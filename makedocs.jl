@@ -1,6 +1,7 @@
 using Pkg
 cd(@__DIR__)
 Pkg.activate(".")
+Pkg.resolve()
 #pkg"dev .. ../GMT"
 Pkg.instantiate()
 Pkg.precompile()
