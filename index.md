@@ -27,7 +27,7 @@ using GMT
 
 |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|
-| \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} |  clip  | \myreflink{coast} |
+| basemap | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} |  clip  | \myreflink{coast} |
 | \myreflink{colorbar} |  contour  |  dimfilter  |  docs  |  events  |  filter1d  |
 | fitcircle |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
 | gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |
