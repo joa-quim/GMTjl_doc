@@ -53,18 +53,18 @@ If the grid does not have meter as the horizontal unit, append **+u**\ *unit* to
 Hints
 -----
 
-If you don't know what **norm** options to use to make an intensity file for [grdimage](@ref) and [grdview](@ref), a good first try is **norm=e0.6**.
+If you don't know what **norm** options to use to make an intensity file for \myreflink{grdimage} and \myreflink{grdview}, a good first try is **norm=e0.6**.
 
 Usually 255 shades are more than enough for visualization purposes. You can save 75% disk space by appending =nb/a to the output filename *outgrid*.
 
-If you want to make several illuminated maps of subregions of a large data set, and you need the illumination effects to be consistent across all the maps, use the **norm** option and supply the same value of *sigma* and *offset* to **grdgradient** for each map. A good guess is *offset* = 0 and *sigma* found by `grdinfo` **-L2** or **-L1** applied to an unnormalized gradient grd.
+If you want to make several illuminated maps of subregions of a large data set, and you need the illumination effects to be consistent across all the maps, use the **norm** option and supply the same value of *sigma* and *offset* to \myreflink{grdgradient} for each map. A good guess is *offset* = 0 and *sigma* found by `grdinfo` **-L2** or **-L1** applied to an unnormalized gradient grd.
 
 If you simply need the *x*- or *y*-derivatives of the grid, use `grdmath`.
 
 Tiles
 -----
 
-For very large datasets (or very large plots) you may need to break the job into multiple tiles. It is then important that the normalization of the intensities are handled the same way for each tile. By default, *offset* and *sigma* are recalculated for each tile. Hence, different tiles of the same large grid will compute different *offset* and *sigma* values. Thus, the intensity for the same directional slope will be different across the final map. This inconsistency can lead to visible changes in image appearance across tile seams. The way to ensure compatible results is to specify the same *offset* and *sigma* via the modifiers to **norm**. However, if these need to be estimated from the large grid then the **save\_stats** option can help: Run **grdgradient** on the full grid (or as large portion of the grid that your computer can handle) and specify **save\_stats=:save** to create a statistics file with the resulting *offset* and *sigma*. Then, for each of your grid tile calculations, give **norm=(offset="",)** and/or **norm=(sigma="",)** without arguments to **norm** and specify **save\_stats=:read**. This option will read the values from the hidden statistics file and use them in the normalization. If you use **save\_stats=:Read** for the final tile then the statistics file is removed after use.
+For very large datasets (or very large plots) you may need to break the job into multiple tiles. It is then important that the normalization of the intensities are handled the same way for each tile. By default, *offset* and *sigma* are recalculated for each tile. Hence, different tiles of the same large grid will compute different *offset* and *sigma* values. Thus, the intensity for the same directional slope will be different across the final map. This inconsistency can lead to visible changes in image appearance across tile seams. The way to ensure compatible results is to specify the same *offset* and *sigma* via the modifiers to **norm**. However, if these need to be estimated from the large grid then the **save\_stats** option can help: Run \myreflink{grdgradient} on the full grid (or as large portion of the grid that your computer can handle) and specify **save\_stats=:save** to create a statistics file with the resulting *offset* and *sigma*. Then, for each of your grid tile calculations, give **norm=(offset="",)** and/or **norm=(sigma="",)** without arguments to **norm** and specify **save\_stats=:read**. This option will read the values from the hidden statistics file and use them in the normalization. If you use **save\_stats=:Read** for the final tile then the statistics file is removed after use.
 
 Examples
 --------

@@ -1,6 +1,8 @@
 # plot
 
-	plot(cmd0::String="", arg1=[]; kwargs...)
+```julia
+plot(cmd0::String="", arg1=[]; kwargs...)
+```
 
 
 Reads (x,y) pairs and plot lines, polygons, or symbols with different levels of decoration. The input can either be a file name of a file with at least two columns (x,y),but optionally more, a *GMTdatset* object with also two or more columns.
@@ -17,9 +19,7 @@ Parameters
 - **A** or **steps** : -- *steps=true* **|** *steps=:meridian|:parallel|:x|:y*\
    By default, geographic line segments are drawn as great circle arcs. To draw them as straight lines, use the **steps=true**. Alternatively, use **steps=:meridian** to draw the line by first following a meridian, then a parallel. Or append **steps=:parallel** to start following a parallel, then a meridian. (This can be practical to draw a line along parallels, for example). For Cartesian data, points are simply connected, unless you use **steps=:x** or **steps=:y** to draw stair-case curves that whose first move is along *x* or *y*, respectively.
 
-- **B** or **axes** or **frame**\
-   Set map boundary frame and axes attributes. Default is to draw and annotate left and bottom axes.
-   More at [frame](@ref)
+\textinput{common_opts/opt_B}
 
 - **C** or **color** or **cmap** : *color=cpt*\
    Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)** to build a linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented by one for each color. In this case *color_n* can be a [r g b] triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ). If **symbol** is set, let symbol fill color be determined by the z-value in the third column. Additional fields are shifted over by one column (optional size would be 4th rather than 3rd field, etc.). If **symbol** is not set, then it expects the user to supply a multisegment file where each segment header contains a **-Z**\ *val* string. The *val* will control the color of the line or polygon (if **close** is set) via the CPT.
@@ -42,19 +42,15 @@ Parameters
    **segments=true** : Segment headers are honored so each segment is a group; the group reference point is reset to the first point of each incoming segment [Default].
    **segments_reset=true** : Same as **segments=true**, but the group reference point is reset after each record to the previous point (this method is only available with the **refpoint=true** scheme). Instead of the codes **ignore_hdr**, **single_group**, **segments**, **segments_reset** you may append the coordinates of a **anchor=(x,y)** which will serve as a fixed external reference point for all groups.
 
-- **J** or **proj** : *proj=<parameters>*\
-   Select map projection. Default is linear and 14 cm width. More at [proj](@ref)
+\textinput{common_opts/opt_J}
 
 - **Jz** or **JZ** or **zscale** or **zsize** (*for* **plot3d** *only*) : -- *zscale=scale* **|** *zsize=size*\
    Set z-axis scaling or or z-axis size. `zsize=size` sets the size to the fixed value *size*
    (for example *zsize=10* or *zsize=4i*). `zscale=scale` sets the vertical scale to UNIT/z-unit.
 
-- **R** or **region** or **limits** : *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
-   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more \
-   Specify the region of interest. By default, the limits are computed from data extents. More at [limits](@ref)
+\textinput{common_opts/opt_R}
 
-- **G** or **markercolor** or **markerfacecolor** or **mc** or **fill**\
-   Select color or pattern for filling of symbols or polygons [Default is no fill]. Note that plot will search for *fill* and *pen* settings in all the segment headers (when passing a GMTdaset or file of a multi-segment dataset) and let any values thus found over-ride the command line settings (but those must be provided in the terse GMT syntax). See [Setting color](@ref) for extend color selection (including colormap generation).
+\textinput{common_opts/opt_mfc}
 
 - **hexbin** : -- *hexbin=true*\
    Make a 2D hexagonal binning plot of points _xy_ that have been processed by `binstats(xy, tiling=:hex, stats=...)`.
@@ -87,28 +83,28 @@ Parameters
    **d** or **diamond** size is diameter of circumscribing circle.\
    **e** or **ellipse** Direction (in degrees counter-clockwise from horizontal), major\_axis, and minor\_axis must be found in columns 3, 4, and 5.\
    **E** or **Ellipse** Same as **ellipse**, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (**ellipse** leaves the directions unchanged.) Furthermore, the axes lengths must be given in geographical instead of plot-distance units. An exception occurs for a linear projection in which we assume the ellipse axes are given in the same units as **region**. For degenerate ellipses (circles) with just the diameter given, use **Ellipse-**. The diameter is excepted to be given in column 3. Alternatively, append the desired diameter to **E-** and this fixed diameter is used instead (*e.g.* **symbol="E-500"**). For allowable geographical units, see UNITS.\
-   **front**    Draw a front. See [Front lines](@ref)\
+   **front**    Draw a front. See \myreflink{Front lines}\
    **g** or **octagon**  size is diameter of circumscribing circle.\
    **h** or **hexagon**  size is diameter of circumscribing circle.\
    **i** or **inverted\_tri**  size is diameter of circumscribing circle.\
    **j** or **rotated\_rec**  Rotated rectangle. Direction (in degrees counter-clockwise from horizontal), x-dimension, and y-dimension must be found in columns 3, 4, and 5.\
    **J** or **Rotated\_rec**  Same as **rotated\_rec**, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (**rotated\_rec** leaves the directions unchanged.) Furthermore, the dimensions must be given in geographical instead of plot-distance units. For a degenerate rectangle (square) with one dimension given, use **J-**. The dimension is excepted to be given in column 3. Alternatively, append the dimension diameter to **J-** and this fixed dimension is used instead. An exception occurs for a linear projection in which we assume the dimensions are given in the same units as **region**. For allowable geographical units, see UNITS.\
-   **m** or **matang**  math angle arc, optionally with one or two arrow heads [Default is no arrow heads]. The size is the length of the vector head. Arc width is set by **pen**, with vector head outlines defaulting to half of arc width. The radius of the arc and its start and stop directions (in degrees counter-clockwise from horizontal) must be given in columns 3-5. See [Vector Attributes](@ref) for specifying other attributes.\
+   **m** or **matang**  math angle arc, optionally with one or two arrow heads [Default is no arrow heads]. The size is the length of the vector head. Arc width is set by **pen**, with vector head outlines defaulting to half of arc width. The radius of the arc and its start and stop directions (in degrees counter-clockwise from horizontal) must be given in columns 3-5. See \myreflink{Vector Attributes} for specifying other attributes.\
    **M** or **Matang**  Same as **matang** but switches to straight angle symbol if angles subtend 90 degrees exactly.\
    **n** or **pentagon**  size is diameter of circumscribing circle.\
    **p** or **point**  No size needs to be specified (1 pixel is used).\
-   **quoted lines**    i.e., lines with annotations such as contours. See [Quoted lines](@ref)\
+   **quoted lines**    i.e., lines with annotations such as contours. See \myreflink{Quoted lines}\
    **r** or **rectangle**  No size needs to be specified, but the x- and y-dimensions must be found in columns 3 and 4.\
    **R** or **roundrect**  Rounded rectangle. No size needs to be specified, but the x- and y-dimensions and corner radius must be found in columns 3, 4, and 5.\
    **s** or **square**    size is diameter of circumscribing circle.\
    **t** or **^** or **triangle**  size is diameter of circumscribing circle.\
    **x** or **cross**    size is diameter of circumscribing circle.\
    **y** or **y-dash**  (|). size is the length of a short vertical (y-dir) line segment.\
-   **decorated**    i.e., lines with symbols along them. See [Decorated lines](@ref)\
+   **decorated**    i.e., lines with symbols along them. See \myreflink{Decorated lines}\
 
 - **W** or **pen=pen**\
    Set pen attributes for lines or the outline of symbols [Defaults: width = default, color = black, style = solid].
-   See [Pen attributes](@ref). 
+   See \myreflink{Pen attributes}. 
    If the modifier **pen=(cline=true)** is appended then the color of the line are taken from the CPT (see **cmap**).
    If instead modifier **pen=(csymbol=true)** is appended then the color from the cpt file is applied to symbol fill.
    Use **pen=(colored=true)** for both effects.
@@ -117,21 +113,17 @@ Parameters
    the map or append map distance units instead (see below);
    **bezier=true** will draw the line using a Bezier spline; *vspecs* will place a vector head at the ends of the lines.
    You can use **vec\_start** and **vec\_stop** to specify separate vector specs at each end [shared specs]. See the
-   [Vector Attributes](@ref) for more information. If **level** is set, then **pen=(zlevels=true)** assign pen color via
+   \myreflink{Vector Attributes} for more information. If **level** is set, then **pen=(zlevels=true)** assign pen color via
    **cmap** and the z-values obtained. Finally, if pen color = `:auto` then we will cycle through the pen colors implied by
    `COLOR_SET` and change on a per-segmentbasis. The width, style, or transparency settings are unchanged.
 
-- **U** or **time_stamp** : *time_stamp=true* **|** *time_stamp=(just="code", pos=(dx,dy), label="label", com=true)*\
-   Draw GMT time stamp logo on plot. More at [timestamp](@ref)
+\textinput{common_opts/opt_U}
 
-- **V** or **verbose** : *verbose=true* **|** *verbose=level*\
-   Select verbosity level. More at [verbose](@ref)
+\textinput{common_opts/opt_V}
 
-- **X** or **xshift** or **x_offset** : *xshift=[] **|** *xshift=x-shift* **|** *xshift=(shift=x-shift, mov="a|c|f|r")*\
-   Shift plot origin. More at [xshift](@ref)
+\textinput{common_opts/opt_X}
 
-- **Y** or **yshift** or **y_offset** : *yshift=[] **|** *yshift=y-shift* **|** *yshift=(shift=y-shift, mov="a|c|f|r")*\
-   Shift plot origin. More at [yshift](@ref)
+\textinput{common_opts/opt_Y}
 
 - **Z** or **level** : *level=vec* **|** *level=(data=vec, outline=true, nofill=true)*\
    Instead of specifying a symbol or polygon fill and outline color via **markercolor** and **pen**, give both a value
@@ -141,8 +133,7 @@ Parameters
    to only paint outlines but not fill. The default is to fill and draw outlines with default color (black). This option
    is particularly useful to make choropleth maps. Note, options **fill** and **pen** may overlap with this option.
 
-- **figname** or **savefig** or **name** :: *figname=`name.png`*\
-   Save the figure with the `figname=name.ext` where `ext` chooses the figure format
+\textinput{common_opts/opt_save_fig}
 
 Units
 -----
@@ -155,7 +146,7 @@ Examples
 Decorated curve with blue stars
 
 ```julia
-    xy = gmt("gmtmath -T0/180/1 T SIND 4.5 ADD");
-    lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), symbol=:star,
-          symbsize=1, pen=(0.5,:green), fill=:blue, dec2=true), show=true)
+xy = gmt("gmtmath -T0/180/1 T SIND 4.5 ADD");
+lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), symbol=:star,
+      symbsize=1, pen=(0.5,:green), fill=:blue, dec2=true), show=true)
 ```

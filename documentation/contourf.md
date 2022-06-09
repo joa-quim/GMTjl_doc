@@ -9,7 +9,7 @@ Create filled contour mapps.
 Description
 -----------
 
-This module is a wrapper to *grdview*, *contour* and *grdcontour* and as such it works with two different kinds of input data. If input is a grid (either a grid file name or a GMTgrid object) it will make a filled contour with *grdview* and optionally  overlay contours by calling *grdcontour*. If, on the other hand, the input data is table data file or a Mx3 array (or GMTdataset), it first compute a Delaunay triangulation and makes the plot from it. In this later case, the job is done by *contour* module alone.
+This module is a wrapper to \myreflink{grdview}, *contour* and \myreflink{grdcontour} and as such it works with two different kinds of input data. If input is a grid (either a grid file name or a GMTgrid object) it will make a filled contour with *grdview* and optionally  overlay contours by calling \myreflink{grdcontour}. If, on the other hand, the input data is table data file or a Mx3 array (or GMTdataset), it first compute a Delaunay triangulation and makes the plot from it. In this later case, the job is done by *contour* module alone.
 
 The **region** option can be used to select a map region larger or smaller than that implied by the extent of the grid. 
 
@@ -32,7 +32,7 @@ Optional Arguments
 - **A** or **annot** : -- *annot=annot\_int* **|** *annot=(int=annot\_int, disable=true, single=true, labels=labelinfo)*\
    *annot\_int* is annotation interval in data units; it is ignored if contour levels are given in a file.
    [Default is no annotations]. Use *annot=(disable=true,)* to disable all annotations implied by **cont**.
-   Alternatively do *annot=(single=true, int=val)* to plot *val* as a single contour. The optional *labelinfo* controls the specifics of the label formatting and consists of a named tuple with the following control arguments [`Label formatting`](@ref label_format_quot)
+   Alternatively do *annot=(single=true, int=val)* to plot *val* as a single contour. The optional *labelinfo* controls the specifics of the label formatting and consists of a named tuple with the following control arguments \myreflink{Label formatting}
 
 \textinput{common_opts/opt_B}
 
@@ -61,7 +61,7 @@ Optional Arguments
 
 - **G** or **labels** : -- *labels=()*\
    The required argument controls the placement of labels along the quoted lines. Choose among five
-   controlling algorithms as explained in [`Placement methods`](@ref placement_method_quot)
+   controlling algorithms as explained in \myreflink{Label formatting}
 
 \textinput{common_opts/opt_J}
 
@@ -71,12 +71,7 @@ Optional Arguments
    coordinates) or **C** for plot length units in current plot units after projecting the coordinates.
    Optionally, append **+z** to exclude the zero contour.
 
-- **R** or **region** or **limits** : -- *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
-   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more\
-   Specify the region of interest. More at [limits](@ref). For perspective view **view**, optionally add
-   *zmin,zmax*. This option may be used to indicate the range used for the 3-D axes [Default is region given
-   by the reliefgrid]. You may ask for a larger w/e/s/n region to have more room between the image and the axes.
-   A smaller region than specified in the reliefgrid will result in a subset of the grid.
+\textinput{common_opts/opt_R}
 
 - **S** or **smooth** : -- *smooth=smoothfactor*\
    Resample the contour lines at roughly every (*gridbox\_size/smoothfactor*) interval.

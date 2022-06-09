@@ -21,7 +21,7 @@ Optional Arguments
 - **A** or **annot** : -- *annot=annot\_int* **|** *annot=(int=annot\_int, disable=true, single=true, labels=labelinfo)*\
   *annot\_int* is annotation interval in data units; it is ignored if contour levels are given in a file.
   [Default is no annotations]. Use *annot=(disable=true,)* to disable all annotations implied by **cont**.
-  Alternatively do *annot=(single=true, int=val)* to plot *val* as a single contour. The optional *labelinfo* controls the specifics of the label formatting and consists of a named tuple with the following control arguments [`Label formatting`](@ref label_format_quot)
+  Alternatively do *annot=(single=true, int=val)* to plot *val* as a single contour. The optional *labelinfo* controls the specifics of the label formatting and consists of a named tuple with the following control arguments \myreflink{Label formatting}
 
 \textinput{common_opts/opt_B}
 
@@ -62,7 +62,7 @@ Optional Arguments
 
 - **G** or **labels** : -- *labels=()*\
   The required argument controls the placement of labels along the quoted lines. Choose among five
-  controlling algorithms as explained in [`Placement methods`](@ref placement_method_quot)
+  controlling algorithms as explained in \myreflink{Placement methods}
 
 \textinput{common_opts/opt_J}
 
@@ -72,7 +72,7 @@ Optional Arguments
   to include the zero contour.
 
 - **N** or **fill** : -- *fill=color*\
-  Fill the area between contours using the discrete color table given by *color*, a [Setting color](@ref) element.
+  Fill the area between contours using the discrete color table given by *color*, a \myreflink{Setting color} element.
   Then, **cont** and **annot** can be used as well to control the contour lines and annotations. If no *color*
   is set (*fill=[]*) then a discrete color setting must be given via **cont** instead.
 
@@ -114,8 +114,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **pen** : -- *pen=pen*\
-   Set pen attributes for lines or the outline of symbols [Defaults: width = default, color = black, style = solid].
+\textinput{common_opts/opt_pen}
 
 \textinput{common_opts/opt_X}
 
@@ -130,11 +129,11 @@ Contour the *peaks* function. *cont=1* and *annot=2* means draw contours at ever
 grid and annotate at every other contour line:
 
 ```julia
-    G = GMT.peaks();
-    grdcontour(G, cont=1, annot=2, show=true)
+G = GMT.peaks();
+grdcontour(G, cont=1, annot=2, show=true)
 ```
 
-For a more elaborated example see [Contour maps](@ref)
+For a more elaborated example see \myreflink{Contour maps}
 
 See also
 --------

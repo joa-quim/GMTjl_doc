@@ -72,7 +72,7 @@ controlling algorithms.
 ### [Symbol formatting:](@id symb_format_dec)
 
 - *marker=symb* or *symbol=symb*\
-   Selects the decorating symbol *symb*. See the [Symbols](@ref) for the list of symbols available.
+   Selects the decorating symbol *symb*. See the \myreflink{Symbols} for the list of symbols available.
 - *size=xx* or *markersize* or *ms* or *symbolsize*\
    Use any of these to set the symbol size. Sizes can be scalars, strings or tuples if a unit is used.
 - *angle=xx*\
@@ -81,7 +81,7 @@ controlling algorithms.
    Turns on debug which will draw helper points and lines to illustrate the workings
    of the decorated line setup.
 - *fill=color*\
-   Sets the symbol fill. The *color* is a [Setting color](@ref) element.
+   Sets the symbol fill. The *color* is a \myreflink{Setting color} element.
 - *pen=pen*\
    Draws the outline of symbols; optionally specify pen for outline [Default is width = 0.25p,
    color = black, style = solid]. The *pen* value may contain any of valid ways of specifying pens.
@@ -97,7 +97,7 @@ To select this type the *quoted=true* keyword/value must be present in the *deco
 Lines with annotations such as contours. The required setting controls the placement of labels along the quoted
 lines. Choose among the controlling algorithms.
 
-### [Placement methods:](@id placement_method_quot)
+### Placement methods
 
 - *dist=xx* or *distance=xx*\
    Give distances between symbols  on the plot in your preferred measurement unit.
@@ -126,7 +126,7 @@ lines. Choose among the controlling algorithms.
    [Default centers them along the line]. Optionally, append /min_dist[c|i|p] to enforce that a minimum distance
    separation between successive labels is enforced. In this case *xx* must obviously be a string.
 
-### [Label formatting:](@id label_format_quot)
+### Label formatting
 
 - *angle=xx*\
    For symbols at a fixed angle.
@@ -136,7 +136,7 @@ lines. Choose among the controlling algorithms.
    a percentage of the label font size [15%].
 - *color=color*\
    Selects opaque text boxes [Default is transparent]; optionally specify the color [Default is PS\_PAGE\_COLOR].
-   The *color* is a [Setting color](@ref) element.
+   The *color* is a \myreflink{Setting color} element.
 - *const_label="xx"*\
    Sets the constant label text.
 - *curved=true*\
@@ -150,9 +150,9 @@ lines. Choose among the controlling algorithms.
    finally plots the original text.
 - *font=xx*\
    Sets the desired font [Default FONT_ANNOT_PRIMARY with its size changed to 9p]. *xx* is a
-   [Setting fonts](@ref) element.
+   \myreflink{Setting fonts} element.
 - *justify=xx*\
-   Sets label justification [Default is MC]. *xx* is a two char justification code (see [Justify](@ref)).
+   Sets label justification [Default is MC]. *xx* is a two char justification code (see \myreflink{Justify}).
 - *label=xx*\
   Sets the label text according to the specified option. Where *xx* may be a symbol or a tuple:
   - *label=:header*  -- Take the label from the current segment header
