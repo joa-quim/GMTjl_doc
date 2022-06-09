@@ -1,4 +1,0 @@
-Sitemap: fct-gmt.ualg.pt\sitemap.xml
-
-User-agent: *
-Disallow:
