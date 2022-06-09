@@ -23,12 +23,12 @@ Required Arguments
 ------------------
 
 - **J** or *proj* -- *proj=<parameters>*\
-   Select map projection. More at [proj](@ref)
+   Select map projection. More at \myreflink{proj}
 [//]: # \textinput{common_opts/opt_J}
 
 - **R** or *region* or *limits* -- *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
    **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more 
-   Specify the region of interest. More at [limits](@ref)
+   Specify the region of interest. More at \myreflink{limits}
 [//]: # \textinput{common_opts/opt_R}
 
 Optional Arguments
@@ -55,7 +55,7 @@ Optional Arguments
    Without further options, draws a rectangular border around the map scale or rose using [MAP\_FRAME\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-pen); specify a different pen with **pen=new\_pen**. Add ``fill=fill_value`` to fill the logo box [no fill]. Append **clearance=gap** where **gap** is either a scalar, or tuples with *(xgap, ygap)*, or *(lgap,rgap,bgap,tgap*) where these items are uniform, separate in x- and y-direction, or individual side spacings between logo and border. Append ``inner`` to draw a secondary, inner border as well. We use a uniform **gap** between borders of **2p** and the [MAP\_DEFAULT\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-default-pen) unless other values are specified. Append **rounded=6** to draw rounded rectangular borders instead, with a **6p** corner radius. You can override this radius by appending another value. Finally, append **shaded=(dx,dy[,shade])** to draw an offset background shaded region. Here, **dx,dy** indicates the shift relative to the foreground frame [**4p,4p**] and **shade** sets the fill style to use for shading [gray50]. Requires **map\_scale** or **rose**.  If both **map\_scale** or **rose**, you may repeat **box** after each of these but remember to put repeated settings inside a tuple of tuples.
 
 - **G** or *land* : -- *land=fill*\
-   Select filling (see [Fill color/pattern](@ref)) "dry" areas. Append the shade, color, or pattern.
+   Select filling (see \myreflink{Fill color/pattern}) "dry" areas. Append the shade, color, or pattern.
 
 - **I** or *rivers* : -- *rivers=type* **|** *rivers=(type=type, pen=(pen))*\
    Draw rivers. Specify the *type* of rivers and [optionally] append pen attributes [Default pen: width = default, color = black, style = solid].\
@@ -89,7 +89,7 @@ Optional Arguments
    Dumps a single multisegment ASCII (or binary, see **-bo**) file to standard output. No plotting occurs. Specify one of **DCW**, **rivers**, **borders** or **shore**. Note: if **dump** is used with **DCW** then **region** or the **+r** modifier to **DCW** are not required as we automatically determine the region given the selected geographic entities.
 
 - **N** or *borders* : -- *borders=type* **|** *borders=(type=type, pen=(pen))*\
-   Draw political boundaries. Specify the *type* of boundary and [optionally] append pen attributes [Default pen: width = default, color = black, style = solid].\
+   Draw political boundaries. Specify the *type* of boundary and optionally append pen attributes [Default pen: width = default, color = black, style = solid].\
    Choose *type* from the list of boundaries below. To repeat this option, use a tuple of tuples.
 
       1 = National boundaries

@@ -24,19 +24,13 @@ Parameters
 
 \textinput{common_opts/opt_R}
 
-- **G** or **markerfacecolor** or **mc** or **fill**\
-   Select color or pattern for filling of polygons [Default is no fill]. Note that plot will search for *fill*
-   and *pen* settings in all the segment headers (when passing a GMTdaset or file of a multi-segment dataset)
-   and let any values thus found over-ride the command line settings (but those must be provided in the terse GMT
-   syntax). See [Setting color](@ref) for extend color selection (including colormap generation).
+\textinput{common_opts/opt_mfc}
 
-- **W** or *pen=pen*\
-   Set pen attributes for lines or the outline of symbols (except for the *decorated* lines that have their own
-   options to do it) [Defaults: width = default, color = black, style = solid]. See [Pen attributes](@ref)
+\textinput{common_opts/opt_pen}
 
 - **decorated**\
-   For all types of line decorations: symbols [Decorated lines](@ref), fronts [Front lines](@ref),
-   text [Quoted lines](@ref), etc... see [Line decorations](@ref)
+   For all types of line decorations: symbols \myreflink{Decorated lines}, fronts \myreflink{Front lines},
+   text \myreflink{Quoted lines}, etc... see \myreflink{Line decorations}
 
 \textinput{common_opts/opt_U}
 
@@ -54,7 +48,7 @@ Examples
 Decorated curve with blue stars
 
 ```julia
-    xy = gmt("gmtmath -T0/180/1 T SIND 4.5 ADD");
-    lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), symbol=:star,
-          symbsize=1, pen=(0.5,:green), fill=:blue, dec2=true), show=true)
+xy = gmt("gmtmath -T0/180/1 T SIND 4.5 ADD");
+lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), symbol=:star,
+      symbsize=1, pen=(0.5,:green), fill=:blue, dec2=true), show=true)
 ```

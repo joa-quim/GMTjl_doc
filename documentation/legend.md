@@ -1,6 +1,8 @@
 # legend
 
-	legend(cmd0::String="", arg1=nothing; kwargs...)
+```julia
+legend(cmd0::String="", arg1=nothing; kwargs...)
+```
 
 Description
 -----------
@@ -32,7 +34,7 @@ Defines the reference point on the map for the legend using one of four coordina
 Use `width=(width,height)` to set the *width* (and *height*) of the legend box in plot coordinates (inches, cm, etc.).
 If *height* is zero or not given then we estimate *height* based the expected vertical extent of the items to be placed.
 By default, the anchor point on the legend is assumed to be the bottom left corner (:BL), but this
-can be changed by appending `justify` followed by a 2-char justification code *justify* (see [text](@ref)).
+can be changed by appending `justify` followed by a 2-char justification code *justify* (see \myreflink{text}).
 **Note**: If `inside` is used then *justify* defaults to the same as `anchor`,
 if `outside` is used then `justify` defaults to the mirror opposite of `anchor`.
 Use `spacing=val` to change the line-spacing factor in units of the current
@@ -41,32 +43,28 @@ font size [1.1].
 Optional Arguments
 ------------------
 
-- **B** or **axes** or *frame*\
-   Set map boundary frame and axes attributes. More at [frame](@ref)
+\textinput{common_opts/opt_B}
 
 - **C** or **clearance** : -- *clearance=(dx,dy)*\
    Sets the clearance between the legend frame and the internal items [4p/4p].
 
 - **F** or **box** : -- *box=(clearance=val, fill=color, inner=true, pen=pen, rounded=true, shaded=XX)*\
-   Without further options, draws a rectangular border around the scale using `MAP_FRAME_PEN`; specify a different pen with `pen=pen` (see [Pen attributes](@ref)).
+   Without further options, draws a rectangular border around the scale using `MAP_FRAME_PEN`; specify a different pen with `pen=pen` (see \myreflink{Pen attributes}).
 
-   - `fill=color` where *color* is any valid color setting (see [Setting color](@ref)), to fill the scale panel [no fill].
+   - `fill=color` where *color* is any valid color setting (see \myreflink{Setting color}), to fill the scale panel [no fill].
    - `clearance=val` where *val* is either *gap* or *(xgap,ygap)*, or *(lgap,rgap,bgap,tgap)* where these items are uniform, separate in x- and y-direction, or individual side spacings between scale and border.
    - `inner=true` to draw a secondary, inner border as well. We use a uniform *gap* between borders of *2p* and the `MAP_DEFAULTS_PEN` unless other values are specified (like `inner="gap/pen"`)
    - `rounded=true` to draw rounded rectangular borders instead, with a *6p* corner radius. You can override this radius by using another value instead of *true* (default is **6p**).
    - `shadded=true` or `shadded=(dx,dy)` or `shadded=shade` to draw an offset background shaded region. Here, *dx/dy* indicates the shift relative to the foreground frame [*4p/-4p*]and *shade* sets the fill style to use for shading ("gray50").
 
-- **J** or **proj** : *proj=<parameters>*\
-   Select map projection. Default is linear and 14 cm width. More at [proj](@ref)
+\textinput{common_opts/opt_J}
 
 - **M**\
    Modern mode only: Read both (1) the hidden auto-generated legend information file created by plotting-modules'
    **legend** option (warning: **not** this **legend** module) and (2) additional information from input file(s)
    given on the command line [hidden file only].
 
-- **R** or **region** or **limits** : *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
-   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more \
-   Specify the region of interest. Default limits are computed from data extents. More at [limits](@ref)
+\textinput{common_opts/opt_R}
 
 - **S** or **scale** : *scale=val*\
    Scale all symbol sizes by a common *scale*.
@@ -74,26 +72,19 @@ Optional Arguments
 - **T** or **leg_file** : *leg_file=fname*\
    Modern mode only: Write hidden legend specification file to *fname*.
 
-- **U** or **time_stamp** : -- *time_stamp=true* **|** *time_stamp=(just="code", pos=(dx,dy), label="label", com=true)*\
-   Draw GMT time stamp logo on plot. More at [timestamp](@ref)
+\textinput{common_opts/opt_U}
 
-- **V** or **verbose** : -- *verbose=true* **|** *verbose=level*\
-   Select verbosity level. More at [verbose](@ref)
+\textinput{common_opts/opt_V}
 
-- **X** or *xshift* or *x_offset* : *xshift=[] **|** *xshift=x-shift* **|** *xshift=(shift=x-shift, mov="a|c|f|r")*\
-   Shift plot origin. More at [xshift](@ref)
+\textinput{common_opts/opt_X}
 
-- **Y** or *yshift* or *y_offset* : *yshift=[] **|** *yshift=y-shift* **|** *yshift=(shift=y-shift, mov="a|c|f|r")*\
-   Shift plot origin. More at [yshift](@ref)
+\textinput{common_opts/opt_Y}
 
-- **p** or *view* or *perspective* : -- *view=(azim, elev)*\
-   Selects perspective view and sets the azimuth and elevation of the viewpoint. More at [perspective](@ref)
+\textinput{common_opts/opt_p}
 
-- **q** or **inrows**
+\textinput{common_opts/opt_q}
 
-- **t** or *transparency* or *alpha*: -- *alpha=50*\
-   Set PDF transparency level for an overlay, in (0-100] percent range. [Default is 0, *i.e.*, opaque].
-   Works only for the PDF and PNG formats.
+\textinput{common_opts/opt_t}
 
 Legend Codes
 ------------
@@ -109,13 +100,13 @@ different record types are recognized, and the syntax for each of these records 
    via the given CPT *cptname*.  You may switch to other *cptname* by repeating this command.
 
 - **B** or **colorbar** : *colorbar=(name=`cptname`, offset=`val`, height=`val` [, extra="..."])*\
-   This record will plot a horizontal color bar, [colorbar](@ref)-style in the middle, starting at `offset` from the
-   left edge, and of the given `height`. You may add any additional [colorbar](@ref) options as well as string in `extra=opts`.
-   Any of the modifiers (here in hardcore GMT syntax)
+   This record will plot a horizontal color bar, \myreflink{colorbar} -style in the middle, starting at `offset` from the
+   left edge, and of the given `height`. You may add any additional \myreflink{colorbar} options as well as
+   string in `extra=opts`.  Any of the modifiers (here in hardcore GMT syntax)
    [**+e**[**b**|**f**][*length*]][**+h**][**+m**[**a**|**c**|**l**|**u**]][**+n**[*txt*]]
    may be appended ts a string o the `height` argument, while other module options **frame**, **shade**, **equal**,
    **monochrome**, **dpi**, **nolines** **zfile** and **view** may be appended as *optional arguments* at the end of
-   the record. See [colorbar](@ref) for details on all modifiers and options.
+   the record. See \myreflink{colorbar} for details on all modifiers and options.
 
 - **C** or **textcolor** : *textcolor=`color`*\
    Specifies the color with which the remaining text is to be printed via z=*value* (requires a prior **cmap** code as well).
@@ -175,13 +166,13 @@ different record types are recognized, and the syntax for each of these records 
    If no argument is given the we set `ncols` to 1.
 
 - **P** or **paragraph** : *paragraph=true* **|** *paragraph=`options`*\
-   Start a new text paragraph by specifying all the parameters needed (see [text](@ref) **paragraph** record description).
+   Start a new text paragraph by specifying all the parameters needed (see \myreflink{text} **paragraph** record description).
    Note that the module knows what all those values should be, so normally you can just use `paragraph=true`.
    If you need to set at least one of the parameters directly, you must specify all and set the ones you want
    to leave at their default value to **-**.
 
 - **S** or **symbol** : *symbol=(marker=`name`, [dx_left=`val`,] size=`val` [fill=`fill`, pen=`pen`] [, dx_right, label=`text`])*\
-   Plots the selected symbol with specified diameter, fill, and outline (see [plot](@ref)). The symbol is centered
+   Plots the selected symbol with specified diameter, fill, and outline (see \myreflink{plot}). The symbol is centered
    at `dx_left` from the left margin of the column, with the optional explanatory *label* starting `dx_right` from
    the margin, printed with `FONT_ANNOT_PRIMARY`. If `dx_left` is not given then it is automatically computed from
    half the largest symbol size.  If `dx_right` is not given then it is automatically computed as 1.5 times the
@@ -189,15 +180,15 @@ different record types are recognized, and the syntax for each of these records 
    color is assigned via the CPT look-up (requires a prior **cmap** code). When plotting just a symbol, without
    text, `dx_right` and `label` can be omitted. The `dx_left` value can also be given as a justification code **L**,
    **C**, or **R** which justifies the symbol with respect to the current column. If no arguments are given to
-   **symbol** then we simply skip to the next column. Three [plot](@ref) symbols may take special modifiers:
+   **symbol** then we simply skip to the next column. Three \myreflink{plot} symbols may take special modifiers:
    *front* (**f**), *quoted line* (**q**) and *vector* (**v**). You can append modifiers to the symbol and affect how
    the fronts, quoted lines
-   and vectors are presented (see [plot](@ref) man page for modifiers). The module will determine default settings
+   and vectors are presented (see \myreflink{plot} man page for modifiers). The module will determine default settings
    for all modifiers and secondary arguments if not provided. A few other symbols (the rectangles, ellipse, wedge,
    mathangle) may take more than a single argument size.  Note that for a line segment you should use the horizontal
    dash symbol (**-**). If just a single size if given then we will provide reasonable arguments to plot the symbol
    (See **Defaults**). Alternatively, combine the required arguments into a single, comma-separated string and use
-   that as the symbol size (again, see [plot](@ref) for details on the arguments needed).
+   that as the symbol size (again, see \myreflink{plot} for details on the arguments needed).
 
 - **T** or **text[xx]** : *text[xx]=`text`*\
    One or more of these **text** records with *paragraph-text* printed with `FONT_ANNOT_PRIMARY`. To specify special
@@ -213,8 +204,7 @@ different record types are recognized, and the syntax for each of these records 
    start and stop of a vertical line (so **vline** must follow **hline**).  If no horizontal line is desired simply
    give **-** as `pen` to **hline**.
 
-- **figname** or **savefig** or **name** :: *figname=`name.png`*\
-   Save the figure with the `figname=name.ext` where `ext` chooses the figure format
+\textinput{common_opts/opt_save_fig}
 
 The function `GMT.mk_legend(kwargs...)` can be used to generate the hard core GMT *Legend Codes*, which in turn can be
 written to a file and feed to this module as input. It can also be used in debug to check that the appropriate
@@ -259,35 +249,36 @@ Examples
 To add an example of a legend to a Mercator plot with the given specifications:
 
 ```julia
-   makecpt("-Cpanoply -T-8/8 > tt.cpt")
+makecpt("-Cpanoply -T-8/8 > tt.cpt")
 
-   legend((
-	       vspace=-0.25,
-	       header=(text="My Map Legend", font=(24,"Times-Roman")),
-	       hline=(pen=1, offset=0.5),
-	       ncolumns=2,
-	       vline=(pen=1, offset=0),
-	       symbol1=(marker=:circ,    size=0.4, dx_left=0.25, fill="p300/12", dx_right=0.75, text="This circle is hachured"),
-	       symbol2=(marker=:ellipse, size=0.4, dx_left=0.25, fill=:yellow,   dx_right=0.75, text="This ellipse is yellow"),
-	       symbol3=(marker=:wedge,   size=0.4, dx_left=0.25, fill=:green, pen=0.25, dx_right=0.75, text="This wedge is green"),
-	       symbol4=(marker=:fault,   size=0.65, dx_left=0.25, fill=:blue, dx_right=0.75, text="This is a fault"),
-	       symbol5=(marker="-", size=0.4,  dx_left=0.25, pen=(0.25,:dash), dx_right=0.75, text="A contour"),
-	       symbol6=(marker=:vector, size=0.65, dx_left=0.25, fill=:magenta, pen=0.5, dx_right=0.75, text="This is a vector"),
-	       symbol7=(marker="i", size=0.4,  dx_left=0.25, fill=:cyan,    pen=0.25, dx_right=0.75, text="This triangle is boring"),
-	       hline2=(pen=1, offset=0.5),
-	       vline2=(pen=1, offset=0),
-	       ncolumns2=1,
-	       map_scale=(lon=5, lat=5, length="600+u+f"),
-	       vspace2=0.13,
-	       image=(width=7.5, fname="@SOEST_block4.png", justify=:CT),
-	       vspacep3=0.13,
-	       colorbar=(name="tt.cpt", offset=0.5, height=0.5, extra="-B0"),
-	       label=(txt="Smith et al., @%5%J. Geophys. Res., 99@%%, 2000", justify=:R, font=(9, "Times-Roman")),
-	       vspace4=0.25,
-	       text1="Let us just try some simple text that can go on a few lines. There is no easy way to predetermine",
-	       text2="how many lines may be required so we may have to adjust the height to get the right size box."
-          ),
-          region=(0,10,0,8), pos=(paper=(1.25,1.25), width=14, justify=:BL, spacing=1.2),
-          clearance=(0.25,0.25), box=(pen=0.5, fill=:azure1),
-          figsize=16, proj=:Mercator, show=true)
+legend((
+       vspace=-0.25,
+       header=(text="My Map Legend", font=(24,"Times-Roman")),
+       hline=(pen=1, offset=0.5),
+       ncolumns=2,
+       vline=(pen=1, offset=0),
+       symbol1=(marker=:circ,    size=0.4, dx_left=0.25, fill="p300/12", dx_right=0.75, text="This circle is hachured"),
+       symbol2=(marker=:ellipse, size=0.4, dx_left=0.25, fill=:yellow,   dx_right=0.75, text="This ellipse is yellow"),
+       symbol3=(marker=:wedge,   size=0.4, dx_left=0.25, fill=:green, pen=0.25, dx_right=0.75, text="This wedge is green"),
+       symbol4=(marker=:fault,   size=0.65, dx_left=0.25, fill=:blue, dx_right=0.75, text="This is a fault"),
+       symbol5=(marker="-", size=0.4,  dx_left=0.25, pen=(0.25,:dash), dx_right=0.75, text="A contour"),
+       symbol6=(marker=:vector, size=0.65, dx_left=0.25, fill=:magenta, pen=0.5, dx_right=0.75, text="This is a vector"),
+       symbol7=(marker="i", size=0.4,  dx_left=0.25, fill=:cyan,    pen=0.25, dx_right=0.75, text="This triangle is boring"),
+       hline2=(pen=1, offset=0.5),
+       vline2=(pen=1, offset=0),
+       ncolumns2=1,
+       map_scale=(lon=5, lat=5, length="600+u+f"),
+       vspace2=0.13,
+       image=(width=7.5, fname="@SOEST_block4.png", justify=:CT),
+       vspacep3=0.13,
+       colorbar=(name="tt.cpt", offset=0.5, height=0.5, extra="-B0"),
+       label=(txt="Smith et al., @%5%J. Geophys. Res., 99@%%, 2000", justify=:R, font=(9, "Times-Roman")),
+       vspace4=0.25,
+       text1="Let us just try some simple text that can go on a few lines. There is no easy way to predetermine",
+       text2="how many lines may be required so we may have to adjust the height to get the right size box."
+       ),
+       region=(0,10,0,8), pos=(paper=(1.25,1.25), width=14, justify=:BL, spacing=1.2),
+       clearance=(0.25,0.25), box=(pen=0.5, fill=:azure1),
+       figsize=16, proj=:Mercator, show=true
+       )
 ```

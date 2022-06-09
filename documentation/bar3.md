@@ -24,9 +24,7 @@ Parameters
 
 \textinput{common_opts/opt_R_3D}
 
-- **G** or **markerfacecolor** or **MarkerFaceColor** or **mc** or **fill**\
-   Select color or pattern for filling of bars [Default is default color]. See \myreflink{Setting color} for extend
-   color selection (including color map generation).
+\textinput{common_opts/opt_mfc}
 
 - **bar**\
    column (3-D) extending from base to *z*. By default, base is 0 and the bar widths are 0.85 of the width in

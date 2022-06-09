@@ -17,17 +17,13 @@ Parameters
 
 \textinput{common_opts/opt_R_3D}
 
-- **G** or *markerfacecolor* or *MarkerFaceColor* or *mc* or *fill*\
-   Select color or pattern for filling of symbols [Default is black cubes]. Note that plot will search for *fill*
-   and *pen* settings in all the segment headers (when passing a GMTdaset or file of a multi-segment dataset)
-   and let any values thus found over-ride the command line settings (but those must provided in the terse GMT
-   syntax). See [Setting color](@ref) for extend color selection (including color map generation).
+\textinput{common_opts/opt_mfc}
 
 - **S** or *symbol* or *marker* or *Marker* or *shape* : --  Default is `cube` with size of 7 points
    - *symbol=symbol string*\
       A full GMT compact string.
    - *symbol=(symb=..., size=..., unit=...)*\
-      Where *symb* is one [Symbols](@ref) like `:circle`, *size* is
+      Where *symb* is one \myreflink{Symbols} like `:circle`, *size* is
       symbol size in cm, unless *unit* is specified i.e. `:points`
 
    In alternative to the *symbol* keyword, user can select the symbol name with either *marker* or *shape*

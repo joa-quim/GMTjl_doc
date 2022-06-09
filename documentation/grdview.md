@@ -33,7 +33,7 @@ Optional Arguments
 - **C** or *color* or *cmap* : -- *color=cpt*\
    Where *cpt* is a *GMTcpt* type or a cpt file name. Alternatively, supply the name of a GMT color master
    dynamic CPT [jet] to automatically determine a continuous CPT from the grid's z-range; you may round
-   up/down the z-range by adding **+i** *zinc*. Yet another option is to specify ``color="color1,color2[,color3 ,...]"`` or ``color=((r1,g1,b1),(r2,g2,b2),...)`` to build a linear continuous CPT from those colors automatically (see [Setting color](@ref)). When not explicitly set, but a color map is needed, we will either use the current color map, if available (set by a previous call to *makecpt*), or the default *jet* color map. Must be present if you want (1) mesh plot with contours (``surftype=(mesh=true,)``), or (2) shaded/colored perspective image (``surftype=(surface=true,)`` or ``surftype=(img=true,)``). For ``surftype=(surface=true,)`` you can specify that you want to skip a z-slice by setting the red r/g/b component to **-**.
+   up/down the z-range by adding **+i** *zinc*. Yet another option is to specify ``color="color1,color2[,color3 ,...]"`` or ``color=((r1,g1,b1),(r2,g2,b2),...)`` to build a linear continuous CPT from those colors automatically (see \myreflink{Setting color}). When not explicitly set, but a color map is needed, we will either use the current color map, if available (set by a previous call to *makecpt*), or the default *jet* color map. Must be present if you want (1) mesh plot with contours (``surftype=(mesh=true,)``), or (2) shaded/colored perspective image (``surftype=(surface=true,)`` or ``surftype=(img=true,)``). For ``surftype=(surface=true,)`` you can specify that you want to skip a z-slice by setting the red r/g/b component to **-**.
 
 - **G** or *drape* : -- *drape=grid* **|** *drape=(grid\_r, grid\_g, grid\_b)* **|** *drape=image*\
    Drape the image in _drapegrid_ on top of the relief provided by _reliefgrid_. [Default determines colors from
@@ -70,7 +70,7 @@ Optional Arguments
     transformation. Note: pay attention to always use a tuple, even when only one option is used. This is
     correct: *surf=(img=true,)* but this is wrong: *surf=(img=true)*
 
-  - Specify ``mesh=true`` for mesh plot [Default], and optionally set a color (see [Setting color](@ref)), with ``mesh=color``, for a different mesh paint.
+  - Specify ``mesh=true`` for mesh plot [Default], and optionally set a color (see \myreflink{Setting color}), with ``mesh=color``, for a different mesh paint.
 
   - Specify ``waterfall=:rows`` or ``:cols`` for waterfall plots (row or column profiles). Specify fill color or patterns with a second argument. For example ``waterfall=(:rows, :red)``
 
@@ -90,7 +90,7 @@ Optional Arguments
    which is then painted separately. Use ``skip=true`` to skip nodes with z = NaN. This option is useful
    for categorical data where interpolating between values is meaningless. Optionally, add ``outlines=true``
    to draw the tile outlines. If the default pen is not to your liking, use ``outlines=pen``
-   (see [Pen attributes](@ref)). As this option produces a flat surface it cannot be combined with -JZ or -Jz.
+   (see \myreflink{Pen attributes}). As this option produces a flat surface it cannot be combined with -JZ or -Jz.
 
 \textinput{common_opts/opt_U}
 

@@ -372,7 +372,7 @@ The ellipsoid used in the map projections is user-definable by editing the gmt.c
 ellipsoid parameters [Default is WGS-84]. Several GMT parameters can affect the projection: *PROJ\_ELLIPSOID*,
 *GMT\_INTERPOLANT*, *PROJ\_SCALE\_FACTOR*, and *PROJ\_LENGTH\_UNIT*; see the gmt.conf man page for details.
 
-See [GMT Map Projections](@ref) for a list of projection examples 
+See \myreflink{GMT Map Projections} for a list of projection examples 
 
 | name                 | center     | horizon | parallels | GMT code | Description |
 | -------------------- |:----------:|:------:| :---------:| -------- | ------- |

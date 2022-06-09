@@ -201,7 +201,7 @@ The issue with this solution, that could be implemented internally without user 
 currently only works on Windows.
 
 Another alternative to a file format is the option to create RGB images with *psconvert* and
-return it to Julia as a [Image type](@ref) type.
+return it to Julia as a \myreflink{Image type} type.
 
 ```julia
     I = psconvert(in_memory=true, adjust=true)

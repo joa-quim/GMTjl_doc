@@ -101,8 +101,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **pen** : -- *pen=pen*\
-   Draw bar outline (or stair-case curve) using the specified pen thickness. [Default is no outline]. See [Pen attributes](@ref)
+\textinput{common_opts/opt_pen}
 
 \textinput{common_opts/opt_X}
 

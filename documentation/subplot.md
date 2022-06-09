@@ -33,7 +33,7 @@ Required Arguments
     **panels**\
     Specify the dimensions of each subplot directly. Then, the figure dimensions are computed from the subplot dimensions after adding the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append a comma-separated list of widths, a slash, and then the comma-separated list of heights. A single number means constant widths (or heights) [Default]. For example **dims=(panels=((5,8),8),)** will make the first column 5 cm wide and the second column 8 cm wide, with all having a constant height of 8 cm. The number of values must either be one (constant across the rows or columns) or exactly match the number of rows (or columns). For geographic maps, the height of each subplot depends on your map region and projection. There are two options: (1) Specify both **limits** and **projection** and we use these to compute the height of each subplot. All subplots must share the same region and projection and you specify a zero *height*, or (2) you can select *height* based on trial and error to suit your plot layout.
 
-    Optionally, you may draw the outline (**outline=pen**) or paint (**fill=color**) the figure rectangle behind the subplots, add dividing lines between panels (**divlines=pen**), and even expand it via **clearance=(dx.dy)**. These are most useful if you supply **axes=:none**, meaning no ticks or annotations will take place in the subplots. See [Setting color](@ref) and [Pen attributes](@ref) for extend color and pen selections.
+    Optionally, you may draw the outline (**outline=pen**) or paint (**fill=color**) the figure rectangle behind the subplots, add dividing lines between panels (**divlines=pen**), and even expand it via **clearance=(dx.dy)**. These are most useful if you supply **axes=:none**, meaning no ticks or annotations will take place in the subplots. See \myreflink{Setting color} and \myreflink{Pen attributes} for extend color and pen selections.
 
     But when only want to set panels with a constant size one can use the simpler form **subplot(grid=..., panels_size=8, ...)**, *i.e.* without sing the **dims=(panels=())** form. *panels_size*, *panel_size* and *panel_sizes* are all aliases.
 
@@ -145,36 +145,36 @@ Examples
 To make a minimalistic 3x3 basemap layout called panels.pdf, try::
 
 ```julia
-    subplot(grid="3x3", panels_size=(5,7), region=(0, 100, 0, 80), frame=:WSen, autolabel=1, margins="6p", name="panels.pdf")
-        gmtset(MAP_FRAME_TYPE=:plain)
+subplot(grid="3x3", panels_size=(5,7), region=(0, 100, 0, 80), frame=:WSen, autolabel=1, margins="6p", name="panels.pdf")
+    gmtset(MAP_FRAME_TYPE=:plain)
 
-        basemap(panel=1)
-        basemap(panel=2, proj=:linear)		# Same as above
-        basemap(panel="next", proj=:linear, figsize="auto,auto")
+    basemap(panel=1)
+    basemap(panel=2, proj=:linear)		# Same as above
+    basemap(panel="next", proj=:linear, figsize="auto,auto")
 
-        basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:x)
-        basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:y)
-        basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:xy)
+    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:x)
+    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:y)
+    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:xy)
 
-        basemap(panel=(3,1), proj=:linear, figscale="auto,auto", axesswap=:x)
-        basemap(panel="next", proj=:geog, figsize="auto,auto")
-        basemap(panel="next", proj=:geog, figsize="auto")
-    subplot(:show)
+    basemap(panel=(3,1), proj=:linear, figscale="auto,auto", axesswap=:x)
+    basemap(panel="next", proj=:geog, figsize="auto,auto")
+    basemap(panel="next", proj=:geog, figsize="auto")
+subplot(:show)
 ```
 
 and a 2x2 with some symbols and showing more ways of setting the panel sizes and selection
 
 ```julia
-    subplot(grid=(2,2), panels_size=8, region=(0, 100, 0, 80), margins="5p", autolabel=true, col_axes=(bott=true,), row_axes=(left=true,), axes="wstr", name="panels.pdf")
-        subplot(:set)
-        basemap(region=(0,80,0,50))
-        subplot(:set)
-        plot([50 40], marker=:circle, mc=:red)
-        subplot(:set)
-        plot([50 40], marker=:square, mc=:green)
-        subplot(:set, panel=(2,2))
-        plot([50 40], marker=:star, mc=:blue)
-    subplot(:show)
+subplot(grid=(2,2), panels_size=8, region=(0, 100, 0, 80), margins="5p", autolabel=true, col_axes=(bott=true,), row_axes=(left=true,), axes="wstr", name="panels.pdf")
+    subplot(:set)
+    basemap(region=(0,80,0,50))
+    subplot(:set)
+    plot([50 40], marker=:circle, mc=:red)
+    subplot(:set)
+    plot([50 40], marker=:square, mc=:green)
+    subplot(:set, panel=(2,2))
+    plot([50 40], marker=:star, mc=:blue)
+subplot(:show)
 ```
 
 Restriction
