@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -38,6 +38,9 @@ jobs:
       uses: julia-actions/setup-julia@v1
       with:
         version: 1.7
+    - name: Install Ghostscript (Windows)
+      run: >
+        choco install ghostscript
     - name: Build and deploy docs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
