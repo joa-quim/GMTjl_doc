@@ -1,0 +1,289 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/GMTjl_doc/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/GMTjl_doc/css/franklin.css">
+<link rel="stylesheet" href="/GMTjl_doc/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/GMTjl_doc/css/makie.css">
+<link rel="icon" href="/GMTjl_doc/assets/icon_transparent.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" rel="stylesheet" type="text/css"/>
+<!--[if IE ]>
+<style>
+  /* old IE unsupported flexbox fixes */
+  .greedy-nav .site-title {
+    padding-right: 3em;
+  }
+  .greedy-nav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+</style>
+<![endif]-->
+
+   <title>The GMT.jl types</title>  
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  <div class="site-container">
+    <div class="masthead">
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <a class="title-icon" href="/GMTjl_doc/"><img src="/GMTjl_doc/assets/GMT_coverlogo.png"/></a>
+                <!-- github link -->
+                
+
+                <ul class="visible-links">
+                    <li class="masthead__menu-item">
+                        <a href="https://www.generic-mapping-tools.org/GMT.jl"><img src="/GMTjl_doc/assets/GitHub-Mark-64px.png" class="masthead-icon" /></a>
+                    </li>
+                    <li class="masthead__menu-item"><a href="/GMTjl_doc/examples/">Examples</a></li>
+                    <li class="masthead__menu-item"><a href="/GMTjl_doc/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="/GMTjl_doc/documentation/">Documentation</a></li>
+                    <li class="masthead__menu-item"><a href="/GMTjl_doc/api/">API</a></li>
+                    <li class="masthead__menu-item"><a href="/GMTjl_doc/news/">News</a></li>
+                </ul>
+                <button class="greedy-nav__toggle" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+    
+      <div id="main" role="main">
+        <div id="overlay"></div>
+        <div id="navbar-container">
+          <div id="navbar">
+            <form id="lunrSearchForm" name="lunrSearchForm" action="/GMTjl_doc/search/index.html">
+              <input class="search-input" name="q" placeholder="Search docs" type="text">
+            </form>
+            <h1>Navigation</h1>
+            <ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/">Home</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples">Examples</a></div><ul><li><input class="collapse-toggle" id="menuitem-2-1" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-1"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/art">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/art/art_examples">Art</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-2" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/choropleths">Choropleths</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/choropleths/choro_examples">Choropleths</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/contours">Contours</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/contours/contour_examples">Contours</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/plotting_functions">Plotting functions</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/arrows">Arrows</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/bars">Bar plots</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/error_bars">Error bars</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/histograms">Histograms</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/lines">Line plots</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/plotyy">Plotyy</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/scatter">Scatter</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/spirals">Spirals</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/proj_examples">GMT Map Projections</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+</ul></li>
+</ul></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials">Tutorials</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/api">API</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-5"><i class="docs-chevron"></i></label><span ></span></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/arrows">arrows</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/arrows_control">Vector Attributes</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/bar">bar</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/bar3">bar3</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmean">blockmean</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmedian">blockmedian</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmode">blockmode</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/coast">nothing</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/color">Setting color</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/colorbar">colorbar</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/common_opts">frame</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/contourf">contourf</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/decorated">Line decorations</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/examples">Examples</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/fonts">Setting fonts</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/frames">Draw Frames</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/gmtbinstats">gmtbinstats</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdcontour">grdcontour</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdgradient">grdgradient</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdhisteq">grdhisteq</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdimage">grdimage</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdsample">grdsample</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/grdview">grdview</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/histogram">histogram</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/introduction">Introduction</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/justify">Justify</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/legend">legend</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/lines">lines</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/makecpt">makecpt</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules">By Modules</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/monolitic">Monolithic</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/movie">movie</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/pens">Pen attributes</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/plot">plot</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/quick_learn">How to learn using GMT in Julia</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/rectangles">Draw rectangles</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/scatter">scatter</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/scatter3">scatter3</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/solar">solar</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/subplot">subplot</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/symbols">Symbols</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/text">text</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/themes">Themes</a></div></li>
+<li><div class="tocitem-container"><a class = active href="/GMTjl_doc/documentation/types">The GMT.jl types</a></div><ul class="page-content">
+<li><a href="#the_gmtjl_types">The GMT.jl types</a></li>
+<li><ul>
+<li><a href="#grid_type">Grid type</a></li>
+<li><a href="#image_type">Image type</a></li>
+<li><a href="#dataset_type">Dataset type</a></li>
+<li><a href="#cpt_type">CPT type</a></li>
+<li><a href="#postscript_type">Postscript type</a></li>
+</ul>
+</ul>
+</li>
+</ul></li>
+</ul>
+          </div>
+        </div>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="the_gmtjl_types"><a href="#the_gmtjl_types" class="header-anchor">The GMT.jl types</a></h1>
+<h2 id="grid_type"><a href="#grid_type" class="header-anchor">Grid type</a></h2>
+<pre><code class="language-julia">type GMTgrid&#123;T&lt;:Real,N&#125; &lt;: AbstractArray&#123;T,N&#125;      # The type holding a local header and data of a GMT grid
+    proj4::String                      # Projection string in PROJ4 syntax &#40;Optional&#41;
+    wkt::String                        # Projection string in WKT syntax &#40;Optional&#41;
+    epsg::Int                          # EPSG code
+    range::Array&#123;Float64,1&#125;            # 1x6&#91;8&#93; vector with &#91;x_min, x_max, y_min, y_max, z_min, z_max &#91;, v_min, v_max&#93;&#93;
+    inc::Array&#123;Float64,1&#125;              # 1x2&#91;3&#93; vector with &#91;x_inc, y_inc &#91;,v_inc&#93;&#93;
+    registration::Int                  # Registration type: 0 -&gt; Grid registration; 1 -&gt; Pixel registration
+    nodata::Union&#123;Float64, Float32&#125;    # The value of nodata
+    title::String                      # Title &#40;Optional&#41;
+    comment::String                    # Remark &#40;Optional&#41;
+    command::String                    # Command used to create the grid &#40;Optional&#41;
+    names::Vector&#123;String&#125;              # To use whith multi-layered and when layers have names &#40;Optional&#41;
+    x::Array&#123;Float64,1&#125;                # &#91;1 x n_columns&#93; vector with XX coordinates
+    y::Array&#123;Float64,1&#125;                # &#91;1 x n_rows&#93;    vector with YY coordinates
+    v::Union&#123;Vector&#123;&lt;:Real&#125;, Vector&#123;String&#125;&#125;    # &#91;v x n_bands&#93;   vector with VV &#40;vertical for 3D grids&#41; coordinates
+    z::Array&#123;T,N&#125;                      # &#91;n_rows x n_columns&#93; grid array
+    x_units::String                    # Units of XX axis &#40;Optional&#41;
+    y_units::String                    # Units of YY axis &#40;Optional&#41;
+    v_units::String                    # Units of Vertical axis &#40;Optional&#41;
+    z_units::String                    # Units of z vlues &#40;Optional&#41;
+    layout::String                     # A three character string describing the grid memory layout
+    scale::Union&#123;Float64, Float32&#125;&#61;1f0 # When saving in file apply &#96;z &#61; z * scale &#43; offset&#96;
+    offset::Union&#123;Float64, Float32&#125;&#61;0f0
+    pad::Int&#61;0                         # When &#33;&#61; 0 means that the array is placed in a padded array of PAD rows/cols
+end</code></pre>
+<h2 id="image_type"><a href="#image_type" class="header-anchor">Image type</a></h2>
+<pre><code class="language-julia">type GMTimage&#123;T&lt;:Unsigned, N&#125; &lt;: AbstractArray&#123;T,N&#125;   # The type holding a local header and data of a GMT image
+    proj4::String              # Projection string in PROJ4 syntax &#40;Optional&#41;
+    wkt::String                # Projection string in WKT syntax &#40;Optional&#41;
+    epsg::Int                  # EPSG code
+    range::Array&#123;Float64,1&#125;    # 1x6 vector with &#91;x_min x_max y_min y_max z_min z_max&#93;
+    inc::Array&#123;Float64,1&#125;      # 1x2 vector with &#91;x_inc y_inc&#93;
+    registration::Int          # Registration type: 0 -&gt; Grid registration; 1 -&gt; Pixel registration
+    nodata::Unsigned           # The value of nodata
+    color_interp::String       # If equal to &quot;Gray&quot; an indexed image with no cmap will get a gray cmap
+    metadata::Vector&#123;String&#125;   # To store any metadata that can eventually be passed to GDAL &#40;Optional&#41;
+    names::Vector&#123;String&#125;      # To use whith multi-band and when bands have names &#40;Optional&#41;
+    x::Array&#123;Float64,1&#125;        # &#91;1 x n_columns&#93; vector with XX coordinates
+    y::Array&#123;Float64,1&#125;        # &#91;1 x n_rows&#93;    vector with YY coordinates
+    v::Array&#123;Float64,1&#125;        # &#91;v x n_bands&#93;   vector with vertical coords or wavelengths in hypercubes &#40;Optional&#41;
+    image::Array&#123;T,N&#125;          # &#91;n_rows x n_columns x n_bands&#93; image array
+    colormap::Array&#123;Int32,1&#125;   # 
+    alpha::Array&#123;UInt8,2&#125;      # A &#91;n_rows x n_columns&#93; alpha array
+    layout::String             # A four character string describing the image memory layout
+    pad::Int                   # When &#33;&#61; 0 means that the array is placed in a padded array of PAD rows/cols
+end</code></pre>
+<h2 id="dataset_type"><a href="#dataset_type" class="header-anchor">Dataset type</a></h2>
+<pre><code class="language-julia">type GMTdataset&#123;T&lt;:Real, N&#125; &lt;: AbstractArray&#123;T,N&#125;
+    data::Array&#123;T,N&#125;           # Mx2 Matrix with segment data
+    ds_bbox::Vector&#123;Float64&#125;   # Global BoundingBox &#40;for when there are many segments&#41;
+    bbox::Vector&#123;Float64&#125;      # Segment BoundingBox
+    attrib::Dict&#123;String, String&#125; # Dictionary with attributes/values &#40;optional&#41;
+    colnames::Vector&#123;String&#125;   # Column names. Antecipate using this with a future Tables inerface
+    text::Vector&#123;String&#125;       # Array with text after data coordinates &#40;mandatory only when plotting Text&#41;
+    header::String             # String with segment header &#40;Optional but sometimes very useful&#41;
+    comment::Vector&#123;String&#125;    # Array with any dataset comments &#91;empty after first segment&#93;
+    proj4::String              # Projection string in PROJ4 syntax &#40;Optional&#41;
+    wkt::String                # Projection string in WKT syntax &#40;Optional&#41;
+    geom::Integer              # Geometry type. One of the GDAL&#39;s enum &#40;wkbPoint, wkbPolygon, etc...&#41;
+end</code></pre>
+<h2 id="cpt_type"><a href="#cpt_type" class="header-anchor">CPT type</a></h2>
+<pre><code class="language-julia">type GMTcpt
+    colormap::Array&#123;Float64,2&#125;
+    alpha::Array&#123;Float64,1&#125;
+    range::Array&#123;Float64,2&#125;
+    minmax::Array&#123;Float64,1&#125;
+    bfn::Array&#123;Float64,2&#125;
+    depth::Cint
+    hinge::Cdouble
+    cpt::Array&#123;Float64,2&#125;
+    label::Vector&#123;String&#125;     # Labels of a Categorical CPT
+    key::Vector&#123;String&#125;       # Keys of a Categorical CPT
+    model::String
+    comment::Array&#123;Any,1&#125;     # Cell array with any comments
+end</code></pre>
+<h2 id="postscript_type"><a href="#postscript_type" class="header-anchor">Postscript type</a></h2>
+<pre><code class="language-julia">type GMTps
+    postscript::String      # Actual PS plot &#40;text string&#41;
+    length::Int             # Byte length of postscript
+    mode::Int               # 1 &#61; Has header, 2 &#61; Has trailer, 3 &#61; Has both
+    comment::Array&#123;Any,1&#125;   # Cell array with any comments
+end</code></pre>
+<div class="page-foot">
+  <div class="copyright">
+    &copy; GMT.jl. Last modified: June 10, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+      <p>These docs were autogenerated using GMT: v0.42.3</p>
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+
+      </div> <!-- closure of main -->
+
+      <div class="page__footer">
+        <footer>
+          <!-- start custom footer snippets -->
+          <!-- end custom footer snippets -->
+          <div class="page__footer-follow">
+            <ul class="social-icons">
+              <li><a href="https://twitter.com/MakiePlots" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/JuliaPlots/Makie.jl" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+          <div class="page__footer-copyright">&copy; GMT.jl. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+        </footer>
+      </div>
+
+    </div>   <!-- closure of class site-container -->
+
+    
+
+    <script src="/GMTjl_doc/libs/navbar.js"></script>
+    <script src="/GMTjl_doc/libs/lunr/lunr.min.js"></script>
+    <script src="/GMTjl_doc/libs/lunr/lunr_index.js"></script>
+    <script src="/GMTjl_doc/libs/lunr/lunrclient.min.js"></script>
+    <!-- <script src="/GMTjl_doc/libs/minimal-mistakes/main.min.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    
+    
+        <script src="/GMTjl_doc/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>
