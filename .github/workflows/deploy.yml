@@ -6,7 +6,7 @@ on:
       - master
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions:
       contents: write
     steps:
@@ -20,12 +20,8 @@ jobs:
         version: '1'
 
     # GMT + ghostscript deps
-    - uses: conda-incubator/setup-miniconda@v2
-      with:
-        auto-activate-base: true
-        activate-environment: ""
-    - run: conda install gmt -c conda-forge
-    - run: conda info --all | grep -i gmt
+    - run: brew install ghostscript gmt
+    - run: echo $(gmt --version)
 
     - run: julia -e '
             using Pkg;
