@@ -124,6 +124,14 @@ using GMT
     ~~~</a>~~~
   @@
 
+  @@box
+    ~~~<a class="boxlink" href="examples/misc/">~~~
+    @@title Misc Examples @@
+    @@box-content
+    @@
+    ~~~</a>~~~
+  @@
+
 @@
 
 
