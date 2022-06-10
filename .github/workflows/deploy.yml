@@ -20,8 +20,11 @@ jobs:
         version: '1'
 
     # GMT + ghostscript deps
-    - run: sudo apt-get update
-    - run: sudo apt-get install ghostscript gmt gmt-dcw gmt-gshhg
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-activate-base: true
+        activate-environment: ""
+    - run: conda install gmt -c conda-forge
     - run: echo $(gmt --version)
 
     - run: julia -e '
