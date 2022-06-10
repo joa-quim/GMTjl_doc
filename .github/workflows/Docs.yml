@@ -50,4 +50,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Docs build
+        BRANCH: gh-pages
         path: ./__site
