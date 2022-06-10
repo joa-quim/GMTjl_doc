@@ -83,7 +83,10 @@
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/contours">Contours</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/contours/contour_examples">Contours</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/plotting_functions">Plotting functions</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/arrows">Arrows</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/misc">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/buffer">Geodesic buffers</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/gadm">GADM</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/plotting_functions">Plotting functions</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/arrows">Arrows</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/bars">Bar plots</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/error_bars">Error bars</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/histograms">Histograms</a></div></li>
@@ -92,9 +95,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/scatter">Scatter</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/spirals">Spirals</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/proj_examples">GMT Map Projections</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/proj_examples">GMT Map Projections</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-7" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-7"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials">Tutorials</a></div></li>
@@ -106,7 +109,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmean">blockmean</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmedian">blockmedian</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/blockmode">blockmode</a></div></li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/coast">nothing</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/coast">coast</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/color">Setting color</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/colorbar">colorbar</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/common_opts">frame</a></div></li>
@@ -179,7 +182,7 @@
 <ul>
 <li><p><strong>C</strong> or <strong>color</strong> or <strong>cmap</strong> : – <em>color&#61;cpt</em><br /> Where <em>cpt</em> is a <em>GMTcpt</em> type or a cpt file name &#40;for <em>grd&#95;z</em> only&#41;. Alternatively, supply the name of  a GMT color master dynamic CPT &#91;jet&#93; to automatically determine a continuous CPT from the grid&#39;s z-range;  you may round up/down the z-range by adding <strong>&#43;i</strong> <em>zinc</em>. Yet another option is to specify  <em>color&#61;&quot;color1,color2 &#91;,color3 ,...&#93;&quot;</em> or <em>color&#61;&#40;&#40;r1,g1,b1&#41;,&#40;r2,g2,b2&#41;,...&#41;</em> to build a linear continuous  CPT from those colors automatically. In this case <em>color1</em> etc can be a &#40;r,g,b&#41; triplet, a color name, or  an HTML hexadecimal color &#40;e.g. #aabbcc &#41; &#40;see <a href="/GMTjl_doc/documentation/color/index.html#setting_color">Setting color</a>&#41;. When not explicitly set, but a  color map is needed, we will either use the current color map, if available &#40;set by a previous call to  <em>makecpt</em>&#41;, or the default <em>jet</em> color map.</p>
 </li>
-<li><p><strong>coast</strong> : – <em>coast&#61;true</em> <strong>|</strong> <em>coast&#61;&#40;...&#41;</em><br /> Call the <a href="#">coast</a> module to overlay coastlines and/or countries. The short form <em>coast&#61;true</em> just  plots the coastlines with a black, 0.5p thickness line. To access all options available in the <em>coast</em>  module passe them in the named tuple &#40;...&#41;.</p>
+<li><p><strong>coast</strong> : – <em>coast&#61;true</em> <strong>|</strong> <em>coast&#61;&#40;...&#41;</em><br /> Call the <a href="/GMTjl_doc/documentation/coast/index.html#coast">coast</a> module to overlay coastlines and/or countries. The short form <em>coast&#61;true</em> just  plots the coastlines with a black, 0.5p thickness line. To access all options available in the <em>coast</em>  module passe them in the named tuple &#40;...&#41;.</p>
 </li>
 <li><p><strong>colorbar</strong> : – <em>colorbar&#61;true</em> <strong>|</strong> <em>colorbar&#61;&#40;...&#41;</em><br /> Call the <a href="/GMTjl_doc/documentation/colorbar/index.html#colorbar">colorbar</a> module to add a colorbar. The short form <em>colorbar&#61;true</em> automatically adds a  color bar on the right side of the image using the current color map stored in the global scope. To  access all options available in the <em>colorbar</em> module passe them in the named tuple &#40;...&#41;.</p>
 </li>
