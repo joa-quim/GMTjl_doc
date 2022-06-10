@@ -90,7 +90,7 @@ Optional Arguments
 
 - **G** or **fill** : -- *fill=color* | *fill=(fill=color, pen=pen)*\
     Set the canvas color or fill before plotting commences [none]. Optionally, append **pen=pen** to draw the canvas
-    outline with *pen* [no outline]. See [Setting color](@ref) and [Pen attributes](@ref) for extend color and pen selections.
+    outline with *pen* [no outline]. See \myreflink{Setting color} and \myreflink{Pen attributes} for extend color and pen selections.
 
 - **H** or **scale** : -- *scale=factor*\
     Given the finite dots-per-unit used to rasterize *PostScript* frames to PNGs, the quantizing of features

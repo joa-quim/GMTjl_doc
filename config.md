@@ -21,6 +21,7 @@ website_title = "Franklin Template"
 website_descr = "Example website using Franklin"
 prepath = get(ENV, "PREVIEW_FRANKLIN_PREPATH", "")
 website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "fct-gmt.ualg.pt")
+prepath = "GMTjl_doc"
 +++
 
 <!--

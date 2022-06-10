@@ -14,7 +14,7 @@ node and assigning them a gray-shade (or color) based on the z-value. Alternativ
 2-D grid files with the red, green, and blue components directly (all must be in the 0-255 range). Optionally,
 illumination may be added by providing a file with intensities in the (-1,+1) range or instructions to derive
 intensities from the input data grid. Values outside this range will be clipped. Such intensity files can be
-created from the grid using [grdgradient](@ref) and, optionally, modified by [grdhisteq](@ref). A third
+created from the grid using \myreflink{grdgradient} and, optionally, modified by \myreflink{grdhisteq}. A third
 alternative is available when GMT is build with GDAL support. Pass *img* which can be an image file
 (geo-referenced or not). In this case the images can optionally be illuminated with the file provided via the
 **shade** option. Here, if image has no coordinates then those of the intensity file will be used.
@@ -131,6 +131,6 @@ To make a map of the global bathymetry (automatically download it if needed) usi
 add coast lines and a color bar, do:
 
 ```julia
-    grdimage("@earth_relief_20m.grd", proj=:Winkel, colorbar=true,
-             coast=true, show=true)
+grdimage("@earth_relief_20m.grd", proj=:Winkel, colorbar=true,
+         coast=true, show=true)
 ```
