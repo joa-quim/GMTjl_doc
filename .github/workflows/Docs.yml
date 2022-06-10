@@ -41,14 +41,19 @@ jobs:
     - name: Install Ghostscript (Windows)
       run: >
         choco install ghostscript
-    - name: Build and deploy docs
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: >
-          julia --color=yes makedocs.jl
-    - name: Upload site as artifact
-      uses: actions/upload-artifact@v2
+    - run: julia -e '
+            using Pkg;
+            Pkg.add(Pkg.PackageSpec(name="NodeJS"));
+            using NodeJS;
+            run(`$(npm_cmd()) install lunr`);
+            run(`$(npm_cmd()) install cheerio`);
+            Pkg.add(Pkg.PackageSpec(name="Franklin", rev="master"));
+            using Franklin;
+            Pkg.activate("."); Pkg.instantiate();
+            serve(single=true, cleanup=false); lunr(); optimize(minify=false, prerender=false);
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        name: Docs build
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        path: ./__site
+        FOLDER: ./__site
