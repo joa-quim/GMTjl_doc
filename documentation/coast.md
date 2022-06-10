@@ -1,4 +1,4 @@
-# coast
+<!-- # coast
 
 ```julia
 coast(cmd0::String=""; kwargs...)
@@ -27,7 +27,7 @@ Required Arguments
 [//]: # \textinput{common_opts/opt_J}
 
 - **R** or *region* or *limits* -- *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
-   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more 
+   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more
    Specify the region of interest. More at \myreflink{limits}
 [//]: # \textinput{common_opts/opt_R}
 
@@ -132,4 +132,4 @@ To plot Great Britain, Italy, and France in blue with a red outline and Spain, P
 ```julia
 coast(proj=:Mercator, DCW=((country="GB,IT,FR", fill=:blue, pen=(0.25,:red)),
                            (country="ES,PT,GR", fill=:yellow)), show=true)
-```
+``` -->
