@@ -1,4 +1,4 @@
-<!-- # coast
+# coast
 
 ```julia
 coast(cmd0::String=""; kwargs...)
@@ -23,11 +23,11 @@ Required Arguments
 ------------------
 
 - **J** or *proj* -- *proj=<parameters>*\
-   Select map projection. More at \myreflink{proj}
+   Select map projection. More at
 [//]: # \textinput{common_opts/opt_J}
 
 - **R** or *region* or *limits* -- *limits=(xmin, xmax, ymin, ymax)* **|** *limits=(BB=(xmin, xmax, ymin, ymax),)*
-   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more
+   **|** *limits=(LLUR=(xmin, xmax, ymin, ymax),units="unit")* **|** ...more 
    Specify the region of interest. More at \myreflink{limits}
 [//]: # \textinput{common_opts/opt_R}
 
@@ -52,7 +52,7 @@ Optional Arguments
    Select painting country polygons from the Digital Chart of the World. This is another dataset independent of GSHHG and hence the **area** and **resolution** options do not apply. **DCW="+l"** just list the countries and their codes [plotting takes place] and **DCW="+L"** shows states/territories for Argentina, Australia, Brazil, Canada, and the US. *country* or **name=code(s)**, where **code(s)** is a one or more comma-separated countries using the 2-character ISO 3166-1 alpha-2 convention. To select a state of a country (if available), append .state, e.g, US.TX for Texas. To specify a whole continent, use **continent=code**, with continent codes AF (Africa),AN (Antarctica), AS (Asia), EU (Europe), OC (Oceania), NA (North America), or SA (South America). Use **pen=pen** (see \myreflink{Pen attributes}) to draw polygon outlines and **fill=fill** (see \myreflink{Fill color/pattern}) to fill them [default is no fill]. At least one of these must be specified unless **dump** is in effect, in which case only one **DCW** option can be given. It is also possible to specify the parameters using simple Tuples. For example: **DCW=("PT", (0.5,"red","--"), "blue")** plots the polygon *PT* with a 0.5p red dashed line and filled with blue and **DCW=:PT** uses a default pen of 0.5. **DCW=(:PT, :blue)** fills with blue. You may repeat **DCW** to give different groups of items their own *pen/fill* settings. However, since we cannot repeat a keyword, the solution to setting different groupes is to use a tuple of tuples. An example would be *DCW=((country=:PT, pen=(2,:red), fill=:blue), (country=:ES, pen=(2,:blue)) )*. If neither **proj** nor **dump** are set then we just print the **region**.
 
 - **F** or *box* : -- *box=(clearance=gap, pen=pen, fill=fill, inner=(gap,pen), rounded=xx, shaded=(dx,dy[,shade]))*\
-   Without further options, draws a rectangular border around the map scale or rose using [MAP\_FRAME\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-pen); specify a different pen with **pen=new\_pen**. Add ``fill=fill_value`` to fill the logo box [no fill]. Append **clearance=gap** where **gap** is either a scalar, or tuples with *(xgap, ygap)*, or *(lgap,rgap,bgap,tgap*) where these items are uniform, separate in x- and y-direction, or individual side spacings between logo and border. Append ``inner`` to draw a secondary, inner border as well. We use a uniform **gap** between borders of **2p** and the [MAP\_DEFAULT\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-default-pen) unless other values are specified. Append **rounded=6** to draw rounded rectangular borders instead, with a **6p** corner radius. You can override this radius by appending another value. Finally, append **shaded=(dx,dy[,shade])** to draw an offset background shaded region. Here, **dx,dy** indicates the shift relative to the foreground frame [**4p,4p**] and **shade** sets the fill style to use for shading [gray50]. Requires **map\_scale** or **rose**.  If both **map\_scale** or **rose**, you may repeat **box** after each of these but remember to put repeated settings inside a tuple of tuples.
+   Without further options, draws a rectangular border around the map scale or rose using [MAP\_FRAME\_PEN](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-frame-pen); specify a different pen with **pen=new\_pen**. Add ``fill=fill_value`` to fill the logo box [no fill]. Append **clearance=gap** where **gap** is either a scalar, or tuples with *(xgap, ygap)*, or *(lgap,rgap,bgap,tgap*) where these items are uniform, separate in x- and y-direction, or individual side spacings between logo and border. Append ``inner`` to draw a secondary, inner border as well. We use a uniform **gap** between borders of **2p** and the [MAP\_DEFAULT\_PEN](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-default-pen) unless other values are specified. Append **rounded=6** to draw rounded rectangular borders instead, with a **6p** corner radius. You can override this radius by appending another value. Finally, append **shaded=(dx,dy[,shade])** to draw an offset background shaded region. Here, **dx,dy** indicates the shift relative to the foreground frame [**4p,4p**] and **shade** sets the fill style to use for shading [gray50]. Requires **map\_scale** or **rose**.  If both **map\_scale** or **rose**, you may repeat **box** after each of these but remember to put repeated settings inside a tuple of tuples.
 
 - **G** or *land* : -- *land=fill*\
    Select filling (see \myreflink{Fill color/pattern}) "dry" areas. Append the shade, color, or pattern.
@@ -132,4 +132,4 @@ To plot Great Britain, Italy, and France in blue with a red outline and Spain, P
 ```julia
 coast(proj=:Mercator, DCW=((country="GB,IT,FR", fill=:blue, pen=(0.25,:red)),
                            (country="ES,PT,GR", fill=:yellow)), show=true)
-``` -->
+```
