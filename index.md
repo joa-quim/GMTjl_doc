@@ -59,6 +59,17 @@ using GMT
 @@box-container
 
   @@box
+    ~~~<a class="boxlink" href="examples/frames/">~~~
+    @@title Frames Layout @@
+    @@box-content
+      ~~~
+      <img src="/assets/GMT_Defaults_1a.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
     ~~~<a class="boxlink" href="examples/plotting_functions/">~~~
     @@title Plot Examples @@
     @@box-content
