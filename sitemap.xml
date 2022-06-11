@@ -32,6 +32,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/rectangles/index.html</loc>
+    <lastmod>2022-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/documentation/grdgradient/index.html</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -411,6 +417,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/colorbar/index.html</loc>
+    <lastmod>2022-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/frames/frames/index.html</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

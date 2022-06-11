@@ -91,6 +91,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/histograms">Histograms</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/lines">Line plots</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/plotyy">Plotyy</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/rectangles">Draw rectangles</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/scatter">Scatter</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/spirals">Spirals</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/symbols">Symbols</a></div></li>
@@ -98,6 +99,8 @@
 <li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/proj_examples">GMT Map Projections</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-7" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-7"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-8" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-8"><i class="docs-chevron"></i></label><span ></span></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/frames/frames">Draw Frames</a></div></li>
 </ul></li>
 </ul></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials">Tutorials</a></div></li>
@@ -1726,23 +1729,23 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.destroy</code> is a <code>Function</code>.</p>
 <pre><code># 17 methods for generic function &quot;destroy&quot;:
-&#91;1&#93; destroy&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1029
+&#91;1&#93; destroy&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1073
 &#91;2&#93; destroy&#40;band::GMT.Gdal.IRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1042
-&#91;3&#93; destroy&#40;band::GMT.Gdal.AbstractRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1038
-&#91;4&#93; destroy&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:873
-&#91;5&#93; destroy&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1025
-&#91;6&#93; destroy&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1073
-&#91;7&#93; destroy&#40;fielddefn::GMT.Gdal.FieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1078
-&#91;8&#93; destroy&#40;fielddefn::GMT.Gdal.IFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1091
-&#91;9&#93; destroy&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1062
-&#91;10&#93; destroy&#40;layer::GMT.Gdal.IFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1052
-&#91;11&#93; destroy&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1048
-&#91;12&#93; destroy&#40;featuredefn::GMT.Gdal.IFeatureDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1058
-&#91;13&#93; destroy&#40;geomdefn::GMT.Gdal.GeomFieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1084
-&#91;14&#93; destroy&#40;featuredefn::GMT.Gdal.FeatureDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1067
-&#91;15&#93; destroy&#40;geomdefn::GMT.Gdal.IGeomFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1096
-&#91;16&#93; destroy&#40;obj::GMT.Gdal.CoordTransform&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1033
-&#91;17&#93; destroy&#40;drv::GMT.Gdal.Driver&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1021</code></pre>
+&#91;3&#93; destroy&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1025
+&#91;4&#93; destroy&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1029
+&#91;5&#93; destroy&#40;band::GMT.Gdal.AbstractRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1038
+&#91;6&#93; destroy&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:873
+&#91;7&#93; destroy&#40;featuredefn::GMT.Gdal.FeatureDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1067
+&#91;8&#93; destroy&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1062
+&#91;9&#93; destroy&#40;geomdefn::GMT.Gdal.GeomFieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1084
+&#91;10&#93; destroy&#40;featuredefn::GMT.Gdal.IFeatureDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1058
+&#91;11&#93; destroy&#40;drv::GMT.Gdal.Driver&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1021
+&#91;12&#93; destroy&#40;layer::GMT.Gdal.IFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1052
+&#91;13&#93; destroy&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1048
+&#91;14&#93; destroy&#40;geomdefn::GMT.Gdal.IGeomFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1096
+&#91;15&#93; destroy&#40;obj::GMT.Gdal.CoordTransform&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1033
+&#91;16&#93; destroy&#40;fielddefn::GMT.Gdal.IFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1091
+&#91;17&#93; destroy&#40;fielddefn::GMT.Gdal.FieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/q2JlU/src/gdal.jl:1078</code></pre>
 </div>
 </div>
 <div class="docstring">
