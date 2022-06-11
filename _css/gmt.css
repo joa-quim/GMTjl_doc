@@ -687,7 +687,7 @@ input.collapse-toggle {
 .banner-container {
     margin-bottom: -1em;
     margin-top: 1em;
-    #background: url("../assets/bannermesh_gradient.png");
+    background: url("../assets/GMTjl_banner.png");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -696,7 +696,7 @@ input.collapse-toggle {
 
 @media (min-width: 800px) {
     .banner-container {
-        padding-top: 19.25%;
+        padding-top: 34.0%;
         margin-bottom: 1em;
     }
 }
