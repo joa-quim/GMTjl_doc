@@ -92,6 +92,17 @@ using GMT
   @@
 
   @@box
+    ~~~<a class="boxlink" href="examples/images/">~~~
+    @@title The world of images @@
+    @@box-content
+      ~~~
+      <img src="/assets/flower.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
     ~~~<a class="boxlink" href="examples/art/">~~~
     @@title Art Examples @@
     @@box-content
