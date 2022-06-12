@@ -8,12 +8,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/projections/hello/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>fct-gmt.ualg.pt/documentation/justify/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -57,12 +51,6 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/grdgradient/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/projections/proj_examples/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -284,7 +272,19 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/projections/01_hello/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/projections/02_proj_examples/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

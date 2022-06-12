@@ -34,7 +34,7 @@
 </style>
 <![endif]-->
 
-   <title>Hello World</title>  
+   <title>The true Hello World</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -101,12 +101,12 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/spirals">Spirals</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/symbols">Symbols</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-8" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-8"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
-<li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/projections/hello">Hello World</a></div><ul class="page-content">
-<li><a href="#hello_world">Hello World</a></li>
+<li><input class="collapse-toggle" id="menuitem-2-8" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-8"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/projections">Projections</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/projections/01_hello">The true Hello World</a></div><ul class="page-content">
+<li><a href="#the_true_hello_world">The true Hello World</a></li>
 </ul>
 </li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/proj_examples">GMT Map Projections</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-9" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-9"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
@@ -164,7 +164,7 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="hello_world"><a href="#hello_world" class="header-anchor">Hello World</a></h1>
+<div class="franklin-content"><h1 id="the_true_hello_world"><a href="#the_true_hello_world" class="header-anchor">The true Hello World</a></h1>
 <pre><code class="language-julia">using GMT
 x &#61; GMT.linspace&#40;0, 2pi, 180&#41;;	y &#61; sin.&#40;x/0.2&#41;*45;
 coast&#40;region&#61;:global, proj&#61;&#40;name&#61;:ortho, center&#61;&#40;300,15&#41;&#41;, frame&#61;:g,
@@ -173,7 +173,7 @@ plot&#33;&#40;x*60, y, lw&#61;1, lc&#61;:red, marker&#61;:circle, size&#61;0.2,
       markeredgecolor&#61;0, markerfacecolor&#61;:cyan&#41;</code></pre></p>
 <p>
 <a id="example_8881433263149014887">
- <img src="/GMTjl_doc/assets/examples/projections/hello/code/output/example_8881433263149014887.png" alt=""> 
+ <img src="/GMTjl_doc/assets/examples/projections/01_hello/code/output/example_8881433263149014887.png" alt=""> 
 </a>
 
 <div class="page-foot">
