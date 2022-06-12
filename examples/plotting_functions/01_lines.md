@@ -124,7 +124,7 @@ Plot a skier on a sinusoid.
 using GMT
 x = linspace(0,2π,50);
 #plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
-plot(x, sin.(x), linestyle="Line&I am sinning&")
 #GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
+plot(x, sin.(x), linestyle="Line&I am sinning&")
 ```
 \end{examplefig}
