@@ -1,7 +1,8 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.3.0
-B	afg+tCassini cylindrical
+B	afg+tCassini cylindrical
 J	C
+J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs+width=14c/0
 JA	A280/30/14c
 JB	B125/20/25/45/14c
 JC	C8.75/40/14c
@@ -35,7 +36,7 @@ JZ	Z1
 Jz	z1i
 R	7:30/38:30/10:30/41:30r
 X	2.6664
-Y	7
+Y	0.25
 Z	Z
 p	135/30
 @G	0.5 0.5
