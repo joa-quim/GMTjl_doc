@@ -80,6 +80,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/images/grdimage/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/documentation/arrows_control/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -195,12 +201,6 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/modules/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/images/04_grdview/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -327,12 +327,6 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/contours/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/images/01_grdimage/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

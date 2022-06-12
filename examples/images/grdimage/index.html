@@ -85,11 +85,11 @@
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/frames">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/frames/frames">Draw Frames</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/01_grdimage">Color images</a></div><ul class="page-content">
+<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/grdimage">Color images</a></div><ul class="page-content">
 <li><a href="#color_images">Color images</a></li>
+<li><a href="#perspective_view">Perspective view</a></li>
 </ul>
 </li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/04_grdview">Perspective view</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/misc">Misc</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/buffer">Geodesic buffers</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/gadm">GADM</a></div></li>
@@ -174,7 +174,18 @@ colorbar&#33;&#40;pos&#61;&#40;outside&#61;:TC,length&#61;&#40;12.5,0.6&#41;, ho
           color&#61;topo, frame&#61;&#40;ylabel&#61;:m,&#41;&#41;</code></pre></p>
 <p>
 <a id="example_18085740280087455450">
- <img src="/GMTjl_doc/assets/examples/images/01_grdimage/code/output/example_18085740280087455450.png" alt=""> 
+ <img src="/GMTjl_doc/assets/examples/images/grdimage/code/output/example_18085740280087455450.png" alt=""> 
+</a>
+
+<h2 id="perspective_view"><a href="#perspective_view" class="header-anchor">Perspective view</a></h2>
+<p>We will make a perspective, color-coded view of the US Rockies from the southeast.</p>
+<pre><code class="language-julia">using GMT
+topo &#61; makecpt&#40;color&#61;:rainbow, range&#61;&#40;1000,5000,500&#41;, continuous&#61;true&#41;;
+grdview&#40;&quot;@tut_relief.nc&quot;, proj&#61;:Mercator, zsize&#61;1, shade&#61;&#40;azim&#61;100, norm&#61;&quot;e0.8&quot;&#41;, view&#61;&#40;135,30&#41;,
+        frame&#61;:a, Q&#61;&quot;i100&quot;&#41;</code></pre></p>
+<p>
+<a id="example_811868211093930195">
+ <img src="/GMTjl_doc/assets/examples/images/grdimage/code/output/example_811868211093930195.png" alt=""> 
 </a>
 
 <div class="page-foot">

@@ -32,13 +32,13 @@ JW	W14c
 JX	X0.001c
 Jx	x2.5
 JY	Y35/30/14c
-JZ	Z6c
+JZ	Z1
 Jz	z1i
 R	0/6/0/3
 X	2.6664
 Y	0.25
 Z	Z
-p	200/30
+p	135/30
 @G	1 1
 @L	5
 END
