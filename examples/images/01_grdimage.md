@@ -1,4 +1,4 @@
-## Color images
+# Color images
 
 Color images are made with ``grdimage`` which takes the usual common options and a color map.
 It operates over grids or images. The next example shows how to create a color appropriate for
