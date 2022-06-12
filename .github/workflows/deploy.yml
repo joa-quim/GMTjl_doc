@@ -21,8 +21,8 @@ jobs:
         version: '1'
 
     # GMT + ghostscript deps
-    #- run: brew install ghostscript gmt
-    #- run: echo $(gmt --version)
+    - run: brew install ghostscript gmt
+    - run: echo $(gmt --version)
 
     #- name: Install Ghostscript (Windows)
       #run: >
