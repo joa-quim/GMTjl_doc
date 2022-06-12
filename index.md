@@ -96,18 +96,7 @@ using GMT
     @@title The world of images @@
     @@box-content
       ~~~
-      <img src="/assets/flower.png">
-      ~~~
-    @@
-    ~~~</a>~~~
-  @@
-
-  @@box
-    ~~~<a class="boxlink" href="examples/art/">~~~
-    @@title Art Examples @@
-    @@box-content
-      ~~~
-      <img src="/assets/flower.png">
+      <img src="/assets/ex04.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -150,6 +139,20 @@ using GMT
     ~~~<a class="boxlink" href="examples/misc/">~~~
     @@title Misc Examples @@
     @@box-content
+      ~~~
+      <img src="/assets/buffer3.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+  
+  @@box
+    ~~~<a class="boxlink" href="examples/art/">~~~
+    @@title Art Examples @@
+    @@box-content
+      ~~~
+      <img src="/assets/flower.png">
+      ~~~
     @@
     ~~~</a>~~~
   @@
