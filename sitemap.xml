@@ -80,12 +80,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/images/grdimage/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>fct-gmt.ualg.pt/documentation/arrows_control/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -111,6 +105,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/ternary/ternary_examples/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/04_scatter/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -182,7 +182,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/plotting_functions/bars/index.html</loc>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/03_bars/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -195,6 +195,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/modules/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/images/04_grdview/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -260,6 +266,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/02_plotyy/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -320,6 +332,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/images/01_grdimage/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/art/art_examples/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -345,6 +363,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/frames/index.html</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/01_lines/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -386,18 +410,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/plotting_functions/lines/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/plotting_functions/scatter/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>fct-gmt.ualg.pt/documentation/blockmean/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -405,12 +417,6 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/search/index.html</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/plotting_functions/plotyy/index.html</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
