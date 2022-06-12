@@ -1,4 +1,4 @@
-# Draw rectangles
+# Patterns & trasparency
 
 ### Simple filled rectangle
 
