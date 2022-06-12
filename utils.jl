@@ -132,6 +132,7 @@ function env_examplefig(com, _)
     showfig(show=false)     # hide
     fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
     gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
+    GMT.current_cpt[1] = GMT.GMTcpt()   # hide
     mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
  
     nothing # hide
