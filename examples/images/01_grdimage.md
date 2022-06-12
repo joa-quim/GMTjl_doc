@@ -1,4 +1,4 @@
-## Color images
+# Color images
 
 Color images are made with ``grdimage`` which takes the usual common options and a color map.
 It operates over grids or images. The next example shows how to create a color appropriate for
@@ -15,5 +15,17 @@ topo = makecpt(color=:rainbow, range=(1000,5000,500), continuous=true);
 grdimage("@tut_relief.nc", shade=(azimuth=100, norm="e0.8"), proj=:Mercator, frame=:a, color=topo)
 colorbar!(pos=(outside=:TC,length=(12.5,0.6), horizontal=true, offset=(0,1.0)),
           color=topo, frame=(ylabel=:m,))
+```
+\end{examplefig}
+
+## A global bathymetry
+
+Make a map of the global bathymetry (automatically download it if needed) using the Winkel projection,
+add coast lines and a color bar
+
+\begin{examplefig}{}
+```julia
+using GMT
+grdimage("@earth_relief_20m.grd", proj=:Winkel, colorbar=true, coast=true)
 ```
 \end{examplefig}

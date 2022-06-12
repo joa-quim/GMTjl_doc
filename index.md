@@ -160,8 +160,6 @@ using GMT
 @@
 
 
-
-
 ## Getting Help
 
 1. Use the REPL `?` help mode.
