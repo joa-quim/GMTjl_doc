@@ -49,7 +49,7 @@
 
                 <ul class="visible-links">
                     <li class="masthead__menu-item">
-                        <a href="https://www.generic-mapping-tools.org/GMT.jl"><img src="/GMTjl_doc/assets/GitHub-Mark-64px.png" class="masthead-icon" /></a>
+                        <a href="https://github.com/joa-quim/GMTjl_doc"><img src="/GMTjl_doc/assets/GitHub-Mark-64px.png" class="masthead-icon" /></a>
                     </li>
                     <li class="masthead__menu-item"><a href="/GMTjl_doc/examples/">Examples</a></li>
                     <li class="masthead__menu-item"><a href="/GMTjl_doc/tutorials/">Tutorials</a></li>
@@ -85,7 +85,10 @@
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/frames">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/frames/frames">Draw Frames</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/grdimage">Color images</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/01_grdimage">Color images</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/02_pcolor">Pcolor</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/03_triplot">Triplot</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/04_grdview">Perspective view</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/misc">Misc</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/buffer">Geodesic buffers</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/gadm">GADM</a></div></li>
@@ -273,11 +276,12 @@ lines&#40;x,y, region&#61;&#40;-4,7,-5.5,2.5&#41;, lw&#61;2, lc&#61;:sienna,
 <h3 id="how_to_sin"><a href="#how_to_sin" class="header-anchor">How to sin</a></h3>
 <pre><code class="language-julia">using GMT
 x &#61; linspace&#40;0,2π,50&#41;;
-plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;, theme&#61;&#40;&quot;A2GraphDark&quot;&#41;&#41;
-#plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;&#41;</code></pre></p>
+#plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;, theme&#61;&#40;&quot;A2GraphDark&quot;&#41;&#41;
+#GMT.theme_modern&#40;&#41;      # Need this to reset the theme untill a more elegant solution is implemented
+plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;&#41;</code></pre></p>
 <p>
-<a id="example_2759625702993944508">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_2759625702993944508.png" alt=""> 
+<a id="example_6784676844636227723">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_6784676844636227723.png" alt=""> 
 </a>
 
 <div class="page-foot">
@@ -297,7 +301,7 @@ plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot
           <div class="page__footer-follow">
             <ul class="social-icons">
               <li><a href="https://twitter.com/gmt_dev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-              <li><a href="https://www.generic-mapping-tools.org/GMT.jl" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+              <li><a href="https://github.com/GenericMappingTools/GMT.jl" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
             </ul>
           </div>
           <div class="page__footer-copyright">&copy; GMT.jl. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>

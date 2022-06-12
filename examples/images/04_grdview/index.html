@@ -34,7 +34,7 @@
 </style>
 <![endif]-->
 
-   <title>Color images</title>  
+   <title>Perspective view</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -49,7 +49,7 @@
 
                 <ul class="visible-links">
                     <li class="masthead__menu-item">
-                        <a href="https://www.generic-mapping-tools.org/GMT.jl"><img src="/GMTjl_doc/assets/GitHub-Mark-64px.png" class="masthead-icon" /></a>
+                        <a href="https://github.com/joa-quim/GMTjl_doc"><img src="/GMTjl_doc/assets/GitHub-Mark-64px.png" class="masthead-icon" /></a>
                     </li>
                     <li class="masthead__menu-item"><a href="/GMTjl_doc/examples/">Examples</a></li>
                     <li class="masthead__menu-item"><a href="/GMTjl_doc/tutorials/">Tutorials</a></li>
@@ -85,8 +85,10 @@
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/frames">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/frames/frames">Draw Frames</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/grdimage">Color images</a></div><ul class="page-content">
-<li><a href="#color_images">Color images</a></li>
+<li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-5"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/01_grdimage">Color images</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/02_pcolor">Pcolor</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/03_triplot">Triplot</a></div></li>
+<li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/04_grdview">Perspective view</a></div><ul class="page-content">
 <li><a href="#perspective_view">Perspective view</a></li>
 </ul>
 </li>
@@ -165,19 +167,7 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h2 id="color_images"><a href="#color_images" class="header-anchor">Color images</a></h2>
-<p>Color images are made with <code>grdimage</code> which takes the usual common options and a color map. It operates over grids or images. The next example shows how to create a color appropriate for the grid&#39;s <em>z</em> range, plot the image and add a color scale. We use here the <code>data</code> keyword to tell the program to load the grid from a file. The <code>@</code> before the <em>tut_relief.nc</em> file name instructs GMT to download the file from its server on the first usage and save it in a cache dir. See the <a href="http://docs.generic-mapping-tools.org/latest/GMT_Tutorial.html#color-images"><code>GMT tuturial</code></a> for more details about what the arguments mean.</p>
-<pre><code class="language-julia">using GMT
-topo &#61; makecpt&#40;color&#61;:rainbow, range&#61;&#40;1000,5000,500&#41;, continuous&#61;true&#41;;
-grdimage&#40;&quot;@tut_relief.nc&quot;, shade&#61;&#40;azimuth&#61;100, norm&#61;&quot;e0.8&quot;&#41;, proj&#61;:Mercator, frame&#61;:a, color&#61;topo&#41;
-colorbar&#33;&#40;pos&#61;&#40;outside&#61;:TC,length&#61;&#40;12.5,0.6&#41;, horizontal&#61;true, offset&#61;&#40;0,1.0&#41;&#41;,
-          color&#61;topo, frame&#61;&#40;ylabel&#61;:m,&#41;&#41;</code></pre></p>
-<p>
-<a id="example_18085740280087455450">
- <img src="/GMTjl_doc/assets/examples/images/grdimage/code/output/example_18085740280087455450.png" alt=""> 
-</a>
-
-<h2 id="perspective_view"><a href="#perspective_view" class="header-anchor">Perspective view</a></h2>
+<div class="franklin-content"><h2 id="perspective_view"><a href="#perspective_view" class="header-anchor">Perspective view</a></h2>
 <p>We will make a perspective, color-coded view of the US Rockies from the southeast.</p>
 <pre><code class="language-julia">using GMT
 topo &#61; makecpt&#40;color&#61;:rainbow, range&#61;&#40;1000,5000,500&#41;, continuous&#61;true&#41;;
@@ -185,7 +175,7 @@ grdview&#40;&quot;@tut_relief.nc&quot;, proj&#61;:Mercator, zsize&#61;1, shade&#
         frame&#61;:a, Q&#61;&quot;i100&quot;&#41;</code></pre></p>
 <p>
 <a id="example_811868211093930195">
- <img src="/GMTjl_doc/assets/examples/images/grdimage/code/output/example_811868211093930195.png" alt=""> 
+ <img src="/GMTjl_doc/assets/examples/images/04_grdview/code/output/example_811868211093930195.png" alt=""> 
 </a>
 
 <div class="page-foot">
@@ -205,7 +195,7 @@ grdview&#40;&quot;@tut_relief.nc&quot;, proj&#61;:Mercator, zsize&#61;1, shade&#
           <div class="page__footer-follow">
             <ul class="social-icons">
               <li><a href="https://twitter.com/gmt_dev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-              <li><a href="https://www.generic-mapping-tools.org/GMT.jl" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+              <li><a href="https://github.com/GenericMappingTools/GMT.jl" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
             </ul>
           </div>
           <div class="page__footer-copyright">&copy; GMT.jl. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>

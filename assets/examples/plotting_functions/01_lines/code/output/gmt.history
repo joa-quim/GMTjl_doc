@@ -1,6 +1,6 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.3.0
-B	aWS
+B	afWSen
 J	X
 J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs+width=14c/0
 JA	A280/30/14c
@@ -32,12 +32,12 @@ JW	W14c
 JX	X12/8
 Jx	x2.5
 JY	Y35/30/14c
-JZ	Z1
+JZ	Z6c
 Jz	z1i
 R	20/30/-10/10
 X	2.6664
-Y	0.25
-Z	Z
-p	135/30
+Y	1.7
+Z	z
+p	200/30
 @L	13
 END
