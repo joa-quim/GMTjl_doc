@@ -114,7 +114,7 @@ lines(x,y, region=(-4,7,-5.5,2.5), lw=2, lc=:sienna,
 
 ### The snake skier
 
-Plot a skier on sinusoid. To run this script one need to have the symbol file "ski_alpine.eps"
+Plot a skier on a sinusoid.
 
 
 ### How to sin
@@ -123,7 +123,7 @@ Plot a skier on sinusoid. To run this script one need to have the symbol file "s
 ```julia
 using GMT
 x = linspace(0,2π,50);
-#plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
-plot(x, sin.(x), linestyle="Line&I am sinning&")
+plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
+#plot(x, sin.(x), linestyle="Line&I am sinning&")
 ```
 \end{examplefig}
