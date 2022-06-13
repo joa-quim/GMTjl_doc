@@ -12,9 +12,9 @@ and have a look at what we got
 imshow(Ir)
 ```
 
-~~~ 
-<img src="b4raw.png" width=50% class="center"/>
-~~~
+[//]: # ~~~ <img src="/tutorials/Landsat8/b4raw.png" width=50% class="center"/> ~~~
+
+\figenv{The caption}{/tutorials/Landsat8/b4raw.png}{width:50%;border: 1px solid red;}
 
 
 _Ah, nice ... but it's so dark that we can't really see much!_
@@ -28,7 +28,7 @@ histogram(Ir, auto=true, bin=20, show=true)
 ```
 
 ~~~
-<img src="b4hist.png" width=50% class="center"/>
+<img src="/tutorials/Landsat8/b4hist.png" width=50% class="center"/>
 ~~~
 
 We have used here the option **auto**=*true* that will try to guess where the data in histogram plot starts and ~ ends. It did behave well and we will use those numbers to do an operation that is called *histogram stretch* that consists in picking only part of the histogram and stretch it to [0 255]. Note that in fact we have data to the 40000 DN (Digital Number) but they are very few and at the end we must choose a balance to show *almost all* DNs and not making the image too dark.
@@ -38,7 +38,7 @@ imshow(I, stretch=[6000 23800])
 ```
 
 ~~~
-<img src="b4stretched.png" width=50% class="center"/>
+<img src="/tutorials/Landsat8/b4stretched.png" width=50% class="center"/>
 ~~~
 
 Now that we feel confident with the auto-stretching algorithm we can create a true color image. True color images
@@ -61,7 +61,7 @@ Irgb = truecolor(Ir, Ig, Ib);
 ```
 
 ~~~
-<img src="truecolor.png" width=50% class="center"/>
+<img src="/tutorials/Landsat8/truecolor.png" width=50% class="center"/>
 ~~~
 
 ---
