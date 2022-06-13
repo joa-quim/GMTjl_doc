@@ -33,4 +33,13 @@ Add here global latex commands to use throughout your pages.
 <!-- myreflink{Basic Tutorial} expands to [Basic Tutorial](link_to_that) -->
 \newcommand{\myreflink}[1]{[!#1](\reflink{!#1})}
 
+\newcommand{\figenv}[3]{
+~~~
+<figure style="text-align:center;">
+<img src="!#2" style="padding:0;#3" alt="#1"/>
+<figcaption>#1</figcaption>
+</figure>
+~~~
+}
+
 \newcommand{\apilink}[1]{[`!#1`](/api/#!#1)}
