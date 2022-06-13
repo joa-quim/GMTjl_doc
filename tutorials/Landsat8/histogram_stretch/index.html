@@ -175,20 +175,23 @@
 <pre><code class="language-julia">Ir &#61; gmtread&#40;&quot;/vsicurl/http://landsat-pds.s3.amazonaws.com/c1/L8/037/034/LC08_L1TP_037034_20160712_20170221_01_T1/LC08_L1TP_037034_20160712_20170221_01_T1_B4.TIF&quot;&#41;;</code></pre>
 <p>and have a look at what we got</p>
 <pre><code class="language-julia">imshow&#40;Ir&#41;</code></pre>
- 
-<img src="b4raw.png" width=50% class="center"/>
-
+<p> 
+<figure style="text-align:center;">
+<img src="/GMTjl_doc/tutorials/Landsat8/b4raw.png" style="padding:0; width:50%;border: 1px solid red;" alt=" The caption"/>
+<figcaption> The caption</figcaption>
+</figure>
+</p>
 <p><em>Ah, nice ... but it&#39;s so dark that we can&#39;t really see much&#33;</em></p>
 <p>Well that is true and has one explanation. Modern satellite data is acquired with sensors of 12 bits or more but the data is stored in variables with 16 bits. This means that many of those data bits will not be used. But on screens we are limited to 8 bits per channel so we must scale the full 16 bits range &#91;0 65535&#93; to the &#91;0 255&#93; interval and in this process we tend to have much more dark pixels.</p>
 <p>To see this better, let&#39;s look at the image&#39;s histogram.</p>
 <pre><code class="language-julia">histogram&#40;Ir, auto&#61;true, bin&#61;20, show&#61;true&#41;</code></pre>
 
-<img src="b4hist.png" width=50% class="center"/>
+<img src="/GMTjl_doc/tutorials/Landsat8/b4hist.png" width=50% class="center"/>
 
 <p>We have used here the option <strong>auto</strong>&#61;<em>true</em> that will try to guess where the data in histogram plot starts and ~ ends. It did behave well and we will use those numbers to do an operation that is called <em>histogram stretch</em> that consists in picking only part of the histogram and stretch it to &#91;0 255&#93;. Note that in fact we have data to the 40000 DN &#40;Digital Number&#41; but they are very few and at the end we must choose a balance to show <em>almost all</em> DNs and not making the image too dark.</p>
 <pre><code class="language-julia">imshow&#40;I, stretch&#61;&#91;6000 23800&#93;&#41;</code></pre>
 
-<img src="b4stretched.png" width=50% class="center"/>
+<img src="/GMTjl_doc/tutorials/Landsat8/b4stretched.png" width=50% class="center"/>
 
 <p>Now that we feel confident with the auto-stretching algorithm we can create a true color image. True color images are obtained by inserting the Landsat8 band 4 in the Red channel, band 3 in Green and band 2 in Blue. Looking at the file name that we downloaded it&#39;s easy to guess that bands &quot;...T1<em>B3.TIF&quot; and &quot;...T1</em>B2.TIF&quot; contain the green and blue channels that we need. So download them &#40;takes a little time&#41;</p>
 <pre><code class="language-julia">Ig &#61; gmtread&#40;&quot;/vsicurl/http://landsat-pds.s3.amazonaws.com/c1/L8/037/034/LC08_L1TP_037034_20160712_20170221_01_T1/LC08_L1TP_037034_20160712_20170221_01_T1_B3.TIF&quot;&#41;;
@@ -198,7 +201,7 @@ Ib &#61; gmtread&#40;&quot;/vsicurl/http://landsat-pds.s3.amazonaws.com/c1/L8/03
 <pre><code class="language-julia">using RemoteS
 Irgb &#61; truecolor&#40;Ir, Ig, Ib&#41;;</code></pre>
 
-<img src="truecolor.png" width=50% class="center"/>
+<img src="/GMTjl_doc/tutorials/Landsat8/truecolor.png" width=50% class="center"/>
 
 <hr />
 <p><em>Download a <a href="histogram_stretch.jl">Pluto Notebook here</a></em></p>
