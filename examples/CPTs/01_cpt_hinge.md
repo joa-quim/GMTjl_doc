@@ -1,6 +1,8 @@
 # Color maps
 
-## Hinges
+## Examples
+
+### Hinges
 
 The CPTs distributed with GMT are dynamic. This means they have several special properties that modify
 the behavior of programs that use them. Dynamic CPTs comes in a few different flavors: Some CPTs were
@@ -31,7 +33,7 @@ text!(text_record([5.7 0.9],["HINGE"]), font=12, justify=:CB)
 
 
 
-## Manipulating
+### Manipulating
 
 There are many ways to turn a master CPT into a custom CPT that works for your particular data range.
 The tools \myreflink{makecpt} and `grd2cpt` allow several types of transformations to take place:
@@ -79,7 +81,7 @@ text!(T, noclip=true, font=14, justify=true)
 \end{examplefig}
 
 
-## Labeled
+### Labeled
 
 Things become a bit more complicated when we want to label the legend with names for certain
 intervals (like geological time periods in the example below). To accomplish that, one should
