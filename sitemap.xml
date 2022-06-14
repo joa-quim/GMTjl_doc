@@ -236,6 +236,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/contours/01_contour_examples/index.html</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/documentation/pens/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -380,12 +386,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/contours/contour_examples/index.html</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>fct-gmt.ualg.pt/examples/frames/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -411,6 +411,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/CPTs/01_cpt_hinge/index.html</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/contours/02_polar_contours/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
