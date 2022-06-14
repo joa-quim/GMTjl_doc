@@ -83,6 +83,17 @@ contourf(d, contours=cpt, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:m
 ```
 \end{examplefig}
 
+### Earth is round and GMT knows it
+
+Creating a periodic 0/360 grid then selecting a central meridian for a contour map.
+
+\begin{examplefig}{}
+```julia
+using GMT
+G = grdmath("-Rg -I5 35 21 SDIST");    # Example grid
+grdcontour(G, region=:global360, proj=(name=:Mollweide, center=35), cont=2000, pen=:thin, frame=:bare, coast=true)
+```
+\end{examplefig}
 
 ### Streamlines
 
