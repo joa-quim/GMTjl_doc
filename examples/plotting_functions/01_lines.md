@@ -119,6 +119,7 @@ Plot a skier on a sinusoid.
 \begin{examplefig}{}
 ```julia
 using GMT
+
 x = GMT.linspace(0, 2pi);  y = cos.(2x)*0.9;
 
 lines(x,y,                           # The data
