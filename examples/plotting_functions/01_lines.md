@@ -116,6 +116,21 @@ lines(x,y, region=(-4,7,-5.5,2.5), lw=2, lc=:sienna,
 
 Plot a skier on a sinusoid.
 
+\begin{examplefig}{}
+```julia
+using GMT
+x = GMT.linspace(0, 2pi);  y = cos.(2x)*0.9;
+
+lines(x,y,                           # The data
+      limits=(0,6.5,-1,2.0),         # Fig limits
+      pen=(lw=7,lc=:sienna, arrow=(len=2.2,shape=:arrow, fill=:darkgreen)),  # The "Snake"
+      figsize=(16,12),               # Fig size
+      title="Double Snake")
+plot!(3.49, 0.97,                    # Coordinates where to plot symbol
+      symbol="kski_alpine/1.7",      # Fill patern file
+      fill=:black)                   # Fill the symbol in black
+```
+\end{examplefig}
 
 ### How to sin
 
