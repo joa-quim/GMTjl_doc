@@ -4,8 +4,8 @@
 
 # Welcome to GMT!
 
-GMT is a data visualization ecosystem for the [Julia](https://julialang.org/) programming language,
-with high performance and extensibility.  It is available for Windows, Mac and Linux.
+GMT is a data processing and visualization package for the [Julia](https://julialang.org/) programming language,
+with high performance and extensibility. It is available for Windows, Mac and Linux.
 
 
 ## Installation and Import
