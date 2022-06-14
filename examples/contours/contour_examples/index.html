@@ -92,6 +92,7 @@
 <li><a href="#colored_contours">Colored contours</a></li>
 <li><a href="#contourf_examples">Contourf examples</a></li>
 <li><a href="#contours_from_xyz">Contours from x,y,z</a></li>
+<li><a href="#streamlines">Streamlines</a></li>
 </ul>
 </ul>
 </ul>
@@ -241,6 +242,21 @@ contourf&#40;d, contours&#61;cpt, limits&#61;&#40;-0.5,9.5,0,5&#41;, pen&#61;0.2
 <p>
 <a id="example_7259724366370723183">
  <img src="/GMTjl_doc/assets/examples/contours/contour_examples/code/output/example_7259724366370723183.png" alt=""> 
+</a>
+
+<h3 id="streamlines"><a href="#streamlines" class="header-anchor">Streamlines</a></h3>
+<pre><code class="language-julia">using GMT
+x,y &#61; GMT.meshgrid&#40;-10:10&#41;;
+u &#61; 2 .* x .* y;
+v &#61; y .^2 - x .^ 2;
+U &#61; mat2grid&#40;u, x&#91;1,:&#93;, y&#91;:,1&#93;&#41;;
+V &#61; mat2grid&#40;v, x&#91;1,:&#93;, y&#91;:,1&#93;&#41;;
+r,a &#61; streamlines&#40;U, V&#41;;
+plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot;arrow&quot;, size&#61;0.3&#41;, fill&#61;:black,
+          dec2&#61;true&#41;, title&#61;&quot;Someone wanted flowlines?&quot;&#41;</code></pre></p>
+<p>
+<a id="example_18265205723826839558">
+ <p><span style="color:red;">// Image matching '/assets/examples/contours/contour_examples/code/example_18265205723826839558.png' not found. //</span></p> 
 </a>
 
 <div class="page-foot">
