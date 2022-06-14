@@ -80,9 +80,12 @@
 <li><input class="collapse-toggle" id="menuitem-2" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples">Examples</a></div><ul><li><input class="collapse-toggle" id="menuitem-2-1" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-1"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/CPTs">Color maps</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/CPTs/01_cpt_hinge">Color maps</a></div><ul class="page-content">
 <li><a href="#color_maps">Color maps</a></li>
 <li><ul>
+<li><a href="#examples">Examples</a></li>
+<li><ul>
 <li><a href="#hinges">Hinges</a></li>
 <li><a href="#manipulating">Manipulating</a></li>
 <li><a href="#labeled">Labeled</a></li>
+</ul>
 </ul>
 </ul>
 </li>
@@ -178,7 +181,8 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="color_maps"><a href="#color_maps" class="header-anchor">Color maps</a></h1>
-<h2 id="hinges"><a href="#hinges" class="header-anchor">Hinges</a></h2>
+<h2 id="examples"><a href="#examples" class="header-anchor">Examples</a></h2>
+<h3 id="hinges"><a href="#hinges" class="header-anchor">Hinges</a></h3>
 <p>The CPTs distributed with GMT are dynamic. This means they have several special properties that modify the behavior of programs that use them. Dynamic CPTs comes in a few different flavors: Some CPTs were designed to behave differently across a <strong>hinge</strong> value &#40;e.g., a CPT designed specifically for topographic relief may include a discontinuity in color across the coastline at z &#61; 0&#41;, and when users select these CPTs they will be stretched to fit the user’s desired data range separately for each side of this <em>hard</em> <strong>hinge</strong>. Basically, a hard hinge CPT is the juxtaposition of two different CPTs joined at the hinge and these sections are stretched independently.</p>
 <p>In the figure bellow the top color bar is a dynamic master CPT &#40;here, globe&#41; with a hard hinge at sea level and a natural range from -10,000 to &#43;10,000 meters. However, our data range is asymmetrical, going from -8,000 meter depths up to &#43;3,000 meter elevations. Because of the hinge, the two sides of the CPT will be stretched separately to honor the desired range while utilizing the full color range.</p>
 <pre><code class="language-julia">using GMT
@@ -195,7 +199,7 @@ text&#33;&#40;text_record&#40;&#91;5.7 0.9&#93;,&#91;&quot;HINGE&quot;&#93;&#41;
  <img src="/GMTjl_doc/assets/examples/CPTs/01_cpt_hinge/code/output/example_7540024690860658477.png" alt=""> 
 </a>
 
-<h2 id="manipulating"><a href="#manipulating" class="header-anchor">Manipulating</a></h2>
+<h3 id="manipulating"><a href="#manipulating" class="header-anchor">Manipulating</a></h3>
 <p>There are many ways to turn a master CPT into a custom CPT that works for your particular data range. The tools <a href="/GMTjl_doc/documentation/makecpt/index.html#makecpt">makecpt</a> and <code>grd2cpt</code> allow several types of transformations to take place:</p>
 <p>Examples of two user CPTs for the range -0.5 to 3 created from the same master. One &#40;left&#41; extracted a subset of the master before scaling while the other &#40;right&#41; used the entire range.</p>
 <pre><code class="language-julia">using GMT
@@ -237,7 +241,7 @@ text&#33;&#40;T, noclip&#61;true, font&#61;14, justify&#61;true&#41;</code></pre
  <img src="/GMTjl_doc/assets/examples/CPTs/01_cpt_hinge/code/output/example_16549074009904310201.png" alt=""> 
 </a>
 
-<h2 id="labeled"><a href="#labeled" class="header-anchor">Labeled</a></h2>
+<h3 id="labeled"><a href="#labeled" class="header-anchor">Labeled</a></h3>
 <p>Things become a bit more complicated when we want to label the legend with names for certain intervals &#40;like geological time periods in the example below&#41;. To accomplish that, one should currently do a hack and add the labels manually in the CGMTcpt fields <code>label</code> and <code>key</code>, and add the <code>equal_size</code> option to the colorbar command that draws the color legend. This option also makes all intervals in the legend of equal length, even it the numerical values are not equally spaced.</p>
 <p>Normally, the name labels are plotted at the lower end of the intervals. But by adding a gap amount &#40;even when zero&#41; to the -L option, they are centered. The example below also shows how to annotate ranges using <code>equal_size&#61;&#40;range&#61;true,&#41;</code> &#40;in which case no name labels should appear in the CPT&#41;, and how to switch the color bar around &#40;by using a negative length&#41;.</p>
 <pre><code class="language-julia">using GMT
