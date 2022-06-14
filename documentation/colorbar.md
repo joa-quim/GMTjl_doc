@@ -66,7 +66,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **zscale** : -- *zscale=true*\
+- **W** or **scale** : -- *scale=true*\
     Multiply all *z*-values in the CPT by the provided *scale*. By default the CPT is used as is.
 
 \textinput{common_opts/opt_X}
