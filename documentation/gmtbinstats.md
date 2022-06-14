@@ -112,14 +112,14 @@ To examine the population inside a circle of 1000 km radius for all nodes in a 5
 using the remote file @capitals.gmt, and plot the resulting grid using default projection and colors, try
 
 ```julia
-    G = gmtbinstats("@capitalas.gmt", a="2=population", region=:global360, inc=5, stats=:sum, search_radiusS="1000k");
-	imshow(G)
+G = gmtbinstats("@capitals.gmt", a="2=population", region=:global360, inc=5, stats=:sum, search_radius="1000k");
+imshow(G)
 ```
 
 Make a hexbin plot with random numbers.
 
 ```julia
-    xy = rand(100,2) .* [5 3];
-    D = binstats(xy, region=(0,5,0,3), inc=1, tiling=:hex, stats=:number);
-    imshow(D, C=C, hexbin=true, ml=0.5, colorbar=true)
+xy = rand(100,2) .* [5 3];
+D = binstats(xy, region=(0,5,0,3), inc=1, tiling=:hex, stats=:number);
+imshow(D, hexbin=true, ml=0.5, colorbar=true)
 ```
