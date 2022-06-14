@@ -1,6 +1,6 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.3.0
-B	sa1Ypa5Df1dS
+B	sxc/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/GMTjl_custom_sx.txtWS
 J	X
 J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs+width=14c/0
 JA	A280/30/14c
@@ -29,15 +29,16 @@ JT	T330/-45/14c
 Jt	t35/0.45
 JV	V14c
 JW	W35/14c
-JX	X12/0.25
+JX	X-12/5
 Jx	x1i
 JY	Y35/30/14c
 JZ	Z6c
 Jz	z1i
-R	2000-12-15T/2001-1-15T/0/1
+R	416/542/0/6.2831852
 X	2.6664
 Y	1.7
 Z	z
 p	200/30
-@L	1
+@G	25 0
+@L	2
 END
