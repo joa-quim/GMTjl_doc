@@ -81,6 +81,17 @@ using GMT
   @@
 
   @@box
+    ~~~<a class="boxlink" href="examples/CPTs/">~~~
+    @@title Color maps @@
+    @@box-content
+      ~~~
+      <img src="/examples/CPTs/GMT_CPTscale.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
     ~~~<a class="boxlink" href="examples/projections/">~~~
     @@title Projections Examples @@
     @@box-content

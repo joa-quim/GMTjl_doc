@@ -182,18 +182,21 @@ To make a continuous CPT from white to blue as z goes from 3 to 10, try
     makecpt(cmap="white,blue", range=(3,10))
 ```
 
-To make a wrapped (cyclic) CPT from the jet table over the interval 0 to 500, i.e., the color will be wrapped every 500
+To make a wrapped (cyclic) CPT from the turbo table over the interval 0 to 500, i.e., the color will be wrapped every 500
 z-units so that we always get a color regardless of the *z* value, try
 
 ```julia
-    makecpt(cmap=:jet, range=(0,500), wrap=:w)
+    makecpt(cmap=:turbo, range=(0,500), wrap=:w)
 ```
 
-To show the ``jet`` color table.
+To show the ``turbo`` color table.
 
+\begin{examplefig}{}
 ```julia
-    imshow(:jet)
+using GMT
+imshow(:turbo, horizontal=true, show=false)
 ```
+\end{examplefig}
 
 Bugs
 ----
