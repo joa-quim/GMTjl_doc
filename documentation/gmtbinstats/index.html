@@ -314,12 +314,12 @@
 
 <h2>Examples</h2>
 <p>To examine the population inside a circle of 1000 km radius for all nodes in a 5x5 arc degree grid, using the remote file @capitals.gmt, and plot the resulting grid using default projection and colors, try</p>
-<pre><code class="language-julia">G &#61; gmtbinstats&#40;&quot;@capitalas.gmt&quot;, a&#61;&quot;2&#61;population&quot;, region&#61;:global360, inc&#61;5, stats&#61;:sum, search_radiusS&#61;&quot;1000k&quot;&#41;;
-	imshow&#40;G&#41;</code></pre>
+<pre><code class="language-julia">G &#61; gmtbinstats&#40;&quot;@capitals.gmt&quot;, a&#61;&quot;2&#61;population&quot;, region&#61;:global360, inc&#61;5, stats&#61;:sum, search_radius&#61;&quot;1000k&quot;&#41;;
+imshow&#40;G&#41;</code></pre>
 <p>Make a hexbin plot with random numbers.</p>
 <pre><code class="language-julia">xy &#61; rand&#40;100,2&#41; .* &#91;5 3&#93;;
-    D &#61; binstats&#40;xy, region&#61;&#40;0,5,0,3&#41;, inc&#61;1, tiling&#61;:hex, stats&#61;:number&#41;;
-    imshow&#40;D, C&#61;C, hexbin&#61;true, ml&#61;0.5, colorbar&#61;true&#41;</code></pre>
+D &#61; binstats&#40;xy, region&#61;&#40;0,5,0,3&#41;, inc&#61;1, tiling&#61;:hex, stats&#61;:number&#41;;
+imshow&#40;D, hexbin&#61;true, ml&#61;0.5, colorbar&#61;true&#41;</code></pre>
 <div class="page-foot">
   <div class="copyright">
     &copy; GMT.jl. Last modified: June 14, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
