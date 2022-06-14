@@ -34,7 +34,7 @@
 </style>
 <![endif]-->
 
-   <title>Color map Hinges</title>  
+   <title>Color maps</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -77,12 +77,15 @@
             </form>
             <h1>Navigation</h1>
             <ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/">Home</a></div></li>
-<li><input class="collapse-toggle" id="menuitem-2" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples">Examples</a></div><ul><li><input class="collapse-toggle" id="menuitem-2-1" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-1"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/CPTs">Color maps</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/CPTs/01_cpt_hinge">Color map Hinges</a></div><ul class="page-content">
-<li><a href="#color_map_hinges">Color map Hinges</a></li>
+<li><input class="collapse-toggle" id="menuitem-2" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples">Examples</a></div><ul><li><input class="collapse-toggle" id="menuitem-2-1" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-1"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/CPTs">Color maps</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/CPTs/01_cpt_hinge">Color maps</a></div><ul class="page-content">
+<li><a href="#color_maps">Color maps</a></li>
+<li><ul>
+<li><a href="#hinges">Hinges</a></li>
+<li><a href="#manipulating">Manipulating</a></li>
+<li><a href="#labeled">Labeled</a></li>
+</ul>
 </ul>
 </li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/CPTs/02_cpt_stretch">Manipulating CPTs</a></div></li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/CPTs/03_cpt_labeled">Labeled and non-equidistant color legends</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-2" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/art">Art</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/art/art_examples">Art</a></div></li>
 </ul></li>
@@ -174,7 +177,8 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="color_map_hinges"><a href="#color_map_hinges" class="header-anchor">Color map Hinges</a></h1>
+<div class="franklin-content"><h1 id="color_maps"><a href="#color_maps" class="header-anchor">Color maps</a></h1>
+<h2 id="hinges"><a href="#hinges" class="header-anchor">Hinges</a></h2>
 <p>The CPTs distributed with GMT are dynamic. This means they have several special properties that modify the behavior of programs that use them. Dynamic CPTs comes in a few different flavors: Some CPTs were designed to behave differently across a <strong>hinge</strong> value &#40;e.g., a CPT designed specifically for topographic relief may include a discontinuity in color across the coastline at z &#61; 0&#41;, and when users select these CPTs they will be stretched to fit the user’s desired data range separately for each side of this <em>hard</em> <strong>hinge</strong>. Basically, a hard hinge CPT is the juxtaposition of two different CPTs joined at the hinge and these sections are stretched independently.</p>
 <p>In the figure bellow the top color bar is a dynamic master CPT &#40;here, globe&#41; with a hard hinge at sea level and a natural range from -10,000 to &#43;10,000 meters. However, our data range is asymmetrical, going from -8,000 meter depths up to &#43;3,000 meter elevations. Because of the hinge, the two sides of the CPT will be stretched separately to honor the desired range while utilizing the full color range.</p>
 <pre><code class="language-julia">using GMT
@@ -189,6 +193,91 @@ text&#33;&#40;text_record&#40;&#91;5.7 0.9&#93;,&#91;&quot;HINGE&quot;&#93;&#41;
 <p>
 <a id="example_7540024690860658477">
  <img src="/GMTjl_doc/assets/examples/CPTs/01_cpt_hinge/code/output/example_7540024690860658477.png" alt=""> 
+</a>
+
+<h2 id="manipulating"><a href="#manipulating" class="header-anchor">Manipulating</a></h2>
+<p>There are many ways to turn a master CPT into a custom CPT that works for your particular data range. The tools <a href="/GMTjl_doc/documentation/makecpt/index.html#makecpt">makecpt</a> and <code>grd2cpt</code> allow several types of transformations to take place:</p>
+<p>Examples of two user CPTs for the range -0.5 to 3 created from the same master. One &#40;left&#41; extracted a subset of the master before scaling while the other &#40;right&#41; used the entire range.</p>
+<pre><code class="language-julia">using GMT
+ls &#61; &#91;3	2.9;	# Coordinates of 6 line segments connecting example CPTs
+ 5	2.5;;;
+ 3	0.1;
+ 5	0.5;;;
+ 3	2.2;
+ 1	2.5;;;
+ 3	1.08;
+ 1	0.5;;;
+ 1	0.785;
+ 3	1.5;;;
+ 3	1.5;
+ 5	0.785&#93;;
+
+D &#61; mat2ds&#40;reshape&#40;ls, 2, 2, 6&#41;&#41;            # Create a GMTdaset with the six line segments
+D&#91;5&#93;.header &#61; D&#91;6&#93;.header &#61; &quot; -W0.25p,-&quot;    # Tell that last two segments are dashed lines 
+lines&#40;D, region&#61;&#40;0,6,0,3&#41;, figscale&#61;&quot;1i&quot;, frame&#61;:none, pen&#61;0.25&#41;
+colorbar&#33;&#40;cmap&#61;:globe, frame&#61;:auto, pos&#61;&#40;paper&#61;true, anchor&#61;&#40;&quot;3i&quot;,&quot;1.5i&quot;&#41;,
+          size&#61;&#40;&quot;2.8i&quot;,&quot;0.15i&quot;&#41;, justify&#61;:CM&#41;, W&#61;0.001&#41;
+C &#61; makecpt&#40;cmap&#61;:globe, range&#61;&#40;-500, 3000&#41;&#41;;
+colorbar&#33;&#40;frame&#61;:auto, pos&#61;&#40;paper&#61;true, anchor&#61;&#40;&quot;5i&quot;,&quot;1.5i&quot;&#41;,
+          size&#61;&#40;&quot;2.0i&quot;,&quot;0.15i&quot;&#41;, justify&#61;:LM&#41;, W&#61;0.001&#41;
+C &#61; makecpt&#40;cmap&#61;:globe, truncate&#61;&#40;-3000,5000&#41;, range&#61;&#40;-500, 3000&#41;&#41;;
+colorbar&#33;&#40;frame&#61;:auto, pos&#61;&#40;paper&#61;true, anchor&#61;&#40;&quot;1i&quot;,&quot;1.5i&quot;&#41;,
+          size&#61;&#40;&quot;2.0i&quot;,&quot;0.15i&quot;&#41;, justify&#61;:RM, move_annot&#61;:a&#41;, W&#61;0.001&#41;
+
+T &#61; text_record&#40;&#91;0 0; 6 0; 3 3.1; 1 3.1; 5 3.1&#93;,
+                &#91;&quot;LB Scale a subset &#40;via @&#37;1&#37;truncate@&#37;&#37;&#41;&quot;
+                 &quot;RB	Scale entire range&quot;;
+                 &quot;CB	Master CPT&quot;;
+                 &quot;CB	New CPT v1&quot;;
+                 &quot;CB	New CPT v2&quot;&#93;&#41;;
+
+text&#33;&#40;T, noclip&#61;true, font&#61;14, justify&#61;true&#41;</code></pre></p>
+<p>
+<a id="example_16549074009904310201">
+ <img src="/GMTjl_doc/assets/examples/CPTs/01_cpt_hinge/code/output/example_16549074009904310201.png" alt=""> 
+</a>
+
+<h2 id="labeled"><a href="#labeled" class="header-anchor">Labeled</a></h2>
+<p>Things become a bit more complicated when we want to label the legend with names for certain intervals &#40;like geological time periods in the example below&#41;. To accomplish that, one should currently do a hack and add the labels manually in the CGMTcpt fields <code>label</code> and <code>key</code>, and add the <code>equal_size</code> option to the colorbar command that draws the color legend. This option also makes all intervals in the legend of equal length, even it the numerical values are not equally spaced.</p>
+<p>Normally, the name labels are plotted at the lower end of the intervals. But by adding a gap amount &#40;even when zero&#41; to the -L option, they are centered. The example below also shows how to annotate ranges using <code>equal_size&#61;&#40;range&#61;true,&#41;</code> &#40;in which case no name labels should appear in the CPT&#41;, and how to switch the color bar around &#40;by using a negative length&#41;.</p>
+<pre><code class="language-julia">using GMT
+
+C &#61; makecpt&#40;cmap&#61;&#40;&#40;197,0,255&#41;,&#40;81,0,255&#41;,&#40;0,35,255&#41;,&#40;0,151,255&#41;,&#40;0,255,244&#41;,&#40;0,255,127&#41;,&#40;0,255,11&#41;,
+                  &#40;104,255,0&#41;,&#40;220,255,0&#41;,&#40;255,174,0&#41;,&#40;255,58,0&#41;&#41;,
+            T&#61;&#91;0,23,66,146,200,251,299,359,416,444,488,542&#93;&#41;;
+# Add the labels for the periods 
+C.label &#61; C.key &#61; &#91;&quot;Neogene&quot;, &quot;Paleogene&quot;, &quot;Cretaceous&quot;, &quot;Jurassic&quot;, &quot;Triassic&quot;, &quot;Permian&quot;,
+                   &quot;Carboniferous&quot;, &quot;Devonian&quot;, &quot;Silurian&quot;, &quot;Ordovician&quot;, &quot;Cambrian;Precambrian&quot;&#93;;
+
+colorbar&#40;pos&#61;&#40;paper&#61;true,  anchor&#61;&#40;0,13&#41;,  size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;, B&#61;:none&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;4,13&#41;,  size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;true&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;8,13&#41;,  size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;gap&#61;0,&#41;&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;12,13&#41;, size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;gap&#61;0.1,&#41;&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;16,13&#41;, size&#61;&#40;08,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;true&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;20,13&#41;, size&#61;&#40;08,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;gap&#61;0.1,&#41;&#41;
+
+# Remove the labels so that we can plot the ages
+C.label &#61; C.key &#61; fill&#40;&quot;&quot;, length&#40;C.label&#41;&#41;;
+
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;0,4&#41;,  size&#61;&#40;08,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;, B&#61;:none&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;4,4&#41;,  size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;true&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;8,4&#41;,  size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;gap&#61;0,&#41;&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;12,4&#41;, size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;gap&#61;0.1,&#41;&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;16,4&#41;, size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;range&#61;true,&#41;&#41;
+colorbar&#33;&#40;pos&#61;&#40;paper&#61;true, anchor&#61;&#40;20,4&#41;, size&#61;&#40;-8,0.5&#41;, justify&#61;:ML, triangles&#61;:f&#41;,
+          B&#61;:none, equal_size&#61;&#40;range&#61;true, gap&#61;0.1&#41;&#41;</code></pre></p>
+<p>
+<a id="example_13562179981823219022">
+ <img src="/GMTjl_doc/assets/examples/CPTs/01_cpt_hinge/code/output/example_13562179981823219022.png" alt=""> 
 </a>
 
 <div class="page-foot">
