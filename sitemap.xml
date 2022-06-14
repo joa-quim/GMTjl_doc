@@ -32,6 +32,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/images/03_hexbin/index.html</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/plotting_functions/histograms/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -81,6 +87,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/legend/index.html</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/images/04_triplot/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -273,12 +285,6 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/grdimage/index.html</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/images/03_triplot/index.html</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

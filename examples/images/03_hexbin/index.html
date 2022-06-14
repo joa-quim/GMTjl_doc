@@ -34,7 +34,7 @@
 </style>
 <![endif]-->
 
-   <title>Triplot</title>  
+   <title>Hexagonal binning</title>  
   <!-- end custom head snippets -->
 </head>
 <body class="layout--single">
@@ -91,13 +91,14 @@
 <li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-6"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/images">Images</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/01_grdimage">Color images</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/01b_grdview">Perspective view</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/02_pcolor">Pcolor</a></div></li>
-<li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/03_triplot">Triplot</a></div><ul class="page-content">
-<li><a href="#triplot">Triplot</a></li>
+<li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/images/03_hexbin">Hexagonal binning</a></div><ul class="page-content">
+<li><a href="#hexagonal_binning">Hexagonal binning</a></li>
 <li><ul>
-<li><a href="#delaunay_triangulation">Delaunay triangulation</a></li>
+<li><a href="#binhex">Binhex</a></li>
 </ul>
 </ul>
 </li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/images/04_triplot">Triplot</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-7" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-7"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/misc">Misc</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/buffer">Geodesic buffers</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/misc/gadm">GADM</a></div></li>
@@ -176,43 +177,97 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><h1 id="triplot"><a href="#triplot" class="header-anchor">Triplot</a></h1>
+<div class="franklin-content"><h1 id="hexagonal_binning"><a href="#hexagonal_binning" class="header-anchor">Hexagonal binning</a></h1>
 <div class="docstring">
-<div class="doc-header" id="triplot">
-<a href="#triplot">triplot</a>
+<div class="doc-header" id="gmtbinstats">
+<a href="#gmtbinstats">gmtbinstats</a>
 </div>
-<div class="doc-content"><p>triplot&#40;in::Matrix; onlyedges::Bool&#61;false, noplot::Bool&#61;false, kw...&#41;</p>
-<p>Plots the 2-D triangulation or Voronoi polygons defined by the points in a matrix</p>
+<div class="doc-content"><pre><code>binstats&#40;cmd0::String&#61;&quot;&quot;, arg1&#61;nothing; kwargs...&#41;</code></pre>
+<p>Reads arbitrarily located &#40;x,y&#91;,z&#93;&#91;,w&#93;&#41; points &#40;2-4 columns&#41; and for each node in the specified grid layout determines which points are within the given radius. These point are then used in the calculation of the specified statistic. The results may be presented as is or may be normalized by the circle area to perhaps give density estimates. Alternatively, select hexagonal tiling instead or a rectangular grid layout.</p>
+<p>Full option list at <a href="http://docs.generic-mapping-tools.org/latest/gmtbinstats.html"><code>gmtbinstats</code></a></p>
+<h2>Parameters</h2>
 <ul>
-<li><p><code>in</code>: The input data. Can be either a Mx2 or Mx3 matrix.</p>
+<li><p><strong>C</strong> | <strong>stats</strong> | <strong>statistic</strong> :: &#91;Type &#61;&gt; String | NamedTuple&#93;</p>
+<p>Choose the statistic that will be computed per node based on the points that are within radius distance of the node.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#c&#41;</p>
 </li>
-<li><p><code>noplot</code>: Return the computed Delaunay or Veronoi data instead of plotting it &#40;the default&#41;.</p>
+<li><p><strong>I</strong> | <strong>inc</strong> | <strong>increment</strong> | <strong>spacing</strong> :: &#91;Type &#61;&gt; Str&#93;	&#36;Arg &#61; xinc&#91;unit&#93;&#91;&#43;e|n&#93;&#91;/yinc&#91;unit&#93;&#91;&#43;e|n&#93;&#93;&#93;&#36;</p>
+<p><em>x_inc</em> &#91;and optionally <em>y_inc</em>&#93; is the grid spacing. Optionally, append an increment unit.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#i&#41;</p>
 </li>
-<li><p><code>onlyedges</code>: By default we compute Delaunay tringles or Veronoi cells as polygons. Use this option as  <code>onlyedges&#61;true</code> to compute multiple line segments.</p>
+<li><p><strong>E</strong> | <strong>empty</strong> :: &#91;Type &#61;&gt; Number&#93;</p>
+<p>Set the value assigned to empty nodes &#91;NaN&#93;.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#e&#41;</p>
 </li>
-<li><p><code>region</code>: Sets the data region &#40;xmin,xmax,ymin,ymax&#41; for <code>voronoi</code> &#40;required&#41;. If not provided we compute it from <code>in</code>.</p>
+<li><p><strong>G</strong> | <strong>save</strong> | <strong>outgrid</strong> | <strong>outfile</strong> :: &#91;Type &#61;&gt; Str&#93;</p>
+<p>Output grid file name. Note that this is optional and to be used only when saving   the result directly on disk. Otherwise, just use the G &#61; gmtbinstats&#40;....&#41; form.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#g&#41;</p>
 </li>
-<li><p><code>voronoi</code>: Compute Voronoi cells instead of Delaunay triangles &#40;requires <code>region</code>&#41;.</p>
+<li><p><strong>N</strong> | <strong>normalize</strong> :: &#91;Type &#61;&gt; Bool&#93;</p>
+<p>Normalize the resulting grid values by the area represented by the <code>search_radius</code>.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#n&#41;</p>
 </li>
-<li><p><code>kw...</code>: Are keyword arguments used in the &#36;plot&#36; module &#40;ignore if <code>noplot&#61;true</code>&#41;.</p>
+<li><p><strong>S</strong> | <strong>search_radius</strong> :: &#91;Type &#61;&gt; Number&#93;</p>
+<p>Sets the search_radius that determines which data points are considered close to a node. Not compatible with <code>tiling</code>   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#s&#41;</p>
+</li>
+<li><p><strong>R</strong> | <strong>region</strong> | <strong>limits</strong> :: &#91;Type &#61;&gt; Str or list or GMTgrid|image&#93;	&#36;Arg &#61; &#40;xmin,xmax,ymin,ymax&#41;&#36;</p>
+<p>Specify the region of interest. Set to data minimum BoundinBox if not provided.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#r-full&#41;</p>
+</li>
+<li><p><strong>T</strong> | <strong>tiling</strong> | <strong>bins</strong> :: &#91;Type &#61;&gt; String | NamedTuple&#93;</p>
+<p>Instead of circular, possibly overlapping areas, select non-overlapping tiling. Choose between   rectangular hexagonal binning.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#t&#41;</p>
+</li>
+<li><p><strong>V</strong> | <strong>verbose</strong> :: &#91;Type &#61;&gt; Bool or Str&#93;		&#36;Arg &#61; &#91;level&#93;&#36;</p>
+<p>Select verbosity level, which will send progress reports to stderr.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#v-full&#41;</p>
+</li>
+<li><p><strong>W</strong> | <strong>weights</strong> :: &#91;Type &#61;&gt; Bool | String&#93;</p>
+<p>Input data have a 4th column containing observation point weights.   &#40;http://docs.generic-mapping-tools.org/latest/gmtbinstats.html#w&#41;</p>
+</li>
+<li><p><strong>a</strong> | <strong>aspatial</strong> :: &#91;Type &#61;&gt; Str&#93;			&#36;Arg &#61; &#91;col&#61;&#93;name&#91;…&#93;&#36;</p>
+<p>Control how aspatial data are handled in GMT during input and output.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#aspatial-full&#41;</p>
+</li>
+<li><p><strong>bi</strong> | <strong>binary_in</strong> :: &#91;Type &#61;&gt; Str&#93;			&#36;Arg &#61; &#91;ncols&#93;&#91;type&#93;&#91;w&#93;&#91;&#43;L|&#43;B&#93;&#36;</p>
+<p>Select native binary format for primary input &#40;secondary inputs are always ASCII&#41;.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#bi-full&#41;</p>
+</li>
+<li><p><strong>di</strong> | <strong>nodata_in</strong> :: &#91;Type &#61;&gt; Str or Number&#93;      &#36;Arg &#61; nodata&#36;</p>
+<p>Examine all input columns and if any item equals nodata we interpret this value as a   missing data item and substitute the value NaN.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#di-full&#41;</p>
+</li>
+<li><p><strong>e</strong> | <strong>pattern</strong> | <strong>find</strong> :: &#91;Type &#61;&gt; Str&#93;        &#36;Arg &#61; &#91;~&#93;”pattern” | -e&#91;~&#93;/regexp/&#91;i&#93;&#36;</p>
+<p>Only accept ASCII data records that contains the specified pattern.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#e-full&#41;</p>
+</li>
+<li><p><strong>f</strong> | <strong>colinfo</strong> | <strong>coltypes</strong> | <strong>coltype</strong> :: &#91;Type &#61;&gt; Str&#93;        &#36;Arg &#61; &#91;i|o&#93;colinfo&#36;</p>
+<p>Specify the data types of input and/or output columns &#40;time or geographical data&#41;.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#f-full&#41;</p>
+</li>
+<li><p><strong>g</strong> | <strong>gap</strong> :: &#91;Type &#61;&gt; Str&#93;           &#36;Arg &#61; &#91;a&#93;x|y|d|X|Y|D|&#91;col&#93;z&#91;&#43;|-&#93;gap&#91;u&#93;&#36;</p>
+<p>Examine the spacing between consecutive data points in order to impose breaks in the line.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#g-full&#41;</p>
+</li>
+<li><p><strong>h</strong> | <strong>header</strong> :: &#91;Type &#61;&gt; Str&#93;        &#36;Arg &#61; &#91;i|o&#93;&#91;n&#93;&#91;&#43;c&#93;&#91;&#43;d&#93;&#91;&#43;rremark&#93;&#91;&#43;ttitle&#93;&#36;</p>
+<p>Primary input file&#40;s&#41; has header record&#40;s&#41;.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#h-full&#41;</p>
+</li>
+<li><p><strong>i</strong> | <strong>incols</strong> | <strong>incol</strong> :: &#91;Type &#61;&gt; Str&#93;      &#36;Arg &#61; cols&#91;&#43;l&#93;&#91;&#43;sscale&#93;&#91;&#43;ooffset&#93;&#91;,…&#93;&#36;</p>
+<p>Select specific data columns for primary input, in arbitrary order.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#icols-full&#41;</p>
+</li>
+<li><p><strong>q</strong> | <strong>inrow</strong> | <strong>inrows</strong> :: &#91;Type &#61;&gt; Str&#93;       &#36;Arg &#61; &#91;i|o&#93;&#91;~&#93;rows&#91;&#43;ccol&#93;&#91;&#43;a|f|s&#93;&#36;</p>
+<p>Select specific data rows to be read &#40;-qi &#91;Default&#93;&#41; or written &#40;-qo&#41; &#91;all&#93;.    &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#q-full&#41;</p>
+</li>
+<li><p><strong>r</strong> | <strong>reg</strong> | <strong>registration</strong> :: &#91;Type &#61;&gt; Bool or &#91;&#93;&#93;</p>
+<p>Force pixel node registration &#91;Default is gridline registration&#93;.   &#40;http://docs.generic-mapping-tools.org/latest//gmt.html#r-full&#41;</p>
+</li>
+<li><p><strong>w</strong> | <strong>wrap</strong> | <strong>cyclic</strong> :: &#91;Type &#61;&gt; Str or Number&#93;  &#36;Arg &#61; &#91;&#91;-&#93;n&#93;&#36;</p>
+<p>Convert input records to a cyclical coordinate.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#w-full&#41;</p>
+</li>
+<li><p><strong>yx</strong> :: &#91;Type &#61;&gt; Str or Bool or &#91;&#93;&#93;     &#36;Arg &#61; &#91;i|o&#93;&#36;</p>
+<p>Swap 1st and 2nd column on input and/or output.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#colon-full&#41;</p>
 </li>
 </ul>
-<h3>Returns</h3>
-<p>A GMTdataset if <code>noplot&#61;true</code> or &#36;nothing&#36; otherwise.</p>
-<h2>Example:</h2>
-<p>triplot&#40;rand&#40;5,2&#41;, voronoi&#61;true, show&#61;true&#41;</p>
-<p>triplot&#40;rand&#40;5,3&#41;, lc&#61;:red, show&#61;true&#41;</p>
 
 
 </div>
 </div>
 
-<h2 id="delaunay_triangulation"><a href="#delaunay_triangulation" class="header-anchor">Delaunay triangulation</a></h2>
+<h2 id="binhex"><a href="#binhex" class="header-anchor">Binhex</a></h2>
+<p>To do hexagonal binning of a random data and counting the number of points inside each hexagon, try:</p>
 <pre><code class="language-julia">using GMT
-triplot&#40;rand&#40;5,3&#41;, lc&#61;:red, title&#61;&quot;Delaunay&quot;&#41;</code></pre></p>
+xy &#61; rand&#40;100,2&#41; .* &#91;5 3&#93;;
+D &#61; binstats&#40;xy, region&#61;&#40;0,5,0,3&#41;, inc&#61;1, tiling&#61;:hex, stats&#61;:number&#41;;
+imshow&#40;D, hexbin&#61;true, ml&#61;0.5, colorbar&#61;true, show&#61;false&#41;</code></pre></p>
 <p>
-<a id="example_7381416103350412624">
- <img src="/GMTjl_doc/assets/examples/images/03_triplot/code/output/example_7381416103350412624.png" alt=""> 
+<a id="example_4025504833215613745">
+ <p><span style="color:red;">// Image matching '/assets/examples/images/03_hexbin/code/example_4025504833215613745.png' not found. //</span></p> 
 </a>
 
 <div class="page-foot">
