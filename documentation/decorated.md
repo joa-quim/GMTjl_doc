@@ -19,11 +19,15 @@ with symbols. This second category is still subdivided in two algorithms. They a
    Plot symbols on the left side of the front
 - *right=true*\
    Plot symbols on the right side of the front
+- *side=left|right*\
+   Alternative to the above `left` or `right` keywords.
 - *len=xx* or *length=xx*\
    Length of the vector head. *xx* may be numeric, a string with the length
    and the units attached (as in len="2c") or a tuple with length and units as in *len=(2,:centimeters)*
 - *pen=pen*\
    Use an alternate pen. The *pen* value may contain any of valid ways of specifying pens.
+- *noline=true*\
+   Make the main front line invisible.
 - *symbol=* -- Specify which symbol to plot:
   - *symbol=:box*
   - *symbol=:circle*
@@ -39,7 +43,7 @@ To select this type the *dec2=true* keyword/value must be present in the *decora
 The required setting controls the placement of symbols along the quoted lines. Choose among the
 controlling algorithms.
 
-### [Placement methods:](@id placement_method_dec)
+### Placement methods
 
 - *dist=xx* or *distance=xx*\
    Give distances between symbols on the plot in your preferred measurement unit.
@@ -69,7 +73,7 @@ controlling algorithms.
    [Default centers them along the line]. Optionally, append /min_dist[c|i|p] to enforce that a minimum distance
    separation between successive labels is enforced. In this case *xx* must obviously be a string.
 
-### [Symbol formatting:](@id symb_format_dec)
+### Symbol formatting
 
 - *marker=symb* or *symbol=symb*\
    Selects the decorating symbol *symb*. See the \myreflink{Symbols} for the list of symbols available.

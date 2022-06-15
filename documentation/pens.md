@@ -70,7 +70,7 @@ of the line. Example `ls=FrontTriangleLeft` will draw a ``subduction zone`` line
 
 The above line and symbol at fixed spacing is nice but there are many instances where one wants to have
 a line and symbols only at vertex locations. While that can generally be achieved by using the `marker`,
-`markersize` (`mc`), `markercolor` (`mc`) and `linecolor` (`lc`), `linewidth` (`lw`)
+`markersize` (`ms`), `markercolor` (`mc`) and `linecolor` (`lc`), `linewidth` (`lw`)
 keywords we can also use a condensed form similar to the annotated lines above. In this case we drop
 the separating char and compose it only with the line style and symbol name, *e.g.* `"LineCirc"`.
 
