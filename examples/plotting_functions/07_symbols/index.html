@@ -230,9 +230,14 @@ fs &#61; &#91;&quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:fa
       &quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:box&#41;&quot;,
       &quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:circle&#41;&quot;,
       &quot;decorated&#61;&#40;dist&#61;&#40;1,0.30&#41;, symbol&#61;:triangle&#41;&quot;,
-      &quot;decorated&#61;&#40;dist&#61;&#40;2,1.00&#41;, symbol&#61;\&quot;s45\&quot;, side&#61;:left, offset&#61;2.25&#41;&quot;,
-      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, side&#61;:right, offset&#61;0.3, pen&#61;true&#41;&quot;,
-      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, right&#61;true, offset&#61;0.3, pen&#61;&#39;&#39;&#39;&#39;, noline&#61;true&#41;&quot;&#93;;
+      &quot;decorated&#61;&#40;dist&#61;&#40;2,1.00&#41;, symbol&#61;\&quot;s45\&quot;, side&#61;left, offset&#61;2.25&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.40&#41;, symbol&#61;:fault, side&#61;left&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.30&#41;, symbol&#61;:box, side&#61;left&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.40&#41;, symbol&#61;:circle, right&#61;true&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.30&#41;, symbol&#61;:triangle, side&#61;left&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.40&#41;, symbol&#61;:fault, side&#61;right, pen&#61;&#40;1.5,:dodgerblue&#41;&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, side&#61;right, offset&#61;0.3, pen&#61;true&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, side&#61;right, offset&#61;0.3, pen&#61;&#39;&#39;&#39;&#39;, noline&#61;true&#41;&quot;&#93;;
 
 # Helper variable with the above verbose pen settings converted to GMT hard-core syntax
 _fs &#61; &#91;&quot;1c/0.25c&quot;, &quot;1c/0.25c&#43;b&quot;, &quot;1c/0.25c&#43;c&quot;, &quot;1c/0.3c&#43;t&quot;, &quot;2c/1c&#43;l&#43;s45&#43;o2.25c&quot;, &quot;1c/0.4c&#43;l&quot;,
@@ -251,8 +256,8 @@ for k &#61; 1:length&#40;fs&#41;
     text&#33;&#40;x&#61;x&#91;end&#93;, y&#61;y&#91;1,k&#93;, text&#61;fs&#91;k&#93;, font&#61;8, justify&#61;:ML, offset&#61;&#40;0.5,0&#41;&#41;
 end</code></pre></p>
 <p>
-<a id="example_2774196383503322495">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_2774196383503322495.png" alt=""> 
+<a id="example_10420912652133071256">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_10420912652133071256.png" alt=""> 
 </a>
 
 <h3 id="symbols"><a href="#symbols" class="header-anchor">Symbols</a></h3>
