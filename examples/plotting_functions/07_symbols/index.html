@@ -109,7 +109,9 @@
 <li><ul>
 <li><a href="#examples">Examples</a></li>
 <li><ul>
-<li><a href="#lines_symbols">Lines &amp; Symbols</a></li>
+<li><a href="#line_styles">Line styles</a></li>
+<li><a href="#line_styles__2">Line styles</a></li>
+<li><a href="#symbols">Symbols</a></li>
 <li><a href="#spiders">Spiders</a></li>
 </ul>
 </ul>
@@ -183,8 +185,79 @@
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="symbols_linestyes"><a href="#symbols_linestyes" class="header-anchor">Symbols &amp; Linestyes</a></h1>
 <h2 id="examples"><a href="#examples" class="header-anchor">Examples</a></h2>
-<h3 id="lines_symbols"><a href="#lines_symbols" class="header-anchor">Lines &amp; Symbols</a></h3>
+<h3 id="line_styles"><a href="#line_styles" class="header-anchor">Line styles</a></h3>
 <pre><code class="language-julia">using GMT
+
+ls &#61; &#91;&quot;pen&#61;0.5&quot;,                      # default &#40;a 0.5 points continuous black line&#41;
+      &quot;pen&#61;&#40;\&quot;1p\&quot;,:red,:dash&#41;&quot;,      # dashed line
+      &quot;pen&#61;&#40;1,:blue,:dot&#41;&quot;,           # dotted line
+      &quot;pen&#61;&#40;1,:lightblue,:DashDot&#41;&quot;,  # dash-dotted line
+      &quot;pen&#61;&#40;2,:blue,:DotDotDash&#41;&quot;,    # dot-dot-dashed line
+      &quot;pen&#61;&#40;2,:tomato,:DashDashDot&#41;&quot;, # dash-dash-dotted line
+      &quot;pen&#61;&#40;2,:tomato,\&quot;4_2:2p\&quot;&#41;&quot;,   # A pattern of 4-point-long line segments and 2-point-long gaps between
+                                      # segments, with pattern offset by 2 points from the origin
+      &quot;pen&#61;&#40;5,:black&#41;&quot;,               # First line of the railway 
+      &quot;pen&#61;&#40;4,:white,\&quot;20p_20p\&quot;&#41;&quot;&#93;;  # Second line of the railway. Together they make the desired effect
+
+# Helper variable with the above verbose pen settings converted to GMT hard-core syntax
+_ls &#61; &#91;&quot;0.5&quot;, &quot;1p,red,-&quot;, &quot;1p,blue,.&quot;, &quot;1p,lightblue,-.&quot;, &quot;2p,blue,..-&quot;,
+      &quot;2p,tomato,--.&quot;, &quot;2p,tomato,4_2:2p&quot;, &quot;5,black&quot;, &quot;4p,white,20p_20p&quot;&#93;;
+
+# line coordinates
+x &#61; &#91;0 7&#93;;  y &#61; &#91;9 8 7 6 5 4 3 2 2; 9 8 7 6 5 4 3 2 2&#93;;
+D &#61; mat2ds&#40;y, x&#61;x, pen&#61;_ls, multi&#61;true&#41;;    # GMTdataset with all info about the lines
+
+# Plot the lines
+plot&#40;D, region&#61;&#40;0,11,1,9.5&#41;, title&#61;&quot;Line styles&quot;, frame&#61;:none&#41;
+
+# Plot all texts but the one referring to last line that must be broken in two tokens
+for k &#61; 1:length&#40;ls&#41;-2
+    text&#33;&#40;x&#61;x&#91;end&#93;, y&#61;y&#91;1,k&#93;, text&#61;ls&#91;k&#93;, justify&#61;:ML, offset&#61;&#40;0.2,0&#41;&#41;
+end
+text&#33;&#40;x&#61;x&#91;end&#93;, y&#61;y&#91;1,end&#93;, text&#61;ls&#91;end-1&#93;, justify&#61;:ML, offset&#61;&#40;0.2,0.2&#41;&#41;
+text&#33;&#40;x&#61;x&#91;end&#93;, y&#61;y&#91;1,end&#93;, text&#61;ls&#91;end&#93;,   justify&#61;:ML, offset&#61;&#40;0.2,-0.2&#41;&#41;</code></pre></p>
+<p>
+<a id="example_15845512914405539368">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_15845512914405539368.png" alt=""> 
+</a>
+
+<h3 id="line_styles__2"><a href="#line_styles__2" class="header-anchor">Line styles</a></h3>
+<p>Draw a so-called front which allows to plot specific symbols distributed along a line or curve. Typical use cases are weather fronts, fault lines, subduction zones, and more.</p>
+<pre><code class="language-julia">using GMT
+
+# keyword/value way of controlling the Front line styles.
+fs &#61; &#91;&quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:fault&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:box&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.25&#41;, symbol&#61;:circle&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;1,0.30&#41;, symbol&#61;:triangle&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;2,1.00&#41;, symbol&#61;\&quot;s45\&quot;, side&#61;:left, offset&#61;2.25&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, side&#61;:right, offset&#61;0.3, pen&#61;true&#41;&quot;,
+      &quot;decorated&#61;&#40;dist&#61;&#40;0.5,0.3&#41;, symbol&#61;:triang, right&#61;true, offset&#61;0.3, pen&#61;&#39;&#39;&#39;&#39;, noline&#61;true&#41;&quot;&#93;;
+
+# Helper variable with the above verbose pen settings converted to GMT hard-core syntax
+_fs &#61; &#91;&quot;1c/0.25c&quot;, &quot;1c/0.25c&#43;b&quot;, &quot;1c/0.25c&#43;c&quot;, &quot;1c/0.3c&#43;t&quot;, &quot;2c/1c&#43;l&#43;s45&#43;o2.25c&quot;, &quot;1c/0.4c&#43;l&quot;,
+       &quot;1c/0.3c&#43;l&#43;b&quot;, &quot;1c/0.4c&#43;r&#43;c&quot;, &quot;1c/0.3c&#43;l&#43;t&quot;, &quot;1c/0.4c&#43;r&#43;t&#43;p1.5p,dodgerblue&quot;,
+       &quot;0.5c/0.3c&#43;r&#43;t&#43;o0.3c&#43;p&quot;, &quot;0.5c/0.3c&#43;r&#43;t&#43;o0.3c&#43;p&#43;i&quot;&#93;;
+
+# line coordinates
+x &#61; &#91;1 6&#93;;  y &#61; &#91;20 19 18 17 16 15 14 13 12 11 10 9; 20 19 18 17 16 15 14 13 12 11 10 9&#93;;
+D &#61; mat2ds&#40;y, x&#61;x, lt&#61;1.25, front&#61;_fs, fill&#61;&#91;&quot;red&quot;&#93;, multi&#61;true&#41;;    # GMTdataset with all info about the lines
+
+# Plot the lines
+plot&#40;D, region&#61;&#40;0,21,8,20.5&#41;, figsize&#61;&#40;16,10&#41;, title&#61;&quot;Line fronts&quot;, symbol&#61;:f, frame&#61;:none&#41;
+
+# Plot the texts with the verbose front style settings
+for k &#61; 1:length&#40;fs&#41;
+    text&#33;&#40;x&#61;x&#91;end&#93;, y&#61;y&#91;1,k&#93;, text&#61;fs&#91;k&#93;, font&#61;8, justify&#61;:ML, offset&#61;&#40;0.5,0&#41;&#41;
+end</code></pre></p>
+<p>
+<a id="example_2774196383503322495">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_2774196383503322495.png" alt=""> 
+</a>
+
+<h3 id="symbols"><a href="#symbols" class="header-anchor">Symbols</a></h3>
+<pre><code class="language-julia">using GMT
+
 plot&#40;&#91;0 0&#93;, limits&#61;&#40;-1,6,-1,6&#41;, figsize&#61;&#40;15,15&#41;, marker&#61;:circle, ms&#61;0.75,
      fill&#61;:green, frame&#61;&#40;axes&#61;:WSen, annot&#61;2,grid&#61;1, title&#61;&quot;Symbols &amp; pens&quot;&#41;&#41;
 plot&#33;&#40;&#91;1 0&#93;, marker&#61;:circle, ms&#61;0.75, fill&#61;:green, ml&#61;&#40;1,:black&#41;&#41;
@@ -207,8 +280,8 @@ plot&#33;&#40;&#91;5 3&#93;, marker&#61;&#40;custom&#61;&quot;volcano&quot;, siz
 plot&#33;&#40;&#91;1 5&#93;, marker&#61;&#40;custom&#61;&quot;@gallo&quot;,  size&#61;3.5&#41;&#41;
 plot&#33;&#40;&#91;4 5&#93;, marker&#61;&#40;custom&#61;&quot;@sardinha&quot;, size&#61;6.0&#41;&#41;</code></pre></p>
 <p>
-<a id="example_2102459762739448529">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_2102459762739448529.png" alt=""> 
+<a id="example_4440797161996691937">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/07_symbols/code/output/example_4440797161996691937.png" alt=""> 
 </a>
 
 <h3 id="spiders"><a href="#spiders" class="header-anchor">Spiders</a></h3>
@@ -230,7 +303,7 @@ plot&#33;&#40;&#91;4.5 1.75&#93;, marker&#61;&#40;:web, &#91;30 330&#93;, &#40;s
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 15, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 16, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

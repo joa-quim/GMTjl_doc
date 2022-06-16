@@ -139,12 +139,12 @@
 <li><a href="#front_lines">Front lines</a></li>
 <li><a href="#decorated_lines">Decorated lines</a></li>
 <li><ul>
-<li><a href="#a_hrefid_placement_method_decplacement_methods"><a href="@id placement_method_dec">Placement methods:</a></a></li>
-<li><a href="#a_hrefid_symb_format_decsymbol_formatting"><a href="@id symb_format_dec">Symbol formatting:</a></a></li>
+<li><a href="#placement_methods">Placement methods</a></li>
+<li><a href="#symbol_formatting">Symbol formatting</a></li>
 </ul></li>
 <li><a href="#quoted_lines">Quoted lines</a></li>
 <li><ul>
-<li><a href="#placement_methods">Placement methods</a></li>
+<li><a href="#placement_methods__2">Placement methods</a></li>
 <li><a href="#label_formatting">Label formatting</a></li>
 </ul>
 </ul>
@@ -200,9 +200,13 @@
 </li>
 <li><p><em>right&#61;true</em><br /> Plot symbols on the right side of the front</p>
 </li>
+<li><p><em>side&#61;left|right</em><br /> Alternative to the above <code>left</code> or <code>right</code> keywords.</p>
+</li>
 <li><p><em>len&#61;xx</em> or <em>length&#61;xx</em><br /> Length of the vector head. <em>xx</em> may be numeric, a string with the length  and the units attached &#40;as in len&#61;&quot;2c&quot;&#41; or a tuple with length and units as in <em>len&#61;&#40;2,:centimeters&#41;</em></p>
 </li>
 <li><p><em>pen&#61;pen</em><br /> Use an alternate pen. The <em>pen</em> value may contain any of valid ways of specifying pens.</p>
+</li>
+<li><p><em>noline&#61;true</em><br /> Make the main front line invisible.</p>
 </li>
 <li><p><em>symbol&#61;</em> – Specify which symbol to plot:</p>
 <ul>
@@ -225,7 +229,7 @@
 </ul>
 <h2 id="decorated_lines"><a href="#decorated_lines" class="header-anchor">Decorated lines</a></h2>
 <p>To select this type the <em>dec2&#61;true</em> keyword/value must be present in the <em>decorated</em> args. The required setting controls the placement of symbols along the quoted lines. Choose among the controlling algorithms.</p>
-<h3 id="a_hrefid_placement_method_decplacement_methods"><a href="#a_hrefid_placement_method_decplacement_methods" class="header-anchor"><a href="@id placement_method_dec">Placement methods:</a></a></h3>
+<h3 id="placement_methods"><a href="#placement_methods" class="header-anchor">Placement methods</a></h3>
 <ul>
 <li><p><em>dist&#61;xx</em> or <em>distance&#61;xx</em><br /> Give distances between symbols on the plot in your preferred measurement unit. <em>xx</em> may be a scalar or a string. Use strings when appending the units c &#40;cm&#41;, i &#40;inch&#41;, or p &#40;points&#41;.</p>
 </li>
@@ -242,9 +246,9 @@
 <li><p><em>N_labels&#61;xx</em> or <em>:N_symbols&#61;xx</em><br /> Same as above but starts labeling exactly at the start of the line  &#91;Default centers them along the line&#93;. Optionally, append /min_dist&#91;c|i|p&#93; to enforce that a minimum distance  separation between successive labels is enforced. In this case <em>xx</em> must obviously be a string.</p>
 </li>
 </ul>
-<h3 id="a_hrefid_symb_format_decsymbol_formatting"><a href="#a_hrefid_symb_format_decsymbol_formatting" class="header-anchor"><a href="@id symb_format_dec">Symbol formatting:</a></a></h3>
+<h3 id="symbol_formatting"><a href="#symbol_formatting" class="header-anchor">Symbol formatting</a></h3>
 <ul>
-<li><p><em>marker&#61;symb</em> or <em>symbol&#61;symb</em><br /> Selects the decorating symbol <em>symb</em>. See the <a href="/GMTjl_doc/documentation/symbols/index.html#symbols">Symbols</a> for the list of symbols available.</p>
+<li><p><em>marker&#61;symb</em> or <em>symbol&#61;symb</em><br /> Selects the decorating symbol <em>symb</em>. See the <a href="/GMTjl_doc/examples/plotting_functions/07_symbols/index.html#symbols">Symbols</a> for the list of symbols available.</p>
 </li>
 <li><p><em>size&#61;xx</em> or <em>markersize</em> or <em>ms</em> or <em>symbolsize</em><br /> Use any of these to set the symbol size. Sizes can be scalars, strings or tuples if a unit is used.</p>
 </li>
@@ -263,7 +267,7 @@
 </ul>
 <h2 id="quoted_lines"><a href="#quoted_lines" class="header-anchor">Quoted lines</a></h2>
 <p>To select this type the <em>quoted&#61;true</em> keyword/value must be present in the <em>decorated</em> args. Lines with annotations such as contours. The required setting controls the placement of labels along the quoted lines. Choose among the controlling algorithms.</p>
-<h3 id="placement_methods"><a href="#placement_methods" class="header-anchor">Placement methods</a></h3>
+<h3 id="placement_methods__2"><a href="#placement_methods__2" class="header-anchor">Placement methods</a></h3>
 <ul>
 <li><p><em>dist&#61;xx</em> or <em>distance&#61;xx</em><br /> Give distances between symbols  on the plot in your preferred measurement unit. <em>xx</em> may be a scalar or a string. Use strings when appending the units c &#40;cm&#41;, i &#40;inch&#41;, or p &#40;points&#41;.</p>
 </li>
@@ -331,7 +335,7 @@
 </ul>
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 15, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 16, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>
