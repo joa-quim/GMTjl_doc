@@ -42,7 +42,7 @@ Optional Arguments
 - **clip** : -- *clip=:land* **|**  *clip=:water|ocean* **|** *clip=:end*\
    **clip=:land** or **clip=:water|ocean** starts a clipping path. **clip=:end** marks end of existing clip path. No projection information is needed. Also supply **X** and **Y** settings if you have moved since the clip started.
 
-- **D** or **res** or *resolution* : -- *res=full* **|** *res=auto*\
+- **D** or **res** or **resolution** : -- *res=full* **|** *res=auto*\
    Selects the resolution of the data set to use *full*, *high*, *intermediate*, *low*, and *crude*. The resolution drops off by 80% between data sets. The default is **res=auto**, which chooses to automatically select the best resolution given the chosen map scale.
 
 - **E** or **DCW** : -- *DCW=code1,code2,...* **|** *DCW=(country=code, continent=code, pen=pen, fill=fill)*\
@@ -54,9 +54,9 @@ Optional Arguments
 - **G** or **land** : -- *land=fill*\
    Select filling (see \myreflink{Fill color/pattern}) "dry" areas. Append the shade, color, or pattern.
 
-- **I** or **rivers** : -- *rivers=type* **|** *rivers=(type=type, pen=(pen))*\
+- **I** or **rivers** : -- *rivers=type* **|** *rivers=(type, pen)* **|** *rivers=(type=type, pen=pen)*\
    Draw rivers. Specify the *type* of rivers and [optionally] append pen attributes [Default pen: width = default, color = black, style = solid].\
-   Choose *type* from the list of river types below; To repeat this option, use a tuple of tuples.
+   Choose *type* from the list of river types below; To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed (the simpler **rivers=(type, pen)** doesn't allow repetitions).
 
       0 = Double-lined rivers (river-lakes)
       1 = Permanent major rivers
@@ -85,9 +85,9 @@ Optional Arguments
 - **M** or **dump** : -- *dump=true*\
    Dumps a single multisegment ASCII (or binary, see **-bo**) file to standard output. No plotting occurs. Specify one of **DCW**, **rivers**, **borders** or **shore**. Note: if **dump** is used with **DCW** then **region** or the **+r** modifier to **DCW** are not required as we automatically determine the region given the selected geographic entities.
 
-- **N** or **borders** : -- *borders=type* **|** *borders=(type=type, pen=(pen))*\
+- **N** or **borders** : -- *borders=type* **|** *borders=(type, pen)* **|** *borders=(type=type, pen=pen)*\
    Draw political boundaries. Specify the *type* of boundary and optionally append pen attributes [Default pen: width = default, color = black, style = solid].\
-   Choose *type* from the list of boundaries below. To repeat this option, use a tuple of tuples.
+   Choose *type* from the list of boundaries below. To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed (the simpler **borders=(type, pen)** doesn't allow repetitions)..
 
       1 = National boundaries
       2 = State boundaries within the Americas
@@ -107,8 +107,14 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W**  or **shore** : -- *shore=pen* **|** *shore=(level, pen)*\
-   Draw shorelines [the Default]. Append pen attributes (see \myreflink{Pen attributes}) [Defaults: width = default, color = black,style = solid] which apply to all four levels. To set the pen for each level differently, use the form **shore=(level, pen)**, where **level** is 1-4 and represent coastline, lakeshore, island-in-lake shore, and lake-in-island-in-lake shore. To repeat the **shore** option, use a tuple of tuples. When specific level pens are set, those not listed will not be drawn [Default draws all levels; but see **area**].
+- **W** or **shore** or **shorelines** or **coast** : -- *shore=pen*  **|** *shore=(level,pen)* **|** *shore=(level=lev, pen=pen)*\
+   Draw shorelines [the Default]. Append pen attributes (see \myreflink{Pen attributes}) [Defaults: width = default,
+   color = black,style = solid] which apply to all four levels. To set the pen for each level differently, use the
+   form **shore=(level,pen)** or the **shore=(level=levnum, pen=pen)**, where **level** (or `levnum` in second case)
+   is 1-4 and represent coastline, lakeshore, island-in-lake shore, and lake-in-island-in-lake shore. To repeat the
+   **shore** option, use a tuple of tuples but in this case it is mandatory to use the NamedTuple for (the simpler
+   **shore=(level,pen)** doesn't allow repetitions). When specific level pens are set, those not listed will not be
+   drawn [Default draws all levels; but see **area**].
 
 \textinput{common_opts/opt_X}
 
