@@ -119,6 +119,8 @@
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
 <li><input class="collapse-toggle" id="menuitem-3-2" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials/Landsat8">Landsat8</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/Landsat8/histogram_stretch">Plot Landsat 8 images</a></div></li>
 </ul></li>
+<li><input class="collapse-toggle" id="menuitem-3-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials/coast">Landsat8</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/coast/coastlines">Coastlines and borders</a></div></li>
+</ul></li>
 </ul></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/api">API</a></div></li>
 <li><input class="collapse-toggle" id="menuitem-5" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-5"><i class="docs-chevron"></i></label><span ></span></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/arrows">arrows</a></div></li>
@@ -238,7 +240,7 @@ c &#61; All canals &#40;8-10&#41;</code></pre>
 </li>
 <li><p><strong>M</strong> or <strong>dump</strong> : – <em>dump&#61;true</em><br /> Dumps a single multisegment ASCII &#40;or binary, see <strong>-bo</strong>&#41; file to standard output. No plotting occurs. Specify one of <strong>DCW</strong>, <strong>rivers</strong>, <strong>borders</strong> or <strong>shore</strong>. Note: if <strong>dump</strong> is used with <strong>DCW</strong> then <strong>region</strong> or the <strong>&#43;r</strong> modifier to <strong>DCW</strong> are not required as we automatically determine the region given the selected geographic entities.</p>
 </li>
-<li><p><strong>N</strong> or <strong>borders</strong> : – <em>borders&#61;type</em> <strong>|</strong> <em>borders&#61;&#40;type, pen&#41;</em> <strong>|</strong> <em>borders&#61;&#40;type&#61;type, pen&#61;pen&#41;</em><br /> Draw political boundaries. Specify the <em>type</em> of boundary and optionally append pen attributes &#91;Default pen: width &#61; default, color &#61; black, style &#61; solid&#93;.<br /> Choose <em>type</em> from the list of boundaries below. To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed &#40;the simpler <strong>borders&#61;&#40;type, pen&#41;</strong> doesn&#39;t allow repetitions&#41;..</p>
+<li><p><strong>N</strong> or <strong>borders</strong> : – <em>borders&#61;type</em> <strong>|</strong> <em>borders&#61;&#40;type, pen&#41;</em> <strong>|</strong> <em>borders&#61;&#40;type&#61;type, pen&#61;pen&#41;</em><br /> Draw political boundaries. Specify the <em>type</em> of boundary and optionally append pen attributes &#91;Default pen: width &#61; default, color &#61; black, style &#61; solid&#93;.<br /> Choose <em>type</em> from the list of boundaries below. To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed &#40;the simpler <strong>borders&#61;&#40;type, pen&#41;</strong> doesn&#39;t allow repetitions&#41;.</p>
 <pre><code>1 &#61; National boundaries
 2 &#61; State boundaries within the Americas
 3 &#61; Marine boundaries
@@ -266,12 +268,12 @@ a &#61; All boundaries &#40;1-3&#41;</code></pre>
 </li>
 </ul>
 <ul>
-<li><p><strong>X</strong> or <strong>xshift</strong> or <strong>x_offset</strong> : <em>xshift&#61;&#91;&#93; <strong>|</strong> *xshift&#61;x-shift</em> <strong>|</strong> <em>xshift&#61;&#40;shift&#61;x-shift, mov&#61;&quot;a|c|f|r&quot;&#41;</em><br /> Shift plot origin. More at <a href="/GMTjl_doc/documentation/common_opts/index.html#xshift">xshift</a></p>
+<li><p><strong>X</strong> or <strong>xshift</strong> or <strong>x_offset</strong> : <em>xshift&#61;&#91;&#93;</em> <strong>|</strong> <em>xshift&#61;x-shift</em> <strong>|</strong> <em>xshift&#61;&#40;shift&#61;x-shift, mov&#61;&quot;a|c|f|r&quot;&#41;</em><br /> Shift plot origin. More at <a href="/GMTjl_doc/documentation/common_opts/index.html#xshift">xshift</a></p>
 </li>
 </ul>
 
 <ul>
-<li><p><strong>Y</strong> or <strong>yshift</strong> or <strong>y_offset</strong> : <em>yshift&#61;&#91;&#93; <strong>|</strong> *yshift&#61;y-shift</em> <strong>|</strong> <em>yshift&#61;&#40;shift&#61;y-shift, mov&#61;&quot;a|c|f|r&quot;&#41;</em><br /> Shift plot origin. More at <a href="/GMTjl_doc/documentation/common_opts/index.html#yshift">yshift</a></p>
+<li><p><strong>Y</strong> or <strong>yshift</strong> or <strong>y_offset</strong> : <em>yshift&#61;&#91;&#93;</em> <strong>|</strong> <em>yshift&#61;y-shift</em> <strong>|</strong> <em>yshift&#61;&#40;shift&#61;y-shift, mov&#61;&quot;a|c|f|r&quot;&#41;</em><br /> Shift plot origin. More at <a href="/GMTjl_doc/documentation/common_opts/index.html#yshift">yshift</a></p>
 </li>
 </ul>
 
