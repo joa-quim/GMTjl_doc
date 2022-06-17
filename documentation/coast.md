@@ -87,7 +87,7 @@ Optional Arguments
 
 - **N** or **borders** : -- *borders=type* **|** *borders=(type, pen)* **|** *borders=(type=type, pen=pen)*\
    Draw political boundaries. Specify the *type* of boundary and optionally append pen attributes [Default pen: width = default, color = black, style = solid].\
-   Choose *type* from the list of boundaries below. To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed (the simpler **borders=(type, pen)** doesn't allow repetitions)..
+   Choose *type* from the list of boundaries below. To repeat this option, use a tuple of tuples but only the NamedTuple version is allowed (the simpler **borders=(type, pen)** doesn't allow repetitions).
 
       1 = National boundaries
       2 = State boundaries within the Americas

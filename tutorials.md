@@ -31,4 +31,18 @@
     ~~~</a>~~~
   @@
 
+  @@box
+    ~~~<a class="boxlink" href="coast/coastlines">~~~
+    @@title Coastlines @@
+    @@box-content
+      @@description
+      Plotting coastlines and rivers
+      @@
+      ~~~
+      <img src="/tutorials/coast/tilelogo.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
 @@
