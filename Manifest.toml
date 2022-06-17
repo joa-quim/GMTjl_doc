@@ -215,7 +215,7 @@ version = "0.8.27"
 
 [[deps.GMT]]
 deps = ["Conda", "Dates", "Pkg", "PrettyTables", "Printf", "Statistics", "Tables"]
-git-tree-sha1 = "868aeda4573d8b35daf605d2e98f729f267a227f"
+git-tree-sha1 = "9e46ecc438353e40a896955bb61be936087f8e7b"
 repo-rev = "master"
 repo-url = "https://github.com/GenericMappingTools/GMT.jl.git"
 uuid = "5752ebe1-31b9-557e-87aa-f909b540aa54"

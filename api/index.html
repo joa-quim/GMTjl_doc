@@ -364,6 +364,76 @@ v&quot;2.0.1-rc1&quot;</code></pre>
 </div>
 </div>
 <div class="docstring">
+<div class="doc-header" id="arccircle">
+<a href="#arccircle">arccircle</a>
+</div>
+<div class="doc-content"><pre><code>arccircle&#40;x0, y0, radius, start_angle, end_angle; z0&#61;0, inc&#61;2, gdataset&#61;false&#41;</code></pre>
+<h3>Parameters</h3>
+<ul>
+<li><p><code>x0</code>: center X</p>
+</li>
+<li><p><code>y0</code>: center Y</p>
+</li>
+<li><p><code>radius</code>: radius of the circle.</p>
+</li>
+<li><p><code>start_angle</code>: angle to first point on arc &#40;clockwise of X-positive&#41; </p>
+</li>
+<li><p><code>end_angle</code>: angle to last point on arc &#40;clockwise of X-positive&#41; </p>
+</li>
+</ul>
+<h3>Keywords</h3>
+<ul>
+<li><p><code>z0</code>: center Z. Optional, if not provided the output is flat 2D</p>
+</li>
+<li><p><code>inc</code>: the largest step in degrees along the arc. Default is 2 degree</p>
+</li>
+<li><p><code>gdataset</code>: Returns a GDAL IGeometry even when input are GMTdataset or Matrix</p>
+</li>
+</ul>
+<h3>Returns</h3>
+<p>A GMT dataset or a GDAL IGeometry</p>
+
+
+</div>
+</div>
+<div class="docstring">
+<div class="doc-header" id="arcellipse">
+<a href="#arcellipse">arcellipse</a>
+</div>
+<div class="doc-content"><pre><code>arcellipse&#40;x0, y0, primary_radius, secondary_radius, start_angle, end_angle; rotation&#61;0, z0&#61;0, inc&#61;2, gdataset&#61;false&#41;</code></pre>
+<h3>Parameters</h3>
+<ul>
+<li><p><code>x0</code>: center X</p>
+</li>
+<li><p><code>y0</code>: center Y</p>
+</li>
+<li><p><code>primary_radius</code>: X radius of ellipse.</p>
+</li>
+<li><p><code>secondary_radius</code>: Y radius of ellipse.</p>
+</li>
+<li><p><code>start_angle</code>: angle to first point on arc &#40;clockwise of X-positive&#41; </p>
+</li>
+<li><p><code>end_angle</code>: angle to last point on arc &#40;clockwise of X-positive&#41; </p>
+</li>
+</ul>
+<h3>Keywords</h3>
+<ul>
+<li><p><code>rotation</code>: rotation of the ellipse clockwise. </p>
+</li>
+<li><p><code>z0</code>: center Z. Optional, if not provided the output is flat 2D</p>
+</li>
+<li><p><code>inc</code>: the largest step in degrees along the arc. Default is 2 degree</p>
+</li>
+<li><p><code>gdataset</code>: Returns a GDAL IGeometry even when input are GMTdataset or Matrix</p>
+</li>
+</ul>
+<h3>Returns</h3>
+<p>A GMT dataset or a GDAL IGeometry</p>
+
+
+</div>
+</div>
+<div class="docstring">
 <div class="doc-header" id="arrows">
 <a href="#arrows">arrows</a>
 </div>
@@ -402,10 +472,10 @@ v&quot;2.0.1-rc1&quot;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.arrows&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;arrows&#33;&quot;:
-&#91;1&#93; arrows&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:644
-&#91;2&#93; arrows&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:644
-&#91;3&#93; arrows&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:644
-&#91;4&#93; arrows&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:646</code></pre>
+&#91;1&#93; arrows&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:644
+&#91;2&#93; arrows&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:644
+&#91;3&#93; arrows&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:644
+&#91;4&#93; arrows&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:646</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -450,13 +520,13 @@ v&quot;2.0.1-rc1&quot;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.bar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 7 methods for generic function &quot;bar&#33;&quot;:
-&#91;1&#93; bar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:462
-&#91;2&#93; bar&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:468
-&#91;3&#93; bar&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:468
-&#91;4&#93; bar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:462
-&#91;5&#93; bar&#33;&#40;cmd0::String, arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:462
-&#91;6&#93; bar&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:473
-&#91;7&#93; bar&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:471</code></pre>
+&#91;1&#93; bar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:462
+&#91;2&#93; bar&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:468
+&#91;3&#93; bar&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:468
+&#91;4&#93; bar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:462
+&#91;5&#93; bar&#33;&#40;cmd0::String, arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:462
+&#91;6&#93; bar&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:473
+&#91;7&#93; bar&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:471</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -502,10 +572,10 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.bar3&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;bar3&#33;&quot;:
-&#91;1&#93; bar3&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:579
-&#91;2&#93; bar3&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:579
-&#91;3&#93; bar3&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:579
-&#91;4&#93; bar3&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:580</code></pre>
+&#91;1&#93; bar3&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:579
+&#91;2&#93; bar3&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:579
+&#91;3&#93; bar3&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:579
+&#91;4&#93; bar3&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:580</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -584,9 +654,9 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.basemap&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;basemap&#33;&quot;:
-&#91;1&#93; basemap&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72
-&#91;2&#93; basemap&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72
-&#91;3&#93; basemap&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72</code></pre>
+&#91;1&#93; basemap&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72
+&#91;2&#93; basemap&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72
+&#91;3&#93; basemap&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1016,11 +1086,11 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.clip&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;clip&#33;&quot;:
-&#91;1&#93; clip&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;2&#93; clip&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;3&#93; clip&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;4&#93; clip&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:67
-&#91;5&#93; clip&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:67</code></pre>
+&#91;1&#93; clip&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;2&#93; clip&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;3&#93; clip&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;4&#93; clip&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:67
+&#91;5&#93; clip&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:67</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1131,8 +1201,8 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.coast&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;coast&#33;&quot;:
-&#91;1&#93; coast&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscoast.jl:227
-&#91;2&#93; coast&#33;&#40;cmd0::String; clip, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscoast.jl:227</code></pre>
+&#91;1&#93; coast&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscoast.jl:227
+&#91;2&#93; coast&#33;&#40;cmd0::String; clip, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscoast.jl:227</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1211,10 +1281,10 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.colorbar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;colorbar&#33;&quot;:
-&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:90</code></pre>
+&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:90</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1293,10 +1363,10 @@ bar3&#40;G, lw&#61;:thinnest, show&#61;true&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.colorbar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;colorbar&#33;&quot;:
-&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:90</code></pre>
+&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:90</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1481,11 +1551,11 @@ imshow&#40;Pt, proj&#61;:guess&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.contour&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;contour&#33;&quot;:
-&#91;1&#93; contour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;2&#93; contour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;3&#93; contour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;4&#93; contour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:160
-&#91;5&#93; contour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:160</code></pre>
+&#91;1&#93; contour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;2&#93; contour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;3&#93; contour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;4&#93; contour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:160
+&#91;5&#93; contour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:160</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1601,12 +1671,12 @@ imshow&#40;Pt, proj&#61;:guess&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.contourf&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 6 methods for generic function &quot;contourf&#33;&quot;:
-&#91;1&#93; contourf&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:231
-&#91;2&#93; contourf&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:231
-&#91;3&#93; contourf&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:231
-&#91;4&#93; contourf&#33;&#40;cmd0::String, arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:231
-&#91;5&#93; contourf&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:233
-&#91;6&#93; contourf&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/contourf.jl:233</code></pre>
+&#91;1&#93; contourf&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:231
+&#91;2&#93; contourf&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:231
+&#91;3&#93; contourf&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:231
+&#91;4&#93; contourf&#33;&#40;cmd0::String, arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:231
+&#91;5&#93; contourf&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:233
+&#91;6&#93; contourf&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/contourf.jl:233</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1646,11 +1716,11 @@ imshow&#40;Pt, proj&#61;:guess&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.coupe&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;coupe&#33;&quot;:
-&#91;1&#93; coupe&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;2&#93; coupe&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;3&#93; coupe&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;4&#93; coupe&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:118
-&#91;5&#93; coupe&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:118</code></pre>
+&#91;1&#93; coupe&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;2&#93; coupe&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;3&#93; coupe&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;4&#93; coupe&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:118
+&#91;5&#93; coupe&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:118</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1723,8 +1793,8 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.decorated</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;decorated&quot;:
-&#91;1&#93; decorated&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2843
-&#91;2&#93; decorated&#40;nt::NamedTuple&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2842</code></pre>
+&#91;1&#93; decorated&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2846
+&#91;2&#93; decorated&#40;nt::NamedTuple&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2845</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1755,7 +1825,7 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.delrows&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;delrows&#33;&quot;:
-&#91;1&#93; delrows&#33;&#40;A::Matrix, rows&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1480</code></pre>
+&#91;1&#93; delrows&#33;&#40;A::Matrix, rows&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1480</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1765,23 +1835,23 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.destroy</code> is a <code>Function</code>.</p>
 <pre><code># 17 methods for generic function &quot;destroy&quot;:
-&#91;1&#93; destroy&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1026
-&#91;2&#93; destroy&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1030
-&#91;3&#93; destroy&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1074
-&#91;4&#93; destroy&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:874
-&#91;5&#93; destroy&#40;band::GMT.Gdal.IRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1043
-&#91;6&#93; destroy&#40;band::GMT.Gdal.AbstractRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1039
-&#91;7&#93; destroy&#40;layer::GMT.Gdal.IFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1053
-&#91;8&#93; destroy&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1049
-&#91;9&#93; destroy&#40;featuredefn::GMT.Gdal.FeatureDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1068
-&#91;10&#93; destroy&#40;geomdefn::GMT.Gdal.IGeomFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1097
-&#91;11&#93; destroy&#40;drv::GMT.Gdal.Driver&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1022
-&#91;12&#93; destroy&#40;fielddefn::GMT.Gdal.IFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1092
-&#91;13&#93; destroy&#40;obj::GMT.Gdal.CoordTransform&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1034
-&#91;14&#93; destroy&#40;geomdefn::GMT.Gdal.GeomFieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1085
-&#91;15&#93; destroy&#40;featuredefn::GMT.Gdal.IFeatureDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1059
-&#91;16&#93; destroy&#40;fielddefn::GMT.Gdal.FieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1079
-&#91;17&#93; destroy&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1063</code></pre>
+&#91;1&#93; destroy&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:877
+&#91;2&#93; destroy&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1033
+&#91;3&#93; destroy&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1077
+&#91;4&#93; destroy&#40;band::GMT.Gdal.IRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1046
+&#91;5&#93; destroy&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1029
+&#91;6&#93; destroy&#40;band::GMT.Gdal.AbstractRasterBand&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1042
+&#91;7&#93; destroy&#40;obj::GMT.Gdal.CoordTransform&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1037
+&#91;8&#93; destroy&#40;featuredefn::GMT.Gdal.IFeatureDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1062
+&#91;9&#93; destroy&#40;geomdefn::GMT.Gdal.GeomFieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1088
+&#91;10&#93; destroy&#40;drv::GMT.Gdal.Driver&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1025
+&#91;11&#93; destroy&#40;layer::GMT.Gdal.IFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1056
+&#91;12&#93; destroy&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1052
+&#91;13&#93; destroy&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1066
+&#91;14&#93; destroy&#40;fielddefn::GMT.Gdal.IFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1095
+&#91;15&#93; destroy&#40;fielddefn::GMT.Gdal.FieldDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1082
+&#91;16&#93; destroy&#40;geomdefn::GMT.Gdal.IGeomFieldDefnView&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1100
+&#91;17&#93; destroy&#40;featuredefn::GMT.Gdal.FeatureDefn&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1071</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1890,9 +1960,9 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.events</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;events&quot;:
-&#91;1&#93; events&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032
-&#91;2&#93; events&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032
-&#91;3&#93; events&#40;cmd0::String, arg1; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032</code></pre>
+&#91;1&#93; events&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032
+&#91;2&#93; events&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032
+&#91;3&#93; events&#40;cmd0::String, arg1; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1902,8 +1972,8 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.fields</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;fields&quot;:
-&#91;1&#93; fields&#40;arg::Array&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1498
-&#91;2&#93; fields&#40;arg&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1497</code></pre>
+&#91;1&#93; fields&#40;arg::Array&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1498
+&#91;2&#93; fields&#40;arg&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1497</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2046,8 +2116,8 @@ crop&#40;G, region&#61;&#40;-2,2,-2,2&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.fromWKT</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;fromWKT&quot;:
-&#91;1&#93; fromWKT&#40;data::String, args...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1651
-&#91;2&#93; fromWKT&#40;data::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1645</code></pre>
+&#91;1&#93; fromWKT&#40;data::String, args...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1654
+&#91;2&#93; fromWKT&#40;data::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1648</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2110,8 +2180,8 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.gdalbuildvrt</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;gdalbuildvrt&quot;:
-&#91;1&#93; gdalbuildvrt&#40;datasets::Vector&#123;&lt;:GMT.Gdal.AbstractDataset&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1581
-&#91;2&#93; gdalbuildvrt&#40;datasets::Vector&#123;&lt;:GMT.Gdal.AbstractDataset&#125;, options::Vector&#123;String&#125;; dest, save&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1581</code></pre>
+&#91;1&#93; gdalbuildvrt&#40;datasets::Vector&#123;&lt;:GMT.Gdal.AbstractDataset&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1584
+&#91;2&#93; gdalbuildvrt&#40;datasets::Vector&#123;&lt;:GMT.Gdal.AbstractDataset&#125;, options::Vector&#123;String&#125;; dest, save&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1584</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2149,10 +2219,10 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.gdalgrid</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;gdalgrid&quot;:
-&#91;1&#93; gdalgrid&#40;dataset::GMT.Gdal.Dataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1553
-&#91;2&#93; gdalgrid&#40;dataset::GMT.Gdal.Dataset, options::Vector&#123;String&#125;; dest, gdataset, save&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1553
-&#91;3&#93; gdalgrid&#40;ds::GMT.Gdal.IDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1564
-&#91;4&#93; gdalgrid&#40;ds::GMT.Gdal.IDataset, opts::Vector&#123;String&#125;; dest, gdataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1564</code></pre>
+&#91;1&#93; gdalgrid&#40;dataset::GMT.Gdal.Dataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1556
+&#91;2&#93; gdalgrid&#40;dataset::GMT.Gdal.Dataset, options::Vector&#123;String&#125;; dest, gdataset, save&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1556
+&#91;3&#93; gdalgrid&#40;ds::GMT.Gdal.IDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1567
+&#91;4&#93; gdalgrid&#40;ds::GMT.Gdal.IDataset, opts::Vector&#123;String&#125;; dest, gdataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1567</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2162,12 +2232,12 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.gdalinfo</code> is a <code>Function</code>.</p>
 <pre><code># 6 methods for generic function &quot;gdalinfo&quot;:
-&#91;1&#93; gdalinfo&#40;fname::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1529
-&#91;2&#93; gdalinfo&#40;fname::AbstractString, opts&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1529
-&#91;3&#93; gdalinfo&#40;ds::GMT.Gdal.Dataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1520
-&#91;4&#93; gdalinfo&#40;ds::GMT.Gdal.Dataset, options::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1520
-&#91;5&#93; gdalinfo&#40;ds::GMT.Gdal.IDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1528
-&#91;6&#93; gdalinfo&#40;ds::GMT.Gdal.IDataset, opts::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1528</code></pre>
+&#91;1&#93; gdalinfo&#40;fname::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1532
+&#91;2&#93; gdalinfo&#40;fname::AbstractString, opts&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1532
+&#91;3&#93; gdalinfo&#40;ds::GMT.Gdal.Dataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1523
+&#91;4&#93; gdalinfo&#40;ds::GMT.Gdal.Dataset, options::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1523
+&#91;5&#93; gdalinfo&#40;ds::GMT.Gdal.IDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1531
+&#91;6&#93; gdalinfo&#40;ds::GMT.Gdal.IDataset, opts::Vector&#123;String&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1531</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2177,10 +2247,10 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.gdalrasterize</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;gdalrasterize&quot;:
-&#91;1&#93; gdalrasterize&#40;dataset::Union&#123;GMT.GMTdataset, Vector&#123;&lt;:GMT.GMTdataset&#125;&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1567
-&#91;2&#93; gdalrasterize&#40;dataset::Union&#123;GMT.GMTdataset, Vector&#123;&lt;:GMT.GMTdataset&#125;&#125;, options::Vector&#123;String&#125;; dest, gdataset, save, layout&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1567
-&#91;3&#93; gdalrasterize&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1569
-&#91;4&#93; gdalrasterize&#40;dataset::GMT.Gdal.AbstractDataset, options::Vector&#123;String&#125;; dest, gdataset, save, layout&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1569</code></pre>
+&#91;1&#93; gdalrasterize&#40;dataset::Union&#123;GMT.GMTdataset, Vector&#123;&lt;:GMT.GMTdataset&#125;&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1570
+&#91;2&#93; gdalrasterize&#40;dataset::Union&#123;GMT.GMTdataset, Vector&#123;&lt;:GMT.GMTdataset&#125;&#125;, options::Vector&#123;String&#125;; dest, gdataset, save, layout&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1570
+&#91;3&#93; gdalrasterize&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1572
+&#91;4&#93; gdalrasterize&#40;dataset::GMT.Gdal.AbstractDataset, options::Vector&#123;String&#125;; dest, gdataset, save, layout&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1572</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2389,11 +2459,11 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getband</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;getband&quot;:
-&#91;1&#93; getband&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1372
-&#91;2&#93; getband&#40;dataset::GMT.Gdal.AbstractDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1372
-&#91;3&#93; getband&#40;ds::GMT.Gdal.RasterDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1373
-&#91;4&#93; getband&#40;ds::GMT.Gdal.RasterDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1373
-&#91;5&#93; getband&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:874</code></pre>
+&#91;1&#93; getband&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1375
+&#91;2&#93; getband&#40;dataset::GMT.Gdal.AbstractDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1375
+&#91;3&#93; getband&#40;ds::GMT.Gdal.RasterDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1376
+&#91;4&#93; getband&#40;ds::GMT.Gdal.RasterDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1376
+&#91;5&#93; getband&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:877</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2426,10 +2496,10 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getdriver</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;getdriver&quot;:
-&#91;1&#93; getdriver&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:874
-&#91;2&#93; getdriver&#40;ds::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1368
-&#91;3&#93; getdriver&#40;i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1369
-&#91;4&#93; getdriver&#40;name::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1370</code></pre>
+&#91;1&#93; getdriver&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:877
+&#91;2&#93; getdriver&#40;ds::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1371
+&#91;3&#93; getdriver&#40;i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1372
+&#91;4&#93; getdriver&#40;name::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1373</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2439,9 +2509,9 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getgeom</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;getgeom&quot;:
-&#91;1&#93; getgeom&#40;geom::GMT.Gdal.AbstractGeometry, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1879
-&#91;2&#93; getgeom&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1869
-&#91;3&#93; getgeom&#40;feature::GMT.Gdal.Feature, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1874</code></pre>
+&#91;1&#93; getgeom&#40;geom::GMT.Gdal.AbstractGeometry, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1882
+&#91;2&#93; getgeom&#40;feature::GMT.Gdal.Feature&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1872
+&#91;3&#93; getgeom&#40;feature::GMT.Gdal.Feature, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1877</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2451,8 +2521,8 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getgeotransform</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;getgeotransform&quot;:
-&#91;1&#93; getgeotransform&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:874
-&#91;2&#93; getgeotransform&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:889</code></pre>
+&#91;1&#93; getgeotransform&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:877
+&#91;2&#93; getgeotransform&#40;dataset::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:892</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2462,8 +2532,8 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getlayer</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;getlayer&quot;:
-&#91;1&#93; getlayer&#40;ds::GMT.Gdal.AbstractDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1718
-&#91;2&#93; getlayer&#40;ds::GMT.Gdal.AbstractDataset, name::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1719</code></pre>
+&#91;1&#93; getlayer&#40;ds::GMT.Gdal.AbstractDataset, i::Integer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1721
+&#91;2&#93; getlayer&#40;ds::GMT.Gdal.AbstractDataset, name::AbstractString&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1722</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2473,14 +2543,14 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.getproj</code> is a <code>Function</code>.</p>
 <pre><code># 8 methods for generic function &quot;getproj&quot;:
-&#91;1&#93; getproj&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:874
-&#91;2&#93; getproj&#40;ds::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1374
-&#91;3&#93; getproj&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1375
-&#91;4&#93; getproj&#40;name::AbstractString; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1376
-&#91;5&#93; getproj&#40;G::GMT.GMTgrid; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1402
-&#91;6&#93; getproj&#40;I::GMT.GMTimage; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1403
-&#91;7&#93; getproj&#40;D::GMT.GMTdataset; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1404
-&#91;8&#93; getproj&#40;D::Vector&#123;&lt;:GMT.GMTdataset&#125;; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1405</code></pre>
+&#91;1&#93; getproj&#40;x::GMT.Gdal.RasterDataset, args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:877
+&#91;2&#93; getproj&#40;ds::GMT.Gdal.AbstractDataset&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1377
+&#91;3&#93; getproj&#40;layer::GMT.Gdal.AbstractFeatureLayer&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1378
+&#91;4&#93; getproj&#40;name::AbstractString; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1379
+&#91;5&#93; getproj&#40;G::GMT.GMTgrid; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1405
+&#91;6&#93; getproj&#40;I::GMT.GMTimage; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1406
+&#91;7&#93; getproj&#40;D::GMT.GMTdataset; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1407
+&#91;8&#93; getproj&#40;D::Vector&#123;&lt;:GMT.GMTdataset&#125;; proj4, wkt, epsg&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1408</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -2939,7 +3009,7 @@ or
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.gmthelp</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;gmthelp&quot;:
-&#91;1&#93; gmthelp&#40;opt&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4271</code></pre>
+&#91;1&#93; gmthelp&#40;opt&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4274</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -4107,11 +4177,11 @@ found in your local data or cache dirs.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.grdcontour&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;grdcontour&#33;&quot;:
-&#91;1&#93; grdcontour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdcontour.jl:172
-&#91;2&#93; grdcontour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdcontour.jl:172
-&#91;3&#93; grdcontour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdcontour.jl:172
-&#91;4&#93; grdcontour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdcontour.jl:174
-&#91;5&#93; grdcontour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdcontour.jl:174</code></pre>
+&#91;1&#93; grdcontour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdcontour.jl:172
+&#91;2&#93; grdcontour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdcontour.jl:172
+&#91;3&#93; grdcontour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdcontour.jl:172
+&#91;4&#93; grdcontour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdcontour.jl:174
+&#91;5&#93; grdcontour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdcontour.jl:174</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -4583,14 +4653,14 @@ found in your local data or cache dirs.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.grdimage&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 8 methods for generic function &quot;grdimage&#33;&quot;:
-&#91;1&#93; grdimage&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:180
-&#91;2&#93; grdimage&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:180
-&#91;3&#93; grdimage&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:180
-&#91;4&#93; grdimage&#33;&#40;cmd0::String, arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:180
-&#91;5&#93; grdimage&#33;&#40;cmd0::String, arg1, arg2, arg3; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:180
-&#91;6&#93; grdimage&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:184
-&#91;7&#93; grdimage&#33;&#40;arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:184
-&#91;8&#93; grdimage&#33;&#40;arg1, arg2, arg3; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdimage.jl:184</code></pre>
+&#91;1&#93; grdimage&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:180
+&#91;2&#93; grdimage&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:180
+&#91;3&#93; grdimage&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:180
+&#91;4&#93; grdimage&#33;&#40;cmd0::String, arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:180
+&#91;5&#93; grdimage&#33;&#40;cmd0::String, arg1, arg2, arg3; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:180
+&#91;6&#93; grdimage&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:184
+&#91;7&#93; grdimage&#33;&#40;arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:184
+&#91;8&#93; grdimage&#33;&#40;arg1, arg2, arg3; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdimage.jl:184</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5233,13 +5303,13 @@ imshow&#40;Gr, plot&#61;&#40;data&#61;tri_rot,&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.grdvector&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 7 methods for generic function &quot;grdvector&#33;&quot;:
-&#91;1&#93; grdvector&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:102
-&#91;2&#93; grdvector&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:102
-&#91;3&#93; grdvector&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:102
-&#91;4&#93; grdvector&#33;&#40;cmd0::String, arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:102
-&#91;5&#93; grdvector&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:103
-&#91;6&#93; grdvector&#33;&#40;arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:103
-&#91;7&#93; grdvector&#33;&#40;arg1, arg2, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdvector.jl:103</code></pre>
+&#91;1&#93; grdvector&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:102
+&#91;2&#93; grdvector&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:102
+&#91;3&#93; grdvector&#33;&#40;cmd0::String, arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:102
+&#91;4&#93; grdvector&#33;&#40;cmd0::String, arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:102
+&#91;5&#93; grdvector&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:103
+&#91;6&#93; grdvector&#33;&#40;arg1, arg2&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:103
+&#91;7&#93; grdvector&#33;&#40;arg1, arg2, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdvector.jl:103</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5329,10 +5399,10 @@ imshow&#40;Gr, plot&#61;&#40;data&#61;tri_rot,&#41;&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.grdview&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;grdview&#33;&quot;:
-&#91;1&#93; grdview&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdview.jl:192
-&#91;2&#93; grdview&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdview.jl:192
-&#91;3&#93; grdview&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdview.jl:192
-&#91;4&#93; grdview&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/grdview.jl:194</code></pre>
+&#91;1&#93; grdview&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdview.jl:192
+&#91;2&#93; grdview&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdview.jl:192
+&#91;3&#93; grdview&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdview.jl:192
+&#91;4&#93; grdview&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/grdview.jl:194</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5594,10 +5664,10 @@ are inversely proportional to the uncertainties squared.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.histogram&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;histogram&#33;&quot;:
-&#91;1&#93; histogram&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;2&#93; histogram&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;3&#93; histogram&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;4&#93; histogram&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:380</code></pre>
+&#91;1&#93; histogram&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;2&#93; histogram&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;3&#93; histogram&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;4&#93; histogram&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:380</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5634,8 +5704,8 @@ hlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.hlines&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;hlines&#33;&quot;:
-&#91;1&#93; hlines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:727
-&#91;2&#93; hlines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:727</code></pre>
+&#91;1&#93; hlines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:727
+&#91;2&#93; hlines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:727</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5702,9 +5772,9 @@ hlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.image&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;image&#33;&quot;:
-&#91;1&#93; image&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57
-&#91;2&#93; image&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57
-&#91;3&#93; image&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57</code></pre>
+&#91;1&#93; image&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57
+&#91;2&#93; image&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57
+&#91;3&#93; image&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5741,7 +5811,7 @@ Example2: change to the first 6 colors in cmap by assigning them random values
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.importEPSG</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;importEPSG&quot;:
-&#91;1&#93; importEPSG&#40;code::Integer; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1698</code></pre>
+&#91;1&#93; importEPSG&#40;code::Integer; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1701</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5751,7 +5821,7 @@ Example2: change to the first 6 colors in cmap by assigning them random values
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.importPROJ4</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;importPROJ4&quot;:
-&#91;1&#93; importPROJ4&#40;projstr::AbstractString; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1707</code></pre>
+&#91;1&#93; importPROJ4&#40;projstr::AbstractString; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1710</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5761,7 +5831,7 @@ Example2: change to the first 6 colors in cmap by assigning them random values
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.importWKT</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;importWKT&quot;:
-&#91;1&#93; importWKT&#40;wktstr::AbstractString; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1691</code></pre>
+&#91;1&#93; importWKT&#40;wktstr::AbstractString; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1694</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5806,8 +5876,8 @@ julia&gt; imshow&#40;&quot;http://larryfire.files.wordpress.com/2009/07/untooned
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.inset</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;inset&quot;:
-&#91;1&#93; inset&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmtbegin.jl:56
-&#91;2&#93; inset&#40;fim; stop, kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmtbegin.jl:56</code></pre>
+&#91;1&#93; inset&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmtbegin.jl:56
+&#91;2&#93; inset&#40;fim; stop, kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmtbegin.jl:56</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -5912,8 +5982,8 @@ plot&#33;&#40;points, marker&#61;:star, ms&#61;&quot;12p&quot;, fill&#61;:blue, 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.isnodata</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;isnodata&quot;:
-&#91;1&#93; isnodata&#40;array::AbstractArray&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4136
-&#91;2&#93; isnodata&#40;array::AbstractArray, val&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4136</code></pre>
+&#91;1&#93; isnodata&#40;array::AbstractArray&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4139
+&#91;2&#93; isnodata&#40;array::AbstractArray, val&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4139</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6024,10 +6094,10 @@ plot&#33;&#40;points, marker&#61;:star, ms&#61;&quot;12p&quot;, fill&#61;:blue, 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.legend&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;legend&#33;&quot;:
-&#91;1&#93; legend&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;2&#93; legend&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;3&#93; legend&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;4&#93; legend&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:223</code></pre>
+&#91;1&#93; legend&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;2&#93; legend&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;3&#93; legend&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;4&#93; legend&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:223</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6086,15 +6156,15 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.lines&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;lines&#33;&quot;:
-&#91;1&#93; lines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:673
-&#91;2&#93; lines&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:679
-&#91;3&#93; lines&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:684
-&#91;4&#93; lines&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:684
-&#91;5&#93; lines&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:679
-&#91;6&#93; lines&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:673
-&#91;7&#93; lines&#33;&#40;cmd0::String, arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:673
-&#91;8&#93; lines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:689
-&#91;9&#93; lines&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:687</code></pre>
+&#91;1&#93; lines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:673
+&#91;2&#93; lines&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:679
+&#91;3&#93; lines&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:684
+&#91;4&#93; lines&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:684
+&#91;5&#93; lines&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:679
+&#91;6&#93; lines&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:673
+&#91;7&#93; lines&#33;&#40;cmd0::String, arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:673
+&#91;8&#93; lines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:689
+&#91;9&#93; lines&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:687</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6104,8 +6174,8 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.linspace</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;linspace&quot;:
-&#91;1&#93; linspace&#40;start, stop&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1495
-&#91;2&#93; linspace&#40;start, stop, length&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1495</code></pre>
+&#91;1&#93; linspace&#40;start, stop&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1495
+&#91;2&#93; linspace&#40;start, stop, length&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1495</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6171,8 +6241,8 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.logo&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;logo&#33;&quot;:
-&#91;1&#93; logo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmtlogo.jl:91
-&#91;2&#93; logo&#33;&#40;cmd0::String; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmtlogo.jl:91</code></pre>
+&#91;1&#93; logo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmtlogo.jl:91
+&#91;2&#93; logo&#33;&#40;cmd0::String; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmtlogo.jl:91</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6182,8 +6252,8 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.logspace</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;logspace&quot;:
-&#91;1&#93; logspace&#40;start, stop&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1496
-&#91;2&#93; logspace&#40;start, stop, length&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1496</code></pre>
+&#91;1&#93; logspace&#40;start, stop&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1496
+&#91;2&#93; logspace&#40;start, stop, length&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1496</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6303,7 +6373,7 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.magic</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;magic&quot;:
-&#91;1&#93; magic&#40;n::Int64&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4215</code></pre>
+&#91;1&#93; magic&#40;n::Int64&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4218</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -6582,11 +6652,11 @@ lines&#40;x -&gt; cos&#40;x&#41; * x, y -&gt; sin&#40;y&#41; * y, linspace&#40;0
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.mask&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;mask&#33;&quot;:
-&#91;1&#93; mask&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;2&#93; mask&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;3&#93; mask&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;4&#93; mask&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:93
-&#91;5&#93; mask&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:93</code></pre>
+&#91;1&#93; mask&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;2&#93; mask&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;3&#93; mask&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;4&#93; mask&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:93
+&#91;5&#93; mask&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:93</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7037,11 +7107,11 @@ julia&gt; mean&#40;A, dims&#61;2&#41;
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.meca&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;meca&#33;&quot;:
-&#91;1&#93; meca&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;2&#93; meca&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;3&#93; meca&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;4&#93; meca&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:96
-&#91;5&#93; meca&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:96</code></pre>
+&#91;1&#93; meca&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;2&#93; meca&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;3&#93; meca&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;4&#93; meca&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:96
+&#91;5&#93; meca&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:96</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7182,8 +7252,8 @@ You can override that by giving another workdir as a relative or full directory 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.nanmean</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;nanmean&quot;:
-&#91;1&#93; nanmean&#40;x&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4078
-&#91;2&#93; nanmean&#40;x, y&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4079</code></pre>
+&#91;1&#93; nanmean&#40;x&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4081
+&#91;2&#93; nanmean&#40;x, y&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4082</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7193,8 +7263,8 @@ You can override that by giving another workdir as a relative or full directory 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.nanstd</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;nanstd&quot;:
-&#91;1&#93; nanstd&#40;x&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4080
-&#91;2&#93; nanstd&#40;x, y&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4081</code></pre>
+&#91;1&#93; nanstd&#40;x&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4083
+&#91;2&#93; nanstd&#40;x, y&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4084</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7372,11 +7442,11 @@ pcolor&#40;XX,YY, reshape&#40;repeat&#40;&#91;1:18; 18:-1:1&#93;, 9,1&#41;, size
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.pcolor&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;pcolor&#33;&quot;:
-&#91;1&#93; pcolor&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pcolor.jl:148
-&#91;2&#93; pcolor&#33;&#40;X::Union&#123;VecOrMat&#123;&lt;:Real&#125;, AbstractVector&#123;&lt;:Real&#125;&#125;, Y::Union&#123;VecOrMat&#123;&lt;:Real&#125;, AbstractVector&#123;&lt;:Real&#125;&#125;, C::Matrix&#123;&lt;:Real&#125;; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pcolor.jl:106
-&#91;3&#93; pcolor&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pcolor.jl:148
-&#91;4&#93; pcolor&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pcolor.jl:148
-&#91;5&#93; pcolor&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pcolor.jl:149</code></pre>
+&#91;1&#93; pcolor&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pcolor.jl:148
+&#91;2&#93; pcolor&#33;&#40;X::Union&#123;VecOrMat&#123;&lt;:Real&#125;, AbstractVector&#123;&lt;:Real&#125;&#125;, Y::Union&#123;VecOrMat&#123;&lt;:Real&#125;, AbstractVector&#123;&lt;:Real&#125;&#125;, C::Matrix&#123;&lt;:Real&#125;; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pcolor.jl:106
+&#91;3&#93; pcolor&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pcolor.jl:148
+&#91;4&#93; pcolor&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pcolor.jl:148
+&#91;5&#93; pcolor&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pcolor.jl:149</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7538,16 +7608,16 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.plot&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 10 methods for generic function &quot;plot&#33;&quot;:
-&#91;1&#93; plot&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;2&#93; plot&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:121
-&#91;3&#93; plot&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:126
-&#91;4&#93; plot&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:126
-&#91;5&#93; plot&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:121
-&#91;6&#93; plot&#33;&#40;arg1::Number, arg2::Number; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:133
-&#91;7&#93; plot&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;8&#93; plot&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;9&#93; plot&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:115
-&#91;10&#93; plot&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:131</code></pre>
+&#91;1&#93; plot&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;2&#93; plot&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:121
+&#91;3&#93; plot&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:126
+&#91;4&#93; plot&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:126
+&#91;5&#93; plot&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:121
+&#91;6&#93; plot&#33;&#40;arg1::Number, arg2::Number; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:133
+&#91;7&#93; plot&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;8&#93; plot&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;9&#93; plot&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:115
+&#91;10&#93; plot&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:131</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7701,15 +7771,15 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.plot3d&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;plot3d&#33;&quot;:
-&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:311
-&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:302</code></pre>
+&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:311
+&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:302</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -7863,15 +7933,15 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.plot3d&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;plot3d&#33;&quot;:
-&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:311
-&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:302</code></pre>
+&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:311
+&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:302</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8147,9 +8217,9 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.basemap&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;basemap&#33;&quot;:
-&#91;1&#93; basemap&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72
-&#91;2&#93; basemap&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72
-&#91;3&#93; basemap&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psbasemap.jl:72</code></pre>
+&#91;1&#93; basemap&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72
+&#91;2&#93; basemap&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72
+&#91;3&#93; basemap&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psbasemap.jl:72</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8240,11 +8310,11 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.clip&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;clip&#33;&quot;:
-&#91;1&#93; clip&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;2&#93; clip&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;3&#93; clip&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:65
-&#91;4&#93; clip&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:67
-&#91;5&#93; clip&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psclip.jl:67</code></pre>
+&#91;1&#93; clip&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;2&#93; clip&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;3&#93; clip&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:65
+&#91;4&#93; clip&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:67
+&#91;5&#93; clip&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psclip.jl:67</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8355,8 +8425,8 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.coast&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;coast&#33;&quot;:
-&#91;1&#93; coast&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscoast.jl:227
-&#91;2&#93; coast&#33;&#40;cmd0::String; clip, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscoast.jl:227</code></pre>
+&#91;1&#93; coast&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscoast.jl:227
+&#91;2&#93; coast&#33;&#40;cmd0::String; clip, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscoast.jl:227</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8480,11 +8550,11 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.contour&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;contour&#33;&quot;:
-&#91;1&#93; contour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;2&#93; contour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;3&#93; contour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:158
-&#91;4&#93; contour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:160
-&#91;5&#93; contour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pscontour.jl:160</code></pre>
+&#91;1&#93; contour&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;2&#93; contour&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;3&#93; contour&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:158
+&#91;4&#93; contour&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:160
+&#91;5&#93; contour&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pscontour.jl:160</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8567,11 +8637,11 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.coupe&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;coupe&#33;&quot;:
-&#91;1&#93; coupe&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;2&#93; coupe&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;3&#93; coupe&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:116
-&#91;4&#93; coupe&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:118
-&#91;5&#93; coupe&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:118</code></pre>
+&#91;1&#93; coupe&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;2&#93; coupe&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;3&#93; coupe&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:116
+&#91;4&#93; coupe&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:118
+&#91;5&#93; coupe&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:118</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8581,9 +8651,9 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.events</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;events&quot;:
-&#91;1&#93; events&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032
-&#91;2&#93; events&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032
-&#91;3&#93; events&#40;cmd0::String, arg1; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:1032</code></pre>
+&#91;1&#93; events&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032
+&#91;2&#93; events&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032
+&#91;3&#93; events&#40;cmd0::String, arg1; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:1032</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8710,10 +8780,10 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.histogram&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;histogram&#33;&quot;:
-&#91;1&#93; histogram&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;2&#93; histogram&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;3&#93; histogram&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:378
-&#91;4&#93; histogram&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pshistogram.jl:380</code></pre>
+&#91;1&#93; histogram&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;2&#93; histogram&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;3&#93; histogram&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:378
+&#91;4&#93; histogram&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pshistogram.jl:380</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8780,9 +8850,9 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.image&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;image&#33;&quot;:
-&#91;1&#93; image&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57
-&#91;2&#93; image&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57
-&#91;3&#93; image&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psimage.jl:57</code></pre>
+&#91;1&#93; image&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57
+&#91;2&#93; image&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57
+&#91;3&#93; image&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psimage.jl:57</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8861,10 +8931,10 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.legend&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;legend&#33;&quot;:
-&#91;1&#93; legend&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;2&#93; legend&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;3&#93; legend&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:221
-&#91;4&#93; legend&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pslegend.jl:223</code></pre>
+&#91;1&#93; legend&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;2&#93; legend&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;3&#93; legend&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:221
+&#91;4&#93; legend&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pslegend.jl:223</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -8973,11 +9043,11 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.mask&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;mask&#33;&quot;:
-&#91;1&#93; mask&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;2&#93; mask&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;3&#93; mask&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:91
-&#91;4&#93; mask&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:93
-&#91;5&#93; mask&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psmask.jl:93</code></pre>
+&#91;1&#93; mask&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;2&#93; mask&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;3&#93; mask&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:91
+&#91;4&#93; mask&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:93
+&#91;5&#93; mask&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psmask.jl:93</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9085,11 +9155,11 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.meca&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;meca&#33;&quot;:
-&#91;1&#93; meca&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;2&#93; meca&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;3&#93; meca&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:94
-&#91;4&#93; meca&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:96
-&#91;5&#93; meca&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/seis/psmeca.jl:96</code></pre>
+&#91;1&#93; meca&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;2&#93; meca&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;3&#93; meca&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:94
+&#91;4&#93; meca&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:96
+&#91;5&#93; meca&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/seis/psmeca.jl:96</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9251,11 +9321,11 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.rose&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;rose&#33;&quot;:
-&#91;1&#93; rose&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;2&#93; rose&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;3&#93; rose&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;4&#93; rose&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:125
-&#91;5&#93; rose&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:125</code></pre>
+&#91;1&#93; rose&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;2&#93; rose&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;3&#93; rose&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;4&#93; rose&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:125
+&#91;5&#93; rose&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:125</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9334,10 +9404,10 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.colorbar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;colorbar&#33;&quot;:
-&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:91
-&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psscale.jl:90</code></pre>
+&#91;1&#93; colorbar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;2&#93; colorbar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;3&#93; colorbar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:91
+&#91;4&#93; colorbar&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psscale.jl:90</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9423,9 +9493,9 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.solar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;solar&#33;&quot;:
-&#91;1&#93; solar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74
-&#91;2&#93; solar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74
-&#91;3&#93; solar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74</code></pre>
+&#91;1&#93; solar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74
+&#91;2&#93; solar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74
+&#91;3&#93; solar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9566,10 +9636,10 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.ternary&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;ternary&#33;&quot;:
-&#91;1&#93; ternary&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;2&#93; ternary&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;3&#93; ternary&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;4&#93; ternary&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:965</code></pre>
+&#91;1&#93; ternary&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;2&#93; ternary&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;3&#93; ternary&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;4&#93; ternary&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:965</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9690,11 +9760,11 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.text&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;text&#33;&quot;:
-&#91;1&#93; text&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;2&#93; text&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;3&#93; text&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;4&#93; text&#33;&#40;txt::Vector&#123;String&#125;; x, y, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:145
-&#91;5&#93; text&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:134</code></pre>
+&#91;1&#93; text&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;2&#93; text&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;3&#93; text&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;4&#93; text&#33;&#40;txt::Vector&#123;String&#125;; x, y, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:145
+&#91;5&#93; text&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:134</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9716,11 +9786,11 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.velo&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;velo&#33;&quot;:
-&#91;1&#93; velo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;2&#93; velo&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;3&#93; velo&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;4&#93; velo&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:49
-&#91;5&#93; velo&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:49</code></pre>
+&#91;1&#93; velo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;2&#93; velo&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;3&#93; velo&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;4&#93; velo&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:49
+&#91;5&#93; velo&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:49</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9824,11 +9894,11 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.wiggle&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;wiggle&#33;&quot;:
-&#91;1&#93; wiggle&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;2&#93; wiggle&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;3&#93; wiggle&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;4&#93; wiggle&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:92
-&#91;5&#93; wiggle&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:92</code></pre>
+&#91;1&#93; wiggle&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;2&#93; wiggle&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;3&#93; wiggle&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;4&#93; wiggle&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:92
+&#91;5&#93; wiggle&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:92</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -9990,16 +10060,16 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.plot&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 10 methods for generic function &quot;plot&#33;&quot;:
-&#91;1&#93; plot&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;2&#93; plot&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:121
-&#91;3&#93; plot&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:126
-&#91;4&#93; plot&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:126
-&#91;5&#93; plot&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:121
-&#91;6&#93; plot&#33;&#40;arg1::Number, arg2::Number; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:133
-&#91;7&#93; plot&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;8&#93; plot&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:129
-&#91;9&#93; plot&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:115
-&#91;10&#93; plot&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:131</code></pre>
+&#91;1&#93; plot&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;2&#93; plot&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:121
+&#91;3&#93; plot&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:126
+&#91;4&#93; plot&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:126
+&#91;5&#93; plot&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:121
+&#91;6&#93; plot&#33;&#40;arg1::Number, arg2::Number; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:133
+&#91;7&#93; plot&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;8&#93; plot&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:129
+&#91;9&#93; plot&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:115
+&#91;10&#93; plot&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:131</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10153,15 +10223,15 @@ To draw them as straight lines, use this option.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.plot3d&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;plot3d&#33;&quot;:
-&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:311
-&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:321
-&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:316
-&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:305
-&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:302</code></pre>
+&#91;1&#93; plot3d&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;2&#93; plot3d&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:311
+&#91;3&#93; plot3d&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;4&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;5&#93; plot3d&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:321
+&#91;6&#93; plot3d&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:316
+&#91;7&#93; plot3d&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;8&#93; plot3d&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:305
+&#91;9&#93; plot3d&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:302</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10199,8 +10269,8 @@ rasterzones&#33;&#40;G, D, mean&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.readraster</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;readraster&quot;:
-&#91;1&#93; readraster&#40;s::String; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1444
-&#91;2&#93; readraster&#40;args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1445</code></pre>
+&#91;1&#93; readraster&#40;s::String; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1447
+&#91;2&#93; readraster&#40;args...; kwargs...&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1448</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10323,7 +10393,7 @@ rasterzones&#33;&#40;G, D, mean&#41;</code></pre>
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.resetGMT</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;resetGMT&quot;:
-&#91;1&#93; resetGMT&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/gmt_main.jl:1392</code></pre>
+&#91;1&#93; resetGMT&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/gmt_main.jl:1392</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10485,11 +10555,11 @@ instead of true 0-360 degree directions &#91;Default&#93;.
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.rose&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;rose&#33;&quot;:
-&#91;1&#93; rose&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;2&#93; rose&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;3&#93; rose&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:123
-&#91;4&#93; rose&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:125
-&#91;5&#93; rose&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/psrose.jl:125</code></pre>
+&#91;1&#93; rose&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;2&#93; rose&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;3&#93; rose&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:123
+&#91;4&#93; rose&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:125
+&#91;5&#93; rose&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/psrose.jl:125</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10637,15 +10707,15 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.scatter&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;scatter&#33;&quot;:
-&#91;1&#93; scatter&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:394
-&#91;2&#93; scatter&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:386
-&#91;3&#93; scatter&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:391
-&#91;4&#93; scatter&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:391
-&#91;5&#93; scatter&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:386
-&#91;6&#93; scatter&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:394
-&#91;7&#93; scatter&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:394
-&#91;8&#93; scatter&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:397
-&#91;9&#93; scatter&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:400</code></pre>
+&#91;1&#93; scatter&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:394
+&#91;2&#93; scatter&#33;&#40;f::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:386
+&#91;3&#93; scatter&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:391
+&#91;4&#93; scatter&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:391
+&#91;5&#93; scatter&#33;&#40;f::Function, rang; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:386
+&#91;6&#93; scatter&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:394
+&#91;7&#93; scatter&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:394
+&#91;8&#93; scatter&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:397
+&#91;9&#93; scatter&#33;&#40;arg1, arg2; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:400</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10655,15 +10725,15 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.scatter3</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;scatter3&quot;:
-&#91;1&#93; scatter3&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:403
-&#91;2&#93; scatter3&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:409
-&#91;3&#93; scatter3&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:416
-&#91;4&#93; scatter3&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:421
-&#91;5&#93; scatter3&#40;f1::Function, f2::Function, f3::Function, range_t; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:421
-&#91;6&#93; scatter3&#40;f1::Function, f2::Function, range_t; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:416
-&#91;7&#93; scatter3&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:403
-&#91;8&#93; scatter3&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:403
-&#91;9&#93; scatter3&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:406</code></pre>
+&#91;1&#93; scatter3&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:403
+&#91;2&#93; scatter3&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:409
+&#91;3&#93; scatter3&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:416
+&#91;4&#93; scatter3&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:421
+&#91;5&#93; scatter3&#40;f1::Function, f2::Function, f3::Function, range_t; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:421
+&#91;6&#93; scatter3&#40;f1::Function, f2::Function, range_t; first, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:416
+&#91;7&#93; scatter3&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:403
+&#91;8&#93; scatter3&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:403
+&#91;9&#93; scatter3&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:406</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10673,15 +10743,15 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.scatter3&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 9 methods for generic function &quot;scatter3&#33;&quot;:
-&#91;1&#93; scatter3&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:404
-&#91;2&#93; scatter3&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:412
-&#91;3&#93; scatter3&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:419
-&#91;4&#93; scatter3&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:424
-&#91;5&#93; scatter3&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:424
-&#91;6&#93; scatter3&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:419
-&#91;7&#93; scatter3&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:404
-&#91;8&#93; scatter3&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:404
-&#91;9&#93; scatter3&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:407</code></pre>
+&#91;1&#93; scatter3&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:404
+&#91;2&#93; scatter3&#33;&#40;arg1::AbstractArray, arg2::AbstractArray, arg3::AbstractArray; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:412
+&#91;3&#93; scatter3&#33;&#40;f1::Function, f2::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:419
+&#91;4&#93; scatter3&#33;&#40;f1::Function, f2::Function, f3::Function&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:424
+&#91;5&#93; scatter3&#33;&#40;f1::Function, f2::Function, f3::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:424
+&#91;6&#93; scatter3&#33;&#40;f1::Function, f2::Function, range_t; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:419
+&#91;7&#93; scatter3&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:404
+&#91;8&#93; scatter3&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:404
+&#91;9&#93; scatter3&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:407</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10691,7 +10761,7 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.setgeotransform&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;setgeotransform&#33;&quot;:
-&#91;1&#93; setgeotransform&#33;&#40;dataset::GMT.Gdal.AbstractDataset, transform::Vector&#123;Float64&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:891</code></pre>
+&#91;1&#93; setgeotransform&#33;&#40;dataset::GMT.Gdal.AbstractDataset, transform::Vector&#123;Float64&#125;&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:894</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10715,10 +10785,10 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.showfig</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;showfig&quot;:
-&#91;1&#93; showfig&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:3528
-&#91;2&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:3474
-&#91;3&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String, K::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:3474
-&#91;4&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String, K::Bool, fname::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:3474</code></pre>
+&#91;1&#93; showfig&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:3531
+&#91;2&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:3477
+&#91;3&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String, K::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:3477
+&#91;4&#93; showfig&#40;d::Dict, fname_ps::String, fname_ext::String, opt_T::String, K::Bool, fname::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:3477</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -10844,9 +10914,9 @@ points unless specified otherwise with &#40;for example for cm&#41; *par&#61;&#4
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.solar&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;solar&#33;&quot;:
-&#91;1&#93; solar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74
-&#91;2&#93; solar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74
-&#91;3&#93; solar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pssolar.jl:74</code></pre>
+&#91;1&#93; solar&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74
+&#91;2&#93; solar&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74
+&#91;3&#93; solar&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pssolar.jl:74</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11352,8 +11422,8 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.tern2cart</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;tern2cart&quot;:
-&#91;1&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:945
-&#91;2&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;, reverse::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:945</code></pre>
+&#91;1&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:945
+&#91;2&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;, reverse::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:945</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11494,10 +11564,10 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.ternary&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;ternary&#33;&quot;:
-&#91;1&#93; ternary&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;2&#93; ternary&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;3&#93; ternary&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:963
-&#91;4&#93; ternary&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:965</code></pre>
+&#91;1&#93; ternary&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;2&#93; ternary&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;3&#93; ternary&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:963
+&#91;4&#93; ternary&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:965</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11618,11 +11688,11 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.text&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;text&#33;&quot;:
-&#91;1&#93; text&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;2&#93; text&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;3&#93; text&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:132
-&#91;4&#93; text&#33;&#40;txt::Vector&#123;String&#125;; x, y, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:145
-&#91;5&#93; text&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pstext.jl:134</code></pre>
+&#91;1&#93; text&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;2&#93; text&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;3&#93; text&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:132
+&#91;4&#93; text&#33;&#40;txt::Vector&#123;String&#125;; x, y, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:145
+&#91;5&#93; text&#33;&#40;arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pstext.jl:134</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11632,13 +11702,13 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.text_record</code> is a <code>Function</code>.</p>
 <pre><code># 7 methods for generic function &quot;text_record&quot;:
-&#91;1&#93; text_record&#40;text::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:30
-&#91;2&#93; text_record&#40;text::String, hdr::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:30
-&#91;3&#93; text_record&#40;text::Vector&#123;String&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:31
-&#91;4&#93; text_record&#40;text::Vector&#123;String&#125;, hdr::Union&#123;String, Vector&#123;String&#125;&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:31
-&#91;5&#93; text_record&#40;text&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:33
-&#91;6&#93; text_record&#40;data, text&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:1
-&#91;7&#93; text_record&#40;data, text, hdr&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/utils_types.jl:1</code></pre>
+&#91;1&#93; text_record&#40;text::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:30
+&#91;2&#93; text_record&#40;text::String, hdr::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:30
+&#91;3&#93; text_record&#40;text::Vector&#123;String&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:31
+&#91;4&#93; text_record&#40;text::Vector&#123;String&#125;, hdr::Union&#123;String, Vector&#123;String&#125;&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:31
+&#91;5&#93; text_record&#40;text&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:33
+&#91;6&#93; text_record&#40;data, text&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:1
+&#91;7&#93; text_record&#40;data, text, hdr&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/utils_types.jl:1</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11689,7 +11759,7 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.tic</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;tic&quot;:
-&#91;1&#93; tic&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4030</code></pre>
+&#91;1&#93; tic&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4033</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11699,7 +11769,7 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.toPROJ4</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;toPROJ4&quot;:
-&#91;1&#93; toPROJ4&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1676</code></pre>
+&#91;1&#93; toPROJ4&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1679</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11709,9 +11779,9 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.Gdal.toWKT</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function &quot;toWKT&quot;:
-&#91;1&#93; toWKT&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1653
-&#91;2&#93; toWKT&#40;spref::GMT.Gdal.AbstractSpatialRef, simplify::Bool&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1660
-&#91;3&#93; toWKT&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/GljzA/src/gdal.jl:1667</code></pre>
+&#91;1&#93; toWKT&#40;spref::GMT.Gdal.AbstractSpatialRef&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1656
+&#91;2&#93; toWKT&#40;spref::GMT.Gdal.AbstractSpatialRef, simplify::Bool&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1663
+&#91;3&#93; toWKT&#40;geom::GMT.Gdal.AbstractGeometry&#41; in GMT.Gdal at /Users/runner/.julia/packages/GMT/6XX5K/src/gdal.jl:1670</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11721,8 +11791,8 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.toc</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;toc&quot;:
-&#91;1&#93; toc&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4045
-&#91;2&#93; toc&#40;V&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:4045</code></pre>
+&#91;1&#93; toc&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4048
+&#91;2&#93; toc&#40;V&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:4048</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11965,7 +12035,7 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.triplot&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;triplot&#33;&quot;:
-&#91;1&#93; triplot&#33;&#40;in::Matrix; onlyedges, noplot, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/triangulate.jl:146</code></pre>
+&#91;1&#93; triplot&#33;&#40;in::Matrix; onlyedges, noplot, kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/triangulate.jl:146</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -11975,10 +12045,10 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.vector_attrib</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function &quot;vector_attrib&quot;:
-&#91;1&#93; vector_attrib&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2722
-&#91;2&#93; vector_attrib&#40;d::Dict&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2720
-&#91;3&#93; vector_attrib&#40;d::Dict, lixo&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2720
-&#91;4&#93; vector_attrib&#40;t::NamedTuple&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/common_options.jl:2721</code></pre>
+&#91;1&#93; vector_attrib&#40;; kwargs...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2725
+&#91;2&#93; vector_attrib&#40;d::Dict&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2723
+&#91;3&#93; vector_attrib&#40;d::Dict, lixo&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2723
+&#91;4&#93; vector_attrib&#40;t::NamedTuple&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/common_options.jl:2724</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -12000,11 +12070,11 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.velo&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;velo&#33;&quot;:
-&#91;1&#93; velo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;2&#93; velo&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;3&#93; velo&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:47
-&#91;4&#93; velo&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:49
-&#91;5&#93; velo&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/geodesy/psvelo.jl:49</code></pre>
+&#91;1&#93; velo&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;2&#93; velo&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;3&#93; velo&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:47
+&#91;4&#93; velo&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:49
+&#91;5&#93; velo&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/geodesy/psvelo.jl:49</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -12041,8 +12111,8 @@ vlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.vlines&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;vlines&#33;&quot;:
-&#91;1&#93; vlines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:767
-&#91;2&#93; vlines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/plot.jl:767</code></pre>
+&#91;1&#93; vlines&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:767
+&#91;2&#93; vlines&#33;&#40;arg; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/plot.jl:767</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -12146,11 +12216,11 @@ vlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.wiggle&#33;</code> is a <code>Function</code>.</p>
 <pre><code># 5 methods for generic function &quot;wiggle&#33;&quot;:
-&#91;1&#93; wiggle&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;2&#93; wiggle&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;3&#93; wiggle&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:90
-&#91;4&#93; wiggle&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:92
-&#91;5&#93; wiggle&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/GljzA/src/pswiggle.jl:92</code></pre>
+&#91;1&#93; wiggle&#33;&#40;&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;2&#93; wiggle&#33;&#40;cmd0::String&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;3&#93; wiggle&#33;&#40;cmd0::String, arg1; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:90
+&#91;4&#93; wiggle&#33;&#40;arg1&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:92
+&#91;5&#93; wiggle&#33;&#40;arg1, cmd0::String; kw...&#41; in GMT at /Users/runner/.julia/packages/GMT/6XX5K/src/pswiggle.jl:92</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -12468,7 +12538,7 @@ imshow&#40;img, proj&#61;:guess&#41;</code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 16, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 17, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>
