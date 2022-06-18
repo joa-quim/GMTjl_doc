@@ -107,14 +107,14 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **shore** or **shorelines** or **coast** : -- *shore=pen*  **|** *shore=(level,pen)* **|** *shore=(level=lev, pen=pen)*\
+- **W** or **shore** or **shorelines** or **coast** : -- *shore=pen* **|** *shore=(level=lev, pen=pen)*\
    Draw shorelines [the Default]. Append pen attributes (see \myreflink{Pen attributes}) [Defaults: width = default,
    color = black,style = solid] which apply to all four levels. To set the pen for each level differently, use the
-   form **shore=(level,pen)** or the **shore=(level=levnum, pen=pen)**, where **level** (or `levnum` in second case)
-   is 1-4 and represent coastline, lakeshore, island-in-lake shore, and lake-in-island-in-lake shore. To repeat the
-   **shore** option, use a tuple of tuples but in this case it is mandatory to use the NamedTuple for (the simpler
-   **shore=(level,pen)** doesn't allow repetitions). When specific level pens are set, those not listed will not be
-   drawn [Default draws all levels; but see **area**].
+   form **shore=(level=levnum, pen=pen)**, where **levnum** is 1-4 and represent coastline, lakeshore, island-in-lake
+   shore, and lake-in-island-in-lake shore. To repeat the **shore** option, use a tuple of tuples. When specific
+   level pens are set, those not listed will not be drawn [Default draws all levels; but see **area**].  Note, the
+   equivalent of the `borders` and `rivers` form **shore=(level,pen)** is not possible here because the parser cannot
+   tell if `shore=(2,:red)` means plot *level=2* in red or all levels with a line thicknes of 2 points and color `red`. 
 
 \textinput{common_opts/opt_X}
 
