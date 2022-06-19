@@ -13,7 +13,7 @@ The file gadm36_MOZ.gpkg (after uncompressing) will be stored in your home dir/.
 using GMT
 mozambique = gadm("MOZ");
 
-imshow(mozambique, proj=:guess, title="Moçambique", show=false)
+imshow(mozambique, proj=:guess, title="Moçambique")
 ```
 \end{examplefig}
 
@@ -25,7 +25,7 @@ the option `children=true` to indicate that we want all provincies boundaries.
 ```julia
 using GMT
 mozambique = gadm("MOZ", children=true);
-imshow(mozambique, proj=:guess, title="Provinces of Moçambique", show=false)
+imshow(mozambique, proj=:guess, title="Provinces of Moçambique")
 ```
 \end{examplefig}
 
@@ -55,6 +55,6 @@ Now we can plot only one of those provinces and its children
 ```julia
 using GMT
 CD = gadm("MOZ", "Cabo Delgado", children=true);
-imshow(CD, proj=:guess, title="Cabo Delgado", show=false)
+imshow(CD, proj=:guess, title="Cabo Delgado")
 ```
 \end{examplefig}

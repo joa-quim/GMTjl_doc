@@ -7,7 +7,8 @@ A simple bar plot showing color and bar width (in data units) assignement.
 \begin{examplefig}{}
 ```julia
 using GMT
-bar(1:5, (20, 35, 30, 35, 27), width=0.5, color=:lightblue, limits=(0.5,5.5,0,40))
+bar(1:5, (20, 35, 30, 35, 27), width=0.5, color=:lightblue,
+    limits=(0.5,5.5,0,40), show=true)
 ```
 \end{examplefig}
 
@@ -16,7 +17,8 @@ A colored bar plot with colors proportional to bar heights. In this case we let 
 \begin{examplefig}{}
 ```julia
 using GMT
-bar(rand(15), color=:turbo, figsize=(14,8), title="Colored bars", colorbar=true)
+bar(rand(15), color=:turbo, figsize=(14,8), title="Colored bars",
+    colorbar=true, show=true)
 ```
 \end{examplefig}
 
@@ -25,7 +27,7 @@ Example showing how to plot bar groups and at same time assign variable transpar
 \begin{examplefig}{}
 ```julia
 using GMT
-bar([0. 1 2 3; 1 2 3 4], fillalpha=[0.3 0.5 0.7])
+bar([0. 1 2 3; 1 2 3 4], fillalpha=[0.3 0.5 0.7], show=true)
 ```
 \end{examplefig}
 
@@ -37,7 +39,7 @@ using GMT
 bar(1:5, [20 25; 35 32; 30 34; 35 20; 27 25], width=0.7, fill=["lightblue", "brown"],
     error_bars=(y=[2 3; 3 5; 4 2; 1 3; 2 3],),
     xticks=(:G1, :G2, :G3, :G4, :G5), yaxis=(annot=5,label=:Scores),
-    frame=(title="Scores by group and gender", axes=:WSrt))
+    frame=(title="Scores by group and gender", axes=:WSrt), show=true)
 ```
 \end{examplefig}
 
@@ -46,7 +48,7 @@ Example of a verticaly stacked bar plot. In this exampled we pass the *xx* coord
 \begin{examplefig}{}
 ```julia
 using GMT
-bar(1:3,[-5 -15 20; 17 10 21; 10 5 15], stacked=1)
+bar(1:3,[-5 -15 20; 17 10 21; 10 5 15], stacked=1, show=true)
 ```
 \end{examplefig}
 
@@ -55,7 +57,7 @@ To create an horizontal bar plot we use the **hbar**=*true* option
 \begin{examplefig}{}
 ```julia
 using GMT
-bar([0. 1 2 3; 1 2 3 4], hbar=true)
+bar([0. 1 2 3; 1 2 3 4], hbar=true, show=true)
 ```
 \end{examplefig}
 
@@ -64,7 +66,7 @@ And one horizontally stacked but this time we pick the colors.
 \begin{examplefig}{}
 ```julia
 using GMT
-bar([0. 1 2 3; 1 2 3 4], stack=true, hbar=true, fill=["red", "green", "blue"])
+bar([0. 1 2 3; 1 2 3 4], stack=true, hbar=true, fill=["red", "green", "blue"], show=true)
 ```
 \end{examplefig}
 
@@ -81,7 +83,8 @@ G = gmt("grdmath -R0/2/0/2 -I1 X Y R2 NEG EXP X MUL =");
 # Plot that grid as 3D prisms
 bar3(G,                 # 'G' is the grid created above
      fill=[0,115,190],  # Fill prisms with this RGB color
-     lw=:thinnest)      # Line thickness (0.25 pt)
+     lw=:thinnest,      # Line thickness (0.25 pt)
+     show=true)         # Display the figure.
 ```
 \end{examplefig}
 
@@ -97,7 +100,8 @@ cmap = grd2cpt(G);    # Colormap with the grid's data range
 
 bar3(G,               # 'G' is the grid created above
      lw=:thinnest,    # Line thickness (0.25 pt)
-     color=cmap)      # Paint the prisms with colormap computed from grid
+     color=cmap,      # Paint the prisms with colormap computed from grid
+     show=true)       # Display the figure.
 ```
 \end{examplefig}
 

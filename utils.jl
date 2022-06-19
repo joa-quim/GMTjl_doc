@@ -67,11 +67,7 @@ function env_examplefig(com, _)
     end
 
     kwargs = eval(Meta.parse("Dict(pairs((;" * Franklin.content(com.braces[1]) * ")))"))
-
     name = pop!(kwargs, :name, "example_" * string(hash(content)))
-
-    #rest_kwargs_str = join(("$key = $(repr(val))" for (key, val) in kwargs), ", ")
-
     pngfile = "$name.png"
 
     # add the generated png name to the list of examples for this page, which
@@ -82,14 +78,17 @@ function env_examplefig(com, _)
 
     str = """
     ```julia:example_figure
+    try     # hide
     begin # hide
+        using GMT   # hide
+        GMT.isFranklin[1] = true    # hide
         $code
     end # hide
-    showfig(show=false)     # hide
-    fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-    gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-    GMT.current_cpt[1] = GMT.GMTcpt()   # hide
     mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
+    catch   # hide
+    end     # hide
+    GMT.isFranklin[1] = false    # hide
+    GMT.IamModern[1]  = false    # hide
  
     nothing # hide
     ```

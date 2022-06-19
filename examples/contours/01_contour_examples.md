@@ -15,7 +15,7 @@ automatic annotation and labeling for the axes.
 ```julia
 using GMT
 G = GMT.peaks();
-grdcontour(G, cont=1, annot=2)
+grdcontour(G, cont=1, annot=2, show=true)
 ```
 \end{examplefig}
 
@@ -28,8 +28,9 @@ colormap with makecpt that will from -6 to 8 with steps of 1. These values are p
 \begin{examplefig}{}
 ```julia
 using GMT
+G = GMT.peaks();
 cpt = makecpt(range=(-6,8,1));      # Create the color map
-grdcontour(G, pen=(colored=true,))
+grdcontour(G, pen=(colored=true,), show=true)
 ```
 \end{examplefig}
 
@@ -45,7 +46,7 @@ grid and a CPT.
 using GMT
 G = GMT.peaks();
 C = makecpt(T=(-7,9,2));
-contourf(G, C)
+contourf(G, C, show=true)
 ```
 \end{examplefig}
 
@@ -56,7 +57,7 @@ If we want to just draw some contours and not annotate them, we pass an array wi
 using GMT
 G = GMT.peaks();
 C = makecpt(T=(-7,9,2));
-contourf(G, C, contour=[-2, 0, 2, 5])
+contourf(G, C, contour=[-2, 0, 2, 5], show=true)
 ```
 \end{examplefig}
 
@@ -68,7 +69,7 @@ This example uses synthetic data.
 ```julia
 using GMT
 d = [0 2 5; 1 4 5; 2 0.5 5; 3 3 9; 4 4.5 5; 4.2 1.2 5; 6 3 1; 8 1 5; 9 4.5 5];
-contourf(d, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:max),))
+contourf(d, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:max),), show=true)
 ```
 \end{examplefig}
 
@@ -78,8 +79,9 @@ another one it's only a question of creating and passed it in.
 \begin{examplefig}{}
 ```julia
 using GMT
+d = [0 2 5; 1 4 5; 2 0.5 5; 3 3 9; 4 4.5 5; 4.2 1.2 5; 6 3 1; 8 1 5; 9 4.5 5];
 cpt = makecpt(range=(0,10,1), cmap=:batlow);
-contourf(d, contours=cpt, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:max),))
+contourf(d, contours=cpt, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:max),), show=true)
 ```
 \end{examplefig}
 
@@ -91,7 +93,8 @@ Creating a periodic 0/360 grid then selecting a central meridian for a contour m
 ```julia
 using GMT
 G = grdmath("-Rg -I5 35 21 SDIST");    # Example grid
-grdcontour(G, region=:global360, proj=(name=:Mollweide, center=35), cont=2000, pen=:thin, frame=:bare, coast=true)
+grdcontour(G, region=:global360, proj=(name=:Mollweide, center=35),
+           cont=2000, pen=:thin, frame=:bare, coast=true, show=true)
 ```
 \end{examplefig}
 
@@ -107,6 +110,6 @@ U = mat2grid(u, x[1,:], y[:,1]);
 V = mat2grid(v, x[1,:], y[:,1]);
 r,a = streamlines(U, V);
 plot(r, decorated=(locations=a, symbol=(custom="arrow", size=0.3), fill=:black,
-          dec2=true), title="Someone wanted flowlines?")
+          dec2=true), title="Someone wanted flowlines?", show=true)
 ```
 \end{examplefig}

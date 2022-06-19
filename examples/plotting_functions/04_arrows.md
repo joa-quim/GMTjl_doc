@@ -14,7 +14,7 @@ arrows([0.5 0.5 0 8], limits=(-0.1,3,0,2.5), figsize=(16,5),
 T1 = text_record([0 2.0], "arrows([0 1.0 0 6], limits=(0,3,0,2), figsize=(14,5),");
 T2 = text_record([0 1.5], "   arrow=(len=2,stop=1,shape=0.5), pen=6");
 pstext!(T1, font=(20,"Times-Italic"), justify=:LB)
-pstext!(T2, font=(20,"Times-Italic"), justify=:LB)
+pstext!(T2, font=(20,"Times-Italic"), justify=:LB, show=true)
 ```
 \end{examplefig}
 
@@ -31,7 +31,7 @@ T2 = text_record([0 1.5], "   arrow=(len=2,start=:arrow,stop=:tail,shape=0.5),")
 T3 = text_record([0 1.1], "   pen=6, fill=:red");
 pstext!(T1, font=(20,"Times-Italic"), justify=:LB)
 pstext!(T2, font=(20,"Times-Italic"), justify=:LB)
-pstext!(T3, font=(20,"Times-Italic"), justify=:LB)
+pstext!(T3, font=(20,"Times-Italic"), justify=:LB, show=true)
 ```
 \end{examplefig}
 
@@ -57,7 +57,7 @@ arrows!([1 0 45 4], frame=(annot=0, grid=1, title="GMT5 Vectors"), lw=2, fill=:r
 arrows!([3 0 45 4], lw=2, fill=:red,
         arrow=(length="18p", stop=true, pen="-", angle=45, justify=:center, shape=0.5))
 arrows!([5 0 45 4], lw=2, fill=:red,
-        arrow=(length="18p", stop=true, angle=45, justify=:center, shape=0.5))
+        arrow=(length="18p", stop=true, angle=45, justify=:center, shape=0.5), show=true)
 ```
 \end{examplefig}
 
@@ -72,6 +72,6 @@ plot([0.5 1 1.75 5 85], region=(0,5,0,5), figsize=12,
 # Now add another matangle symbol but transmit the angle parameters via the
 # keyword. Note that in this case the arrow attributes are wrapped in a NamedTuple
 plot!([2.5 2.5], marker=(:matang, [2 50 350], (length=0.75, start=true, stop=true, half=:left)),
-        ml=(0.5,:red), fill=:blue)
+        ml=(0.5,:red), fill=:blue, show=true)
 ```
 \end{examplefig}

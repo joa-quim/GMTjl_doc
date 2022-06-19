@@ -9,7 +9,7 @@ with default annotations and gridline spacings, using the specified labeling, do
 \begin{examplefig}{}
 ```julia
 using GMT
-ternary("@ternary.txt", labels=("Clay","Silt","Sand"), marker=:p)
+ternary("@ternary.txt", labels=("Clay","Silt","Sand"), marker=:p, show=true)
 ```
 \end{examplefig}
 
@@ -27,7 +27,7 @@ using GMT
 C = makecpt(T=(0,71));
 ternary("@ternary.txt",  marker=:p, cmap=C, clockwise=true, 
         frame=(annot=:auto, grid=:a, ticks=:a, alabel="Clay", blabel="Silt",
-        clabel="Sand", suffix=" %"))
+        clabel="Sand", suffix=" %"), show=true)
 ```
 \end{examplefig}
 
@@ -41,7 +41,7 @@ for us (but one can use whatever cmap we want, just create a colormap with the w
 using GMT
 ternary("@ternary.txt", marker=:p, image=true, clockwise=true,
         frame=(annot=:auto, grid=:a, ticks=:a, alabel="Clay", blabel="Silt",
-        clabel="Sand", suffix=" %"))
+        clabel="Sand", suffix=" %"), show=true)
 ```
 \end{examplefig}
 
@@ -59,7 +59,7 @@ using GMT
 ternary("@ternary.txt", clockwise=true, image=true, 
         frame=(annot=:auto, grid=:a, ticks=:a, alabel="Clay", blabel="Silt", clabel="Sand", suffix=" %"),
         contour=(annot=10, cont=5, labels=(distance=3,)),
-        colorbar=true)
+        colorbar=true, show=true)
 ```
 \end{examplefig}
 
@@ -71,6 +71,6 @@ since the method used involves a Delaunay triangulation.
 using GMT
 ternary("@ternary.txt", marker=:p, clockwise=true, 
         frame=(annot=:auto, grid=:a, ticks=:a, alabel="Clay", blabel="Silt", clabel="Sand", suffix=" %"),
-        contourf=(annot=10, cont=5))
+        contourf=(annot=10, cont=5), show=true)
 ```
 \end{examplefig}

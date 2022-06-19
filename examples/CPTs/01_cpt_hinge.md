@@ -27,7 +27,7 @@ colorbar!(cmap=:globe, frame=:auto, yshift=1.3,
           pos=(paper=true, anchor=(0,0), size=(11.5, 0.25), horizontal=true))
 plot!([5.75 0.25 90 0.5], region=(0,11.5,0,2.5), figscale=1, proj=:linear,
       symbol="v0.25+a80+b", frame=:none, pen=1, fill=:black)
-text!(text_record([5.7 0.9],["HINGE"]), font=12, justify=:CB)
+text!(text_record([5.7 0.9],["HINGE"]), font=12, justify=:CB, show=true)
 ```
 \end{examplefig}
 
@@ -76,7 +76,7 @@ T = text_record([0 0; 6 0; 3 3.1; 1 3.1; 5 3.1],
                  "CB	New CPT v1";
                  "CB	New CPT v2"]);
 
-text!(T, noclip=true, font=14, justify=true)
+text!(T, noclip=true, font=14, justify=true, show=true)
 ```
 \end{examplefig}
 
@@ -131,6 +131,6 @@ colorbar!(pos=(paper=true, anchor=(12,4), size=(-8,0.5), justify=:ML, triangles=
 colorbar!(pos=(paper=true, anchor=(16,4), size=(-8,0.5), justify=:ML, triangles=:f),
           B=:none, equal_size=(range=true,))
 colorbar!(pos=(paper=true, anchor=(20,4), size=(-8,0.5), justify=:ML, triangles=:f),
-          B=:none, equal_size=(range=true, gap=0.1))
+          B=:none, equal_size=(range=true, gap=0.1), show=true)
 ```
 \end{examplefig}

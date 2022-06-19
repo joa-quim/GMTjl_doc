@@ -19,7 +19,7 @@ v = 0.2;
 t = 0:0.01:5pi;
 x = v.*t .* cos.(omega .* t);
 y = v.*t .* sin.(omega .* t);
-plot(x, y, aspect=:equal)
+plot(x, y, aspect=:equal, show=true)
 ```
 \end{examplefig}
 
@@ -35,7 +35,7 @@ using GMT
 teta = 0:0.01:5pi;
 xf = sqrt.(teta) .* cos.(teta);
 yf = sqrt.(teta) .* sin.(teta);
-plot(xf,yf, aspect=:equal)
+plot(xf,yf, aspect=:equal, show=true)
 ```
 \end{examplefig}
 
@@ -52,7 +52,7 @@ phi = (sqrt(5)-1)/2;
 n = 2618;
 rho = (2:n-1) .^ phi;
 theta = (2:n-1)*2pi*phi;
-scatter(rho .* cos.(theta), rho .* sin.(theta), marker=:point, aspect=:equal)
+scatter(rho .* cos.(theta), rho .* sin.(theta), marker=:point, aspect=:equal, show=true)
 ```
 \end{examplefig}
 
@@ -69,13 +69,13 @@ This time we will also color the seed points in function of r, the distance to t
 ```julia
 using GMT
 angle = 137.5;	# Play with this angle between [137.0 138.0]. Amazing the effect, no?
-	alfa = 2pi * angle / 360;
-	n_seeds = 1500;
-	seeds = 0:n_seeds;
-	r = sqrt.(seeds);
-	ϕ = alfa * seeds;
-	C = makecpt(range=(1,sqrt(n_seeds),1), cmap=:buda);	# Color map to paint the seeds
-	scatter(r .* cos.(ϕ), r .* sin.(ϕ), marker=:point, cmap=C, zcolor=r,
-		frame=(fill=20,), aspect=:equal)
+alfa = 2pi * angle / 360;
+n_seeds = 1500;
+seeds = 0:n_seeds;
+r = sqrt.(seeds);
+ϕ = alfa * seeds;
+C = makecpt(range=(1,sqrt(n_seeds),1), cmap=:buda);	# Color map to paint the seeds
+scatter(r .* cos.(ϕ), r .* sin.(ϕ), marker=:point, cmap=C, zcolor=r,
+        frame=(fill=20,), aspect=:equal, show=true)
 ```
 \end{examplefig}

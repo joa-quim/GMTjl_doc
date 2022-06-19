@@ -15,7 +15,8 @@ using GMT
 x = 0:0.01:20;
 y1 = 200 * exp.(-0.05x) .* sin.(x);
 y2 = 0.8 * exp.(-0.5x)  .* sin.(10x);
-plotyy(y1, y2, title="Vibrating dishes", ylabel=:Knifes, xlabel=:Forks, seclabel=:Spoons)
+plotyy(y1, y2, title="Vibrating dishes", ylabel=:Knifes, xlabel=:Forks,
+       seclabel=:Spoons, show=true)
 ```
 \end{examplefig}
 
@@ -26,7 +27,10 @@ In the general case the data has xx coordinates and they don't even need to be t
 \begin{examplefig}{}
 ```julia
 using GMT
+x = 0:0.01:20;
+y1 = 200 * exp.(-0.05x) .* sin.(x);
+y2 = 0.8 * exp.(-0.5x)  .* sin.(10x);
 plotyy([x[:] y1[:]], [x[:] y2[:]], title="Vibrating dishes",
-       ylabel=:Knifes, xlabel="2000 Forks", seclabel=:Spoons)
+       ylabel=:Knifes, xlabel="2000 Forks", seclabel=:Spoons, show=1)
 ```
 \end{examplefig}

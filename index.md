@@ -158,11 +158,22 @@ using GMT
   @@
   
   @@box
+    ~~~<a class="boxlink" href="examples/subplot/">~~~
+    @@title Subplot Examples @@
+    @@box-content
+      ~~~
+      <img src="/examples/subplot/tictactoe.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+  
+  @@box
     ~~~<a class="boxlink" href="examples/art/">~~~
     @@title Art Examples @@
     @@box-content
       ~~~
-      <img src="/assets/flower.png">
+      <img src="/examples/art/flower.png">
       ~~~
     @@
     ~~~</a>~~~

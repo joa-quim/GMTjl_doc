@@ -24,6 +24,6 @@ lines([-0.7 -0.25 0], [-1.5 -0.8 0], # The flower stem
       frame=:none)                   # Do not plot the frame
 plot!(x, y,
       fill=(pattern="@tiling2.jpg",  # Fill pattern file
-      dpi=200))                      # The pattern DPI
+      dpi=200), show=true)           # The pattern DPI
 ```
 \end{examplefig}

@@ -9,7 +9,7 @@
 using GMT
 plot(1:10, rand(10), lw=1, lc=:blue, marker=:square,
      markeredgecolor=0, size=0.2, markerfacecolor=:red, title="Hello World",
-     xlabel="Spoons", ylabel="Forks")
+     xlabel="Spoons", ylabel="Forks", show=true)
 ```
 \end{examplefig}
 
@@ -34,7 +34,7 @@ for amp = 0:10
 	yy = amp .* sin.(x)
 	plot!(x, yy, cmap=true, level=(data=amp, nofill=true))
 end
-colorbar!()
+colorbar!(show=true)
 ```
 \end{examplefig}
 
@@ -47,7 +47,7 @@ Here we are showing how to plot several lines at once and color them according t
 ```julia
 using GMT
 mat = GMT.fakedata(8, 5);
-lines(mat, multicol=true)
+lines(mat, multicol=true, show=true)
 ```
 \end{examplefig}
 
@@ -60,11 +60,12 @@ The basic data type to transfer tabular data to GMT is the *GMTdataset* and the 
 \begin{examplefig}{}
 ```julia
 using GMT
+mat = GMT.fakedata(8, 5);
 D = mat2ds(mat, color=["brown", "green", "blue"], linethick=[2, 1.0, 0.5, 0.25], multi=true);
 
 # And now we just call *lines* (but using *plot* would have been the same) with the **D** argument.
 
-lines(D, figsize=(14, 9.5))
+lines(D, figsize=(14, 9.5), show=true)
 ```
 \end{examplefig}
 
@@ -76,7 +77,7 @@ lines(D, figsize=(14, 9.5))
 using GMT
 x = [0, 1, 2, 3, 2];  y = [0, 1, 1, 0.5, 0.25];
 lines(x,y, limits=(-1,4,-0.5,2.0), scale=3.0, lw=1, markerfacecolor=:red,
-      size=0.5, bezier=true, title="Bezier curve")
+      size=0.5, bezier=true, title="Bezier curve", show=true)
 ```
 \end{examplefig}
 
@@ -90,7 +91,7 @@ xy = sind.(0:180) .+ 4.5
 lines(xy, limits=(-5,185,4,6), figsize=(16,8), pen=(1,:red),
       decorated=(dist=(2.5,0.25), symbol=:star, size=1,
                  pen=(0.5,:green), fill=:blue, dec2=true),
-      title=:Decorated)
+      title=:Decorated, show=true)
 ```
 \end{examplefig}
 
@@ -107,7 +108,7 @@ txt = " In Vino Veritas  - In Aqua, Rãs & Toads"
 lines(x,y, region=(-4,7,-5.5,2.5), lw=2, lc=:sienna,
       decorated=(quoted=true, const_label=txt, font=(25,"Times-Italic"),
                  curved=true, pen=(0.5,:red)),
-      aspect=:equal)
+      aspect=:equal, show=true)
 ```
 \end{examplefig}
 
@@ -129,7 +130,7 @@ lines(x,y,                           # The data
       title="Double Snake")
 plot!(3.49, 0.97,                    # Coordinates where to plot symbol
       symbol="kski_alpine/1.7",      # Fill patern file
-      fill=:black)                   # Fill the symbol in black
+      fill=:black, show=true)        # Fill the symbol in black
 ```
 \end{examplefig}
 
@@ -141,6 +142,6 @@ using GMT
 x = linspace(0,2π,50);
 #plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
 #GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
-plot(x, sin.(x), linestyle="Line&I am sinning&")
+plot(x, sin.(x), linestyle="Line&I am sinning&", show=true)
 ```
 \end{examplefig}
