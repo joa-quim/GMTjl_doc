@@ -12,7 +12,7 @@ Use the `shore` option to plot only the shorelines:
 \begin{examplefig}{}
 ```julia
 using GMT
-coast(region=:global, proj=:Mollweide, shore=true)
+coast(region=:global, proj=:Mollweide, shore=true, show=true)
 ```
 \end{examplefig}
 
@@ -29,7 +29,7 @@ to the `shore` option. For example, to plot just the coastlines with 0.5 thickne
 \begin{examplefig}{}
 ```julia
 using GMT
-coast(region=:global, proj=:Mollweide, shore=(1, (0.5,:black)))
+coast(region=:global, proj=:Mollweide, shore=(level=1, pen=(0.5,:black)), show=true)
 ```
 \end{examplefig}
 
@@ -39,7 +39,8 @@ That is, in this case we can no longer use the simpler form we used above but mu
 \begin{examplefig}{}
 ```julia
 using GMT
-coast(region=:global, proj=:Mollweide, shore=((level=1, pen=(0.5,:black)), (level=2, pen=(0.5,:red))))
+coast(region=:global, proj=:Mollweide,
+      shore=((level=1, pen=(0.5,:black)), (level=2, pen=(0.5,:red))), show=true)
 ```
 \end{examplefig}
 
@@ -63,10 +64,11 @@ coast(region=(-158.3,-157.6,21.2,21.8), proj=:Mercator, res=:crude, shore=1, fra
 for res in ["low", "intermediate", "high", "full"]
     coast!(shore=1, resolution=res, xshift=12)
 end
+showfig()
 ```
 \end{examplefig}
 
-Land and water
+## Land and water
 
 Use the `land` and `water` options to specify a fill color for land and water bodies.
 The colors can be given by name or hex codes:
@@ -74,7 +76,7 @@ The colors can be given by name or hex codes:
 \begin{examplefig}{}
 ```julia
 using GMT
-coast(region=:global, proj=:Mollweide, land="#666666", water=:skyblue)
+coast(region=:global, proj=:Mollweide, land="#666666", water=:skyblue, show=true)
 ```
 \end{examplefig}
 
@@ -97,7 +99,8 @@ The following example uses a Sinusoidal projection map of the Americas with auto
 ```julia
 using GMT
 coast(region=[-150, -30, -60, 60], land=:gray, projection=(name=:Sinusoidal, center=-90),
-      borders=((type=1, pen=(0.5, :black)), (type=2, pen=(0.5, :red)), (type=3, pen=(0.5, :blue))))
+      borders=((type=1, pen=(0.5, :black)), (type=2, pen=(0.5, :red)), (type=3, pen=(0.5, :blue))),
+      show=true)
 ```
 \end{examplefig}
 
@@ -112,6 +115,6 @@ version of the figure above is obtained with (the code `:r` means *All permanent
 ```julia
 using GMT
 coast(region=[-150, -30, -60, 60], land=:gray, projection=(name=:Sinusoidal, center=-90),
-      rivers=(:r,:blue))
+      rivers=(:r,:blue), show=true)
 ```
 \end{examplefig}

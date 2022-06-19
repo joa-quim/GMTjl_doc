@@ -22,6 +22,6 @@ lines!(D2,                   # Second dataset
       steps=(x=true,),       
       close=(bot="",),
       fill=(pattern=82,bg=:blue,dpi=100),
-      title="Stepped patch histogram")
+      title="Stepped patch histogram", show=true)
 ```
 \end{examplefig}

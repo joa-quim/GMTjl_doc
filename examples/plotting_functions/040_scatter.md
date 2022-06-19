@@ -16,7 +16,8 @@ scatter(rand(100),rand(100),   # Generate data
         color=:ocean,          # Color scale
         zcolor=rand(100),      # Assign color to each symbol
         alpha=50,              # Set transparency to 50%
-        title="Scatter")       # Fig title
+        title="Scatter",       # Fig title
+        show=true)             # Display the figure
 ```
 \end{examplefig}
 
@@ -39,6 +40,7 @@ scatter(teta, r,                  # The data
         zcolor=teta,              # Assign color to each symbol
         size=ms,                  # The symbl sizes
         alpha=25,                 # Set transparency to 50%
-        title="Polar scatter")    # Fig title
+        title="Polar scatter",    # Fig title
+        show=true)             # Display the figure
 ```
 \end{examplefig}

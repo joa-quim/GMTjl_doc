@@ -35,7 +35,7 @@ for k = 1:length(ls)-2
     text!(x=x[end], y=y[1,k], text=ls[k], justify=:ML, offset=(0.2,0))
 end
 text!(x=x[end], y=y[1,end], text=ls[end-1], justify=:ML, offset=(0.2,0.2))
-text!(x=x[end], y=y[1,end], text=ls[end],   justify=:ML, offset=(0.2,-0.2))
+text!(x=x[end], y=y[1,end], text=ls[end],   justify=:ML, offset=(0.2,-0.2), show=true)
 ```
 \end{examplefig}
 
@@ -79,6 +79,7 @@ plot(D, region=(0,21,8,20.5), figsize=(16,10), title="Line fronts", symbol=:f, f
 for k = 1:length(fs)
     text!(x=x[end], y=y[1,k], text=fs[k], font=8, justify=:ML, offset=(0.5,0))
 end
+showfig()
 ```
 \end{examplefig}
 
@@ -109,7 +110,7 @@ plot!([3 3], marker=(custom="star3",   size=1.5),  ml=1, fill=:brown)
 plot!([4 3], marker=(custom="sun",     size=1.5),  ml=1, fill=:yellow)
 plot!([5 3], marker=(custom="volcano", size=1.5),  ml=1, fill=:red)
 plot!([1 5], marker=(custom="@gallo",  size=3.5))
-plot!([4 5], marker=(custom="@sardinha", size=6.0))
+plot!([4 5], marker=(custom="@sardinha", size=6.0), show=true)
 ```
 \end{examplefig}
 
@@ -130,6 +131,6 @@ plot!([2.5 1.75 30 100], marker=(web=true, size=5, radial=15),
       fill=:lightyellow, ml=0.5)
 # But we can also send the Web angle info via marker and use a Tuple as argument.
 plot!([4.5 1.75], marker=(:web, [30 330], (size=5, arc=0.7, radial=15, pen=0.25)),
-      fill=:pink, ml=1)
+      fill=:pink, ml=1, show=true)
 ```
 \end{examplefig}

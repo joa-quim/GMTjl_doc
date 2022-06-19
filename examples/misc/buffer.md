@@ -13,7 +13,7 @@ using GMT
 ortho = orthodrome([0 0; 70 60], step=1000, unit=:k);
 # Plot the orthodrome on an orthographic projection
 coast(region=:global, proj=(name=:ortho, center=(0,45)), land=:peru, frame=:g)
-plot!(ortho, lw=0.5, marker=:circ, ms=0.1, fill=:black)
+plot!(ortho, lw=0.5, marker=:circ, ms=0.1, fill=:black, show=true)
 ```
 \end{examplefig}
 
@@ -24,10 +24,11 @@ And to do it we need ofc to compute those circles. We compute the circles with t
 \begin{examplefig}{}
 ```julia
 using GMT
+ortho = orthodrome([0 0; 70 60], step=1000, unit=:k);
 c = circgeo(ortho, radius=500, unit=:k);
 coast(region=:global, proj=(name=:ortho, center=(0,45)), land=:peru, frame=:g)
 plot!(c, lw=0.1, fill=:gray)
-plot!(ortho, lw=0.5, marker=:circ, ms=0.1, fill=:black)
+plot!(ortho, lw=0.5, marker=:circ, ms=0.1, fill=:black, show=true)
 ```
 \end{examplefig}
 
@@ -42,6 +43,6 @@ line = [-37. 1; -28 26; -45 35; -19 42; -9 55; 4 64; 32 72; 85 73; 135 73; 172 7
 D = buffergeo(line, width=500000);  # Compute the buffer polygon
 coast(region=:global, land=:peru, frame=:g,
       proj=(name=:ortho, center=(0,45)),
-      plot=(data=D, fill=:green))
+      plot=(data=D, fill=:green), show=true)
 ```
 \end{examplefig}
