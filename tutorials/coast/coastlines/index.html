@@ -113,7 +113,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -123,6 +125,7 @@
 <li><a href="#coastlines_and_borders">Coastlines and borders</a></li>
 <li><ul>
 <li><a href="#shorelines">Shorelines</a></li>
+<li><a href="#land_and_water">Land and water</a></li>
 <li><a href="#political_boundaries">Political Boundaries</a></li>
 <li><a href="#rivers">Rivers</a></li>
 </ul>
@@ -186,10 +189,10 @@
 <h2 id="shorelines"><a href="#shorelines" class="header-anchor">Shorelines</a></h2>
 <p>Use the <code>shore</code> option to plot only the shorelines:</p>
 <pre><code class="language-julia">using GMT
-coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;true&#41;</code></pre></p>
+coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;true, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_16200941652950166960">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_16200941652950166960.png" alt=""> 
+<a id="example_357783246433028713">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_357783246433028713.png" alt=""> 
 </a>
 
 <p>The shorelines are divided in 4 levels:</p>
@@ -205,18 +208,19 @@ coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;true&#41;</code></p
 </ul>
 <p>You can specify which level you want to plot by appending the level number and a GMT pen configuration to the <code>shore</code> option. For example, to plot just the coastlines with 0.5 thickness and black lines:</p>
 <pre><code class="language-julia">using GMT
-coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;&#40;1, &#40;0.5,:black&#41;&#41;&#41;</code></pre></p>
+coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;&#40;level&#61;1, pen&#61;&#40;0.5,:black&#41;&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_2165794468298985531">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_2165794468298985531.png" alt=""> 
+<a id="example_16304864095334887972">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_16304864095334887972.png" alt=""> 
 </a>
 
 <p>We can specify multiple levels by using the <code>shore</code> option more than once by using a Tuple of NamedTuples. That is, in this case we can no longer use the simpler form we used above but must instead do:</p>
 <pre><code class="language-julia">using GMT
-coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;&#40;&#40;level&#61;1, pen&#61;&#40;0.5,:black&#41;&#41;, &#40;level&#61;2, pen&#61;&#40;0.5,:red&#41;&#41;&#41;&#41;</code></pre></p>
+coast&#40;region&#61;:global, proj&#61;:Mollweide,
+      shore&#61;&#40;&#40;level&#61;1, pen&#61;&#40;0.5,:black&#41;&#41;, &#40;level&#61;2, pen&#61;&#40;0.5,:red&#41;&#41;&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_18391121800667716746">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_18391121800667716746.png" alt=""> 
+<a id="example_8794661614502050792">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_8794661614502050792.png" alt=""> 
 </a>
 
 <p>Resolutions</p>
@@ -239,19 +243,20 @@ coast&#40;region&#61;:global, proj&#61;:Mollweide, shore&#61;&#40;&#40;level&#61
 coast&#40;region&#61;&#40;-158.3,-157.6,21.2,21.8&#41;, proj&#61;:Mercator, res&#61;:crude, shore&#61;1, frame&#61;:none&#41;
 for res in &#91;&quot;low&quot;, &quot;intermediate&quot;, &quot;high&quot;, &quot;full&quot;&#93;
     coast&#33;&#40;shore&#61;1, resolution&#61;res, xshift&#61;12&#41;
-end</code></pre></p>
+end
+showfig&#40;&#41;</code></pre></p>
 <p>
-<a id="example_16610711361367261579">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_16610711361367261579.png" alt=""> 
+<a id="example_147853474136707412">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_147853474136707412.png" alt=""> 
 </a>
 
-<p>Land and water</p>
+<h2 id="land_and_water"><a href="#land_and_water" class="header-anchor">Land and water</a></h2>
 <p>Use the <code>land</code> and <code>water</code> options to specify a fill color for land and water bodies. The colors can be given by name or hex codes:</p>
 <pre><code class="language-julia">using GMT
-coast&#40;region&#61;:global, proj&#61;:Mollweide, land&#61;&quot;#666666&quot;, water&#61;:skyblue&#41;</code></pre></p>
+coast&#40;region&#61;:global, proj&#61;:Mollweide, land&#61;&quot;#666666&quot;, water&#61;:skyblue, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_3715859618802829109">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_3715859618802829109.png" alt=""> 
+<a id="example_16739529219516743195">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_16739529219516743195.png" alt=""> 
 </a>
 
 <h2 id="political_boundaries"><a href="#political_boundaries" class="header-anchor">Political Boundaries</a></h2>
@@ -269,25 +274,26 @@ coast&#40;region&#61;:global, proj&#61;:Mollweide, land&#61;&quot;#666666&quot;,
 <p>For example, to draw national boundaries with a line thickness of 1p and black line color use <code>borders&#61;&#40;1,&#40;&quot;1p&quot;,:black&#41;&#41;</code>, or <code>borders&#61;&#40;type&#61;1, pen&#61;&#40;0.5, :black&#41;&#41;</code>. We can draw multiple boundaries by passing in a tuple of NamedTuples to <code>borders</code> &#40;for repeating the option we must use the NamedTuple form&#41;. The following example uses a Sinusoidal projection map of the Americas with automatic annotations and ticks.</p>
 <pre><code class="language-julia">using GMT
 coast&#40;region&#61;&#91;-150, -30, -60, 60&#93;, land&#61;:gray, projection&#61;&#40;name&#61;:Sinusoidal, center&#61;-90&#41;,
-      borders&#61;&#40;&#40;type&#61;1, pen&#61;&#40;0.5, :black&#41;&#41;, &#40;type&#61;2, pen&#61;&#40;0.5, :red&#41;&#41;, &#40;type&#61;3, pen&#61;&#40;0.5, :blue&#41;&#41;&#41;&#41;</code></pre></p>
+      borders&#61;&#40;&#40;type&#61;1, pen&#61;&#40;0.5, :black&#41;&#41;, &#40;type&#61;2, pen&#61;&#40;0.5, :red&#41;&#41;, &#40;type&#61;3, pen&#61;&#40;0.5, :blue&#41;&#41;&#41;,
+      show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_11654815723165485576">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_11654815723165485576.png" alt=""> 
+<a id="example_4530462154225019163">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_4530462154225019163.png" alt=""> 
 </a>
 
 <h2 id="rivers"><a href="#rivers" class="header-anchor">Rivers</a></h2>
 <p>The situation with plotting rivers is a bit less good and we hope to improve it when modern data is incorporated in the databse. But we can still do pretty maps of the permanent major rivers. A rivers version of the figure above is obtained with &#40;the code <code>:r</code> means <em>All permanent rivers</em>&#41;:</p>
 <pre><code class="language-julia">using GMT
 coast&#40;region&#61;&#91;-150, -30, -60, 60&#93;, land&#61;:gray, projection&#61;&#40;name&#61;:Sinusoidal, center&#61;-90&#41;,
-      rivers&#61;&#40;:r,:blue&#41;&#41;</code></pre></p>
+      rivers&#61;&#40;:r,:blue&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_2085259898219245638">
- <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_2085259898219245638.png" alt=""> 
+<a id="example_13569898777689253239">
+ <img src="/GMTjl_doc/assets/tutorials/coast/coastlines/code/output/example_13569898777689253239.png" alt=""> 
 </a>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 18, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 19, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

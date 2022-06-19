@@ -1,5 +1,8 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 
 C = makecpt(cmap=((197,0,255),(81,0,255),(0,35,255),(0,151,255),(0,255,244),(0,255,127),(0,255,11),
@@ -34,12 +37,12 @@ colorbar!(pos=(paper=true, anchor=(12,4), size=(-8,0.5), justify=:ML, triangles=
 colorbar!(pos=(paper=true, anchor=(16,4), size=(-8,0.5), justify=:ML, triangles=:f),
           B=:none, equal_size=(range=true,))
 colorbar!(pos=(paper=true, anchor=(20,4), size=(-8,0.5), justify=:ML, triangles=:f),
-          B=:none, equal_size=(range=true, gap=0.1))
+          B=:none, equal_size=(range=true, gap=0.1), show=true)
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_13562179981823219022.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_3987455672134202745.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

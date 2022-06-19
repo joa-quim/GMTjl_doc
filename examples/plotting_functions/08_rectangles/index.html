@@ -121,7 +121,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -185,10 +187,10 @@
 <h3 id="simple_filled_rectangle"><a href="#simple_filled_rectangle" class="header-anchor">Simple filled rectangle</a></h3>
 <pre><code class="language-julia">using GMT
 rect &#61; &#91;2 2; 2 6; 6 6; 6 2; 2 2&#93;;
-plot&#40;rect, region&#61;&#91;0 10 0 10&#93;, lw&#61;1, fill&#61;:blue, axes&#61;:a, aspect&#61;:equal&#41;</code></pre></p>
+plot&#40;rect, region&#61;&#91;0 10 0 10&#93;, lw&#61;1, fill&#61;:blue, axes&#61;:a, aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_16338120429966976855">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_16338120429966976855.png" alt=""> 
+<a id="example_18383523062213224194">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_18383523062213224194.png" alt=""> 
 </a>
 
 <h3 id="rectangles_with_patterns"><a href="#rectangles_with_patterns" class="header-anchor">Rectangles with patterns</a></h3>
@@ -196,10 +198,10 @@ plot&#40;rect, region&#61;&#91;0 10 0 10&#93;, lw&#61;1, fill&#61;:blue, axes&#6
 <pre><code class="language-julia">using GMT
 rect &#61; &#91;1 1; 1 7; 4 7; 4 1; 1 1&#93;;
 plot&#40;rect, region&#61;&#91;0 10 0 10&#93;, lw&#61;1, fill&#61;&quot;p20&#43;bgreen&#43;r200&quot;, axes&#61;:a, aspect&#61;:equal&#41;
-plot&#33;&#40;&#91;4 0&#93;.&#43;rect, lw&#61;1, fill&#61;&quot;p89&#43;r200&quot;&#41;</code></pre></p>
+plot&#33;&#40;&#91;4 0&#93;.&#43;rect, lw&#61;1, fill&#61;&quot;p89&#43;r200&quot;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_15812512838776917236">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_15812512838776917236.png" alt=""> 
+<a id="example_18345525476380314787">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_18345525476380314787.png" alt=""> 
 </a>
 
 <h3 id="rectangles_with_transparency"><a href="#rectangles_with_transparency" class="header-anchor">Rectangles with transparency</a></h3>
@@ -208,15 +210,15 @@ plot&#33;&#40;&#91;4 0&#93;.&#43;rect, lw&#61;1, fill&#61;&quot;p89&#43;r200&quo
 rect &#61; &#91;0.5 0.5; 0.5 7; 2.5 7; 2.5 0.5; 0.5 0.5&#93;;
 plot&#40;rect, region&#61;&#91;0 10 0 10&#93;, lw&#61;0.5, fill&#61;:blue, axes&#61;:a, aspect&#61;:equal&#41;
 plot&#33;&#40;&#91;3 0&#93;.&#43;rect, lw&#61;1, ls&#61;&quot;--&quot;, fill&#61;:blue, transparency&#61;30&#41;
-plot&#33;&#40;&#91;6 0&#93;.&#43;rect, lw&#61;2, lc&#61;:red, fill&#61;:blue, transparency&#61;70&#41;</code></pre></p>
+plot&#33;&#40;&#91;6 0&#93;.&#43;rect, lw&#61;2, lc&#61;:red, fill&#61;:blue, transparency&#61;70, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_11749761243496950737">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_11749761243496950737.png" alt=""> 
+<a id="example_16832277042100198791">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/08_rectangles/code/output/example_16832277042100198791.png" alt=""> 
 </a>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 18, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 19, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

@@ -1,15 +1,18 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 
 G = grdmath("-R0/360/2/4 -I6/0.1 X 4 MUL PI MUL 180 DIV COS Y 2 POW MUL");
 grdcontour(G, proj=:polar, frame=(annot=30, axes=:Ns, fill=:honeydew),
-           cont=2, smooth=4, par=(FORMAT_GEO_MAP="+ddd",))
+           cont=2, smooth=4, par=(FORMAT_GEO_MAP="+ddd",), show=true)
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_12126125853652891009.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_6599446825704667637.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

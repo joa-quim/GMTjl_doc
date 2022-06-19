@@ -1,5 +1,8 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 
 t = GMT.linspace(0,2pi,360);
@@ -15,12 +18,12 @@ lines([-0.7 -0.25 0], [-1.5 -0.8 0], # The flower stem
       frame=:none)                   # Do not plot the frame
 plot!(x, y,
       fill=(pattern="@tiling2.jpg",  # Fill pattern file
-      dpi=200))                      # The pattern DPI
+      dpi=200), show=true)           # The pattern DPI
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_13594761097454812466.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_9912846326165272708.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

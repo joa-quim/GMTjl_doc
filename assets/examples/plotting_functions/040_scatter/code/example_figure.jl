@@ -1,5 +1,8 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 teta = 2pi*rand(150)*180/pi; r = 9*rand(150); ms = r / 10;
 
@@ -11,12 +14,13 @@ scatter(teta, r,                  # The data
         zcolor=teta,              # Assign color to each symbol
         size=ms,                  # The symbl sizes
         alpha=25,                 # Set transparency to 50%
-        title="Polar scatter")    # Fig title
+        title="Polar scatter",    # Fig title
+        show=true)             # Display the figure
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_8450859608383642157.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_4680528454270781307.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

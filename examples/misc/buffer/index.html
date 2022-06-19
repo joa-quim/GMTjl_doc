@@ -116,7 +116,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -184,21 +186,22 @@
 ortho &#61; orthodrome&#40;&#91;0 0; 70 60&#93;, step&#61;1000, unit&#61;:k&#41;;
 # Plot the orthodrome on an orthographic projection
 coast&#40;region&#61;:global, proj&#61;&#40;name&#61;:ortho, center&#61;&#40;0,45&#41;&#41;, land&#61;:peru, frame&#61;:g&#41;
-plot&#33;&#40;ortho, lw&#61;0.5, marker&#61;:circ, ms&#61;0.1, fill&#61;:black&#41;</code></pre></p>
+plot&#33;&#40;ortho, lw&#61;0.5, marker&#61;:circ, ms&#61;0.1, fill&#61;:black, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_15442211792662684940">
- <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_15442211792662684940.png" alt=""> 
+<a id="example_2628794262856115982">
+ <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_2628794262856115982.png" alt=""> 
 </a>
 
 <p>Next we will draw geodesic circles with 500 km radius with center on the orthodrome vertices. And to do it we need ofc to compute those circles. We compute the circles with the <code>circgeo</code> function. </p>
 <pre><code class="language-julia">using GMT
+ortho &#61; orthodrome&#40;&#91;0 0; 70 60&#93;, step&#61;1000, unit&#61;:k&#41;;
 c &#61; circgeo&#40;ortho, radius&#61;500, unit&#61;:k&#41;;
 coast&#40;region&#61;:global, proj&#61;&#40;name&#61;:ortho, center&#61;&#40;0,45&#41;&#41;, land&#61;:peru, frame&#61;:g&#41;
 plot&#33;&#40;c, lw&#61;0.1, fill&#61;:gray&#41;
-plot&#33;&#40;ortho, lw&#61;0.5, marker&#61;:circ, ms&#61;0.1, fill&#61;:black&#41;</code></pre></p>
+plot&#33;&#40;ortho, lw&#61;0.5, marker&#61;:circ, ms&#61;0.1, fill&#61;:black, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_9371919887578886197">
- <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_9371919887578886197.png" alt=""> 
+<a id="example_5026544441022683022">
+ <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_5026544441022683022.png" alt=""> 
 </a>
 
 <p>Now imagine that we plot many close circles and compute the union of them all. That&#39;s how we get the buffer.</p>
@@ -208,15 +211,15 @@ line &#61; &#91;-37. 1; -28 26; -45 35; -19 42; -9 55; 4 64; 32 72; 85 73; 135 7
 D &#61; buffergeo&#40;line, width&#61;500000&#41;;  # Compute the buffer polygon
 coast&#40;region&#61;:global, land&#61;:peru, frame&#61;:g,
       proj&#61;&#40;name&#61;:ortho, center&#61;&#40;0,45&#41;&#41;,
-      plot&#61;&#40;data&#61;D, fill&#61;:green&#41;&#41;</code></pre></p>
+      plot&#61;&#40;data&#61;D, fill&#61;:green&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_12926976129377769591">
- <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_12926976129377769591.png" alt=""> 
+<a id="example_8571589198303415337">
+ <img src="/GMTjl_doc/assets/examples/misc/buffer/code/output/example_8571589198303415337.png" alt=""> 
 </a>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 18, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 19, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

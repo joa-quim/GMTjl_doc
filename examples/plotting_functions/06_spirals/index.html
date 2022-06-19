@@ -125,7 +125,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -198,10 +200,10 @@ v &#61; 0.2;
 t &#61; 0:0.01:5pi;
 x &#61; v.*t .* cos.&#40;omega .* t&#41;;
 y &#61; v.*t .* sin.&#40;omega .* t&#41;;
-plot&#40;x, y, aspect&#61;:equal&#41;</code></pre></p>
+plot&#40;x, y, aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_16345550845589201527">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_16345550845589201527.png" alt=""> 
+<a id="example_5413803035772822067">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_5413803035772822067.png" alt=""> 
 </a>
 
 <h3 id="fermati_spiral"><a href="#fermati_spiral" class="header-anchor">Fermati spiral</a></h3>
@@ -210,10 +212,10 @@ plot&#40;x, y, aspect&#61;:equal&#41;</code></pre></p>
 teta &#61; 0:0.01:5pi;
 xf &#61; sqrt.&#40;teta&#41; .* cos.&#40;teta&#41;;
 yf &#61; sqrt.&#40;teta&#41; .* sin.&#40;teta&#41;;
-plot&#40;xf,yf, aspect&#61;:equal&#41;</code></pre></p>
+plot&#40;xf,yf, aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_1591009751507587844">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_1591009751507587844.png" alt=""> 
+<a id="example_815861710679753929">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_815861710679753929.png" alt=""> 
 </a>
 
 <h3 id="sunflower"><a href="#sunflower" class="header-anchor">Sunflower</a></h3>
@@ -223,10 +225,10 @@ phi &#61; &#40;sqrt&#40;5&#41;-1&#41;/2;
 n &#61; 2618;
 rho &#61; &#40;2:n-1&#41; .^ phi;
 theta &#61; &#40;2:n-1&#41;*2pi*phi;
-scatter&#40;rho .* cos.&#40;theta&#41;, rho .* sin.&#40;theta&#41;, marker&#61;:point, aspect&#61;:equal&#41;</code></pre></p>
+scatter&#40;rho .* cos.&#40;theta&#41;, rho .* sin.&#40;theta&#41;, marker&#61;:point, aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_4710571439797556444">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_4710571439797556444.png" alt=""> 
+<a id="example_2286924938702313147">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_2286924938702313147.png" alt=""> 
 </a>
 
 <h3 id="another_sunflower"><a href="#another_sunflower" class="header-anchor">Another Sunflower</a></h3>
@@ -234,22 +236,22 @@ scatter&#40;rho .* cos.&#40;theta&#41;, rho .* sin.&#40;theta&#41;, marker&#61;:
 <p>This time we will also color the seed points in function of r, the distance to the center and pain with a dark background.</p>
 <pre><code class="language-julia">using GMT
 angle &#61; 137.5;	# Play with this angle between &#91;137.0 138.0&#93;. Amazing the effect, no?
-	alfa &#61; 2pi * angle / 360;
-	n_seeds &#61; 1500;
-	seeds &#61; 0:n_seeds;
-	r &#61; sqrt.&#40;seeds&#41;;
-	ϕ &#61; alfa * seeds;
-	C &#61; makecpt&#40;range&#61;&#40;1,sqrt&#40;n_seeds&#41;,1&#41;, cmap&#61;:buda&#41;;	# Color map to paint the seeds
-	scatter&#40;r .* cos.&#40;ϕ&#41;, r .* sin.&#40;ϕ&#41;, marker&#61;:point, cmap&#61;C, zcolor&#61;r,
-		frame&#61;&#40;fill&#61;20,&#41;, aspect&#61;:equal&#41;</code></pre></p>
+alfa &#61; 2pi * angle / 360;
+n_seeds &#61; 1500;
+seeds &#61; 0:n_seeds;
+r &#61; sqrt.&#40;seeds&#41;;
+ϕ &#61; alfa * seeds;
+C &#61; makecpt&#40;range&#61;&#40;1,sqrt&#40;n_seeds&#41;,1&#41;, cmap&#61;:buda&#41;;	# Color map to paint the seeds
+scatter&#40;r .* cos.&#40;ϕ&#41;, r .* sin.&#40;ϕ&#41;, marker&#61;:point, cmap&#61;C, zcolor&#61;r,
+        frame&#61;&#40;fill&#61;20,&#41;, aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_15256269224586119999">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_15256269224586119999.png" alt=""> 
+<a id="example_6047936830520035738">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/06_spirals/code/output/example_6047936830520035738.png" alt=""> 
 </a>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 18, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 19, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

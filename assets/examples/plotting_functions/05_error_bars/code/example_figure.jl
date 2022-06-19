@@ -1,5 +1,8 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 
 C = makecpt(range=(0,6,1));
@@ -20,12 +23,12 @@ plot!(t, frame=:noannot, marker=:circle, ms=0.5, color=C,
 tt = t[:,1:2]
 plot!(tt, frame=:noannot, marker=:circle, ms=0.5, color=C, mz=[1 2 3 4 5],
       ml=(0.25,:red), error_bars=(x=ones(5,1), pen=1, cline=true),
-      xshift=7.5)
+      xshift=7.5, show=true)
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_11647554236658389801.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_578069722094597478.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

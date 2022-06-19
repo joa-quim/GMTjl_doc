@@ -128,7 +128,9 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/02_proj_examples">GMT Map Projections</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/projections/ex28">Mixing UTM and geographic axes annotations</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-2-10" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-10"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -194,10 +196,10 @@
 <pre><code class="language-julia">using GMT
 plot&#40;1:10, rand&#40;10&#41;, lw&#61;1, lc&#61;:blue, marker&#61;:square,
      markeredgecolor&#61;0, size&#61;0.2, markerfacecolor&#61;:red, title&#61;&quot;Hello World&quot;,
-     xlabel&#61;&quot;Spoons&quot;, ylabel&#61;&quot;Forks&quot;&#41;</code></pre></p>
+     xlabel&#61;&quot;Spoons&quot;, ylabel&#61;&quot;Forks&quot;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_4289004387496542373">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_4289004387496542373.png" alt=""> 
+<a id="example_14533424269246236191">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_14533424269246236191.png" alt=""> 
 </a>
 
 <h3 id="13633231208144796923"><a href="#13633231208144796923" class="header-anchor"></a></h3>
@@ -213,44 +215,45 @@ for amp &#61; 0:10
 	yy &#61; amp .* sin.&#40;x&#41;
 	plot&#33;&#40;x, yy, cmap&#61;true, level&#61;&#40;data&#61;amp, nofill&#61;true&#41;&#41;
 end
-colorbar&#33;&#40;&#41;</code></pre></p>
+colorbar&#33;&#40;show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_5675006406422818600">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_5675006406422818600.png" alt=""> 
+<a id="example_14289182620502621627">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_14289182620502621627.png" alt=""> 
 </a>
 
 <h3 id="line_colors_with_the_automatic_color_scheme"><a href="#line_colors_with_the_automatic_color_scheme" class="header-anchor">Line colors with the automatic color scheme</a></h3>
 <p>Here we are showing how to plot several lines at once and color them according to a circular color scheme comprised of 7 distinct colors. We start by generating a dummy matrix 8x5, where rows represent the vertex and the columns hold the lines. To tell the program that first column contains the coordinates and the remaining are all lines to be plotted we use the option <strong>multicol</strong>&#61;<em>true</em></p>
 <pre><code class="language-julia">using GMT
 mat &#61; GMT.fakedata&#40;8, 5&#41;;
-lines&#40;mat, multicol&#61;true&#41;</code></pre></p>
+lines&#40;mat, multicol&#61;true, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_702704013090615581">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_702704013090615581.png" alt=""> 
+<a id="example_17324840828014447279">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_17324840828014447279.png" alt=""> 
 </a>
 
 <h3 id="line_colors_with_user_set_color_scheme"><a href="#line_colors_with_user_set_color_scheme" class="header-anchor">Line colors with user set color scheme</a></h3>
 <p>But if we want choose the colors ourselves, it is also easy though we need to go a bit lower in the data preparation.</p>
 <p>The basic data type to transfer tabular data to GMT is the <em>GMTdataset</em> and the above command has converted the matrix into a <em>GMTdataset</em> under the hood but now we need to create one ourselves and fine control more details, like the colors and line thickness of the individual lines. Not that we have 5 lines but will provide 3 colors and 3 lines thicknesses. When we do this those properties are wrapped modulo its number.</p>
 <pre><code class="language-julia">using GMT
+mat &#61; GMT.fakedata&#40;8, 5&#41;;
 D &#61; mat2ds&#40;mat, color&#61;&#91;&quot;brown&quot;, &quot;green&quot;, &quot;blue&quot;&#93;, linethick&#61;&#91;2, 1.0, 0.5, 0.25&#93;, multi&#61;true&#41;;
 
 # And now we just call *lines* &#40;but using *plot* would have been the same&#41; with the **D** argument.
 
-lines&#40;D, figsize&#61;&#40;14, 9.5&#41;&#41;</code></pre></p>
+lines&#40;D, figsize&#61;&#40;14, 9.5&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_16290451070034027930">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_16290451070034027930.png" alt=""> 
+<a id="example_8682929654450411439">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_8682929654450411439.png" alt=""> 
 </a>
 
 <h3 id="bezier_curve"><a href="#bezier_curve" class="header-anchor">Bezier curve</a></h3>
 <pre><code class="language-julia">using GMT
 x &#61; &#91;0, 1, 2, 3, 2&#93;;  y &#61; &#91;0, 1, 1, 0.5, 0.25&#93;;
 lines&#40;x,y, limits&#61;&#40;-1,4,-0.5,2.0&#41;, scale&#61;3.0, lw&#61;1, markerfacecolor&#61;:red,
-      size&#61;0.5, bezier&#61;true, title&#61;&quot;Bezier curve&quot;&#41;</code></pre></p>
+      size&#61;0.5, bezier&#61;true, title&#61;&quot;Bezier curve&quot;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_3524620452981400879">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_3524620452981400879.png" alt=""> 
+<a id="example_8676044088309164603">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_8676044088309164603.png" alt=""> 
 </a>
 
 <h3 id="decorated_line"><a href="#decorated_line" class="header-anchor">Decorated line</a></h3>
@@ -259,10 +262,10 @@ xy &#61; sind.&#40;0:180&#41; .&#43; 4.5
 lines&#40;xy, limits&#61;&#40;-5,185,4,6&#41;, figsize&#61;&#40;16,8&#41;, pen&#61;&#40;1,:red&#41;,
       decorated&#61;&#40;dist&#61;&#40;2.5,0.25&#41;, symbol&#61;:star, size&#61;1,
                  pen&#61;&#40;0.5,:green&#41;, fill&#61;:blue, dec2&#61;true&#41;,
-      title&#61;:Decorated&#41;</code></pre></p>
+      title&#61;:Decorated, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_3961880988977120443">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_3961880988977120443.png" alt=""> 
+<a id="example_1120509200921136024">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_1120509200921136024.png" alt=""> 
 </a>
 
 <h3 id="text_decorated_line"><a href="#text_decorated_line" class="header-anchor">Text decorated line</a></h3>
@@ -274,10 +277,10 @@ txt &#61; &quot; In Vino Veritas  - In Aqua, Rãs &amp; Toads&quot;
 lines&#40;x,y, region&#61;&#40;-4,7,-5.5,2.5&#41;, lw&#61;2, lc&#61;:sienna,
       decorated&#61;&#40;quoted&#61;true, const_label&#61;txt, font&#61;&#40;25,&quot;Times-Italic&quot;&#41;,
                  curved&#61;true, pen&#61;&#40;0.5,:red&#41;&#41;,
-      aspect&#61;:equal&#41;</code></pre></p>
+      aspect&#61;:equal, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_5954796337009069990">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_5954796337009069990.png" alt=""> 
+<a id="example_14480082870919839654">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_14480082870919839654.png" alt=""> 
 </a>
 
 <h3 id="the_snake_skier"><a href="#the_snake_skier" class="header-anchor">The snake skier</a></h3>
@@ -293,10 +296,10 @@ lines&#40;x,y,                           # The data
       title&#61;&quot;Double Snake&quot;&#41;
 plot&#33;&#40;3.49, 0.97,                    # Coordinates where to plot symbol
       symbol&#61;&quot;kski_alpine/1.7&quot;,      # Fill patern file
-      fill&#61;:black&#41;                   # Fill the symbol in black</code></pre></p>
+      fill&#61;:black, show&#61;true&#41;        # Fill the symbol in black</code></pre></p>
 <p>
-<a id="example_9339090957342146810">
- <p><span style="color:red;">// Image matching '/assets/examples/plotting_functions/01_lines/code/example_9339090957342146810.png' not found. //</span></p> 
+<a id="example_14448994460914616845">
+ <p><span style="color:red;">// Image matching '/assets/examples/plotting_functions/01_lines/code/example_14448994460914616845.png' not found. //</span></p> 
 </a>
 
 <h3 id="how_to_sin"><a href="#how_to_sin" class="header-anchor">How to sin</a></h3>
@@ -304,15 +307,15 @@ plot&#33;&#40;3.49, 0.97,                    # Coordinates where to plot symbol
 x &#61; linspace&#40;0,2π,50&#41;;
 #plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;, theme&#61;&#40;&quot;A2GraphDark&quot;&#41;&#41;
 #GMT.theme_modern&#40;&#41;      # Need this to reset the theme untill a more elegant solution is implemented
-plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;&#41;</code></pre></p>
+plot&#40;x, sin.&#40;x&#41;, linestyle&#61;&quot;Line&amp;I am sinning&amp;&quot;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_6784676844636227723">
- <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_6784676844636227723.png" alt=""> 
+<a id="example_8278285124084535215">
+ <img src="/GMTjl_doc/assets/examples/plotting_functions/01_lines/code/output/example_8278285124084535215.png" alt=""> 
 </a>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 18, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 19, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>

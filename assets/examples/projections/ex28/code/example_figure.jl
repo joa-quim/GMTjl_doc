@@ -1,15 +1,18 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 G = gmtread("@Kilauea.utm.nc");
 C = makecpt(cmap="copper", range=(0,1500));
-imshow(G, cmap=C, shade=true, frame=(axes="WS", annot=true), show=false,
+imshow(G, cmap=C, shade=true, frame=(axes="WS", annot=true),
 	coast=(shore=true, ocean=:lightblue, frame=(axes="EN", annot=true, grid=true)))
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_12109841746263417147.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_490367137794955767.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide

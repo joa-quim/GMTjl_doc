@@ -1,15 +1,18 @@
 # This file was generated, do not modify it. # hide
+try     # hide
 begin # hide
+    using GMT   # hide
+    GMT.isFranklin[1] = true    # hide
     using GMT
 x = linspace(0,2π,50);
 #plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
 #GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
-plot(x, sin.(x), linestyle="Line&I am sinning&")
+plot(x, sin.(x), linestyle="Line&I am sinning&", show=true)
 end # hide
-showfig(show=false)     # hide
-fname_ps = joinpath(tempdir(), "GMTjl_tmp.ps")  # hide
-gmt("psconvert -A2p -Qg4 -Qt4 " * fname_ps * " -TG *")  # hide
-GMT.current_cpt[1] = GMT.GMTcpt()   # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_6784676844636227723.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_8278285124084535215.png"), force=true);    # hide
+catch   # hide
+end     # hide
+GMT.isFranklin[1] = false    # hide
+GMT.IamModern[1]  = false    # hide
  
 nothing # hide
