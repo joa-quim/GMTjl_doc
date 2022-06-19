@@ -1,4 +1,4 @@
-# subplot
+# Subplots
 
 ```julia
 subplot(fim=nothing; stop=false, kwargs...)
