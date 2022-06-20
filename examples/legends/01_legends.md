@@ -15,6 +15,20 @@ lines!(x, cos.(x), ls="linesquare",  legend=(label="cos(x)", pos=:MiddleCenter, 
 ```
 \end{examplefig}
 
+### With different page and frame colors filling 
+
+We can set the frame filling color in any of the `frame`, `xaxis` or `yaxis` option, and the frame and
+page colors can be different. Use this fact to show a equation in a legend.
+
+\begin{examplefig}{}
+```julia
+using GMT
+x = 1:10
+lines(x, x.^2, limits=(0,10,0,100), linewidth=2, linestyle=".-", pagecolor="#D0DFE6FF",
+      xaxis=(xlabel="x", bgcolor=:lightgray), ylabel="x@+2@+", legend=(label="x@+2@+", pos=:LT), show=true)
+```
+\end{examplefig}
+
 ### Apples & Oranges
 
 The `legend` method can automatically create a legend for symbols plotted using \myreflink{plot}.

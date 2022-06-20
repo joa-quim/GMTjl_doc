@@ -133,15 +133,3 @@ plot!(3.49, 0.97,                    # Coordinates where to plot symbol
       fill=:black, show=true)        # Fill the symbol in black
 ```
 \end{examplefig}
-
-### How to sin
-
-\begin{examplefig}{}
-```julia
-using GMT
-x = linspace(0,2π,50);
-#plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
-#GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
-plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"), show=true)
-```
-\end{examplefig}
