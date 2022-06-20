@@ -37,9 +37,9 @@ using GMT
 | grdgdal | \myreflink{grdgradient} |  \myreflink{grdhisteq} |  \myreflink{grdimage} |  grdinfo |  grdinterpolate |
 | grdlandmask |  grdmask |  grdmath |  grdmix |  grdpaste |  grdproject |
 | \myreflink{grdsample} |  grdselect |  grdtrack |  grdtrend |  grdvector | \myreflink{grdview} |
-| grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt |  legend |
+| grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} |  nearneighbor | \myreflink{plot} |
-| plot3d |  project |  psconvert |  rose |  sample1d |  \myreflink{solar} |
+| plot3d |  project |  psconvert |  rose |  sample1d | \myreflink{solar} |
 | spectrum1d |  sph2grd | sphdistance |  sphinterpolate | sphtriangulate | \myreflink{subplot} |
 | surface |  ternary | \myreflink{text} |  trend1d |  trend2d |  triangulate |
 | wiggle |  xyz2grd |  |  |  |  |
@@ -119,6 +119,17 @@ using GMT
     @@box-content
       ~~~
       <img src="/assets/color-contour.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
+    ~~~<a class="boxlink" href="examples/legends/">~~~
+    @@title Legends@@
+    @@box-content
+      ~~~
+      <img src="/examples/legends/legend_tille.png">
       ~~~
     @@
     ~~~</a>~~~
