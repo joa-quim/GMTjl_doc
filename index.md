@@ -93,7 +93,7 @@ using GMT
 
   @@box
     ~~~<a class="boxlink" href="examples/projections/">~~~
-    @@title Projections Examples @@
+    @@title Projections @@
     @@box-content
       ~~~
       <img src="/assets/GMT_sinus_int.png">
@@ -115,7 +115,7 @@ using GMT
 
   @@box
     ~~~<a class="boxlink" href="examples/contours/">~~~
-    @@title Contours Examples @@
+    @@title Contours @@
     @@box-content
       ~~~
       <img src="/assets/color-contour.png">
@@ -137,7 +137,7 @@ using GMT
 
   @@box
     ~~~<a class="boxlink" href="examples/choropleths/choro_examples">~~~
-    @@title Choropleth Map Examples @@
+    @@title Choropleth Maps @@
     @@box-content
       ~~~
       <img src="/assets/choro1_dcw.png">
@@ -148,7 +148,7 @@ using GMT
 
   @@box
     ~~~<a class="boxlink" href="examples/ternary/">~~~
-    @@title Ternary Plots Examples @@
+    @@title Ternary Plots @@
     @@box-content
       ~~~
       <img src="/assets/ternary3.png">
@@ -158,19 +158,8 @@ using GMT
   @@
 
   @@box
-    ~~~<a class="boxlink" href="examples/misc/">~~~
-    @@title Misc Examples @@
-    @@box-content
-      ~~~
-      <img src="/assets/buffer3.png">
-      ~~~
-    @@
-    ~~~</a>~~~
-  @@
-  
-  @@box
     ~~~<a class="boxlink" href="examples/subplot/">~~~
-    @@title Subplot Examples @@
+    @@title Subplots @@
     @@box-content
       ~~~
       <img src="/examples/subplot/tictactoe.png">
@@ -178,10 +167,32 @@ using GMT
     @@
     ~~~</a>~~~
   @@
-  
+
+  @@box
+    ~~~<a class="boxlink" href="examples/themes/">~~~
+    @@title Themes @@
+    @@box-content
+      ~~~
+      <img src="/examples/themes/themes_tille.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+   
+  @@box
+    ~~~<a class="boxlink" href="examples/misc/">~~~
+    @@title Misc @@
+    @@box-content
+      ~~~
+      <img src="/assets/buffer3.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+   
   @@box
     ~~~<a class="boxlink" href="examples/art/">~~~
-    @@title Art Examples @@
+    @@title Art @@
     @@box-content
       ~~~
       <img src="/examples/art/flower.png">
