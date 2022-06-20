@@ -1,6 +1,6 @@
 # Subplots
 
-{{doc Subplots}}
+{{doc subplot}}
 
 ### Geo Tic-Tac-Toe
 
