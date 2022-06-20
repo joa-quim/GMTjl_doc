@@ -4,9 +4,9 @@ begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
     using GMT
-imshow(:turbo, horizontal=true, show=false)
+imshow(:turbo, horizontal=true)
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_17982387173661050086.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_1968158563341266150.png"), force=true);    # hide
 catch   # hide
 end     # hide
 GMT.isFranklin[1] = false    # hide
