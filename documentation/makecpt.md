@@ -194,7 +194,7 @@ To show the ``turbo`` color table.
 \begin{examplefig}{}
 ```julia
 using GMT
-imshow(:turbo, horizontal=true, show=false)
+imshow(:turbo, horizontal=true)
 ```
 \end{examplefig}
 
