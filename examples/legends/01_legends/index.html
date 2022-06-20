@@ -98,6 +98,7 @@
 <li><a href="#legends">Legends</a></li>
 <li><ul>
 <li><a href="#13633231208144796923"></a></li>
+<li><a href="#with_different_page_and_frame_colors_filling">With different page and frame colors filling </a></li>
 <li><a href="#apples_oranges">Apples &amp; Oranges</a></li>
 </ul>
 </ul>
@@ -125,6 +126,8 @@
 <li><input class="collapse-toggle" id="menuitem-2-11" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-11"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/subplot">Subplots</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/subplot/01_subplots">Subplots</a></div></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-2-12" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-12"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/ternary">Ternary</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/ternary/ternary_examples">Ternary plots</a></div></li>
+</ul></li>
+<li><input class="collapse-toggle" id="menuitem-2-13" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-13"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/themes">Themes</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/themes/01_themes">Theming</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
@@ -194,6 +197,17 @@ lines&#33;&#40;x, cos.&#40;x&#41;, ls&#61;&quot;linesquare&quot;,  legend&#61;&#
 <p>
 <a id="example_18102523611605177212">
  <img src="/GMTjl_doc/assets/examples/legends/01_legends/code/output/example_18102523611605177212.png" alt=""> 
+</a>
+
+<h3 id="with_different_page_and_frame_colors_filling"><a href="#with_different_page_and_frame_colors_filling" class="header-anchor">With different page and frame colors filling </a></h3>
+<p>We can set the frame filling color in any of the <code>frame</code>, <code>xaxis</code> or <code>yaxis</code> option, and the frame and page colors can be different. Use this fact to show a equation in a legend.</p>
+<pre><code class="language-julia">using GMT
+x &#61; 1:10
+lines&#40;x, x.^2, limits&#61;&#40;0,10,0,100&#41;, linewidth&#61;2, linestyle&#61;&quot;.-&quot;, pagecolor&#61;&quot;#D0DFE6FF&quot;,
+      xaxis&#61;&#40;xlabel&#61;&quot;x&quot;, bgcolor&#61;:lightgray&#41;, ylabel&#61;&quot;x@&#43;2@&#43;&quot;, legend&#61;&#40;label&#61;&quot;x@&#43;2@&#43;&quot;, pos&#61;:LT&#41;, show&#61;true&#41;</code></pre></p>
+<p>
+<a id="example_8507889429399594496">
+ <img src="/GMTjl_doc/assets/examples/legends/01_legends/code/output/example_8507889429399594496.png" alt=""> 
 </a>
 
 <h3 id="apples_oranges"><a href="#apples_oranges" class="header-anchor">Apples &amp; Oranges</a></h3>
