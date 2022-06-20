@@ -1,4 +1,4 @@
-# Themes
+# themes
 
 Currently GMT.jl offers 3 themes (classic, modern, and dark). Classic theme has been the default
 up to version 0.34.0. Starting in 0.35.0 the so called (by GMT) modern theme has become the default.
