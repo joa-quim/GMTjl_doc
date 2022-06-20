@@ -1,6 +1,6 @@
 # Subplots
 
-{{doc subplot}}
+See \myreflink{subplot} docs
 
 ### Geo Tic-Tac-Toe
 

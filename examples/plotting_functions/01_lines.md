@@ -142,6 +142,6 @@ using GMT
 x = linspace(0,2π,50);
 #plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
 #GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
-plot(x, sin.(x), linestyle="Line&I am sinning&", show=true)
+plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"), show=true)
 ```
 \end{examplefig}
