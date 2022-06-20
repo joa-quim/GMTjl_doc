@@ -1,6 +1,6 @@
 # Theming
 
-See the \myreflink{themes} docs
+See the \myreflink{theme} docs
 
 ### How to sin
 
