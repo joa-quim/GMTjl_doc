@@ -97,6 +97,7 @@
 <li><input class="collapse-toggle" id="menuitem-2-7" type="checkbox" checked><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-7"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/legends">Legends</a></div><ul><li><div class="tocitem-container"><a class = active href="/GMTjl_doc/examples/legends/01_legends">Legends</a></div><ul class="page-content">
 <li><a href="#legends">Legends</a></li>
 <li><ul>
+<li><a href="#13633231208144796923"></a></li>
 <li><a href="#apples_oranges">Apples &amp; Oranges</a></li>
 </ul>
 </ul>
@@ -184,8 +185,19 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="legends"><a href="#legends" class="header-anchor">Legends</a></h1>
+<h3 id="13633231208144796923"><a href="#13633231208144796923" class="header-anchor"></a></h3>
+<p>Legend example using the classic mode. In this example we show the two ways in which the <code>legend</code> option can be used. First one is only <code>legend&#61;&quot;Bla&quot;</code> and in the second one, argument as a NamedTuple, we set more detailed instructions about the legend.</p>
+<pre><code class="language-julia">using GMT
+x &#61; linspace&#40;0,2π,50&#41;;
+lines&#40;x,  sin.&#40;x&#41;, ls&#61;&quot;lineDiamond&quot;, legend&#61;&quot;sin&#40;x&#41;&quot;, grid&#61;&#40;pen&#61;&quot;gray90&quot;,&#41;, theme&#61;&#40;&quot;A2&quot;&#41;, xaxis&#61;&#40;annot&#61;&quot;pi2&quot;,&#41;&#41;
+lines&#33;&#40;x, cos.&#40;x&#41;, ls&#61;&quot;linesquare&quot;,  legend&#61;&#40;label&#61;&quot;cos&#40;x&#41;&quot;, pos&#61;:MiddleCenter, box&#61;:none&#41;, mc&#61;:red, show&#61;true&#41;</code></pre></p>
+<p>
+<a id="example_18102523611605177212">
+ <img src="/GMTjl_doc/assets/examples/legends/01_legends/code/output/example_18102523611605177212.png" alt=""> 
+</a>
+
 <h3 id="apples_oranges"><a href="#apples_oranges" class="header-anchor">Apples &amp; Oranges</a></h3>
-<p>The <code>legend</code> method can automatically create a legend for symbols plotted using <a href="/GMTjl_doc/documentation/plot/index.html#plot">plot</a>. Legend entries are only created when the <code>legend</code> option is used.</p>
+<p>The <code>legend</code> method can automatically create a legend for symbols plotted using <a href="/GMTjl_doc/documentation/plot/index.html#plot">plot</a>. Legend entries are only created when the <code>legend</code> option is used &#40;but see also the <a href="/GMTjl_doc/documentation/legend/index.html#legend">legend</a> module.&#41;</p>
 <pre><code class="language-julia">using GMT
 gmtbegin&#40;&#41;
 	plot&#40;&quot;@Table_5_11.txt&quot;, region&#61;&#91;0., 7.2, 3, 7.2&#93;, figscale&#61;2, pen&#61;&#40;1.5, :gray&#41;,
@@ -198,6 +210,46 @@ gmtend&#40;:show&#41;</code></pre></p>
 <p>
 <a id="example_14577980894840960975">
  <img src="/GMTjl_doc/assets/examples/legends/01_legends/code/output/example_14577980894840960975.png" alt=""> 
+</a>
+
+<h3></h3>
+<p>A more complex example using the <a href="/GMTjl_doc/documentation/legend/index.html#legend">legend</a> module.</p>
+<pre><code class="language-julia">using GMT
+makecpt&#40;&quot;-Cpanoply -T-8/8 &gt; tt.cpt&quot;&#41;
+
+legend&#40;&#40;
+        vspace&#61;-0.25,
+        header&#61;&#40;text&#61;&quot;My Map Legend&quot;, font&#61;&#40;24,&quot;Times-Roman&quot;&#41;&#41;,
+        hline&#61;&#40;pen&#61;1, offset&#61;0.5&#41;,
+        ncolumns&#61;2,
+        vline&#61;&#40;pen&#61;1, offset&#61;0&#41;,
+        symbol1&#61;&#40;marker&#61;:circ,    size&#61;0.4, dx_left&#61;0.25, fill&#61;&quot;p300/12&quot;, dx_right&#61;0.75, text&#61;&quot;This circle is hachured&quot;&#41;,
+        symbol2&#61;&#40;marker&#61;:ellipse, size&#61;0.4, dx_left&#61;0.25, fill&#61;:yellow,   dx_right&#61;0.75, text&#61;&quot;This ellipse is yellow&quot;&#41;,
+        symbol3&#61;&#40;marker&#61;:wedge,   size&#61;0.4, dx_left&#61;0.25, fill&#61;:green, pen&#61;0.25, dx_right&#61;0.75, text&#61;&quot;This wedge is green&quot;&#41;,
+        symbol4&#61;&#40;marker&#61;:fault,   size&#61;0.65,dx_left&#61;0.25, fill&#61;:blue, dx_right&#61;0.75, text&#61;&quot;This is a fault&quot;&#41;,
+        symbol5&#61;&#40;marker&#61;&quot;-&quot;,      size&#61;0.4, dx_left&#61;0.25, pen&#61;&#40;0.25,:dash&#41;, dx_right&#61;0.75, text&#61;&quot;A contour&quot;&#41;,
+        symbol6&#61;&#40;marker&#61;:vector,  size&#61;0.65,dx_left&#61;0.25, fill&#61;:magenta, pen&#61;0.5, dx_right&#61;0.75, text&#61;&quot;This is a vector&quot;&#41;,
+        symbol7&#61;&#40;marker&#61;&quot;i&quot;, size&#61;0.4, dx_left&#61;0.25, fill&#61;:cyan, pen&#61;0.25, dx_right&#61;0.75, text&#61;&quot;This triangle is boring&quot;&#41;,
+        hline2&#61;&#40;pen&#61;1, offset&#61;0.5&#41;,
+        vline2&#61;&#40;pen&#61;1, offset&#61;0&#41;,
+        ncolumns2&#61;1,
+        map_scale&#61;&#40;lon&#61;5, lat&#61;5, length&#61;&quot;600&#43;u&#43;f&quot;&#41;,
+        vspace2&#61;0.13,
+        image&#61;&#40;width&#61;7.5, fname&#61;&quot;@SOEST_block4.png&quot;, justify&#61;:CT&#41;,
+        vspacep3&#61;0.13,
+        colorbar&#61;&#40;name&#61;&quot;tt.cpt&quot;, offset&#61;0.5, height&#61;0.5, extra&#61;&quot;-B0&quot;&#41;,
+        label&#61;&#40;txt&#61;&quot;Smith et al., @&#37;5&#37;J. Geophys. Res., 99@&#37;&#37;, 2000&quot;, justify&#61;:R, font&#61;&#40;9, &quot;Times-Roman&quot;&#41;&#41;,
+        vspace4&#61;0.25,
+        text1&#61;&quot;Let us just try some simple text that can go on a few lines. There is no easy way to predetermine&quot;,
+        text2&#61;&quot;how many lines may be required so we may have to adjust the height to get the right size box.&quot;
+       &#41;,
+       region&#61;&#40;0,10,0,8&#41;, pos&#61;&#40;paper&#61;&#40;1.25,1.25&#41;, width&#61;14, justify&#61;:BL, spacing&#61;1.2&#41;,
+       clearance&#61;&#40;0.25,0.25&#41;, box&#61;&#40;pen&#61;0.5, fill&#61;:azure1&#41;,
+       figsize&#61;16, proj&#61;:Mercator, show&#61;true
+      &#41;</code></pre></p>
+<p>
+<a id="example_18264910314438066529">
+ <img src="/GMTjl_doc/assets/examples/legends/01_legends/code/output/example_18264910314438066529.png" alt=""> 
 </a>
 
 <div class="page-foot">

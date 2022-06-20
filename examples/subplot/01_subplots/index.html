@@ -185,59 +185,7 @@
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="subplots"><a href="#subplots" class="header-anchor">Subplots</a></h1>
-<div class="docstring">
-<div class="doc-header" id="subplot">
-<a href="#subplot">subplot</a>
-</div>
-<div class="doc-content"><pre><code>subplot&#40;fim&#61;nothing; kwargs...&#41;</code></pre>
-<p>Manage figure subplot configuration and selection.</p>
-<p>Full option list at <a href="http://docs.generic-mapping-tools.org/latest/subplot.html"><code>subplot</code></a></p>
-<h2>Parameters</h2>
-<ul>
-<li><p><strong>grid</strong> :: &#91;Type &#61;&gt; Str | Tuple | Array&#93;</p>
-<p>Specifies the number of rows and columns of subplots. Ex grid&#61;&#40;2,3&#41;</p>
-</li>
-<li><p><strong>F</strong> | <strong>dims</strong> | <strong>dimensions</strong> | <strong>size</strong> | <strong>sizes</strong> :: &#91;Type &#61;&gt; Str | Tuple, NamedTuple&#93;</p>
-<p>Specify the dimensions of the figure.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#f"><code>-F</code></a></p>
-</li>
-<li><p><strong>A</strong> | <strong>autolabel</strong> | <strong>fixedlabel</strong> :: &#91;Type &#61;&gt; Str | number&#93;</p>
-<p>Specify automatic tagging of each subplot. This sets the tag of the first, top-left subplot and others follow sequentially.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#a"><code>-A</code></a></p>
-</li>
-<li><p><strong>B</strong> | <strong>frame</strong> | <strong>axis</strong> | <strong>xaxis yaxis</strong>:: &#91;Type &#61;&gt; Str&#93; </p>
-<p>Set map boundary frame and axes attributes.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#b-full&#41;</p>
-</li>
-<li><p><strong>C</strong> | <strong>clearance</strong> :: &#91;Type &#61;&gt; Str | number&#93;</p>
-<p>Reserve a space of dimension clearance between the margin and the subplot on the specified side. Settings specified under <strong>begin</strong> directive apply to all panels.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#c"><code>-C</code></a></p>
-</li>
-<li><p><strong>J</strong> | <strong>proj</strong> | <strong>projection</strong> :: &#91;Type &#61;&gt; String&#93;</p>
-<p>Select map projection. Defaults to 14x9.5 cm with linear &#40;non-projected&#41; maps.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#j-full&#41;</p>
-</li>
-<li><p><strong>M</strong> | <strong>margin</strong> | <strong>margins</strong> :: &#91;Type &#61;&gt; Str&#93;</p>
-<p>The margin space that is added around each subplot beyond the automatic space allocated for tick marks, annotations, and labels.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#m"><code>-M</code></a></p>
-</li>
-<li><p><strong>R</strong> | <strong>region</strong> | <strong>limits</strong> :: &#91;Type &#61;&gt; Str or list or GMTgrid|image&#93;	&#36;Arg &#61; &#40;xmin,xmax,ymin,ymax&#41;&#36;</p>
-<p>Specify the region of interest. Set to data minimum BoundinBox if not provided.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#r-full&#41;</p>
-</li>
-<li><p><strong>SC</strong> | <strong>SR</strong> | <strong>col_axes</strong> | <strong>row_axes</strong> :: &#91;Type &#61;&gt; Str | NamedTuple&#93;</p>
-<p>Set subplot layout for shared axes. Set separately for rows &#40;SR&#41; and columns &#40;SC&#41;.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#s"><code>-S</code></a></p>
-</li>
-<li><p><strong>T</strong> | <strong>title</strong> :: &#91;Type &#61;&gt; Str&#93;</p>
-<p>While individual subplots can have titles, the entire figure may also have a overarching title.   <a href="http://docs.generic-mapping-tools.org/latest/subplot.html#t"><code>-T</code></a></p>
-</li>
-<li><p><strong>V</strong> | <strong>verbose</strong> :: &#91;Type &#61;&gt; Bool or Str&#93;		&#36;Arg &#61; &#91;level&#93;&#36;</p>
-<p>Select verbosity level, which will send progress reports to stderr.   &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#v-full&#41;</p>
-</li>
-<li><p><strong>X</strong> | <strong>x_offset</strong> | <strong>xshift</strong> :: &#91;Type &#61;&gt; Str&#93;     &#36;Arg &#61; &#91;a|c|f|r&#93;&#91;x-shift&#91;u&#93;&#93;&#36;</p>
-</li>
-<li><p><strong>Y</strong> | <strong>y_offset</strong> | <strong>yshift</strong> :: &#91;Type &#61;&gt; Str&#93;     &#36;Arg &#61; &#91;a|c|f|r&#93;&#91;y-shift&#91;u&#93;&#93;&#36;</p>
-<p>Shift plot origin relative to the current origin by &#40;x-shift,y-shift&#41; and optionally   append the length unit &#40;c, i, or p&#41;.    &#40;http://docs.generic-mapping-tools.org/latest/gmt.html#xy-full&#41;</p>
-</li>
-</ul>
-
-
-</div>
-</div>
-
+<p>See <a href="/GMTjl_doc/documentation/subplot/index.html#subplot">subplot</a> docs</p>
 <h3 id="geo_tic-tac-toe"><a href="#geo_tic-tac-toe" class="header-anchor">Geo Tic-Tac-Toe</a></h3>
 <pre><code class="language-julia">using GMT
 subplot&#40;grid&#61;&quot;3x3&quot;, dims&#61;&#40;panels&#61;&#40;5,&#41;,divlines&#61;&#40;1,:dashed&#41;&#41;, axes&#61;&#40;axes&#61;:lrbt,&#41;, margins&#61;0&#41;;

@@ -7,9 +7,9 @@ begin # hide
 x = linspace(0,2π,50);
 #plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"))
 #GMT.theme_modern()      # Need this to reset the theme untill a more elegant solution is implemented
-plot(x, sin.(x), linestyle="Line&I am sinning&", show=true)
+plot(x, sin.(x), linestyle="Line&I am sinning&", theme=("A2GraphDark"), show=true)
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_8278285124084535215.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_61782749827028812.png"), force=true);    # hide
 catch   # hide
 end     # hide
 GMT.isFranklin[1] = false    # hide
