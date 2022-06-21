@@ -140,9 +140,13 @@ Examples
 
 To make a CPT with z-values from -200 to 200, with discrete color changes every 25, and using a polar blue-white-red colortable:
 
+\begin{examplefig}{}
 ```julia
-    C = makecpt(cmap=:polar, range=(-200,200,25))
+using GMT
+C = makecpt(cmap=:polar, range=(-200,200,25))
+imshow(C, horizontal=true)
 ```
+\end{examplefig}
 
 To make an equidistant CPT from z = -2 to 6 using the continuous default turbo rainbow of colors:
 
@@ -157,11 +161,15 @@ To use the GEBCO look-alike CPT with its default range for bathymetry and save t
 ```
 
 or simply use -Cgebco directly in the application that needs the color table. To create a 24-level color table suitable
-for plotting the depths in the remote ata table v3206_06.txt (with lon, lat, depths), run
+for plotting the depths in the remote data table v3206_06.txt (with lon, lat, depths), run
 
+\begin{examplefig}{}
 ```julia
-    makecpt("@v3206_06.txt", cmap=:gebco, nlevels=24)
+using GMT
+C = makecpt("@v3206_06.txt", cmap=:gebco, nlevels=24)
+imshow(C, horizontal=true)
 ```
+\end{examplefig}
 
 To use the gebco color table but reverse the z-values so it can be used for positive depth values, try
 
@@ -172,22 +180,31 @@ To use the gebco color table but reverse the z-values so it can be used for posi
 To make a custom discrete color table for depth of seismicity, using red color for hypocenters between 0 and 100 km,
 green for 100-300 km, and blue for deep (300-1000 km) earthquakes, use
 
+\begin{examplefig}{}
 ```julia
-    makecpt(cmap=(:red,:green,:blue), range=[0,100,300,1000], no_bg=true)
+using GMT
+imshow(makecpt(cmap=(:red,:green,:blue), range=[0,100,300,1000], no_bg=true), horizontal=true)
 ```
+\end{examplefig}
 
 To make a continuous CPT from white to blue as z goes from 3 to 10, try
 
+\begin{examplefig}{}
 ```julia
-    makecpt(cmap="white,blue", range=(3,10))
+using GMT
+imshow(makecpt(cmap="white,blue", range=(3,10)), horizontal=true)
 ```
+\end{examplefig}
 
 To make a wrapped (cyclic) CPT from the turbo table over the interval 0 to 500, i.e., the color will be wrapped every 500
 z-units so that we always get a color regardless of the *z* value, try
 
+\begin{examplefig}{}
 ```julia
-    makecpt(cmap=:turbo, range=(0,500), wrap=:w)
+using GMT
+imshow(makecpt(cmap=:turbo, range=(0,500), wrap=:w), horizontal=true)
 ```
+\end{examplefig}
 
 To show the ``turbo`` color table.
 
@@ -197,6 +214,17 @@ using GMT
 imshow(:turbo, horizontal=true)
 ```
 \end{examplefig}
+
+To make a categorical CPT with string keys instead of numerical lookup values, try:
+
+\begin{examplefig}{}
+```julia
+using GMT
+C = makecpt(cmap=:categorical, range="wood,water,gold")
+imshow(C, B=:none, horizontal=true)
+```
+\end{examplefig}
+
 
 Bugs
 ----

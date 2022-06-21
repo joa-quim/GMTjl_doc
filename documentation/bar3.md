@@ -66,11 +66,14 @@ Examples
 
 View a grid as a 3D bar plot
 
+\begin{examplefig}{}
 ```julia
+using GMT
 G = gmt("grdmath -R-15/15/-15/15 -I0.5 X Y HYPOT DUP 2 MUL PI MUL 8 DIV COS EXCH NEG 10 DIV EXP MUL =");
 cmap = grd2cpt(G);      # Compute a colormap with the grid's data range
 bar3(G, lw=:thinnest, color=cmap, show=true)
 ```
+\end{examplefig}
 
 See also
 --------

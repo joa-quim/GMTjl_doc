@@ -76,28 +76,33 @@ Examples
 Print current Sun position and Sunrise, Sunset times at:
 
 ```julia
-    solar(sun=(pos=(-7.93,37.079), date="2016-02-04T10:01:00"))
+solar(sun=(pos=(-7.93,37.079), date="2016-02-04T10:01:00"))
 ```
 
 Plot the day-night and civil twilight 
 
+\begin{examplefig}{}
 ```julia
-    coast(region=:d, shore=0.1, proj="Q0/14c", axes=(annot=:auto, axes="WSen"),
-          resolution=:low, area=1000)
-    solar!(pen=1, terminators="dc", show=true)
+using GMT
+coast(region=:d, shore=0.1, proj="Q0/14c", axes=(annot=:auto, axes="WSen"),
+      resolution=:low, area=1000)
+solar!(pen=1, terminators="dc", show=true)
 ```
+\end{examplefig}
 
 But it is much nicer if we paint the terminators
 
+\begin{examplefig}{}
 ```julia
-    coast(region=:d, proj="Ks0/12", resolution=:low, area=5000, borders="1/0.5p,gray",
-          water=(175,210,255), axes=(annot=:a,ticks=:a,grid=:a), shore=0.5) 
-    solar!(terminators=(term=:d, date="2016-02-09T16:00:00"), fill="navy@95")
-    solar!(terminators=(term=:c, date="2016-02-09T16:00:00"), fill="navy@85")
-    solar!(terminators=(term=:n, date="2016-02-09T16:00:00"), fill="navy@80")
-    solar!(terminators=(term=:a, date="2016-02-09T16:00:00"), fill="navy@80",
-    show=true)
+using GMT
+coast(region=:d, proj="Ks0/12", resolution=:low, area=5000, borders="1/0.5p,gray",
+      water=(175,210,255), axes=(annot=:a,ticks=:a,grid=:a), shore=0.5) 
+solar!(terminators=(term=:d, date="2016-02-09T16:00:00"), fill="navy@95")
+solar!(terminators=(term=:c, date="2016-02-09T16:00:00"), fill="navy@85")
+solar!(terminators=(term=:n, date="2016-02-09T16:00:00"), fill="navy@80")
+solar!(terminators=(term=:a, date="2016-02-09T16:00:00"), fill="navy@80", show=true)
 ```
+\end{examplefig}
 
 See also
 --------

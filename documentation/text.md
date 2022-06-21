@@ -55,7 +55,16 @@ Optional Arguments
     Lists the font-numbers and font-names available, then exits.
 
 - **M** or **paragraph** : -- *paragraph=true*\
-    Paragraph mode. Files must be multiple segment files. Segments are separated by a special record whose first character must be *flag* [Default is **>**]. Starting in the 3rd column, we expect to find information pertaining to the typesetting of a text paragraph (the remaining lines until next segment header). The information expected is (*x y* [*font angle justify*\ ] *linespace parwidth parjust*), where *x y font angle justify* are defined above (*font*, *angle*, and *justify* can be set via **F**), while *linespace* and *parwidth* are the linespacing and paragraph width, respectively. The justification of the text paragraph is governed by *parjust* which may be **l**\ (eft), **c**\ (enter), **r**\ (ight), or **j**\ (ustified). The segment header is followed by one or more lines with paragraph text. Text may contain the escape sequences discussed above. Separate paragraphs with a blank line. Note that here, the justification set via **justify** applies to the box alignment since the text justification is set by *parjust*.
+    Paragraph mode. Files must be multiple segment files. Segments are separated by a special record whose first
+    character must be *flag* [Default is **>**]. Starting in the 3rd column, we expect to find information
+    pertaining to the typesetting of a text paragraph (the remaining lines until next segment header).
+    The information expected is (*x y* [*font angle justify*\ ] *linespace parwidth parjust*), where
+    *x y font angle justify* are defined above (*font*, *angle*, and *justify* can be set via **F**), while
+    *linespace* and *parwidth* are the linespacing and paragraph width, respectively. The justification of the
+    text paragraph is governed by *parjust* which may be **l**\ (eft), **c**\ (enter), **r**\ (ight), or
+    **j**\ (ustified). The segment header is followed by one or more lines with paragraph text. Text may
+    contain the escape sequences discussed above. Separate paragraphs with a blank line. Note that here, the
+    justification set via **justify** applies to the box alignment since the text justification is set by *parjust*.
 
 - **N** or **noclip** or **no\_clip** : *noclip=true*\
     Do NOT clip text at map boundaries [Default will clip]. 
@@ -90,15 +99,25 @@ Optional Arguments
 Limitations
 -----------
 
-In paragraph mode, the presence of composite characters and other escape sequences may lead to unfortunate word splitting. Also, if a font is requested with an outline pen it will not be used in paragraph mode. Note if any single word is wider than your chosen paragraph width then the paragraph width is automatically enlarged to fit the widest word.
+In paragraph mode, the presence of composite characters and other escape sequences may lead to unfortunate
+word splitting. Also, if a font is requested with an outline pen it will not be used in paragraph mode.
+Note if any single word is wider than your chosen paragraph width then the paragraph width is automatically
+enlarged to fit the widest word.
 
 Examples
 --------
 
 To plot just the red outlines of the (lon lat text strings) stored in the file text.txt on a Mercator plot with the given specifications, use
 
-    text("text.txt", region=(-30,30,-10,20), proj=:merc, figscale=0.25, font=(18,:Helvetica,"-=0.5p",:red), frame=(annot=5,), show=true)
+```julia
+text("text.txt", region=(-30,30,-10,20), proj=:merc, figscale=0.25, font=(18,:Helvetica,"-=0.5p",:red), frame=(annot=5,), show=true)
+```
 
 To plot just the "Hello World" and let the program estimate the *region*, do
 
-    text(["Hello World"], x=2.0, y=2.0, show=true)
+\begin{examplefig}{}
+```julia
+using GMT
+text(["Hello World"], x=2.0, y=2.0, show=true)
+```
+\end{examplefig}

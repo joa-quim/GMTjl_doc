@@ -132,7 +132,10 @@ Examples
 To plot Great Britain, Italy, and France in blue with a red outline and Spain, Portugal and Greece in yellow
 (no outline), and pick up the plot domain form the extents of these countries, use:
 
+\begin{examplefig}{}
 ```julia
+using GMT
 coast(proj=:Mercator, DCW=((country="GB,IT,FR", fill=:blue, pen=(0.25,:red)),
                            (country="ES,PT,GR", fill=:yellow)), show=true)
 ```
+\end{examplefig}

@@ -53,10 +53,13 @@ Plot a single arrow with head and tail.
 Let us see the effect of the scale factor in quiver plots (components given in *u,v*). Plot a single vector
 with length 0f ~7 cm (sqrt(50)). Notice that map limits and map size are equal to 5.
 
+\begin{examplefig}{}
 ```julia
-   arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=5, frame=(annot=:a, grid=1),
-          arrow=(len=0.5,stop=1,uv=1), show=true)
+using GMT
+arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=5, frame=(annot=:a, grid=1),
+       arrow=(len=0.5,stop=1,uv=1), show=true)
 ```
+\end{examplefig}
 
 now, we increase the fig size to 10 cm and because the vector magnitude is half ot it (= 7) we see that the
 vector is now plot from 0 to ~3.54 figure units. In fact, the vector has exactly the same size as in previous
@@ -70,10 +73,13 @@ example but the figure is now twice as large.
 and finally we will change the vector size again but this time by applying a factor scale of 0.5. The vector
 is now ~1.77 figure units long.
 
+\begin{examplefig}{}
 ```julia
-   arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=10, frame=(annot=0.5, ticks=0.25, grid=0.5),
-          arrow=(len=0.5,stop=1,uv=0.5), show=true)
+using GMT
+arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=10, frame=(annot=0.5, ticks=0.25, grid=0.5),
+       arrow=(len=0.5,stop=1,uv=0.5), show=true)
 ```
+\end{examplefig}
 
 See Also
 --------

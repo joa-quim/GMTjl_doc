@@ -1,4 +1,4 @@
-# Scatter
+# Scatters
 
 
 ## Examples

@@ -47,8 +47,11 @@ Examples
 
 Decorated curve with blue stars
 
+\begin{examplefig}{}
 ```julia
+using GMT
 xy = gmt("gmtmath -T0/180/1 T SIND 4.5 ADD");
-lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), symbol=:star,
-      symbsize=1, pen=(0.5,:green), fill=:blue, dec2=true), show=true)
+lines(xy, axes=:af, pen=(1,:red), decorated=(dist=(2.5,0.25), marker=:star,
+      ms=1, pen=(0.5,:green), fill=:blue, dec2=true), aspect="4:2", show=true)
 ```
+\end{examplefig}
