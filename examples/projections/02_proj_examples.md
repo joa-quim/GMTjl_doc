@@ -260,7 +260,7 @@ coast(region="100/-42/160/-8r", proj=(name=:stereographic, center=(130,-30)), fr
 \end{examplefig}
 
 
-### Perspective
+### Perspective projection
 
 The perspective projection imitates in 2 dimensions the 3-dimensional view of the earth from space. The
 implementation in GMT is very flexible, and thus requires many input variables. Those are listed and

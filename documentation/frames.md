@@ -22,7 +22,6 @@ T = text_record([-0.5 0.05; 0.375 0.05; 1.29166666 0.05], ["annotation", "frame"
 text!(T, font=9, justify=:CB, show=true)
 ```
 
-!["B_geo_1"](figures/B_geo_1.png)
 
 The machinery for primary and secondary annotations axes can be utilized for geographic base maps. This may
 be used to separate degree annotations from minutes- and seconds-annotations. For a more complicated base map
@@ -55,8 +54,6 @@ T = text_record([-2.1 0.025; -1.5  0.05; -0.25 0.05; 0.625 0.05],
 text!(T, font="", justify="", no_clip=true, 'show=true)
 ```
 
-!["B_geo_2"](figures/B_geo_2.png)
-
 ## Cartesian linear axes
 
 For non-geographic axes, the MAP\_FRAME\_TYPE setting is implicitly set to plain. Other than that,
@@ -78,18 +75,17 @@ T = text_record([2 0.2; 7 0.2; 9.5 0.2], ["annotation", "frame", "grid"]);
 text!(T, font=9, justify=:CB, clearance=(0.025,0.025), fill=:white, show=true)
 ```
 
-!["B_linear"](figures/B_linear.png)
-
 There are occasions when the length of the annotations are such that placing them horizontally
 (which is the default) may lead to overprinting or too few annotations. One solution is to request
 slanted annotations for the x-axis via the slanted keyword in frame.
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region=(2000,2020,35,45), frame=(axes=:S, annot=2, ticks=:auto, slanted=-30),
         show=true)
 ```
-
-!["B_slanted"](figures/B_slanted.png)
+\end{examplefig}
 
 ## Cartesian log10 axes
 
@@ -104,7 +100,9 @@ The following concerns are specific to log axes (see Figure Logarithmic projecti
    * Append p to stride. Then, annotations appear as 10 raised to log10 of the value (e.g., 10-5).
 
 
+\begin{examplefig}{}
 ```julia
+using GMT
 gmt("set MAP_GRID_PEN_PRIMARY thinnest,.")
 basemap(region=(1,1000,0,1), proj=:logx, figsize=(8,0.7),
         frame=(axes=:S, annot=1, ticks=2, grid=3, scale=:pow, xlabel="Axis Label"))
@@ -113,8 +111,8 @@ basemap!(frame=(axes=:S, annot=1, ticks=2, grid=3, scale=:log,
 basemap!(frame=(axes=:S, annot=1, ticks=2, grid=3,
                 xlabel="Axis Label"), y_offset=2.2, show=true)
 ```
+\end{examplefig}
 
-!["B_log"](figures/B_log.png)
 
 ## Cartesian exponential axes
 
@@ -125,15 +123,17 @@ interval is expected to be in transformed units, yet the annotation itself will 
 un-transformed units. E.g., if stride = 1 and power = 0.5 (i.e., sqrt), then equidistant
 annotations labeled 1, 4, 9, ... will appear.
 
+\begin{examplefig}{}
 ```julia
+using GMT
 gmt("set MAP_GRID_PEN_PRIMARY thinnest,.")
 asemap(region=(0,100,0,0.9), proj="powx,0.5", figsize=(10, 0.65),
        frame=(axes=:S, annot=3, ticks=2, grid=1, scale=:pow, xlabel="Axis Label"))
 basemap!(frame=(axes=:S, annot=20, ticks=10, grid=5, xlabel="Axis Label"),
          y_offset=2.2, show=true)
 ```
+\end{examplefig}
 
-!["B_pow"](figures/B_pow.png)
 
 ## Cartesian time axes
 
@@ -148,14 +148,16 @@ Our first example shows a time period of almost two months in Spring 2000. We wa
 intervals as well as the date at the start of each week. Note the leading hyphen in the FORMAT_DATE_MAP
 removes leading zeros from calendar items (e.g., 03 becomes 3).
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region="2000-4-1T/2000-5-25T/0/1", figsize=(12,0.5),
         frame=(axes=:S, annot=7, annot_unit=:day_week, ticks=1, ticks_unit=:day_date),
         axis2=(annot=1, annot_unit=:month),
         conf=(FORMAT_DATE_MAP="-o", FONT_ANNOT_PRIMARY="+9p"), show=true)
 ```
+\end{examplefig}
 
-!["B_time1"](figures/B_time1.png)
 
 The next example shows two different ways to annotate an axis portraying 2 days in July 1969:
 
@@ -173,7 +175,6 @@ choses dates (by specifying a1D). Note how the clock format only selects hours a
 (no seconds) and the date format selects a month name, followed by one space and a two-digit
 day-of-month number.
 
-!["B_time2"](figures/B_time2.png)
 
 The lower example chooses to annotate the weekdays (by specifying a1K) while the upper example
 choses dates (by specifying a1D). Note how the clock format only selects hours and minutes
@@ -195,7 +196,6 @@ be centered on the corresponding month and not the 3-month interval. The FORMAT\
 month name only and FORMAT\_TIME\_PRIMARY\_MAP selects the 1-character, upper case abbreviation of
 month names using the current language (selected by GMT\_LANGUAGE).
 
-!["B_time3"](figures/B_time3.png)
 
 The fourth example only shows a few hours of a day, using relative time by specifying *t* in the
 *region* option while the TIME_UNIT is *d* (for days). We select both primary and secondary annotations,
@@ -208,7 +208,6 @@ basemap(region=("0.2t","0.35t",0,1), figsize=(-12,0.25),
         show=true)
 ```
 
-!["B_time4"](figures/B_time4.png)
 
 The fifth example shows a few weeks of time (Figure Cartesian time axis, example 5). The lower
 axis shows ISO weeks with week numbers and abbreviated names of the weekdays. The upper uses
@@ -225,7 +224,6 @@ basemap!(frame=(axes=:S, annot=3, annot_unit=:ISOweekday, ticks=1, ticks_unit=:w
          y_offset=1.7, show=true)
 ```
 
-!["B_time5"](figures/B_time5.png)
 
 Our sixth example shows the first five months of 1996, and we have annotated each month with an
 abbreviated, upper case name and 2-digit year. Only the primary axes information is specified.
@@ -237,7 +235,6 @@ basemap(region=("1996T","1996-6T",0,1), figsize=(12,0.25),
         show=true)
 ```
 
-!["B_time6"](figures/B_time6.png)
 
 Our seventh and final example illustrates annotation of year-days. Unless we specify the
 formatting with a leading hyphen in FORMAT\_DATE\_MAP we get 3-digit integer days. Note that in
@@ -253,10 +250,7 @@ basemap(region=("2000-12-15T","2001-1-15T",0,1), figsize=(12,0.25),
         show=true)
 ```
 
-!["B_time7"](figures/B_time7.png)
-
 ## Custom axes
-
 
 ```julia
     basemap(region=(416,542,0,6.2831852), figsize=(-12,5),
@@ -270,5 +264,3 @@ basemap(region=("2000-12-15T","2001-1-15T",0,1), figsize=(12,0.25),
                             type=["ig Devonian", "ig Silurian", "ig Ordovician", "ig Cambrian"]),),
             par=(MAP_ANNOT_OFFSET_SECONDARY="10p", MAP_GRID_PEN_SECONDARY="2p"), show=true)
 ```
-
-!["B_time7"](figures/B_time8.png)

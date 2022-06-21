@@ -78,25 +78,25 @@ The optional *annot_unit* indicates the unit of the *stride* and can be any of t
 
 - **:year**  or **:Y** (year, plot with 4 digits)
 - **:year2** or **:y** (year, plot with 2 digits)
-- **:month** or **:O** (month, plot using [FORMAT\_DATE\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-date-map))
+- **:month** or **:O** (month, plot using [FORMAT\_DATE\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-date-map))
 - **:month2** or **:o** (month, plot with 2 digits)
-- **:ISOweek** or **:U** (ISO week, plot using [FORMAT\_DATE\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-date-map))
+- **:ISOweek** or **:U** (ISO week, plot using [FORMAT\_DATE\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-date-map))
 - **:ISOweek2** or **:u** (ISO week, plot using 2 digits)
-- **Gregorian_week** or **:r** (Gregorian week, 7-day stride from start of week [TIME\_WEEK\_START](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#time-week-start))
+- **Gregorian_week** or **:r** (Gregorian week, 7-day stride from start of week [TIME\_WEEK\_START](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#time-week-start))
 - **:ISOweekday** or **:K** (ISO weekday, plot name of day)
-- **:date** or **:D** (date, plot using [FORMAT\_DATE\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-date-map))
-- **:day_date** or **:d** (day, plot day of month 0-31 or year 1-366, via [FORMAT\_DATE\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-date-map))
-- **:day_week** or **:R** (day, same as **d**, aligned with [TIME\_WEEK\_START](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#time-week-start))
-- **:hour**    or **:H** (hour, plot using [FORMAT\_CLOCK\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-clock-map))
+- **:date** or **:D** (date, plot using [FORMAT\_DATE\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-date-map))
+- **:day_date** or **:d** (day, plot day of month 0-31 or year 1-366, via [FORMAT\_DATE\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-date-map))
+- **:day_week** or **:R** (day, same as **d**, aligned with [TIME\_WEEK\_START](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#time-week-start))
+- **:hour**    or **:H** (hour, plot using [FORMAT\_CLOCK\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-clock-map))
 - **:hour2**   or **:h** (hour, plot with 2 digits)
-- **:minute**  or **:M** (minute, plot using [FORMAT\_CLOCK\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-clock-map))
+- **:minute**  or **:M** (minute, plot using [FORMAT\_CLOCK\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-clock-map))
 - **:minute2** or **:m** (minute, plot with 2 digits)
-- **:second**  or **:S** (second, plot using [FORMAT\_CLOCK\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-clock-map))
+- **:second**  or **:S** (second, plot using [FORMAT\_CLOCK\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-clock-map))
 - **:second2** or **:s** (second, plot with 2 digits).
 
 
 Note for geographic axes **m** and **s** instead mean arc minutes and arc seconds.
-All entities that are language-specific are under control by [GMT\_LANGUAGE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#gmt-language). 
+All entities that are language-specific are under control by [GMT\_LANGUAGE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#gmt-language). 
 
 For custom annotations and intervals, let *intervals* be given as *custom="intfile"*, where
 *intfile* contains any number of records with *coord type* [*label*]. Here, *type* is one or more
@@ -141,35 +141,35 @@ set such annotation intervals. The format is *pi=n* or *pi=(n,m)*, for an option
 integer *n* and optional *m* fractions 2, 3, or 4.
 
 These GMT parameters can affect the appearance of the map boundary:
-[MAP\_ANNOT\_MIN\_ANGLE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-min-angle),
-[MAP\_ANNOT\_MIN\_SPACING](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-min-spacing),
-[FONT\_ANNOT\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#font-annot-primary),
-[FONT\_ANNOT\_SECONDARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#font-annot-secondary),
-[MAP\_ANNOT\_OFFSET\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-offset-primary),
-[MAP\_ANNOT\_OFFSET\_SECONDARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-offset-secondary),
-[MAP\_ANNOT\_ORTHO](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-ortho),
-[MAP\_FRAME\_AXES](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-axes),
-[MAP\_DEFAULT\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-default-pen),
-[MAP\_FRAME\_TYPE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-type),
-[FORMAT\_GEO\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-geo-map),
-[MAP\_FRAME\_PEN](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-pen),
-[MAP\_FRAME\_WIDTH](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-frame-width),
-[MAP\_GRID\_CROSS\_SIZE\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-grid-cross-size-primary),
-[MAP\_GRID\_PEN\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-grid-pen-primary),
-[MAP\_GRID\_CROSS\_SIZE\_SECONDARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#language),
-[MAP\_GRID\_PEN\_SECONDARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-grid-pen-seondary),
-[FONT\_TITLE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#font-title),
-[FONT\_LABEL](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#font-label),
-[MAP\_LINE\_STEP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-line-step),
-[MAP\_ANNOT\_OBLIQUE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-annot-oblique),
-[FORMAT\_CLOCK\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-clock-map),
-[FORMAT\_DATE\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-date-map),
-[FORMAT\_TIME\_PRIMARY\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-time-primary-map),
-[FORMAT\_TIME\_SECONDARY\_MAP](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#format-time-secondary-map),
-[GMT\_LANGUAGE](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#gmt-language),
-[TIME\_WEEK\_START](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#time-week-start),
-[MAP\_TICK\_LENGTH\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-tick-length-primary),
-and [MAP\_TICK\_PEN\_PRIMARY](http://gmt.soest.hawaii.edu/doc/latest/gmt.conf.html#map-tick-pen-primary)
+[MAP\_ANNOT\_MIN\_ANGLE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-min-angle),
+[MAP\_ANNOT\_MIN\_SPACING](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-min-spacing),
+[FONT\_ANNOT\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#font-annot-primary),
+[FONT\_ANNOT\_SECONDARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#font-annot-secondary),
+[MAP\_ANNOT\_OFFSET\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-offset-primary),
+[MAP\_ANNOT\_OFFSET\_SECONDARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-offset-secondary),
+[MAP\_ANNOT\_ORTHO](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-ortho),
+[MAP\_FRAME\_AXES](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-frame-axes),
+[MAP\_DEFAULT\_PEN](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-default-pen),
+[MAP\_FRAME\_TYPE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-frame-type),
+[FORMAT\_GEO\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-geo-map),
+[MAP\_FRAME\_PEN](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-frame-pen),
+[MAP\_FRAME\_WIDTH](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-frame-width),
+[MAP\_GRID\_CROSS\_SIZE\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-grid-cross-size-primary),
+[MAP\_GRID\_PEN\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-grid-pen-primary),
+[MAP\_GRID\_CROSS\_SIZE\_SECONDARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#language),
+[MAP\_GRID\_PEN\_SECONDARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-grid-pen-seondary),
+[FONT\_TITLE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#font-title),
+[FONT\_LABEL](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#font-label),
+[MAP\_LINE\_STEP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-line-step),
+[MAP\_ANNOT\_OBLIQUE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-annot-oblique),
+[FORMAT\_CLOCK\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-clock-map),
+[FORMAT\_DATE\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-date-map),
+[FORMAT\_TIME\_PRIMARY\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-time-primary-map),
+[FORMAT\_TIME\_SECONDARY\_MAP](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#format-time-secondary-map),
+[GMT\_LANGUAGE](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#gmt-language),
+[TIME\_WEEK\_START](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#time-week-start),
+[MAP\_TICK\_LENGTH\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-tick-length-primary),
+and [MAP\_TICK\_PEN\_PRIMARY](http://docs.generic-mapping-tools.org/latest/gmt.conf.html#map-tick-pen-primary)
 
 ## Axes options table
 

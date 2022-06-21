@@ -128,12 +128,15 @@ Examples
 Contour the *peaks* function. *cont=1* and *annot=2* means draw contours at every 1 unit of the *G*
 grid and annotate at every other contour line:
 
+\begin{examplefig}{}
 ```julia
+using GMT
 G = GMT.peaks();
 grdcontour(G, cont=1, annot=2, show=true)
 ```
+\end{examplefig}
 
-For a more elaborated example see \myreflink{Contour maps}
+For a more elaborated example see \myreflink{Contours}
 
 See also
 --------

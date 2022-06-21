@@ -50,16 +50,22 @@ Examples
 
 A simple scatter of ten points plotted as red circles of 7 points size
 
+\begin{examplefig}{}
 ```julia
+using GMT
 scatter(1:10,rand(10), fill=:red, show=true)
 ```
+\end{examplefig}
 
 A plot where symbol's size grows linearly
 
+\begin{examplefig}{}
 ```julia
+using GMT
 sizevec = [s for s = 1:10] ./ 10;
 scatter(1:10, 1:10, markersize = sizevec, marker=:square, fill=:green, show=1)
 ```
+\end{examplefig}
 
 
 See also

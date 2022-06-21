@@ -19,7 +19,7 @@ Parameters
 
 \textinput{common_opts/opt_mfc}
 
-- **S** or *symbol* or *marker* or *Marker* or *shape* : --  Default is `cube` with size of 7 points
+- **S** or **symbol** or **marker** or **Marker** or **shape** : --  Default is `cube` with size of 7 points
    - *symbol=symbol string*\
       A full GMT compact string.
    - *symbol=(symb=..., size=..., unit=...)*\
@@ -41,9 +41,12 @@ Examples
 
 A scatter of ten points plotted as black cubes of 7 points size using the default perspective of 200,30
 
+\begin{examplefig}{}
 ```julia
-    scatter3(rand(10,10,3), show=true)
+using GMT
+scatter3(rand(10,10,3), zsize=4, marker=:cube, mc=:darkgreen, show=true)
 ```
+\end{examplefig}
 
 See also
 --------

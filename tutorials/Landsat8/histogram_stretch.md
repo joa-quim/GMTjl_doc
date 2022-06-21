@@ -14,7 +14,7 @@ imshow(Ir)
 
 [//]: # ~~~ <img src="/tutorials/Landsat8/b4raw.png" width=50% class="center"/> ~~~
 
-\figenv{The caption}{/tutorials/Landsat8/b4raw.png}{width:50%;border: 1px solid red;}
+\figenv{The caption}{/tutorials/Landsat8/b4raw.png}{width:60%;border: 1px solid red;}
 
 
 _Ah, nice ... but it's so dark that we can't really see much!_
@@ -38,7 +38,7 @@ imshow(I, stretch=[6000 23800])
 ```
 
 ~~~
-<img src="/tutorials/Landsat8/b4stretched.png" width=50% class="center"/>
+<img src="/tutorials/Landsat8/b4stretched.png" width=65% class="center"/>
 ~~~
 
 Now that we feel confident with the auto-stretching algorithm we can create a true color image. True color images
@@ -61,7 +61,7 @@ Irgb = truecolor(Ir, Ig, Ib);
 ```
 
 ~~~
-<img src="/tutorials/Landsat8/truecolor.png" width=50% class="center"/>
+<img src="/tutorials/Landsat8/truecolor.png" width=65% class="center"/>
 ~~~
 
 ---

@@ -79,11 +79,14 @@ A bar group with bars filled with patterns.
 ```
 
 A bar group with error bars
+\begin{examplefig}{}
 ```julia
-    bar([0. 1 2 3; 1 2 3 4], error_bars=(y=[0.1 0.2 0.33; 0.2 0.3 0.4],), show=1)
+using GMT
+bar([0. 1 2 3; 1 2 3 4], error_bars=(y=[0.1 0.2 0.33; 0.2 0.3 0.4],), show=true)
 ```
+\end{examplefig}
 
 See also
 --------
 
-The [`GMT man page`](https://gmt.soest.hawaii.edu/doc/latest/plot.html)
+The [`GMT man page`](https://docs.generic-mapping-tools.org/latest/plot.html)
