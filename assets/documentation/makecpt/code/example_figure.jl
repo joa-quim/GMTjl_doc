@@ -4,9 +4,10 @@ begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
     using GMT
-imshow(:turbo, horizontal=true)
+C = makecpt(cmap=:categorical, range="wood,water,gold")
+imshow(C, B=:none, horizontal=true)
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_1968158563341266150.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_10640709962892911428.png"), force=true);    # hide
 catch   # hide
 end     # hide
 GMT.isFranklin[1] = false    # hide

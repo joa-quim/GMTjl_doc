@@ -102,7 +102,7 @@
 <li><input class="collapse-toggle" id="menuitem-2-9" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-2-9"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/examples/plotting_functions">Plotting functions</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/01_lines">Line plots</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/02_plotyy">Plotyy</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/03_bars">Bar plots</a></div></li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/040_scatter">Scatter</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/040_scatter">Scatters</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/04_arrows">Arrows</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/05_error_bars">Error bars</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/examples/plotting_functions/06_spirals">Spirals</a></div></li>
@@ -224,7 +224,7 @@
 <ul>
 <li><p><strong>L</strong> or <strong>list</strong> : – <em>list&#61;true</em><br />  Lists the font-numbers and font-names available, then exits.</p>
 </li>
-<li><p><strong>M</strong> or <strong>paragraph</strong> : – <em>paragraph&#61;true</em><br />  Paragraph mode. Files must be multiple segment files. Segments are separated by a special record whose first character must be <em>flag</em> &#91;Default is <strong>&gt;</strong>&#93;. Starting in the 3rd column, we expect to find information pertaining to the typesetting of a text paragraph &#40;the remaining lines until next segment header&#41;. The information expected is &#40;<em>x y</em> &#91;<em>font angle justify</em>&#92; &#93; <em>linespace parwidth parjust</em>&#41;, where <em>x y font angle justify</em> are defined above &#40;<em>font</em>, <em>angle</em>, and <em>justify</em> can be set via <strong>F</strong>&#41;, while <em>linespace</em> and <em>parwidth</em> are the linespacing and paragraph width, respectively. The justification of the text paragraph is governed by <em>parjust</em> which may be <strong>l</strong>&#92; &#40;eft&#41;, <strong>c</strong>&#92; &#40;enter&#41;, <strong>r</strong>&#92; &#40;ight&#41;, or <strong>j</strong>&#92; &#40;ustified&#41;. The segment header is followed by one or more lines with paragraph text. Text may contain the escape sequences discussed above. Separate paragraphs with a blank line. Note that here, the justification set via <strong>justify</strong> applies to the box alignment since the text justification is set by <em>parjust</em>.</p>
+<li><p><strong>M</strong> or <strong>paragraph</strong> : – <em>paragraph&#61;true</em><br />  Paragraph mode. Files must be multiple segment files. Segments are separated by a special record whose first   character must be <em>flag</em> &#91;Default is <strong>&gt;</strong>&#93;. Starting in the 3rd column, we expect to find information   pertaining to the typesetting of a text paragraph &#40;the remaining lines until next segment header&#41;.   The information expected is &#40;<em>x y</em> &#91;<em>font angle justify</em>&#92; &#93; <em>linespace parwidth parjust</em>&#41;, where   <em>x y font angle justify</em> are defined above &#40;<em>font</em>, <em>angle</em>, and <em>justify</em> can be set via <strong>F</strong>&#41;, while   <em>linespace</em> and <em>parwidth</em> are the linespacing and paragraph width, respectively. The justification of the   text paragraph is governed by <em>parjust</em> which may be <strong>l</strong>&#92; &#40;eft&#41;, <strong>c</strong>&#92; &#40;enter&#41;, <strong>r</strong>&#92; &#40;ight&#41;, or   <strong>j</strong>&#92; &#40;ustified&#41;. The segment header is followed by one or more lines with paragraph text. Text may   contain the escape sequences discussed above. Separate paragraphs with a blank line. Note that here, the   justification set via <strong>justify</strong> applies to the box alignment since the text justification is set by <em>parjust</em>.</p>
 </li>
 <li><p><strong>N</strong> or <strong>noclip</strong> or <strong>no&#95;clip</strong> : <em>noclip&#61;true</em><br />  Do NOT clip text at map boundaries &#91;Default will clip&#93;. </p>
 </li>
@@ -277,12 +277,18 @@
 <p>In paragraph mode, the presence of composite characters and other escape sequences may lead to unfortunate word splitting. Also, if a font is requested with an outline pen it will not be used in paragraph mode. Note if any single word is wider than your chosen paragraph width then the paragraph width is automatically enlarged to fit the widest word.</p>
 <h2>Examples</h2>
 <p>To plot just the red outlines of the &#40;lon lat text strings&#41; stored in the file text.txt on a Mercator plot with the given specifications, use</p>
-<p>text&#40;&quot;text.txt&quot;, region&#61;&#40;-30,30,-10,20&#41;, proj&#61;:merc, figscale&#61;0.25, font&#61;&#40;18,:Helvetica,&quot;-&#61;0.5p&quot;,:red&#41;, frame&#61;&#40;annot&#61;5,&#41;, show&#61;true&#41;</p>
+<pre><code class="language-julia">text&#40;&quot;text.txt&quot;, region&#61;&#40;-30,30,-10,20&#41;, proj&#61;:merc, figscale&#61;0.25, font&#61;&#40;18,:Helvetica,&quot;-&#61;0.5p&quot;,:red&#41;, frame&#61;&#40;annot&#61;5,&#41;, show&#61;true&#41;</code></pre>
 <p>To plot just the &quot;Hello World&quot; and let the program estimate the <em>region</em>, do</p>
-<p>text&#40;&#91;&quot;Hello World&quot;&#93;, x&#61;2.0, y&#61;2.0, show&#61;true&#41;</p>
+<pre><code class="language-julia">using GMT
+text&#40;&#91;&quot;Hello World&quot;&#93;, x&#61;2.0, y&#61;2.0, show&#61;true&#41;</code></pre></p>
+<p>
+<a id="example_6046692248022155076">
+ <img src="/GMTjl_doc/assets/documentation/text/code/output/example_6046692248022155076.png" alt=""> 
+</a>
+
 <div class="page-foot">
   <div class="copyright">
-    &copy; GMT.jl. Last modified: June 20, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; GMT.jl. Last modified: June 21, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
       <p>These docs were autogenerated using GMT: v0.42.4</p>
   </div>
 </div>
