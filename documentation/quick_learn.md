@@ -1,4 +1,4 @@
-# How to learn using GMT in Julia
+# Quick learn GMT
 
 ## Case 1. You are already a GMT user
 
@@ -25,7 +25,7 @@ just make one and use it in the above command. *i.e.*:
 ```
 
 The last command introduced a novelty in using the **C** option and that's where things start to be interesting.
-Instead of using a previously existing cpt file, *e.g.* a file called ``color.cpt`` and used it as C="color.cpt",
+Instead of using a previously existing cpt file, *e.g.* a file called `color.cpt` and used it as C="color.cpt",
 we created a `GMTcpt` object that resides only in Julia memory space and passed it directly via the **C** option.
 The same could have been done if we had the `earth_relief_20m.grd` grid in memory, which, for example sake, can
 be achieved by previously reading the grid file.
@@ -155,5 +155,5 @@ Examples
 ```julia
     # Contours
     G = GMT.peaks();
-    grdcontour(G, color=makecpt(range=(-6,8,1)), pen="+c", figsize=16, region=(-3,3,-3,3), title="Contours", show=true)
+    grdcontour(G, color=makecpt(range=(-6,8,1)), pen="+c", region=(-3,3,-3,3), title="Contours", show=true)
 ```

@@ -19,9 +19,9 @@ using GMT
 
 ## \myreflink{Introduction}
 
-## \myreflink{Quick learn}
+## \myreflink{Quick learn GMT}
 
-## \myreflink{The GMT.jl types}
+## \myreflink{The GMT.jl types (important)}
 
 ## Core Modules Manuals
 
