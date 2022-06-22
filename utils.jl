@@ -82,6 +82,7 @@ function env_examplefig(com, _)
     begin # hide
         using GMT   # hide
         GMT.isFranklin[1] = true    # hide
+        getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
         $code
     end # hide
     mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
