@@ -275,13 +275,13 @@ basemap&#33;&#40;frame&#61;&#40;axes&#61;:S, annot&#61;1, ticks&#61;2, grid&#61;
 <p>Normally, stride will be used to create equidistant &#40;in the user’s unit&#41; annotations or ticks, but because of the exponential nature of the axis, such annotations may converge on each other at one end of the axis. To avoid this problem, you can append p to stride, and the annotation interval is expected to be in transformed units, yet the annotation itself will be plotted as un-transformed units. E.g., if stride &#61; 1 and power &#61; 0.5 &#40;i.e., sqrt&#41;, then equidistant annotations labeled 1, 4, 9, ... will appear.</p>
 <pre><code class="language-julia">using GMT
 gmt&#40;&quot;set MAP_GRID_PEN_PRIMARY thinnest,.&quot;&#41;
-asemap&#40;region&#61;&#40;0,100,0,0.9&#41;, proj&#61;&quot;powx,0.5&quot;, figsize&#61;&#40;10, 0.65&#41;,
+basemap&#40;region&#61;&#40;0,100,0,0.9&#41;, proj&#61;&quot;powx,0.5&quot;, figsize&#61;&#40;10, 0.65&#41;,
        frame&#61;&#40;axes&#61;:S, annot&#61;3, ticks&#61;2, grid&#61;1, scale&#61;:pow, xlabel&#61;&quot;Axis Label&quot;&#41;&#41;
 basemap&#33;&#40;frame&#61;&#40;axes&#61;:S, annot&#61;20, ticks&#61;10, grid&#61;5, xlabel&#61;&quot;Axis Label&quot;&#41;,
          y_offset&#61;2.2, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_398160234341769741">
- <p><span style="color:red;">// Image matching '/assets/documentation/frames/code/example_398160234341769741.png' not found. //</span></p> 
+<a id="example_10512437383545298939">
+ <img src="/GMTjl_doc/assets/documentation/frames/code/output/example_10512437383545298939.png" alt=""> 
 </a>
 
 <h2 id="cartesian_time_axes"><a href="#cartesian_time_axes" class="header-anchor">Cartesian time axes</a></h2>
