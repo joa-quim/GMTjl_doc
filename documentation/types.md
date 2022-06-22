@@ -1,6 +1,9 @@
-# The GMT.jl types
+# The GMT.jl types (important)
 
 ## Grid type
+
+The GMTgrid type is how grids, (geo)referenced or not, comunicate in/out with the GMT library.
+They implement the AbstractArray interface.
 
 ```julia
 type GMTgrid{T<:Real,N} <: AbstractArray{T,N}      # The type holding a local header and data of a GMT grid

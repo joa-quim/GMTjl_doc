@@ -10,10 +10,10 @@ using Pkg
 
 #include("colormap_generation.jl")
 
-
-# copy NEWS file over to documentation
-
 ############################ Functions ##############################
+
+const global DOCSROOT = pwd()
+getpath4docs(file::String) = joinpath(DOCSROOT, "assert", file)
 
 function hfun_doc(params)
     fname = params[1]
@@ -202,7 +202,7 @@ end
     return "<ul>" * join(title_links) * "</ul>"
 end
 
-
+#=
 function hfun_colorschemes()
     return sprint() do md
         write(md, """
@@ -226,6 +226,7 @@ function hfun_colorschemes()
         end
     end
 end
+=#
 
 function lx_outputimage(lxc, _)
     rpath = Franklin.stent(lxc.braces[1])
