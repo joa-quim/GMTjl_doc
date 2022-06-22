@@ -78,7 +78,6 @@ function env_examplefig(com, _)
 
     str = """
     ```julia:example_figure
-    try     # hide
     begin # hide
         using GMT   # hide
         GMT.isFranklin[1] = true    # hide
@@ -86,8 +85,6 @@ function env_examplefig(com, _)
         $code
     end # hide
     mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
-    catch   # hide
-    end     # hide
     GMT.isFranklin[1] = false    # hide
     GMT.IamModern[1]  = false    # hide
  
