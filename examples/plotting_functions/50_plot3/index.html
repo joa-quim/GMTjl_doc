@@ -132,7 +132,7 @@
 <li><input class="collapse-toggle" id="menuitem-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials">Tutorials</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/ISC">ISC</a></div></li>
 <li><input class="collapse-toggle" id="menuitem-3-2" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3-2"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials/Landsat8">Landsat8</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/Landsat8/histogram_stretch">Plot Landsat 8 images</a></div></li>
 </ul></li>
-<li><input class="collapse-toggle" id="menuitem-3-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials/coast">Landsat8</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/coast/coastlines">Coastlines and borders</a></div></li>
+<li><input class="collapse-toggle" id="menuitem-3-3" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-3-3"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/tutorials/coast">Coastlines</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/tutorials/coast/coastlines">Coastlines and borders</a></div></li>
 </ul></li>
 </ul></li>
 <li><input class="collapse-toggle" id="menuitem-4" type="checkbox" ><div class="tocitem-container"><label class="tocexpander" for="menuitem-4"><i class="docs-chevron"></i></label><a  href="/GMTjl_doc/documentation">Documentation</a></div><ul><li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/arrows">arrows</a></div></li>
@@ -168,7 +168,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/movie">movie</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/pens">Pen attributes</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/plot">plot</a></div></li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/quick_learn">How to learn using GMT in Julia</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/quick_learn">Quick learn GMT</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/rectangles">Draw rectangles</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/scatter">scatter</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/scatter3">scatter3</a></div></li>
@@ -177,7 +177,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/symbols">Symbols</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/text">text</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/themes">theme</a></div></li>
-<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/types">The GMT.jl types</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/types">The GMT.jl types &#40;important&#41;</a></div></li>
 </ul></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/api">API</a></div></li>
 </ul>
@@ -191,11 +191,12 @@
 <h3 id="flight_path"><a href="#flight_path" class="header-anchor">Flight path</a></h3>
 <p>Draw a flight path approaching landing with variable line thickness and color depending on airplain height.</p>
 <pre><code class="language-julia">using GMT
-D &#61; gmtread&#40;&quot;../../../../../track_sample_data.txt&quot;, i&#61;&quot;7,6,3&quot;&#41;;
+#D &#61; gmtread&#40;&quot;../../../../../track_sample_data.txt&quot;, i&#61;&quot;7,6,3&quot;&#41;;
+D &#61; gmtread&#40;getpath4docs&#40;&quot;track_sample_data.txt&quot;&#41;, incols&#61;&quot;7,6,3&quot;&#41;;
 plot3d&#40;D, lc&#61;:gradient, lt&#61;&#91;1,5&#93;, par&#61;&#40;PS_LINE_CAP&#61;&quot;round&quot;,&#41;, show&#61;true&#41;</code></pre></p>
 <p>
-<a id="example_2596002234411629733">
- <p><span style="color:red;">// Image matching '/assets/examples/plotting_functions/50_plot3/code/example_2596002234411629733.png' not found. //</span></p> 
+<a id="example_18413529568571570385">
+ <p><span style="color:red;">// Image matching '/assets/examples/plotting_functions/50_plot3/code/example_18413529568571570385.png' not found. //</span></p> 
 </a>
 
 <div class="page-foot">
