@@ -127,7 +127,7 @@ annotations labeled 1, 4, 9, ... will appear.
 ```julia
 using GMT
 gmt("set MAP_GRID_PEN_PRIMARY thinnest,.")
-asemap(region=(0,100,0,0.9), proj="powx,0.5", figsize=(10, 0.65),
+basemap(region=(0,100,0,0.9), proj="powx,0.5", figsize=(10, 0.65),
        frame=(axes=:S, annot=3, ticks=2, grid=1, scale=:pow, xlabel="Axis Label"))
 basemap!(frame=(axes=:S, annot=20, ticks=10, grid=5, xlabel="Axis Label"),
          y_offset=2.2, show=true)
