@@ -19,7 +19,7 @@ using GMT
 
 ## \myreflink{Introduction}
 
-## \myreflink{Quick learn GMT}
+## \myreflink{Quick learn}
 
 ## \myreflink{The GMT.jl types (important)}
 
