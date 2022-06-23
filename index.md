@@ -63,7 +63,7 @@ using GMT
     @@title Frames Layout @@
     @@box-content
       ~~~
-      <img src="/assets/GMT_Defaults_1a.png">
+      <img src="/examples/frames/GMT_Defaults_1a.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -74,7 +74,7 @@ using GMT
     @@title Plot Examples @@
     @@box-content
       ~~~
-      <img src="/assets/symbols.png">
+      <img src="/examples/plotting_functions/symbols.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -96,7 +96,7 @@ using GMT
     @@title Projections @@
     @@box-content
       ~~~
-      <img src="/assets/GMT_sinus_int.png">
+      <img src="/examples/projections/GMT_sinus_int.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -107,7 +107,7 @@ using GMT
     @@title The world of images @@
     @@box-content
       ~~~
-      <img src="/assets/ex04.png">
+      <img src="/examples/images/ex04.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -118,7 +118,7 @@ using GMT
     @@title Contours @@
     @@box-content
       ~~~
-      <img src="/assets/color-contour.png">
+      <img src="/examples/contours/color-contour.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -151,7 +151,7 @@ using GMT
     @@title Ternary Plots @@
     @@box-content
       ~~~
-      <img src="/assets/ternary3.png">
+      <img src="/examples/ternary/ternary3.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -184,7 +184,7 @@ using GMT
     @@title Misc @@
     @@box-content
       ~~~
-      <img src="/assets/buffer3.png">
+      <img src="/examples/misc/buffer3.png">
       ~~~
     @@
     ~~~</a>~~~
