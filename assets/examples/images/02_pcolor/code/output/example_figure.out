@@ -1,4 +1,0 @@
-MethodError: no method matching isless(::GMT.GMTdataset{Float64, 2}, ::GMT.GMTdataset{Float64, 2})
-Closest candidates are:
-  isless(::Any, !Matched::Missing) at ~/hostedtoolcache/julia/1.7.3/x64/share/julia/base/missing.jl:88
-  isless(!Matched::Missing, ::Any) at ~/hostedtoolcache/julia/1.7.3/x64/share/julia/base/missing.jl:87
