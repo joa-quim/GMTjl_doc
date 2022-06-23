@@ -17,10 +17,10 @@ lines([-0.7 -0.25 0], [-1.5 -0.8 0], # The flower stem
       figsize=(14,0),                # Fig size. Second arg = 0 means compute the height keeping aspect ratio
       frame=:none)                   # Do not plot the frame
 plot!(x, y,
-      fill=(pattern="@tiling2.jpg",  # Fill pattern file
+      fill=(pattern=getpath4docs("tiling2.jpg"),  # Fill pattern file
       dpi=200), show=true)           # The pattern DPI
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_9912846326165272708.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_14772517729074949607.png"), force=true);    # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  
