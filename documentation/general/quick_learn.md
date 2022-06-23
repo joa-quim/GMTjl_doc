@@ -1,4 +1,4 @@
-# Quick learn GMT
+# Quick learn
 
 ## Case 1. You are already a GMT user
 

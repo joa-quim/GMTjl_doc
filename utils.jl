@@ -39,6 +39,20 @@ end
 
 hfun_api_reference() = join(map(html_docstring, names(GMT)))
 
+function hfun_gdalfuns_reference()
+    fid = open("documentation/gdalfuns.txt", "r")
+    names = readlines(fid)
+    close(fid)
+    join(map(html_docstring, names))
+end
+
+function hfun_utilfuns_reference()
+    fid = open("documentation/utilfuns.txt", "r")
+    names = readlines(fid)
+    close(fid)
+    join(map(html_docstring, names))
+end
+
 function env_showhtml(com, _)
     content = Franklin.content(com)
     lang, ex_name, code = Franklin.parse_fenced_block(content, false)
