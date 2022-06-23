@@ -1,8 +1,8 @@
 # This file was generated, do not modify it. # hide
-try     # hide
 begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
+    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
     using GMT
 
 x = GMT.linspace(0, 2pi);  y = cos.(2x)*0.9;
@@ -17,8 +17,6 @@ plot!(3.49, 0.97,                    # Coordinates where to plot symbol
       fill=:black, show=true)        # Fill the symbol in black
 end # hide
 mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_14448994460914616845.png"), force=true);    # hide
-catch   # hide
-end     # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  

@@ -1,8 +1,8 @@
 # This file was generated, do not modify it. # hide
-try     # hide
 begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
+    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
     using GMT
 teta = 2pi*rand(150)*180/pi; r = 9*rand(150); ms = r / 10;
 
@@ -18,8 +18,6 @@ scatter(teta, r,                  # The data
         show=true)             # Display the figure
 end # hide
 mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_4680528454270781307.png"), force=true);    # hide
-catch   # hide
-end     # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  

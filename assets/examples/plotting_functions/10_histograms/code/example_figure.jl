@@ -1,8 +1,8 @@
 # This file was generated, do not modify it. # hide
-try     # hide
 begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
+    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
     using GMT
 D1 = histogram(randn(1000), I=:o, bin=0.1);  # Create histogrammed data with bin = 0.1 (I=:o to create the dataset)
 D2 = histogram(randn(500),  I=:o, bin=0.1);
@@ -19,8 +19,6 @@ lines!(D2,                   # Second dataset
       title="Stepped patch histogram", show=true)
 end # hide
 mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_8874177776778814600.png"), force=true);    # hide
-catch   # hide
-end     # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  

@@ -1,8 +1,8 @@
 # This file was generated, do not modify it. # hide
-try     # hide
 begin # hide
     using GMT   # hide
     GMT.isFranklin[1] = true    # hide
+    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
     using GMT
 basemap(region=(416,542,0,6.2831852), figsize=(-12,5),
         frame=(frame=(:left_full, :bot_full), fill=:lightblue),
@@ -16,8 +16,6 @@ basemap!(frame=(axes=(:left_full, :bot_full),),
         par=(MAP_ANNOT_OFFSET_SECONDARY="10p", MAP_GRID_PEN_SECONDARY="2p"), show=true)
 end # hide
 mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_18053118697193351659.png"), force=true);    # hide
-catch   # hide
-end     # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  
