@@ -1,4 +1,4 @@
-# Quick learn GMT
+# Quick learn
 
 ## Case 1. You are already a GMT user
 
@@ -7,21 +7,21 @@ use the option letters and options arguments as strings. Since (nearly) all base
 a wrapper you would call *pscoast* (or its alias *coast*) like this:
 
 ```julia
-    coast(R="-10/0/35/45", J="M15c", B="afg", W="0.5p", show=true)
+coast(R="-10/0/35/45", J="M15c", B="afg", W="0.5p", show=true)
 ```
 
 but what if you need to make a map with some data, a grid for example. Simple, give it as a first argument as in:
 
 ```julia
-    grdimage("@earth_relief_20m.grd", J="R15c", B="a", show=true)
+grdimage("@earth_relief_20m.grd", J="R15c", B="a", show=true)
 ```
 
 This will compute a cpt under the hood and use it. But what if you want to use another cpt? Also simple,
 just make one and use it in the above command. *i.e.*:
 
 ```julia
-    CPT = makecpt(T="-10000/8000/1000");
-    grdimage("@earth_relief_20m.grd", J="R15c", B="a", C=CPT, show=true)
+CPT = makecpt(T="-10000/8000/1000");
+grdimage("@earth_relief_20m.grd", J="R15c", B="a", C=CPT, show=true)
 ```
 
 The last command introduced a novelty in using the **C** option and that's where things start to be interesting.
@@ -31,9 +31,9 @@ The same could have been done if we had the `earth_relief_20m.grd` grid in memor
 be achieved by previously reading the grid file.
 
 ```julia
-    CPT = makecpt(T="-10000/8000/1000");
-    G = gmtread("@earth_relief_20m.grd");
-    grdimage(G, J="R15c", B="a", C=CPT, show=true)
+CPT = makecpt(T="-10000/8000/1000");
+G = gmtread("@earth_relief_20m.grd");
+grdimage(G, J="R15c", B="a", C=CPT, show=true)
 ```
 
 Though not particularly useful nor memory more efficient to read the grid first this example illustrates
@@ -46,17 +46,17 @@ of floats, uint8, uint16 and MxN matrices respectively.
 Example: create three grids with random data, compute their average and display it
 
 ```julia
-    G1 = mat2grid(rand(128,128));
-    G2 = mat2grid(rand(128,128));
-    G3 = mat2grid(rand(128,128));
-    Gavg = (G1 .+ G2 .+ G3) ./ 3;
-    imshow(Gavg)
+G1 = mat2grid(rand(128,128));
+G2 = mat2grid(rand(128,128));
+G3 = mat2grid(rand(128,128));
+Gavg = (G1 .+ G2 .+ G3) ./ 3;
+imshow(Gavg)
 ```
 
-Here we introduced also the use of a module that does not exist in GMT, `imshow`, but one that is in fact a mockup
-made with `grdimage` and `grdview` and with a set of defaults and guesswork that allows quick and easy display of
-grids and images. It also opens the door for a more vast ensemble of tools that go beyond the use of pure
-GMT syntax.
+Here we introduced also the use of a module that does not exist in GMT, \myreflink{imshow}, but one that
+is in fact a mockup made with \myreflink{grdimage} and \myreflink{grdview} and with a set of defaults and
+guesswork that allows quick and easy display of grids and images. It also opens the door for a more vast
+ensemble of tools that go beyond the use of pure GMT syntax.
 
 ## Case 2. You are a new GMT user or one that wants to use long verbose options
 
@@ -69,7 +69,7 @@ that maps the one letter option to its aliases (there often more than one alias)
 the issue of how the sub-options have been expanded. This has been addressed for the modules that have so far
 a Julia manual, but not for all the others. For those, the recommended way is to use the helper program
 `gmthelp`. It lists the mapping between the options aliases (and, for some, the sub-options) and the
-GMT syntax. Let's, see the example of the `plot` (`psxy`) module
+GMT syntax. Let's, see the example of the \myreflink{plot} (`psxy`) module
 
 ```julia
     gmthelp(plot)
@@ -105,14 +105,14 @@ Other options end with `(Common options)`. This means they are options common to
 ones that are currently implemented, one can do
 
 ```julia
-    gmthelp(:b)
+gmthelp(:b)
     Option: b, or binary => (ncols=?(), type=?(), swapp_bytes=Any(w), little_endian=Any(+l), big_endian=?(+b), )
 ```
 
 but for many we still get
 
 ```julia
-    gmthelp(:i)
+gmthelp(:i)
     Option: i, or incol => (Common option not yet expanded)
 ```
 
@@ -123,7 +123,7 @@ Still other options end with `[Possibly not yet expanded]`. It means that sub-op
 aliases so you must use either arguments in string form or in Tuple form in case the input is numeric and GMT
 expects numbers separated by slashes. For example (invented option) *shift=(1,2)* will translate to *s1/2*
 
-The `plot` command is hugely vast, so a series of *avatars* have been derived from it. Namely, `lines`,
+The \myreflink{plot} command is hugely vast, so a series of *avatars* have been derived from it. Namely, `lines`,
 specialized in plotting lines only; `scater` & `scater3` for scatter plots; `bar` & `bar3`, for bar plots, 
 `arrows` for drawing arrows; `plot3`, `ternary`, `plotyy`. They all share the same argument syntax that mimics
 in many cases the matplotlib syntax with also many Matlab synonyms.
@@ -131,29 +131,31 @@ in many cases the matplotlib syntax with also many Matlab synonyms.
 Examples
 
 ```julia
-    # A Scatter plot
-    scatter(rand(100),rand(100), markersize=rand(100), marker=:c, color=:ocean, zcolor=rand(100), figsize=15, alpha=50, Y=4, title="Scatter", show=true)
+# A Scatter plot
+scatter(rand(100),rand(100), markersize=rand(100), marker=:c, color=:ocean,
+        zcolor=rand(100), alpha=50, Y=4, title="Scatter", show=true)
 ```
 
 ```julia
-    # Colored bar plot
-    bar(rand(15), color=:rainbow, figsize=(14,8), title="Colored bars", Y=3, show=true)
+# Colored bar plot
+bar(rand(15), color=:rainbow, figsize=(14,8), title="Colored bars", Y=3, show=true)
 ```
 
 ```julia
-    # Arrow
-    arrows([0.5 0.5 0 8], limits=(-0.1,3,0,2.5), figsize=(16,5), arrow=(len=2,stop=1,shape=0.5), pen=6, B="a WSrt", title="Arrow", show=true)
+# Arrow
+arrows([0.5 0.5 0 8], limits=(-0.1,3,0,2.5), figsize=(16,5), arrow=(len=2,stop=1,shape=0.5),
+       pen=6, B="a WSrt", title="Arrow", show=true)
 ```
 
 
 ```julia
-    # Peaks 3D bars
-    G = GMT.peaks();    cmap = grd2cpt(G);      # Compute a colormap with the grid's data range
-    bar3(G, lw=:thinnest, color=cmap, figsize=14, Y=5, show=true)
+# Peaks 3D bars
+G = GMT.peaks();    cmap = grd2cpt(G);      # Compute a colormap with the grid's data range
+bar3(G, lw=:thinnest, color=cmap, figsize=14, Y=5, show=true)
 ```
 
 ```julia
-    # Contours
-    G = GMT.peaks();
-    grdcontour(G, color=makecpt(range=(-6,8,1)), pen="+c", region=(-3,3,-3,3), title="Contours", show=true)
+# Contours
+G = GMT.peaks();
+grdcontour(G, color=makecpt(range=(-6,8,1)), pen="+c", region=(-3,3,-3,3), title="Contours", show=true)
 ```
