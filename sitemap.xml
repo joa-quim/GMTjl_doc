@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/makecpt/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/scatter/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/plotting_functions/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -14,7 +26,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/justify/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/themes/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -26,7 +38,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/gmtbinstats/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/utilfuns/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -38,13 +50,19 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/scatter3/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/images/03_hexbin/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/grdview/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/solar/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -62,7 +80,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/grdgradient/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/arrows_control/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -74,25 +92,19 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/blockmedian/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/pens/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/lines/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/gdalfuns/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/types/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/legend/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/blockmode/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -104,31 +116,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/arrows_control/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/fonts/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/scatter/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/movie/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/examples/plotting_functions/10_histograms/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdcontour/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -140,19 +128,31 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/quick_learn/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/general/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/makecpt/index.html</loc>
+    <loc>fct-gmt.ualg.pt/examples/plotting_functions/10_histograms/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/bar3/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/general/introduction/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/symbols/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/general/modules/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -176,13 +176,19 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/misc/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/bar3/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/grdhisteq/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/color/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/examples/misc/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -212,13 +218,19 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/text/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/subplot/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/introduction/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdimage/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/blockmedian/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -236,7 +248,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/projections/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/arrows/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -248,13 +260,19 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/examples/projections/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/plotting_functions/06_spirals/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/coast/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdgradient/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -266,19 +284,19 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/legend/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/tutorials/coast/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/pens/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/plot/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/general/quick_learn/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -308,13 +326,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/blockmode/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/grdimage/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/justify/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -332,7 +344,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/decorated/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/blockmean/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -350,25 +362,37 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdhisteq/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/projections/02_proj_examples/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/subplot/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/text/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/bar/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/contourf/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/arrows/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/general/types/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/bar/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -398,19 +422,31 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/histogram/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/coast/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/monolitic/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdsample/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/general/monolitic/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/images/01b_grdview/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/common_opts/common_opts/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -428,13 +464,25 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/themes/01_themes/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/symbols/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/fonts/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/histogram/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/plot/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -452,13 +500,19 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/solar/index.html</loc>
+    <loc>fct-gmt.ualg.pt/examples/themes/01_themes/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/grdcontour/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/lines/index.html</loc>
+    <lastmod>2022-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/documentation/modules/gmtbinstats/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -470,7 +524,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/blockmean/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/colorbar/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -494,7 +548,7 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/grdsample/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_features/decorated/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -512,37 +566,19 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/scatter3/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/color/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>fct-gmt.ualg.pt/documentation/colorbar/index.html</loc>
-    <lastmod>2022-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>fct-gmt.ualg.pt/examples/frames/frames/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/themes/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/common_opts/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/common_opts/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/movie/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -560,13 +596,13 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/examples/subplot/index.html</loc>
+    <loc>fct-gmt.ualg.pt/documentation/modules/grdview/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>fct-gmt.ualg.pt/documentation/contourf/index.html</loc>
+    <loc>fct-gmt.ualg.pt/examples/subplot/index.html</loc>
     <lastmod>2022-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
