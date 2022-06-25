@@ -8,7 +8,7 @@ GMT is a data processing and visualization package for the [Julia](https://julia
 with high performance and extensibility. It is available for Windows, Mac and Linux.
 
 
-## Installation and Import
+## Installation and use
 
 Using Julia's inbuilt package manager.
 
@@ -17,41 +17,7 @@ Using Julia's inbuilt package manager.
 using GMT
 ```
 
-## \myreflink{Introduction}
-
-## \myreflink{Quick learn}
-
-## \myreflink{The GMT.jl types (important)}
-
-## Core Modules Manuals
-
-|  |  |  |  |  |  |
-|:-----|:----|:----|:----|:----|:----|
-| basemap | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} |  clip  | \myreflink{coast} |
-| \myreflink{colorbar} |  contour  |  dimfilter  |  docs  |  events  |  filter1d  |
-| fitcircle |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
-| gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |
-| gmtset |  gmtsimplify |  gmtspatial |  gmtsplit |  gmtvector |  gmtwhich |
-| grd2cpt |  grd2kml |  grd2xyz |  grdblend |  grdclip | \myreflink{grdcontour} |
-| grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
-| grdgdal | \myreflink{grdgradient} |  \myreflink{grdhisteq} |  \myreflink{grdimage} |  grdinfo |  grdinterpolate |
-| grdlandmask |  grdmask |  grdmath |  grdmix |  grdpaste |  grdproject |
-| \myreflink{grdsample} |  grdselect |  grdtrack |  grdtrend |  grdvector | \myreflink{grdview} |
-| grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
-| \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} |  nearneighbor | \myreflink{plot} |
-| plot3d |  project |  psconvert |  rose |  sample1d | \myreflink{solar} |
-| spectrum1d |  sph2grd | sphdistance |  sphinterpolate | sphtriangulate | \myreflink{subplot} |
-| surface |  ternary | \myreflink{text} |  trend1d |  trend2d |  triangulate |
-| wiggle |  xyz2grd |  |  |  |  |
-
-## Plot avatars
-
-|  |  |  |  |  |  |
-|:-----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{bar} | \myreflink{bar3} | \myreflink{decorated} | \myreflink{lines} | \myreflink{scatter} |
-| \myreflink{scatter3} | \myreflink{contourf} |  |  |  |  |
-
-[//]: # 
+# \myreflink{Manuals}
 
 
 ## First Steps
