@@ -20,8 +20,8 @@ the start point to the end point of a segment:
   - *start=:tail* -- For a tail
   - *start=:open_arrow* -- For a plain open arrow
   - *start=:open_tail* -- For a plain open tail
-  - *start=:left_side* -- For draw the left half-side
-  - *start=:right_side* -- For draw the right half-side
+  - *start=:left* -- For draw the left half-side
+  - *start=:right* -- For draw the right half-side
 - *stop=true*\
    Places a vector head at the end of the vector path [none]. Optionally, set the same values
    as the *start* case.

@@ -23,7 +23,7 @@ Required Arguments
     where the arguments have the same meaning.
 
 - **([text], x=?, y=?)**\
-    As a third alternative provide the inpute data in a form of a string vector and `x` and `y` vector coordinates,
+    As a third alternative provide the input data in a form of a string vector and `x` and `y` vector coordinates,
     or just a `x=mat` where `mat` is *MxN* matix.
 
 Optional Arguments

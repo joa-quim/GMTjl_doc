@@ -8,7 +8,7 @@ Reads (x,y,a,b) data and make arrow plots. The input can either be a file name o
 four columns, but optionally more, or an Mx2 Array or GMTdatset object with the same characteristics in
 terms of columns number.
 
-This module is a subset of `plot` to make it simpler to draw arrow plots. So not all (fine)
+This module is a subset of \myreflink{plot} to make it simpler to draw arrow plots. So not all (fine)
 controlling parameters are listed here. For the finest control, user should consult the \myreflink{plot} module.
 
 Parameters
