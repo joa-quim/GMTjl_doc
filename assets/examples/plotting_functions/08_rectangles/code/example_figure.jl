@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 rect = [0.5 0.5; 0.5 7; 2.5 7; 2.5 0.5; 0.5 0.5];
 plot(rect, region=[0 10 0 10], lw=0.5, fill=:blue, axes=:a, aspect=:equal)
 plot!([3 0].+rect, lw=1, ls="--", fill=:blue, transparency=30)

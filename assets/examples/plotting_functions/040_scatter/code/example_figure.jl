@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 teta = 2pi*rand(150)*180/pi; r = 9*rand(150); ms = r / 10;
 
 scatter(teta, r,                  # The data

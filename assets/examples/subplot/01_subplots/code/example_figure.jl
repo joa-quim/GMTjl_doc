@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 subplot(grid="2x2", dims=(size=(15,15), frac=((10,5),(5,10))),
         col_axes=true, row_axes=true)
 n = 200;

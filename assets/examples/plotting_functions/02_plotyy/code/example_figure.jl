@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 x = 0:0.01:20;
 y1 = 200 * exp.(-0.05x) .* sin.(x);
 y2 = 0.8 * exp.(-0.5x)  .* sin.(10x);

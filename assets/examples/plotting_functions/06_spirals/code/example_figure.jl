@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 angle = 137.5;	# Play with this angle between [137.0 138.0]. Amazing the effect, no?
 alfa = 2pi * angle / 360;
 n_seeds = 1500;

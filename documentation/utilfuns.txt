@@ -1,6 +1,6 @@
 append2fig
 blendimg!
-colorzones
+colorzones!
 cpt4dcw
 crop
 cubeslice

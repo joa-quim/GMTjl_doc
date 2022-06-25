@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 plot([0.5 1 1.75 5 85], region=(0,5,0,5), figsize=12,
         marker=(matang=true, arrow=(length=0.75, start=true, stop=true, half=:right)),
         ml=(0.5,:red), fill=:blue)

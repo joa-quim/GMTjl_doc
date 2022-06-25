@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 x = -2π:0.1:2π
 lines(x, sin.(x), limits=(-2π, 2π, -1,1), lc="#56B4E9", lw=2, label="sin(x)",
       xaxis=(label="x",annot=5, grid=5), ylabel="f(x)", grid=(pen=(:red,:dash),), theme=("A2"))

@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 basemap(region=(416,542,0,6.2831852), figsize=(-12,5),
         frame=(frame=(:left_full, :bot_full), fill=:lightblue),
         xaxis=(annot=25, ticks=5, grid=25, suffix=" Ma"),

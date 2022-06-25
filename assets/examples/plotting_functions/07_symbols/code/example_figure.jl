@@ -1,9 +1,9 @@
 # This file was generated, do not modify it. # hide
 begin # hide
-    using GMT   # hide
-    GMT.isFranklin[1] = true    # hide
-    getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-    using GMT
+	using GMT   # hide
+	GMT.isFranklin[1] = true    # hide
+	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
+	using GMT
 plot([0.5 0.5 30 100], limits=(0,6,0,3), figscale=2.5, frame="afg",
      marker=:wedge, ms=5, fill=:lightyellow, ml=2, title="Spiders")
 plot!([2.5 0.5 30 100], marker=:wedge, ms=5, fill=:yellow)
