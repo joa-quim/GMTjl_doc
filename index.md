@@ -2,7 +2,7 @@
 @def order = 0
 @def frontpage = true
 
-# Welcome to GMT!
+# Welcome to GMT.jl
 
 GMT is a data processing and visualization package for the [Julia](https://julialang.org/) programming language,
 with high performance and extensibility. It is available for Windows, Mac and Linux.
