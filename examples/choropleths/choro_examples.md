@@ -7,6 +7,8 @@ facilitate this, some tools were added to the Julia wrapper.
 
 ## Examples
 
+(But see also the more extended example in \myreflink{tutorials})
+
 ### Countries (DCW)
 
 Load packages needed to download data and put into a DataFrame

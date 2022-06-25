@@ -169,6 +169,7 @@ using GMT
 
 @@
 
+### See also the \myreflink{tutorials}
 
 ## Getting Help
 
