@@ -45,4 +45,15 @@
     ~~~</a>~~~
   @@
 
+  @@box
+    ~~~<a class="boxlink" href="dlakelan/GMTMaps">~~~
+    @@title @dlakelan choropleths@@
+    @@box-content
+      ~~~
+      <img src="/tutorials/dlakelan/tilelogo.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
 @@
