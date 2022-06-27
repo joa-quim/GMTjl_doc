@@ -12,8 +12,8 @@ using Pkg
 
 ############################ Functions ##############################
 
-const global DOCSROOT = pwd()
-getpath4docs(file::String) = joinpath(DOCSROOT, "assert", file)
+#const global DOCSROOT = pwd()
+#getpath4docs(file::String) = joinpath(DOCSROOT, "assert", file)
 
 function hfun_doc(params)
 	fname = params[1]

@@ -32,7 +32,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="tutorials/coast/">~~~
+    ~~~<a class="boxlink" href="coast/">~~~
     @@title Coastlines @@
     @@box-content
       @@description

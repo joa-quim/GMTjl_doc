@@ -27,3 +27,20 @@ plot!(x, y,
       dpi=200), show=true)           # The pattern DPI
 ```
 \end{examplefig}
+
+### A matchbox car
+
+\begin{examplefig}{}
+```julia
+using GMT, GMT.Drawing
+
+ellipse(300,201,0, 200, 50, units=:points, first=true, fill=:purple, pen=1);
+ellipse(340,206, 0,130, 66, fill=:purple, pen=1);
+ellipse(318,222,0, 60, 26, fill=:blue);
+box(200, 173, 205, 26, fill=:purple, pen=1);
+circle(305,185,56, fill=:black);
+circle(305,185,36, fill=:gray50);
+circle(400,185,56, fill=:black);
+circle(400,185,36, fill=:gray50, fmt=:png, show=true);
+```
+\end{examplefig}
