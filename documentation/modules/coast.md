@@ -107,7 +107,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **shore** or **shorelines** or **coast** : -- *shore=pen* **|** *shore=(level=lev, pen=pen)*\
+- **W** or **shore** or **shorelines** or **coast** or **coastlines** : -- *shore=pen* **|** *shore=(level=lev, pen=pen)*\
    Draw shorelines [the Default]. Append pen attributes (see \myreflink{Pen attributes}) [Defaults: width = default,
    color = black,style = solid] which apply to all four levels. To set the pen for each level differently, use the
    form **shore=(level=levnum, pen=pen)**, where **levnum** is 1-4 and represent coastline, lakeshore, island-in-lake
