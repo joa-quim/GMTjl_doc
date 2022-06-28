@@ -83,8 +83,61 @@ showfig()
 ```
 \end{examplefig}
 
+### Basic geometric symbols
 
-### Symbols
+\begin{examplefig}{}
+```julia
+using GMT
+
+font = "9p,Helvetica-Bold"
+
+plot(region=[0, 8, 0, 3], figsize=(12,4), x=1, y=2, marker="-", ms=0.9,
+     ml=(2,:gray40), title="Basic symbols", text=(txt="-", x=1, y=2.6, font=font))
+
+plot!(x=2, y=2, marker="+", ms=0.9, ml=(2,:gray40),
+      text=(txt="+", x=2, y=2.6, font=font))
+
+plot!(x=3, y=2, marker=:star, ms=0.9, mc=:darkorange,
+      ml=1, text=(txt="star", x=3, y=2.6, font=font))
+
+plot!(x=4, y=2, marker=:circ, ms=0.9, mc=:darkred,
+      ml=1, text=(txt="circle", x=4, y=2.6, font=font))
+
+plot!(x=5, y=2, marker=:diamond, ms=0.9, mc=:seagreen,
+      ml=1, text=(txt="diamond", x=5, y=2.6, font=font))
+
+plot!(x=6, y=2, marker=:octagon, ms=0.9, mc=:dodgerblue4,
+      ml=1, text=(txt="octagon", x=6, y=2.6, font=font))
+
+plot!(x=7, y=2, marker=:hexagon, ms=0.9, mc=:lightgray,
+      ml=1, text=(txt="hexagon", x=7, y=2.6, font=font))
+
+plot!(x=1, y=0.5, marker=:inverted_tri, ms=0.9, mc=:tomato,
+      ml=1, text=(txt="inverted_tri", x=1, y=1.1, font="7p,Helvetica-Bold"))
+
+plot!(x=2, y=0.5, marker=:pentagon, ms=0.9, mc=:lightseagreen,
+      ml=1, text=(txt="pentagon", x=2, y=1.1, font=font))
+
+plot!(x=3, y=0.5, marker=:point, ms=0.9, mc=:slateblue,
+      ml=1, text=(txt="point", x=3, y=1.1, font=font))
+
+plot!(x=4, y=0.5, marker=:square, ms=0.9, mc=:gold2,
+      ml=1, text=(txt="square", x=4, y=1.1, font=font))
+
+plot!(x=5, y=0.5, marker=:triangle, ms=0.9, mc=:magenta4,
+      ml=1, text=(txt="triangle", x=5, y=1.1, font=font))
+
+plot!(x=6, y=0.5, marker=:cross, ms=0.9, ml=(2,:gray40), 
+      text=(txt="cross", x=6, y=1.1, font=font))
+
+plot!(x=7, y=0.5, marker="y-dash", ms=0.9, ml=(2,:gray40), 
+      text=(txt="y-dash", x=7, y=1.1, font=font))
+
+showfig()
+```
+\end{examplefig}
+
+### Basic and custom symbols
 
 \begin{examplefig}{}
 ```julia
