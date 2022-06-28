@@ -74,6 +74,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>fct-gmt.ualg.pt/geophysics/seismicity/index.html</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>fct-gmt.ualg.pt/examples/projections/ex28/index.html</loc>
     <lastmod>2022-06-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -225,6 +231,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/documentation/modules/subplot/index.html</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/geophysics/index.html</loc>
     <lastmod>2022-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -387,6 +399,12 @@
 </url>
 <url>
     <loc>fct-gmt.ualg.pt/examples/projections/02_proj_examples/index.html</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>fct-gmt.ualg.pt/geophysics/seismicity/focalmec/index.html</loc>
     <lastmod>2022-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
