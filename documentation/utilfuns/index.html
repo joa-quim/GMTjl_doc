@@ -617,8 +617,8 @@ plot&#33;&#40;points, marker&#61;:star, ms&#61;&quot;12p&quot;, fill&#61;:blue, 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.isnodata</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;isnodata&quot;:
-&#91;1&#93; isnodata&#40;array::AbstractArray&#41; in GMT at /Users/runner/.julia/packages/GMT/ZiYMm/src/common_options.jl:4158
-&#91;2&#93; isnodata&#40;array::AbstractArray, val&#41; in GMT at /Users/runner/.julia/packages/GMT/ZiYMm/src/common_options.jl:4158</code></pre>
+&#91;1&#93; isnodata&#40;array::AbstractArray&#41; in GMT at /Users/runner/.julia/packages/GMT/ABNbz/src/common_options.jl:4158
+&#91;2&#93; isnodata&#40;array::AbstractArray, val&#41; in GMT at /Users/runner/.julia/packages/GMT/ABNbz/src/common_options.jl:4158</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -716,7 +716,7 @@ plot&#33;&#40;points, marker&#61;:star, ms&#61;&quot;12p&quot;, fill&#61;:blue, 
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.magic</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function &quot;magic&quot;:
-&#91;1&#93; magic&#40;n::Int64&#41; in GMT at /Users/runner/.julia/packages/GMT/ZiYMm/src/common_options.jl:4237</code></pre>
+&#91;1&#93; magic&#40;n::Int64&#41; in GMT at /Users/runner/.julia/packages/GMT/ABNbz/src/common_options.jl:4237</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1062,8 +1062,8 @@ plot&#40;r, decorated&#61;&#40;locations&#61;a, symbol&#61;&#40;custom&#61;&quot
 <div class="doc-content"><p>No documentation found.</p>
 <p><code>GMT.tern2cart</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function &quot;tern2cart&quot;:
-&#91;1&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/ZiYMm/src/plot.jl:945
-&#91;2&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;, reverse::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/ZiYMm/src/plot.jl:945</code></pre>
+&#91;1&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;&#41; in GMT at /Users/runner/.julia/packages/GMT/ABNbz/src/plot.jl:945
+&#91;2&#93; tern2cart&#40;abcz::Matrix&#123;&lt;:Real&#125;, reverse::Bool&#41; in GMT at /Users/runner/.julia/packages/GMT/ABNbz/src/plot.jl:945</code></pre>
 </div>
 </div>
 <div class="docstring">
@@ -1168,7 +1168,7 @@ vlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <a href="#wmsinfo">wmsinfo</a>
 </div>
 <div class="doc-content"><pre><code>wmsinfo&#40;server::String&#41;</code></pre>
-<p>Read the xml information from the WebMapServer service and create a WMS data type that holds the information necessary to download the data. The &#36;show&#36; method will display the contents of the WMS data type.</p>
+<p>Read the xml information from the WebMapServer service and create a WMS data type that holds the information necessary to download the data. The <code>show</code> method will display the contents of the WMS data type.</p>
 <ul>
 <li><p><code>server</code>: The server URL address.</p>
 </li>
@@ -1190,14 +1190,14 @@ vlines&#33;&#40;&#91;0.2, 0.6&#93;, pen&#61;&#40;1, :red&#41;, show&#61;true&#41
 <p>Read the <code>layer</code> number provided by the service from which the <code>wms</code> type was created.</p>
 <h3>Parameters</h3>
 <ul>
-<li><p><code>wms</code>: A WMS type obtained from the &#36;wmsinfo&#36; function.</p>
+<li><p><code>wms</code>: A WMS type obtained from the <code>wmsinfo</code> function.</p>
 </li>
 <li><p><code>layer</code>: The layer number or layer name of interest from those provided by the WMS service. That is,  both of these forms are allowed: <code>layer&#61;3</code> or <code>layer&#61;&quot;Invented layer name&quot;</code></p>
 </li>
 </ul>
 <h3><code>kwargs</code> is the keywords/values pairs used to set</h3>
 <ul>
-<li><p><code>region | limits</code>: The region limits. This can be a Tuple or Array with 4 elements defining the &#36;&#40;xmin, xmax, ymin, ymax&#41;&#36;  or a string defining the limits in all ways that GMT can recognize. When the layer has the data projected, we can  a Tuple or Array with 3 elements &#36;&#40;lon0, lat0, width&#41;&#36;, where first two set the center of a square in geographical  coordinates and the third &#40;&#36;width&#36;&#41; is the width of that box in meters.</p>
+<li><p><code>region | limits</code>: The region limits. This can be a Tuple or Array with 4 elements defining the <code>&#40;xmin, xmax, ymin, ymax&#41;</code>  or a string defining the limits in all ways that GMT can recognize. When the layer has the data projected, we can  a Tuple or Array with 3 elements <code>&#40;lon0, lat0, width&#41;</code>, where first two set the center of a square in geographical  coordinates and the third &#40;<code>width</code>&#41; is the width of that box in meters.</p>
 </li>
 <li><p><code>cellsize | pixelsize | resolution | res</code>: Sets the requested cell size in meters &#91;default&#93;. Use a string appended with a &#39;d&#39;  &#40;e.g. <code>resolution&#61;&quot;0.001d&quot;</code>&#41; if the resolution is given in degrees. This way works only when the layer is in geogs.</p>
 </li>
@@ -1228,16 +1228,16 @@ imshow&#40;img, proj&#61;:guess&#41;</code></pre>
 <p>Test function that generates the GetMap request string or the size of the resulting image given the requested resolution. It is meant to generate first the command that gets the image/grid but not running it. Specially usefull to check that the resulting image size is not huge.</p>
 <h3>Parameters</h3>
 <ul>
-<li><p><code>wms</code>: A WMS type obtained from the &#36;wmsinfo&#36; function.</p>
+<li><p><code>wms</code>: A WMS type obtained from the <code>wmsinfo</code> function.</p>
 </li>
 <li><p><code>layer</code>: The layer number or layer name of interest from those provided by the WMS service. That is,  both of these forms are allowed: <code>layer&#61;3</code> or <code>layer&#61;&quot;Invented layer name&quot;</code></p>
 </li>
-<li><p><code>size</code>: If &#36;false&#36;, returns the GetMap request string, otherwise the image size given the requested resolution.</p>
+<li><p><code>size</code>: If <code>false</code>, returns the GetMap request string, otherwise the image size given the requested resolution.</p>
 </li>
 </ul>
 <h3><code>kwargs</code> is the keywords/values pairs used to set</h3>
 <ul>
-<li><p><code>region | limits</code>: The region limits. This can be a Tuple or Array with 4 elements defining the &#36;&#40;xmin, xmax, ymin, ymax&#41;&#36;  or a string defining the limits in all ways that GMT can recognize. When the layer has the data projected, we can  a Tuple or Array with 3 elements &#36;&#40;lon0, lat0, width&#41;&#36;, where first two set the center of a square in geographical  coordinates and the third &#40;&#36;width&#36;&#41; is the width of that box in meters.</p>
+<li><p><code>region | limits</code>: The region limits. This can be a Tuple or Array with 4 elements defining the <code>&#40;xmin, xmax, ymin, ymax&#41;</code>  or a string defining the limits in all ways that GMT can recognize. When the layer has the data projected, we can  a Tuple or Array with 3 elements <code>&#40;lon0, lat0, width&#41;</code>, where first two set the center of a square in geographical  coordinates and the third &#40;<code>width</code>&#41; is the width of that box in meters.</p>
 </li>
 <li><p><code>cellsize | pixelsize | resolution | res</code>: Sets the requested cell size in meters &#91;default&#93;. Use a string appended with a &#39;d&#39;  &#40;e.g. <code>resolution&#61;&quot;0.001d&quot;</code>&#41; if the resolution is given in degrees. This way works only when the layer is in geogs.</p>
 </li>
