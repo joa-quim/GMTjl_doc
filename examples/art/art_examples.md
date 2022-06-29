@@ -30,6 +30,8 @@ plot!(x, y,
 
 ### A matchbox car
 
+A imitation of the original car made by @cormullion in this [Julia forum post](https://discourse.julialang.org/t/for-loops-in-luxor/54197/11)
+
 \begin{examplefig}{}
 ```julia
 using GMT, GMT.Drawing
