@@ -18,6 +18,9 @@
 
   - GMT.jl has 30 years of experience fine tunning details for producing highest quality maps (*BTW* `GMT` stands
     for `Generic Mapping Tools`) with lots of mapping projections and a deep knowledge that the Earth is **round**.
+  - The figure dimensions in GMT are stated in physical units of cm (or inch), not pixels. The internal PS machinery
+    uses integer numbers at an effective DPI of 1200. This allows to keep PostScript files reasonably small
+    and at same time permits to create figures that can go to a maximum of 11 x 11 meters.
   - GMT.jl is not a map/plotting package only. It has innumerous tools for grid and vector data processing.
     *e.g.* read virtually almost all formats (directly or via GDAL), grid interpolations, 1 and 2D filtering,
     coordinate conversions, direct access to many GDAL, PROJ, GEOS functions, dedicated tools for seismology,
