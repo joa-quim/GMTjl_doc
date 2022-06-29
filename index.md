@@ -4,9 +4,13 @@
 
 # Welcome to GMT.jl
 
-GMT is a data processing and visualization package for the [Julia](https://julialang.org/) programming language,
-with high performance and extensibility. It is available for Windows, Mac and Linux.
+GMT is a data processing and visualization package for the [Julia](https://julialang.org/) programming
+language, with high performance and extensibility. It provides the ability for drawing simple and very
+complex static vector graphics as well as conversion to the most common raster formats (PNG, JPG, GeoTIFF, etc...).
+Although it is package more tailored for Earth Sciences, it can also be used for a general purpose plotting
+of 2 and 3D (perspective, not volumetric) graphics.
 
+### \myreflink{Comparison with other plotting packages}
 
 ## Installation and use
 
