@@ -8,7 +8,7 @@
   - GMT.jl uses a `Plots` like syntax and is a general purpose plotting package but doesn't provide (yet)
     the more exotic plot types that can be found in `Plots`, `Makie`, `PyPlot`, etc...
   - It is not interactive like [GLMakie](https://makie.juliaplots.org/stable/documentation/backends/glmakie/).
-  - In its foundation it works in a similar way of [Luxor](https://juliagraphics.github.io/Luxor.jl/stable/) and
+  - It works in a similar way of [Luxor](https://juliagraphics.github.io/Luxor.jl/stable/) and
     [CairoMakie](https://makie.juliaplots.org/stable/documentation/backends/cairomakie/) in the sense that a
     vector graphics is generated and at the end rasterized for displaying. The plot quality should be similar
     to that of those packages (they use the Cairo library and GMT uses its own PostScript library). A prof of
@@ -16,7 +16,7 @@
 
 ### Yes
 
-  - GMT.jl has 30 years of experience fine tunning details for producing highest quality maps (*BTW* `GMT` stands
+  - GMT.jl builds on 30 years of experience in fine-tunning details for producing highest quality maps (*BTW* `GMT` stands
     for `Generic Mapping Tools`) with lots of mapping projections and a deep knowledge that the Earth is **round**.
   - The figure dimensions in GMT are stated in physical units of cm (or inch), not pixels. The internal PS machinery
     uses integer numbers at an effective DPI of 1200. This allows to keep PostScript files reasonably small
