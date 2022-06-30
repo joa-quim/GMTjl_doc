@@ -85,6 +85,7 @@
 <li><ul>
 <li><a href="#filled_flower_with_pattern">Filled flower with pattern</a></li>
 <li><a href="#a_matchbox_car">A matchbox car</a></li>
+<li><a href="#a_mandelbrot_painting">A Mandelbrot painting</a></li>
 </ul>
 </ul>
 </ul>
@@ -240,6 +241,23 @@ circle&#40;400,185,36, fill&#61;:gray50, fmt&#61;:png, show&#61;true&#41;;</code
 <p>
 <a id="example_12239339531825922968">
  <img src="/GMTjl_doc/assets/examples/art/art_examples/code/output/example_12239339531825922968.png" alt=""> 
+</a>
+
+<h3 id="a_mandelbrot_painting"><a href="#a_mandelbrot_painting" class="header-anchor">A Mandelbrot painting</a></h3>
+<p>This example was presented by @FedericoStra in the <a href="https://discourse.julialang.org/t/seven-lines-of-julia-examples-sought/50416/10">Seven Lines of Julia</a> but the GMT figure is clearly nicer &#40;at least IMO&#41;.</p>
+<pre><code class="language-julia">using GMT
+function mandelbrot&#40;z&#41;
+    w &#61; z
+    for n in 1:74
+        abs2&#40;w&#41; &lt; 4 ? w &#61; w^2 &#43; z : return n
+    end
+    75
+end
+x, y &#61; range&#40;-0.65, -0.45; length&#61;1600&#41;, range&#40;0.51, 0.71; length&#61;1600&#41;;
+imshow&#40;-log.&#40;mandelbrot.&#40;x&#39; .&#43; y .* im&#41;&#41;, frame&#61;:none, title&#61;&quot;Mandelbrot painting&quot;, figsize&#61;8&#41;</code></pre></p>
+<p>
+<a id="example_12871770366070556564">
+ <img src="/GMTjl_doc/assets/examples/art/art_examples/code/output/example_12871770366070556564.png" alt=""> 
 </a>
 
 <div class="page-foot">

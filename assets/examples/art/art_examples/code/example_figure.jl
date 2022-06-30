@@ -3,18 +3,18 @@ begin # hide
 	using GMT   # hide
 	GMT.isFranklin[1] = true    # hide
 	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
-	using GMT, GMT.Drawing
-
-ellipse(300,201,0, 200, 50, units=:points, first=true, fill=:purple, pen=1);
-ellipse(340,206, 0,130, 66, fill=:purple, pen=1);
-ellipse(318,222,0, 60, 26, fill=:blue);
-box(200, 173, 205, 26, fill=:purple, pen=1);
-circle(305,185,56, fill=:black);
-circle(305,185,36, fill=:gray50);
-circle(400,185,56, fill=:black);
-circle(400,185,36, fill=:gray50, fmt=:png, show=true);
+	using GMT
+function mandelbrot(z)
+    w = z
+    for n in 1:74
+        abs2(w) < 4 ? w = w^2 + z : return n
+    end
+    75
+end
+x, y = range(-0.65, -0.45; length=1600), range(0.51, 0.71; length=1600);
+imshow(-log.(mandelbrot.(x' .+ y .* im)), frame=:none, title="Mandelbrot painting", figsize=8)
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_12239339531825922968.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_12871770366070556564.png"), force=true);    # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  

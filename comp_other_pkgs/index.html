@@ -209,12 +209,12 @@
 </li>
 <li><p>It is not interactive like <a href="https://makie.juliaplots.org/stable/documentation/backends/glmakie/">GLMakie</a>.</p>
 </li>
-<li><p>In its foundation it works in a similar way of <a href="https://juliagraphics.github.io/Luxor.jl/stable/">Luxor</a> and <a href="https://makie.juliaplots.org/stable/documentation/backends/cairomakie/">CairoMakie</a> in the sense that a vector graphics is generated and at the end rasterized for displaying. The plot quality should be similar to that of those packages &#40;they use the Cairo library and GMT uses its own PostScript library&#41;. A prof of this quality is that GMT has been used for the last 30 years in publishing papers in the highest ranked journals.</p>
+<li><p>It works in a similar way of <a href="https://juliagraphics.github.io/Luxor.jl/stable/">Luxor</a> and <a href="https://makie.juliaplots.org/stable/documentation/backends/cairomakie/">CairoMakie</a> in the sense that a vector graphics is generated and at the end rasterized for displaying. The plot quality should be similar to that of those packages &#40;they use the Cairo library and GMT uses its own PostScript library&#41;. A prof of this quality is that GMT has been used for the last 30 years in publishing papers in the highest ranked journals.</p>
 </li>
 </ul>
 <h3 id="yes"><a href="#yes" class="header-anchor">Yes</a></h3>
 <ul>
-<li><p>GMT.jl has 30 years of experience fine tunning details for producing highest quality maps &#40;<em>BTW</em> <code>GMT</code> stands for <code>Generic Mapping Tools</code>&#41; with lots of mapping projections and a deep knowledge that the Earth is <strong>round</strong>.</p>
+<li><p>GMT.jl builds on 30 years of experience in fine-tunning details for producing highest quality maps &#40;<em>BTW</em> <code>GMT</code> stands for <code>Generic Mapping Tools</code>&#41; with lots of mapping projections and a deep knowledge that the Earth is <strong>round</strong>.</p>
 </li>
 <li><p>The figure dimensions in GMT are stated in physical units of cm &#40;or inch&#41;, not pixels. The internal PS machinery uses integer numbers at an effective DPI of 1200. This allows to keep PostScript files reasonably small and at same time permits to create figures that can go as big as 11 x 11 meters.</p>
 </li>
