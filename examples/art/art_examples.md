@@ -46,3 +46,22 @@ circle(400,185,56, fill=:black);
 circle(400,185,36, fill=:gray50, fmt=:png, show=true);
 ```
 \end{examplefig}
+
+### A Mandelbrot painting
+
+This example was presented by @FedericoStra in the [Seven Lines of Julia](https://discourse.julialang.org/t/seven-lines-of-julia-examples-sought/50416/10) but the GMT figure is clearly nicer (at least IMO).
+
+\begin{examplefig}{}
+```julia
+using GMT
+function mandelbrot(z)
+    w = z
+    for n in 1:74
+        abs2(w) < 4 ? w = w^2 + z : return n
+    end
+    75
+end
+x, y = range(-0.65, -0.45; length=1600), range(0.51, 0.71; length=1600);
+imshow(-log.(mandelbrot.(x' .+ y .* im)), frame=:none, title="Mandelbrot painting", figsize=8)
+```
+\end{examplefig}
