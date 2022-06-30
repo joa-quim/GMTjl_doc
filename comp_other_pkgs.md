@@ -20,12 +20,12 @@
     for `Generic Mapping Tools`) with lots of mapping projections and a deep knowledge that the Earth is **round**.
   - The figure dimensions in GMT are stated in physical units of cm (or inch), not pixels. The internal PS machinery
     uses integer numbers at an effective DPI of 1200. This allows to keep PostScript files reasonably small
-    and at same time permits to create figures that can go to a maximum of 11 x 11 meters.
+    and at same time permits to create figures that can go as big as 11 x 11 meters.
   - GMT.jl is not a map/plotting package only. It has innumerous tools for grid and vector data processing.
     *e.g.* read virtually almost all formats (directly or via GDAL), grid interpolations, 1 and 2D filtering,
-    coordinate conversions, direct access to many GDAL, PROJ, GEOS functions, dedicated tools for seismology,
-    potential methods (gravity and geomagnetics), etc...
+    coordinate conversions, direct access to many of GDAL, PROJ, GEOS functions, dedicated tools for seismology,
+    geodesy, potential methods (gravity and geomagnetism), etc...
   - Thanks to Julia's FFI (Foreign Function Interface) GMT.jl can interface with the 
     [MB-system](https://www.mbari.org/products/research-software/mb-system/) software from swath-bathymetry
     data processing.
-  
+
