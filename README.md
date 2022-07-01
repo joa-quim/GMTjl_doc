@@ -14,4 +14,4 @@ complete as the Windows (local) build shows rather less error then the Unix (CI)
 
 [docs-latest-img]: https://img.shields.io/badge/docs-latest-blue.svg
 [docs-latest-url1]: https://fct-gmt.ualg.pt/GMTjl_doc/
-[docs-latest-url2]: https://joa-quim.github.io/GMTjl_doc/
+[docs-latest-url2]: https://GenericMappingTools.github.io/GMTjl_doc/
