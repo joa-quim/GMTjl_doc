@@ -213,8 +213,16 @@
 </li>
 </ul>
 
-<p><span style="color:red;">// Couldn't find a file when trying to resolve an input request with relative path: `common_opts/opt_mfc`. //</span></p>
-<p><span style="color:red;">// Couldn't find a file when trying to resolve an input request with relative path: `common_opts/opt_pen`. //</span></p>
+<ul>
+<li><p><strong>G</strong> or <strong>markerfacecolor</strong> or <strong>MarkerFaceColor</strong> or <strong>mc</strong> or <strong>fill</strong><br /> Select color or pattern for filling of symbols &#91;Default is no fill&#93;. Note that plot will search for <em>fill</em>  and <em>pen</em> settings in all the segment headers &#40;when passing a GMTdaset or file of a multi-segment dataset&#41;  and let any values thus found over-ride the command line settings &#40;but those must be provided in the terse GMT  syntax&#41;. See <a href="/GMTjl_doc/documentation/common_features/color/index.html#setting_color">Setting color</a> for extend color selection &#40;including color map generation&#41;.</p>
+</li>
+</ul>
+
+<ul>
+<li><p><strong>W</strong> or <strong>pen</strong>&#61;<code>pen</code><br /> Set pen attributes for the arrow stem &#91;Defaults: width &#61; default, color &#61; black,  style &#61; solid&#93;. See <a href="/GMTjl_doc/documentation/common_features/pens/index.html#pen_attributes">Pen attributes</a></p>
+</li>
+</ul>
+
 <ul>
 <li><p><strong>arrow</strong><br /> Direction &#40;in degrees counter-clockwise from horizontal&#41; and length must be found in columns 3 and 4,  and size, if not specified on the command-line, should be present in column 5. The size is the length of  the vector head. Vector stem width is set by <em>pen</em>. By default, a vector head of 0.5 cm is set but see <a href="/GMTjl_doc/documentation/common_features/arrows_control/index.html#vector_attributes">Vector Attributes</a> for overwriting this default and specifying other attributes.</p>
 </li>
