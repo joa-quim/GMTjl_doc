@@ -161,6 +161,17 @@ using GMT
   @@
    
   @@box
+    ~~~<a class="boxlink" href="examples/embellish/">~~~
+    @@title Embellishments @@
+    @@box-content
+      ~~~
+      <img src="/examples/embellish/rose.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+   
+  @@box
     ~~~<a class="boxlink" href="examples/art/">~~~
     @@title Art @@
     @@box-content
