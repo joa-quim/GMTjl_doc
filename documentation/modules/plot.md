@@ -31,16 +31,16 @@ Parameters
    Draw symmetrical error bars. Use **error=(x=true)** and/or **error=(y=true)** to indicate which bars you want to draw (Default is both x and y). The x and/or y errors must be stored in the columns after the (x,y) pair [or (x,y,z) triplet]. If **asym=true** is appended then we will draw asymmetrical error bars; these requires two rather than one extra data column, with the low and high value. If upper case **error=(X=true)** and/or **Y** are used we will instead draw "box-and-whisker" (or "stem-and-leaf") symbols. The x (or y) coordinate is then taken as the median value, and four more columns are expected to contain the minimum (0% quantile), the 25% quantile, the 75% quantile, and the maximum (100% quantile) values. The 25-75% box may be filled by using **fill**. If **wiskers=true** is appended the we draw a notched "box-and-whisker" symbol where the notch width reflects the uncertainty in the median. This symbol requires a 5th extra data column to contain the number of points in the distribution. The **cap=width** modifier sets the *cap* width that indicates the length of the end-cap on the error bars [**7p**]. Pen attributes for error bars may also be set via **pen=pen**. [Defaults: width = default, color = black, style = solid]. When **color** is used we can control how the look-up color is applied to our symbol. Add **cline=true** to use it to fill the symbol, while **csymbol=true** will just set the error pen color and turn off symbol fill. Giving **colored=true** will set both color items.
 
 - **F** or **conn** or **connection** : -- *conn=(continuous=true, net|network=true, refpoint=true, ignore_hdr=true, single_group=true, segments=true, anchor=(x,y))*\
-   Alter the way points are connected (by specifying a *scheme*) and data are grouped (by specifying a *method*).
-   Use one of three line connection schemes:\
-   **continuous=true** : Draw continuous line segments for each group [Default].\
-   **refpoint=true** : Draw line segments from a reference point reset for each group.\
-   **network=true** : Draw networks of line segments between all points in each group.\
-   Optionally, use one of four segmentation methods to define the group:\
-   **ignore_hdr=true** : Ignore all segment headers, i.e., let all points belong to a single group, and set group reference point to the very first point of the first file.
-   **single_group=true** : Consider all data in each file to be a single separate group and reset the group reference point to the first point of each group.
-   **segments=true** : Segment headers are honored so each segment is a group; the group reference point is reset to the first point of each incoming segment [Default].
-   **segments_reset=true** : Same as **segments=true**, but the group reference point is reset after each record to the previous point (this method is only available with the **refpoint=true** scheme). Instead of the codes **ignore_hdr**, **single_group**, **segments**, **segments_reset** you may append the coordinates of a **anchor=(x,y)** which will serve as a fixed external reference point for all groups.
+  Alter the way points are connected (by specifying a *scheme*) and data are grouped (by specifying a *method*).
+  Use one of three line connection schemes:
+    - **continuous=true** : Draw continuous line segments for each group [Default].
+    - **refpoint=true** : Draw line segments from a reference point reset for each group.
+    - **network=true** : Draw networks of line segments between all points in each group.
+  Optionally, use one of four segmentation methods to define the group:
+    - **ignore_hdr=true** : Ignore all segment headers, i.e., let all points belong to a single group, and set group reference point to the very first point of the first file.
+    - **single_group=true** : Consider all data in each file to be a single separate group and reset the group reference point to the first point of each group.
+    - **segments=true** : Segment headers are honored so each segment is a group; the group reference point is reset to the first point of each incoming segment [Default].
+    - **segments_reset=true** : Same as **segments=true**, but the group reference point is reset after each record to the previous point (this method is only available with the **refpoint=true** scheme). Instead of the codes **ignore_hdr**, **single_group**, **segments**, **segments_reset** you may append the coordinates of a **anchor=(x,y)** which will serve as a fixed external reference point for all groups.
 
 \textinput{common_opts/opt_J}
 
@@ -62,45 +62,76 @@ Parameters
     Use the supplied *intens* value (nominally in the -1 to +1 range) to modulate the fill color by simulating illumination [none]. If no intensity is provided (*e.g.* **shade=""**) we will instead read *intens* from the first data column after the symbol parameters (if given).
 
 - **L** or **close** : -- *close=(sym=true, asym=true, envelope=true, left=true, right=true, x0=x0, top=true, bot=true, y0=y0, pen=pen)*\
-    Force closed polygons. Alternatively, add modifiers to build a polygon from a line segment.
-    Add **sym=true** to build symmetrical envelope around y(x) using deviations dy(x) given in extra column 3.
-    Add **asym=true** to build asymmetrical envelope around y(x) using deviations dy1(x) and dy2(x) from extra columns 3-4.
-    Add **envelope=true** to build asymmetrical envelope around y(x) using bounds yl(x) and yh(x) from extra columns 3-4.
-    Add **left=true** or **right=true** or **x0=x0** to connect first and last point to anchor points at either *xmin*, *xmax*, or *x0*, or\
-    **bot=true** or **top=true** or **y0=y0** to connect first and last point to anchor points at either *ymin*, *ymax*, or *y0*.\
+  Force closed polygons. Alternatively, add modifiers to build a polygon from a line segment.
+    - **sym=true** to build symmetrical envelope around y(x) using deviations dy(x) given in extra column 3.
+    - **asym=true** to build asymmetrical envelope around y(x) using deviations dy1(x) and dy2(x) from extra columns 3-4.
+    - **envelope=true** to build asymmetrical envelope around y(x) using bounds yl(x) and yh(x) from extra columns 3-4.
+    - **left=true** or **right=true** or **x0=x0** to connect first and last point to anchor points at either *xmin*, *xmax*, or *x0*, or
+    - **bot=true** or **top=true** or **y0=y0** to connect first and last point to anchor points at either *ymin*, *ymax*, or *y0*.
     Polygon may be painted (**fill**) and optionally outlined by adding **pen=pen**.
 
 - **N** or **noclip** or **no\_clip** : *noclip=true* **|** *noclip=:r* **|** *noclip=:c*\
    Do NOT clip symbols that fall outside map border [Default plots points whose coordinates are strictly inside the map border only]. This option does not apply to lines and polygons which are always clipped to the map region. For periodic (360-longitude) maps we must plot all symbols twice in case they are clipped by the repeating boundary. The **noclip** will turn off clipping and not plot repeating symbols. Use **noclip=:r** to turn off clipping but retain the plotting of such repeating symbols, or use **noclip=:c** to retain clipping but turn off plotting of repeating symbols.
 
-- **S** or **symbol** : -- *symbol=(symb=name, size=val, unit=unity)* or *marker|Marker|shape=name*, *markersize| MarkerSize|ms|size=val*\
-   Plot symbols (including vectors, pie slices, fronts, decorated or quoted lines). If present, size is symbol size in the unit set in gmt.conf (unless *c*, *i*, or *p* is appended to **markersize** or synonym or *cm*, *inch*, *point* as unity when using the **symbol=(symb=name,size=val,unit=unity)** form). If the symbol name is not given it will be read from the last column in the input data (must come from a file name or a *GMTdataset*); this cannot be used in conjunction with binary input (data from file). Optionally, append c, i,or p to indicate that the size information in the input data is in units of cm, inch, or point, respectively [Default is `PROJ_LENGTH_UNIT`]. Note: if you provide both size and symbol via the input file you must use `PROJ_LENGTH_UNIT` to indicate the unit used for the symbol size or append the units to the sizes in the file. If symbol sizes are expected via the third data column then you may convert those values to suitable symbol sizes via the **incol** mechanism.\
-   You can change symbols by adding the required -S option to any of your multisegment headers (*GMTdataset* only). Choose between these symbol codes:\
-   **-** or **x-dash**  size is the length of a short horizontal (x-dir) line segment.\
-   **+** or **plus**    size is diameter of circumscribing circle.\
-   **a** or * or **star**  size is diameter of circumscribing circle.\
-   **c** or **circle**  size is diameter of circle.\
-   **d** or **diamond** size is diameter of circumscribing circle.\
-   **e** or **ellipse** Direction (in degrees counter-clockwise from horizontal), major\_axis, and minor\_axis must be found in columns 3, 4, and 5.\
-   **E** or **Ellipse** Same as **ellipse**, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (**ellipse** leaves the directions unchanged.) Furthermore, the axes lengths must be given in geographical instead of plot-distance units. An exception occurs for a linear projection in which we assume the ellipse axes are given in the same units as **region**. For degenerate ellipses (circles) with just the diameter given, use **Ellipse-**. The diameter is excepted to be given in column 3. Alternatively, append the desired diameter to **E-** and this fixed diameter is used instead (*e.g.* **symbol="E-500"**). For allowable geographical units, see UNITS.\
-   **front**    Draw a front. See \myreflink{Front lines}\
-   **g** or **octagon**  size is diameter of circumscribing circle.\
-   **h** or **hexagon**  size is diameter of circumscribing circle.\
-   **i** or **inverted\_tri**  size is diameter of circumscribing circle.\
-   **j** or **rotated\_rec**  Rotated rectangle. Direction (in degrees counter-clockwise from horizontal), x-dimension, and y-dimension must be found in columns 3, 4, and 5.\
-   **J** or **Rotated\_rec**  Same as **rotated\_rec**, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (**rotated\_rec** leaves the directions unchanged.) Furthermore, the dimensions must be given in geographical instead of plot-distance units. For a degenerate rectangle (square) with one dimension given, use **J-**. The dimension is excepted to be given in column 3. Alternatively, append the dimension diameter to **J-** and this fixed dimension is used instead. An exception occurs for a linear projection in which we assume the dimensions are given in the same units as **region**. For allowable geographical units, see UNITS.\
-   **m** or **matang**  math angle arc, optionally with one or two arrow heads [Default is no arrow heads]. The size is the length of the vector head. Arc width is set by **pen**, with vector head outlines defaulting to half of arc width. The radius of the arc and its start and stop directions (in degrees counter-clockwise from horizontal) must be given in columns 3-5. See \myreflink{Vector Attributes} for specifying other attributes.\
-   **M** or **Matang**  Same as **matang** but switches to straight angle symbol if angles subtend 90 degrees exactly.\
-   **n** or **pentagon**  size is diameter of circumscribing circle.\
-   **p** or **point**  No size needs to be specified (1 pixel is used).\
-   **quoted lines**    i.e., lines with annotations such as contours. See \myreflink{Quoted lines}\
-   **r** or **rectangle**  No size needs to be specified, but the x- and y-dimensions must be found in columns 3 and 4.\
-   **R** or **roundrect**  Rounded rectangle. No size needs to be specified, but the x- and y-dimensions and corner radius must be found in columns 3, 4, and 5.\
-   **s** or **square**    size is diameter of circumscribing circle.\
-   **t** or **^** or **triangle**  size is diameter of circumscribing circle.\
-   **x** or **cross**    size is diameter of circumscribing circle.\
-   **y** or **y-dash**  (|). size is the length of a short vertical (y-dir) line segment.\
-   **decorated**    i.e., lines with symbols along them. See \myreflink{Decorated lines}\
+- **S** or **symbol** or **marker** : -- *symbol=(symb=name, size=val, unit=unity)* or *marker|Marker|shape=name*, *markersize|MarkerSize|ms|size=val*\
+  Plot symbols (including vectors, pie slices, fronts, decorated or quoted lines). If present, size is symbol size in
+  the unit set in gmt.conf (unless *c*, *i*, or *p* is appended to **markersize** or synonym or *cm*, *inch*, *point*
+  as unity when using the **symbol=(symb=name,size=val,unit=unity)** form). If the symbol name is not given it will
+  be read from the last column in the input data (must come from a file name or a *GMTdataset*); this cannot be used
+  in conjunction with binary input (data from file). Optionally, append c, i,or p to indicate that the size information
+  in the input data is in units of cm, inch, or point, respectively [Default is `PROJ_LENGTH_UNIT`]. Note: if you
+  provide both size and symbol via the input file you must use `PROJ_LENGTH_UNIT` to indicate the unit used for the
+  symbol size or append the units to the sizes in the file. If symbol sizes are expected via the third data column
+  then you may convert those values to suitable symbol sizes via the **incol** mechanism.\
+  You can change symbols by adding the required -S option to any of your multisegment headers (*GMTdataset* only).
+  Choose between these symbol codes:
+    - **-** or **x-dash**  size is the length of a short horizontal (x-dir) line segment.
+    - **+** or **plus**    size is diameter of circumscribing circle.
+    - **a** or **\*** or **star**  size is diameter of circumscribing circle.
+    - **c** or **circle**  size is diameter of circle.
+    - **d** or **diamond** size is diameter of circumscribing circle.
+    - **e** or **ellipse** Direction (in degrees counter-clockwise from horizontal), major\_axis,
+      and minor\_axis must be found in columns 3, 4, and 5.
+    - **E** or **Ellipse** Same as **ellipse**, except azimuth (in degrees east of north) should be given instead
+      of direction. The azimuth will be mapped into an angle based on the chosen map projection (**ellipse** leaves
+      the directions unchanged.) Furthermore, the axes lengths must be given in geographical instead of plot-distance
+      units. An exception occurs for a linear projection in which we assume the ellipse axes are given in the same
+      units as **region**. For degenerate ellipses (circles) with just the diameter given, use **Ellipse-**. The
+      diameter is excepted to be given in column 3. Alternatively, append the desired diameter to **E-** and this
+      fixed diameter is used instead (*e.g.* **symbol="E-500"**). For allowable geographical units, see UNITS.
+    - **front**    Draw a front. See \myreflink{Front lines}
+    - **g** or **octagon**  size is diameter of circumscribing circle.
+    - **h** or **hexagon**  size is diameter of circumscribing circle.
+    - **i** or **inverted\_tri**  size is diameter of circumscribing circle.
+    - **j** or **rotated\_rec**  Rotated rectangle. Direction (in degrees counter-clockwise from horizontal), x-dimension, and y-dimension must be found in columns 3, 4, and 5.
+    - **J** or **Rotated\_rec**  Same as **rotated\_rec**, except azimuth (in degrees east of north) should be
+      given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection
+      (**rotated\_rec** leaves the directions unchanged.) Furthermore, the dimensions must be given in
+      geographical instead of plot-distance units. For a degenerate rectangle (square) with one dimension given,
+      use **J-**. The dimension is excepted to be given in column 3. Alternatively, append the dimension diameter
+      to **J-** and this fixed dimension is used instead. An exception occurs for a linear projection in which
+      we assume the dimensions are given in the same units as **region**. For allowable geographical units, see UNITS.
+    - **m** or **matang** math angle arc, optionally with one or two arrow heads [Default is no arrow heads].
+      The size is the length of the vector head. Arc width is set by **pen**, with vector head outlines
+      defaulting to half of arc width. The radius of the arc and its start and stop directions (in degrees
+      counter-clockwise from horizontal) must be given in columns 3-5. See \myreflink{Vector Attributes}
+      for specifying other attributes.
+    - **M** or **Matang**  Same as **matang** but switches to straight angle symbol if angles subtend 90 degrees exactly.
+    - **n** or **pentagon**  size is diameter of circumscribing circle.
+    - **p** or **point**  No size needs to be specified (1 pixel is used).
+    - **quoted lines**    i.e., lines with annotations such as contours. See \myreflink{Quoted lines}
+    - **r** or **rectangle**  No size needs to be specified, but the x- and y-dimensions must be found in columns 3 and 4.
+    - **R** or **roundrect**  Rounded rectangle. No size needs to be specified, but the x- and y-dimensions and
+      corner radius must be found in columns 3, 4, and 5.
+    - **s** or **square**    size is diameter of circumscribing circle.
+    - **t** or **^** or **triangle**  size is diameter of circumscribing circle.
+    - **x** or **cross**    size is diameter of circumscribing circle.
+    - **y** or **y-dash**  (|). size is the length of a short vertical (y-dir) line segment.
+    - **decorated**    i.e., lines with symbols along them. See \myreflink{Decorated lines}
+
+- **csymbol** or **cmarker** or **custom_symbol** or **custom_marker** : -- *csymbol=(name=symbname, size=val, unit=unity)*\
+   Use one the GMT's [custom symbols](https://docs.generic-mapping-tools.org/dev/cookbook/custom-symbols.html#custom-symbols)
+   where *symbname* is the lowercase name of any of those in the table, plus `arrow` or `ski_alpine` (these are from GMT.jl).
 
 - **W** or **pen=pen**\
    Set pen attributes for lines or the outline of symbols [Defaults: width = default, color = black, style = solid].
