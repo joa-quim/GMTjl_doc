@@ -10,6 +10,69 @@ complex static vector graphics as well as conversion to the most common raster f
 Although it is package more tailored for Earth Sciences, it can also be used for a general purpose plotting
 of 2 and 3D (perspective, not volumetric) graphics.
 
+## Quick start
+
+**Scatter plots, line plots and histograms
+([click here for more examples](./examples/plotting_functions))**
+
+\begin{examplefig}{}
+```julia
+using GMT
+
+gmtbegin()
+subplot(grid = (2, 2), size = (14, 10), margin = 0.4)
+plot(rand(10)*10, panel = 1)
+scatter(rand(10), panel = 2)
+histogram(rand(0:10, 25), panel = 3)
+lines(
+    mat2ds([sin.(1:0.1:10) cos.(1:0.1:10)], x = :ny, multi = true, color = true),
+    frame = (; ticks = :auto, annot = :auto, fill = :lightgrey, grid = true),
+    panel = 4
+)
+subplot(:end)
+gmtend(show = true)
+```
+\end{examplefig}
+
+**Maps and geographic data
+([click here for projection examples](./examples/projections))**
+
+\begin{examplefig}{}
+```julia
+using GMT
+
+gmtbegin()
+basemap(
+    region = (0, 40, 20, 60),
+    projection = :Mercator,
+    figsize = "4.5i",
+    frame = (; ticks = :auto, annot = :auto),
+)
+coast(
+    ocean = :paleturquoise,
+    land = :lightyellow,
+    shorelines = true,
+    borders = 1,
+    frame = (; grid = 10),
+)
+# Start the inset context after the main map is complete.
+inset(
+    inset = (; anchor = :TR, width = 2.5, offset = 0.2),  # :TR means top right.
+    box = (; fill = :beige, pen = 0.5, clearance = 0.25),
+)
+# This coastline plots inside the inset, using the :laea (Lambert equal area) projection.
+coast(
+    region = :global,  # Or :g for short.
+    land = :black,
+    projection = (; name = :laea, center = (20, 20)),
+    frame = :auto,
+)
+# Draw a box to locate the map on the globe.
+lines([0 0 40 40 0], [20 60 60 20 20], linewidth = 1, linecolor = :red)
+gmtend(show = true)
+```
+\end{examplefig}
+
 ### \myreflink{Comparison with other plotting packages}
 
 ## Installation and use
@@ -148,7 +211,7 @@ using GMT
     @@
     ~~~</a>~~~
   @@
-   
+
   @@box
     ~~~<a class="boxlink" href="examples/misc/">~~~
     @@title Misc @@
@@ -159,7 +222,7 @@ using GMT
     @@
     ~~~</a>~~~
   @@
-   
+
   @@box
     ~~~<a class="boxlink" href="examples/art/">~~~
     @@title Art @@
