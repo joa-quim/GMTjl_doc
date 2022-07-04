@@ -61,7 +61,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_J}
 
-- **-M** or **margins** : -- *margins=val*\
+- **M** or **margins** : -- *margins=val*\
     This is margin space that is added *between* neighboring subplots (i.e., the interior margins) *in addition*
     to the automatic space added for tick marks, annotations, and labels. The margins can be specified as
     a single value (for same margin on all sides), a pair of values separated by slashes
