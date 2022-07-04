@@ -19,7 +19,6 @@ of 2 and 3D (perspective, not volumetric) graphics.
 ```julia
 using GMT
 
-gmtbegin()
 subplot(grid = (2, 2), size = (14, 10), margin = 0.4)
 plot(rand(10)*10, panel = 1)
 scatter(rand(10), panel = 2)
@@ -30,7 +29,6 @@ lines(
     panel = 4
 )
 subplot(:end)
-gmtend(show = true)
 ```
 \end{examplefig}
 
