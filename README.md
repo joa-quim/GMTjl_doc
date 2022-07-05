@@ -1,6 +1,6 @@
 # GMTjl_doc
 
-This reportory hosts the manual of the [GMT.jl](https://github.com/GenericMappingTools/GMT.jl) package.
+This repository hosts the manual of the [GMT.jl](https://github.com/GenericMappingTools/GMT.jl) package.
 I would like to acknowlege the help provided by [Thibaut Lienart](https://github.com/tlienart) in the
 early stages of setting this site (and make it run) as well as the creators of the
 [Makie](https://makie.juliaplots.org/) manual that was used as base to create this one.
