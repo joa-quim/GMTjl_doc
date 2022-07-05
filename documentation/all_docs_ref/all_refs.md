@@ -34,6 +34,13 @@
 |:-----|:----|:----|:----|:----|:----|:----|:----|
 | \myreflink{arrows} | \myreflink{bar} | \myreflink{bar3} | \myreflink{decorated} | \myreflink{lines} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{contourf} |
 
+## Supplemental Modules
+
+{{ generate_tablerefs supplements}}
+
+Note: module names ending with a **\*** mean that they have not yet been ported to GMT.jl and
+its use requires resorting to the \myreflink{Monolithic} mode.
+
 ## Utility functions
 
 {{ generate_tablerefs utilfuns}}
