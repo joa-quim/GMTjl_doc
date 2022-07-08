@@ -18,13 +18,13 @@ last column in the input. If **marker** is not specified then we instead plot li
 Parameters
 ----------
 
-- **B** or **axes** or **frame** : *frame=??*\
+- **B** or **axes** or **frame** : -- *frame=??*\
     For ternary diagrams the three sides are referred to as a, b, and c. Thus, to give specific
     settings for one of these axis you must include the axis letter before the arguments. If all
     axes have the same arguments then only give one option without the axis letter. For more details,
     see the example at the bottom of this page and the general \myreflink{frame} docs.
 
-- **C** or **color** or **cmap** : *color=cpt*\
+- **C** or **color** or **cmap** : -- *color=cpt*\
     Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)**
     to build a linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented
     by one for each color. In this case *color_n* can be a [r g b] triplet, a color name, or an HTML
@@ -39,12 +39,12 @@ Parameters
     Use a negative *width* to indicate that positive axes directions be clock-wise
     [Default lets the *a, b, c* axes be positive in a counter-clockwise direction].
 
-- **L** or **vertex_labels** : *vertex_labels="Lab1/lab2/Lab3"* **|** *vertex_labels=("Lab1", "lab2", "Lab3")*\
+- **L** or **vertex_labels** : -- *vertex_labels="Lab1/lab2/Lab3"* **|** *vertex_labels=("Lab1", "lab2", "Lab3")*\
     Set the labels for the three diagram vertices where the component is 100% [none].
     These are placed a distance of three times the `MAP_LABEL_OFFSET`
     setting from their respective corners. To skip any one of then, specify that label as "-".
 
-- **M** or **dump** : *dump=true*\
+- **M** or **dump** : -- *dump=true*\
     Do no plot. Instead, convert the input (*a*, *b*, *c* [, *z*]) records
     to Cartesian (*x*, *y*, [, *z*]) records, where *x, y* are normalized coordinates
     on the triangle (i.e., 0–1 in *x* and 0–sqrt(3)/2 in *y*).
@@ -62,11 +62,11 @@ Parameters
 
 Other than the above options, the `kwargs` input accepts still the following options:
 
-- **image** : *image=true*\
+- **image** : -- *image=true*\
     Fills the ternary plot with an image computed automatically with \myreflink{grdimage} from a grid
     interpolated with `surface`
 
-- **contour** : *contour=??*\
+- **contour** : -- *contour=??*\
     This option works in two different ways. If used together with `image` it overlays a contour
     by doing a call to \myreflink{grdcontour}. However, if used alone it will call `contour` to do the contours.
     The difference is important because this option can be used in *default mode* with `contour=true`
@@ -74,11 +74,11 @@ Other than the above options, the `kwargs` input accepts still the following opt
     by passing as argument a NamedTuple with all options appropriated to that module. *e.g.*
     `contour=(cont=10, annot=20, pen=0.5)`
 
-- **contourf** : *contourf=??*\
+- **contourf** : -- *contourf=??*\
     Works a bit like the _standalone_ `contour`. If used with `contourf=true` call make a filled contour
     using automatic parameters. The form `contourf=(...)` let us selects options of the \myreflink{contourf} module.
 
-- **clockwise** : *clockwise=true*\`
+- **clockwise** : -- *clockwise=true*\`
     Set it to `true` to indicate that positive axes directions be clock-wise
     [Default lets the a, b, c axes be positive in a counter-clockwise direction].
 
