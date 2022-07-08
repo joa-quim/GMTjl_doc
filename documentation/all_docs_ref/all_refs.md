@@ -23,10 +23,10 @@
 | \myreflink{grdsample} |  grdselect |  grdtrack |  grdtrend |  grdvector | \myreflink{grdview} |
 | grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} |  nearneighbor | \myreflink{plot} |
-| plot3d |  project |  psconvert |  rose |  sample1d | \myreflink{solar} |
+| plot3d |  project |  psconvert | rose |  sample1d | \myreflink{solar} |
 | spectrum1d |  sph2grd | sphdistance |  sphinterpolate | sphtriangulate | \myreflink{subplot} |
-| surface |  ternary | \myreflink{text} |  trend1d |  trend2d |  triangulate |
-| wiggle |  xyz2grd |  |  |  |  |
+| surface | \myreflink{ternary} | \myreflink{text} | trend1d | trend2d | triangulate |
+| wiggle | xyz2grd |  |  |  |  |
 
 ## Plot avatars
 

@@ -145,7 +145,7 @@ Parameters
    **bezier=true** will draw the line using a Bezier spline; *vspecs* will place a vector head at the ends of the lines.
    You can use **vec\_start** and **vec\_stop** to specify separate vector specs at each end [shared specs]. See the
    \myreflink{Vector Attributes} for more information. If **level** is set, then **pen=(zlevels=true)** assign pen color via
-   **cmap** and the z-values obtained. Finally, if pen color = `:auto` then we will cycle through the pen colors implied by
+   **cmap** and the z-values obtained. Finally, if pen `color = :auto` then we will cycle through the pen colors implied by
    `COLOR_SET` and change on a per-segmentbasis. The width, style, or transparency settings are unchanged.
 
 \textinput{common_opts/opt_U}
