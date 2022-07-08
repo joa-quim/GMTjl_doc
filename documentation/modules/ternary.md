@@ -100,7 +100,7 @@ Other than the above options, the `kwargs` input accepts still the following opt
 
 \textinput{common_opts/opt_s}
 
-\textinput{common_opts/opt_yx}
+\textinput{common_opts/opt_xy}
 
 \textinput{common_opts/opt_p}
 
