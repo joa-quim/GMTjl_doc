@@ -55,7 +55,7 @@ And now, let's see a full month of tidal data (vertical component).
 ```julia
 using GMT
 D = earthtide(range=("2022-07-01T", "2022-07-31T", "1m"), location=(-82,9));
-plot(D[:Time, :Vertical], lc=:blue, legend=:Vertical, title"Tides (m), one month", show=true)
+plot(D[:Time, :Vertical], lc=:blue, legend=:Vertical, title="Tides (m), one month", show=true)
 ```
 \end{examplefig}
 

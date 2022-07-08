@@ -74,3 +74,29 @@ ternary("@ternary.txt", marker=:p, clockwise=true,
         contourf=(annot=10, cont=5), show=true)
 ```
 \end{examplefig}
+
+### Diagram with lines and text
+
+This example makes use of the \myreflink{tern2cart} function that converts from ternary
+to cartesian coordinates. It is based on [this discussion](https://discourse.julialang.org/t/ternary-plots-in-gmt-jl/63181/4)
+of the Julia forum.
+
+\begin{examplefig}{}
+```julia
+using GMT
+
+b = 0:0.01:0.3
+c1 = (1 .- b).^3 .- 0.7^3
+c2 = (1 .- 2*b).^2 .- 0.4^2
+
+# Generate the coordinates of two lines.
+t1 = tern2cart([(1 .- b .- c1) b c1])    # Note that GMT.jl function expects a Mx3 matrix
+t2 = tern2cart([(1 .- b .- c2) b c2])
+
+ternary(labels=("A", "B", "C"))
+
+plot!(t1, lw=2, lc=:red, ls="line& (a) &")	# line style -> fancy stuff
+plot!(t2, lw=2, lc=:blue)
+text!(tern2cart([0.3 0.4 0.3]), text="Umbilicus", font=18, show=true)
+```
+\end{examplefig}
