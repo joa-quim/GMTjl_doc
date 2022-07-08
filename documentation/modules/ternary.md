@@ -18,7 +18,11 @@ last column in the input. If **marker** is not specified then we instead plot li
 Parameters
 ----------
 
-\textinput{common_opts/opt_B}
+- **B** or **axes** or **frame** : *frame=??*\
+    For ternary diagrams the three sides are referred to as a, b, and c. Thus, to give specific
+    settings for one of these axis you must include the axis letter before the arguments. If all
+    axes have the same arguments then only give one option without the axis letter. For more details,
+    see the example at the bottom of this page and the general \myreflink{frame} docs.
 
 - **C** or **color** or **cmap** : *color=cpt*\
     Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)**

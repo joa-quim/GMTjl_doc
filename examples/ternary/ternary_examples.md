@@ -1,10 +1,12 @@
-# Ternary plots
+## Ternary plots
 
-## Examples
+See manual at \myreflink{ternary}
 
+### A scatter plot example
 
-o plot points on a ternary diagram at the positions listed in the file ternary.txt (that GMT knows where to find it),
-with default annotations and gridline spacings, using the specified labeling, do
+To plot points on a ternary diagram at the positions listed in the file ternary.txt
+(that GMT knows where to find it), with default annotations and gridline spacings,
+using the specified labeling, do:
 
 \begin{examplefig}{}
 ```julia
@@ -30,6 +32,8 @@ ternary("@ternary.txt",  marker=:p, cmap=C, clockwise=true,
         clabel="Sand", suffix=" %"), show=true)
 ```
 \end{examplefig}
+
+### Ternary with image
 
 Ah, much better, but now I would like to display the above data as an image.
 
