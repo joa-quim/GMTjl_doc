@@ -60,21 +60,27 @@ Parameters
     plot lines (requires **markerline**) or polygons (requires **cmap** or **fill**). For details on symbols
     see the **symbol** option in \myreflink{plot}
 
-Other than the above options, the `kwargs` input accepts still the following options:\
-- **image** : - Fills the ternary plot with an image computed automatically with \myreflink{grdimage} from a grid interpolated with `surface`
+Other than the above options, the `kwargs` input accepts still the following options:
 
-- **contour** : - This option works in two different ways. If used together with `image` it overlays a contour
-               by doing a call to \myreflink{grdcontour}. However, if used alone it will call `contour` to do the contours.
-               The difference is important because this option can be used in *default mode* with `contour=true`
-               where the number and annotated contours is picked automatically, or the use can exert full control
-               by passing as argument a NamedTuple with all options appropriated to that module. *e.g.*
-               `contour=(cont=10, annot=20, pen=0.5)`
+- **image** : *image=true*\
+    Fills the ternary plot with an image computed automatically with \myreflink{grdimage} from a grid
+    interpolated with `surface`
 
-- **contourf** : - Works a bit like the _standalone_ `contour`. If used with `contourf=true` call make a filled contour
-                using automatic parameters. The form `contourf=(...)` let us selects options of the \myreflink{contourf} module.
+- **contour** : *contour=??*\
+    This option works in two different ways. If used together with `image` it overlays a contour
+    by doing a call to \myreflink{grdcontour}. However, if used alone it will call `contour` to do the contours.
+    The difference is important because this option can be used in *default mode* with `contour=true`
+    where the number and annotated contours is picked automatically, or the use can exert full control
+    by passing as argument a NamedTuple with all options appropriated to that module. *e.g.*
+    `contour=(cont=10, annot=20, pen=0.5)`
 
-- **clockwise** : - Set it to `true` to indicate that positive axes directions be clock-wise
-                 [Default lets the a, b, c axes be positive in a counter-clockwise direction].
+- **contourf** : *contourf=??*\
+    Works a bit like the _standalone_ `contour`. If used with `contourf=true` call make a filled contour
+    using automatic parameters. The form `contourf=(...)` let us selects options of the \myreflink{contourf} module.
+
+- **clockwise** : *clockwise=true*\`
+    Set it to `true` to indicate that positive axes directions be clock-wise
+    [Default lets the a, b, c axes be positive in a counter-clockwise direction].
 
 \textinput{common_opts/opt_U}
 
