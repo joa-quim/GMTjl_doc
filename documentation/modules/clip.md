@@ -26,7 +26,7 @@ Required Arguments
 
 - **C** or **end_clip_path** : -- *end_clip_path=true* or *end_clip_path=n*\
     Mark end of existing clip path(s). No input file will be processed. No projection information
-    is needed unless \myreflink(frame}) has been selected as well. With no arguments we terminate
+    is needed unless \myreflink{frame} has been selected as well. With no arguments we terminate
     all active clipping paths. Experts may restrict the termination to just *n* of the active
     clipping path by passing that as the argument.
 
