@@ -11,7 +11,7 @@
 
 |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|
-| \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} | clip | \myreflink{coast} |
+| \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} | \myreflink{clip} | \myreflink{coast} |
 | \myreflink{colorbar} |  contour  |  dimfilter  | events |  events  |  filter1d  |
 | fitcircle |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
 | gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |

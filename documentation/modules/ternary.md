@@ -104,7 +104,7 @@ Other than the above options, the `kwargs` input accepts still the following opt
 
 \textinput{common_opts/opt_h}
 
-\textinput{common_opts/opt_icols}
+\textinput{common_opts/opt__i}
 
 \textinput{common_opts/opt_q}
 
@@ -115,7 +115,6 @@ Other than the above options, the `kwargs` input accepts still the following opt
 \textinput{common_opts/opt_p}
 
 \textinput{common_opts/opt_t}
-
 
 Examples
 --------
