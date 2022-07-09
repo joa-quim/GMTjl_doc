@@ -74,7 +74,7 @@ annotating every 2, and using xlabel = "Distance" and ylabel = "No of samples", 
 ```julia
 using GMT
 basemap(region=(0,9,0,5), figscale=1,
-        frame=(axes=:WeSn, annot=2, ticks=1, xlabel=:Distance, ylabel="No of samples", show=true))
+        frame=(axes=:WeSn, annot=2, ticks=1, xlabel=:Distance, ylabel="No of samples"), show=true)
 ```
 \end{examplefig}
 
