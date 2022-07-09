@@ -110,12 +110,12 @@ using GMT
 ### Polar (theta,r) plot
 
 For a base map for use with polar coordinates, where the radius from 0 to 1000 should
-correspond to 7.5 cm and with gridlines and ticks intervals automatically determined, use
+correspond to 5 cm and with gridlines and ticks intervals automatically determined, use
 
 \begin{examplefig}{}
 ```julia
 using GMT
-    basemap(region=(0,360,0,1000), figsize=15, frame=:afg, proj=:polar, show=true)
+    basemap(region=(0,360,0,1000), figsize=10, frame=:afg, proj=:polar, show=true)
 ```
 \end{examplefig}
 
