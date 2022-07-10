@@ -12,10 +12,10 @@
 |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|
 | \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} | \myreflink{clip} | \myreflink{coast} |
-| \myreflink{colorbar} |  contour  |  dimfilter  | events |  events  |  filter1d  |
+| \myreflink{colorbar} |  contour  |  dimfilter  | events |  events  | \myreflink{filter1d} |
 | fitcircle |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
 | gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |
-| gmtset |  gmtsimplify |  gmtspatial |  gmtsplit |  gmtvector |  gmtwhich |
+| \myreflink{gmtset} |  gmtsimplify |  gmtspatial |  gmtsplit |  gmtvector |  gmtwhich |
 | grd2cpt |  grd2kml |  grd2xyz |  grdblend |  grdclip | \myreflink{grdcontour} |
 | grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} |  \myreflink{grdimage} |  grdinfo |  grdinterpolate |
