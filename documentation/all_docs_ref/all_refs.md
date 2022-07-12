@@ -13,7 +13,7 @@
 |:-----|:----|:----|:----|:----|:----|
 | \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} | \myreflink{clip} | \myreflink{coast} |
 | \myreflink{colorbar} |  contour  |  dimfilter  | events |  events  | \myreflink{filter1d} |
-| fitcircle |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
+| \myreflink{fitcircle} |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
 | gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |
 | \myreflink{gmtset} |  gmtsimplify |  gmtspatial |  gmtsplit |  gmtvector |  gmtwhich |
 | grd2cpt |  grd2kml |  grd2xyz |  grdblend |  grdclip | \myreflink{grdcontour} |
@@ -23,8 +23,8 @@
 | \myreflink{grdsample} |  grdselect |  grdtrack |  grdtrend |  grdvector | \myreflink{grdview} |
 | grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} |  nearneighbor | \myreflink{plot} |
-| plot3d |  project |  psconvert | rose |  sample1d | \myreflink{solar} |
-| spectrum1d |  sph2grd | sphdistance |  sphinterpolate | sphtriangulate | \myreflink{subplot} |
+| plot3d | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
+| spectrum1d | sph2grd | sphdistance | sphinterpolate | sphtriangulate | \myreflink{subplot} |
 | surface | \myreflink{ternary} | \myreflink{text} | trend1d | trend2d | triangulate |
 | wiggle | xyz2grd |  |  |  |  |
 

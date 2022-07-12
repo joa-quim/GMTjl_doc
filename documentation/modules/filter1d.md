@@ -26,7 +26,7 @@ Required Arguments
     Sets the filter `type`. Choose among convolution and non-convolution
     filters. Append the filter code followed by the full filter
     *width* in same units as time column. By default we
-    perform low-pass filtering; append **+h** to select high-pass filtering.
+    perform low-pass filtering; use the **highpass** to select high-pass filtering.
     Some filters allow for optional arguments and a modifier. Available convolution
     filter types are:
 

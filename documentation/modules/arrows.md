@@ -57,7 +57,7 @@ with length 0f ~7 cm (sqrt(50)). Notice that map limits and map size are equal t
 ```julia
 using GMT
 arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=5, frame=(annot=:a, grid=1),
-       arrow=(len=0.5,stop=1,uv=1), show=true)
+       arrow=(len=0.5, stop=1, uv=1), show=true)
 ```
 \end{examplefig}
 
@@ -67,7 +67,7 @@ example but the figure is now twice as large.
 
 ```julia
    arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=10, frame=(annot=1, ticks=0.5, grid=1),
-          arrow=(len=0.5,stop=1,uv=1), show=true)
+          arrow=(len=0.5, stop=1, uv=1), show=true)
 ```
 
 and finally we will change the vector size again but this time by applying a factor scale of 0.5. The vector
@@ -77,7 +77,7 @@ is now ~1.77 figure units long.
 ```julia
 using GMT
 arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=10, frame=(annot=0.5, ticks=0.25, grid=0.5),
-       arrow=(len=0.5,stop=1,uv=0.5), show=true)
+       arrow=(len=0.5, stop=1, uv=0.5), show=true)
 ```
 \end{examplefig}
 
