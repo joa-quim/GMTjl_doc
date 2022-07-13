@@ -71,19 +71,20 @@ Optional Arguments
 - **F** or **conn_method** : -- *conn_method=[**c|n|p|v**][**a|t|s|r| *refpoint*]*\
     Alter the way points are connected (by specifying a *scheme*) and data are grouped (by specifying a *method*).
     Append one of four line connection schemes:
-    **c**\ : Form continuous line segments for each group [Default].
-    **p**\ : Form line segments from a reference point reset for each group.
-    **n**\ : Form networks of line segments between all points in each group.
-    **v**\ : Form vector line segments suitable for :doc:`plot` **-Sv+s**.
+    - **c**\ : Form continuous line segments for each group [Default].
+    - **p**\ : Form line segments from a reference point reset for each group.
+    - **n**\ : Form networks of line segments between all points in each group.
+    - **v**\ : Form vector line segments suitable for :doc:`plot` **-Sv+s**.
     Optionally, append the one of four segmentation methods to define the group:
-    **a**\ : Ignore all segment headers, i.e., let all points belong to a single group,
+    - **a**\ : Ignore all segment headers, i.e., let all points belong to a single group,
     and set group reference point to the very first point of the first file.
-    **t**\ : Consider all data in each table to be a single separate group and
+    - **t**\ : Consider all data in each table to be a single separate group and
     reset the group reference point to the first point of each group.
-    **s**\ : Segment headers are honored so each segment is a group; the group
+    - **s**\ : Segment headers are honored so each segment is a group; the group
     reference point is reset to the first point of each incoming segment [Default].
-    **r**\ : Same as **s**, but the group reference point is reset after
+    - **r**\ : Same as **s**, but the group reference point is reset after
     each record to the previous point (this method is only available with the **-Fp** scheme).
+
     Instead of the codes **a**\|\ **f**\|\ **s**\|\ **r** you may append
     the coordinates of a *refpoint* which will serve as a fixed external
     reference point for all groups.
@@ -121,7 +122,7 @@ Optional Arguments
     Only output those segments whose header record contains the
     specified text string. To reverse the search, i.e., to output
     segments whose headers do *not* contain the specified pattern, use
-    **-S~**. Should your pattern happen to start with ~ you need to
+    **select_hdr=:~**. Should your pattern happen to start with ~ you need to
     escape this character with a backslash [Default output all
     segments]. Cannot be used with |-Q|. For matching segments based
     on aspatial values (via OGR/GMT format), give the search string as
@@ -139,10 +140,10 @@ Optional Arguments
 - **T** or **skip** : -- *skip=[**h**][**d**\ [[**~**]\ *selection*]]*\
     Suppress the writing of certain records on output.  Append **h** to
     suppress segment headers [Default], and/or **d** to suppress duplicate
-    data records. Use **-Thd** to suppress both types of records.  By default,
+    data records. Use **skip=:hd** to suppress both types of records.  By default,
     all columns must be identical across the two records to skip the record.
     Alternatively, append a column *selection* to only use those columns
-    in the comparisons instead.  The *selection* syntax is
+    in the comparisons instead. The *selection* syntax is
     *range*\ [,\ *range*,...] where each *range* of items is either a single
     column *number* or a range with stepped increments given via *start*\ [:*step*:]\ :*stop*
     (*step* is optional and defaults to 1). A leading **~** will
@@ -203,57 +204,48 @@ To convert the multiple segment ASCII table test.txt to a double precision binar
     convert("test.txt", b=:o, save="test.b")
 ```
 
-If the file instead is the binary file results.b which has 9
-single-precision values per record, we extract the last column and
-columns 4-6 and write ASCII with the command::
+If the file instead is the binary file results.b which has 9 single-precision values
+per record, we extract the last column and columns 4-6 with the command:
 
 ```julia
-    convert results.b -o8,4-6 -bi9s | gmt plot ...
-```
-
-You want to plot the 2nd column of a 2-column file left.txt versus the
-first column of a file right.txt::
-
-```julia
-    convert left.txt right.txt -A -o1,2 | gmt plot ...
+    D = convert("results.b", outcol="8,4-6", binary_in="9s")
 ```
 
 To extract all segments in the file big_file.txt whose headers contain
-the string "RIDGE AXIS", try::
+the string "RIDGE AXIS", try:
 
 ```julia
-    convert big_file.txt -S"RIDGE AXIS" > subset.txt
+    D = convert("big_file.txt", select_hdr="RIDGE AXIS")
 ```
 
 To only get the segments in the file big_file.txt whose headers exactly
-matches the string "Spitsbergen", try::
+matches the string "Spitsbergen", try:
 
 ```julia
-    convert big_file.txt -SSpitsbergen+e > subset.txt
+    D = convert("big_file.txt", select_hdr="Spitsbergen+e")
 ```
 
 To invert the selection of segments whose headers begin with "profile "
-followed by an integer number and any letter between "g" and "l", try::
+followed by an integer number and any letter between "g" and "l", try:
 
 ```julia
-    convert -S~"/^profile [0-9]+[g-l]$/"
+    D = convert(select_hdr="~\"/^profile [0-9]+[g-l]$/\"")
 ```
 
 To reverse the order of segments in a file without reversing the order
-of records within each segment, try::
+of records within each segment, try:
 
 ```julia
-    convert lots_of_segments.txt -Is > last_segment_first.txt
+    convert("lots_of_segments.txt", invert=:s)
 ```
 
-To extract segments 20 to 40 in steps of 2, plus segment 0 in a file, try::
+To extract segments 20 to 40 in steps of 2, plus segment 0 in a file, try:
 
 ```julia
-    convert lots_of_segments.txt -Q0,20:2:40 > my_segments.txt
+    convert("lots_of_segments.txt", select_num="0,20:2:40")
 ```
 
-
-To extract the attribute ELEVATION from an ogr gmt file like this::
+To extract the attribute ELEVATION from an ogr gmt file like this:
 
 ```julia
     # @VGMT1.0 @GPOINT
@@ -268,24 +260,18 @@ To extract the attribute ELEVATION from an ogr gmt file like this::
 do
 
 ```julia
-    convert file.gmt -a2=ELEVATION > xyz.dat
+    D = convert("file.gmt", aspatial="ELEVATION")
 ```
 
-or just
+To connect all points in the file sensors.txt with the specified origin at 23.5/19, try:
 
 ```julia
-    convert file.gmt -aELEVATION > xyz.dat
-```
-
-To connect all points in the file sensors.txt with the specified origin at 23.5/19, try::
-
-```julia
-    convert sensors.txt -F23.5/19 > lines.txt
+    Dlines = convert("sensors.txt", conn_method=(23.5,19))
 ```
 
 To write all segments in the two files A.txt and B.txt to
 individual files named profile_005000.txt, profile_005001.txt, etc.,
-where we reset the origin of the sequential numbering from 0 to 5000, try::
+where we reset the origin of the sequential numbering from 0 to 5000, try:
 
 ```julia
     convert("A.txt", "B.txt", D="profile_%6.6d.txt+o5000")

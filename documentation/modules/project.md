@@ -269,7 +269,7 @@ major axis of 1500 km with azimuth of 30 degree and a minor axis of 600 km, try
 \begin{examplefig}{}
 ```julia
 using GMT
-Dellip = project(origin=(-30,70), step=10, ellipse="1500/600/30+e")
+Dellip = project(origin=(-30,70), step=10, ellipse="1500/600/30+e", km=true)
 imshow(Dellip, coast=true)
 ```
 \end{examplefig}
