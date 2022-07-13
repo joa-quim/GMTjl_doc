@@ -218,15 +218,23 @@ To project the remote data sets ship_03.txt (lon,lat,depth) onto a great circle 
 the two points (330,-18) and (53,21) and sort the records on the projected distances along
 that circle and only output the distance and the depths, try
 
+\begin{examplefig}{}
 ```julia
-    D = project("@ship_03.txt", origin=(330,-18), pole=(53,21), sort=true, outvars=:pz, km=true)
+using GMT
+D = project("@ship_03.txt", origin=(330,-18), pole=(53,21), sort=true, outvars=:pz, km=true)
+imshow(D)
 ```
+\end{examplefig}
 
 To generate points every 10 km along a great circle from 10N,50W to 30N,10W:
 
+\begin{examplefig}{}
 ```julia
-    Dgc = project(origin=(-50,10), endpoint=(-10,30), step=10, km=true)
+using GMT
+Dgc = project(origin=(-50,10), endpoint=(-10,30), step=10, km=true)
+imshow(Dgc, marker=:point, lw=0.5, coast=true)
 ```
+\end{examplefig}
 
 (Note that `Dgc` could now be used as input for \myreflink{grdtrack}, etc. ).
 
@@ -234,14 +242,19 @@ To generate points every 1 degree along a great circle from 30N,10W with
 azimuth 30 and covering a full 360, try:
 
 ```julia
-    D = project(origin=("10W","30N"), azim=30, step=1, length=(-180,180))
+D = project(origin=("10W","30N"), azim=30, step=1, length=(-180,180))
+imshow(D, coast=true)
 ```
 
 To generate points every 10 km along a small circle of colatitude 60 from 10N,50W to 30N,10W:
 
+\begin{examplefig}{}
 ```julia
-    Dsc = project(center=(-50,10), endpoint=(-10,30), step=(10,60), km=true)
+using GMT
+Dsc = project(center=(-50,10), endpoint=(-10,30), step=(10,60), km=true)
+imshow(Dsc, marker=:point, lw=0.5, coast=true)
 ```
+\end{examplefig}
 
 To create a partial small circle of colatitude 80 about a pole at 40E,85N, with extent of 45 degrees
 to either side of the meridian defined by the great circle from the pole to a point 15E,15N, try
@@ -253,9 +266,13 @@ to either side of the meridian defined by the great circle from the pole to a po
 To generate points approximately every 10 km along an ellipse centered on (30W,70N) with
 major axis of 1500 km with azimuth of 30 degree and a minor axis of 600 km, try
 
+\begin{examplefig}{}
 ```julia
-    Dellip = project(origin=(-30,70), step=10, ellipse="1500/600/30+e")
+using GMT
+Dellip = project(origin=(-30,70), step=10, ellipse="1500/600/30+e")
+imshow(Dellip, coast=true)
 ```
+\end{examplefig}
 
 To project the shiptrack gravity, magnetics, and bathymetry in
 c2610.xygmb along a great circle through an origin at 30S, 30W, the

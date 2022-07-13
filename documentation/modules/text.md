@@ -48,7 +48,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **A** or **azimuths** : -- *azimuths=true*\
+- **A** or **azimuths** or **azimuth** or **azim** : -- *azimuths=true*\
     Angles are given as azimuths; convert them to directions using the current projection. 
 
 \textinput{common_opts/opt_B}

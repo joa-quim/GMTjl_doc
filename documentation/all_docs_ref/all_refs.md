@@ -12,15 +12,15 @@
 |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|
 | \myreflink{basemap} | \myreflink{blockmean} | \myreflink{blockmedian} | \myreflink{blockmode} | \myreflink{clip} | \myreflink{coast} |
-| \myreflink{colorbar} |  contour  |  dimfilter  | events |  events  | \myreflink{filter1d} |
-| \myreflink{fitcircle} |  gmt2kml | \myreflink{gmtbinstats} |  gmtconnect |  gmtconvert |  gmtdefaults |
-| gmtget |  gmtinfo |  gmtlogo |  gmtmath |  gmtregress |  gmtselect |
-| \myreflink{gmtset} |  gmtsimplify |  gmtspatial |  gmtsplit |  gmtvector |  gmtwhich |
+| \myreflink{colorbar} | contour  | dimfilter  | events |  events  | \myreflink{filter1d} |
+| \myreflink{fitcircle} | gmt2kml | \myreflink{gmtbinstats} | gmtconnect | \myreflink{gmtconvert} | gmtdefaults |
+| gmtget |  gmtinfo |  gmtlogo | gmtmath | gmtregress |  gmtselect |
+| \myreflink{gmtset} |  gmtsimplify |  gmtspatial | gmtsplit |  gmtvector |  gmtwhich |
 | grd2cpt |  grd2kml |  grd2xyz |  grdblend |  grdclip | \myreflink{grdcontour} |
 | grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} |  \myreflink{grdimage} |  grdinfo |  grdinterpolate |
 | grdlandmask |  grdmask |  grdmath |  grdmix |  grdpaste |  grdproject |
-| \myreflink{grdsample} |  grdselect |  grdtrack |  grdtrend |  grdvector | \myreflink{grdview} |
+| \myreflink{grdsample} |  grdselect | \myreflink{grdtrack} |  grdtrend |  grdvector | \myreflink{grdview} |
 | grdvolume |  greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} |  nearneighbor | \myreflink{plot} |
 | plot3d | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
