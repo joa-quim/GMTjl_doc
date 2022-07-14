@@ -9,7 +9,7 @@ Resample 1-D table data using splines
 Description
 -----------
 
-**sample1d** reads a multi-column data set and interpolates the time-series or spatial profile at locations
+Reads a multi-column data set and interpolates the time-series or spatial profile at locations
 where the user needs the values. The user must provide the column number of the independent (monotonically
 increasing **or** decreasing) variable, here called *time* (it may of course be any type of quantity)
 when that is not the first column in data set. Equidistant or arbitrary sampling can be selected.
