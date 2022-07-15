@@ -34,7 +34,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_bo}
 
-\textinput{common_opts/opt_d}
+\textinput{common_opts/opt_di}
 
 \textinput{common_opts/opt_e}
 

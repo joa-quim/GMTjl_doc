@@ -71,23 +71,20 @@ Optional Arguments
 - **F** or **conn_method** : -- *conn_method=[**c|n|p|v**][**a|t|s|r| *refpoint*]*\
     Alter the way points are connected (by specifying a *scheme*) and data are grouped (by specifying a *method*).
     Append one of four line connection schemes:
-    - **c**\ : Form continuous line segments for each group [Default].
-    - **p**\ : Form line segments from a reference point reset for each group.
-    - **n**\ : Form networks of line segments between all points in each group.
-    - **v**\ : Form vector line segments suitable for :doc:`plot` **-Sv+s**.
+    - **c** : Form continuous line segments for each group [Default].
+    - **p** : Form line segments from a reference point reset for each group.
+    - **n** : Form networks of line segments between all points in each group.
+    - **v** : Form vector line segments suitable for :doc:`plot` **-Sv+s**.
     Optionally, append the one of four segmentation methods to define the group:
-    - **a**\ : Ignore all segment headers, i.e., let all points belong to a single group,
+    - **a** : Ignore all segment headers, i.e., let all points belong to a single group,
     and set group reference point to the very first point of the first file.
-    - **t**\ : Consider all data in each table to be a single separate group and
-    reset the group reference point to the first point of each group.
-    - **s**\ : Segment headers are honored so each segment is a group; the group
+    - **t** : Consider all data in each table to be a single separate group and reset the group reference point to the first point of each group.
+    - **s** : Segment headers are honored so each segment is a group; the group
     reference point is reset to the first point of each incoming segment [Default].
-    - **r**\ : Same as **s**, but the group reference point is reset after
-    each record to the previous point (this method is only available with the **-Fp** scheme).
+    - **r** : Same as **s**, but the group reference point is reset after each record to the previous point (this method is only available with the **Fp** scheme).
 
-    Instead of the codes **a**\|\ **f**\|\ **s**\|\ **r** you may append
-    the coordinates of a *refpoint* which will serve as a fixed external
-    reference point for all groups.
+    Instead of the codes **a|f|s|r** you may append the coordinates of a *refpoint* which will serve
+    as a fixed external reference point for all groups.
 
 - **I** or **invert** or **reverse** : -- *invert=true* **|** *invert=:tsr*\
     Invert the order of items, i.e., output the items in reverse order,
@@ -101,10 +98,10 @@ Optional Arguments
     Only output a listing of all segment header records and no data
     records (requires ASCII data).
 
-- **N** or **sort** : -- *sort=*col*\ [**+a|d**]*\
+- **N** or **sort** : -- *sort=*col* [**+a|d**]*\
     Numerically sort each segment based on values in column *col*.
     The data records will be sorted such that the chosen column will
-    fall into ascending order [**+a**\ , which is Default]. Append **+d**
+    fall into ascending order [**+a**, which is Default]. Append **+d**
     to sort into descending order instead. The **sort** option can be
     combined with any other ordering scheme except **conn_method** (segmentation)
     and is applied at the end.
@@ -112,11 +109,11 @@ Optional Arguments
 - **Q** or **select_num** : -- *select_num=[**~**]\ *selection* *\
     Only write segments whose number is included in *selection* and skip
     all others. Cannot be used with |-S|. The *selection* syntax is
-    *range*\ [,\ *range*,...] where each *range* of items is either a single
+    *range*[,*range*,...] where each *range* of items is either a single
     segment *number* or a range with stepped increments given via *start*\ [:*step*:]\ :*stop*
     (*step* is optional and defaults to 1). A leading **~** will
     invert the selection and write all segments but the ones listed.  Instead
-    of a list of ranges, use **+f**\ *file* to supply a file list with one *range* per line.
+    of a list of ranges, use **+f** *file* to supply a file list with one *range* per line.
 
 - **S** or **select_hdr** : -- *select_hdr=[**~**]\ *"search string"*\|\ **+f**\|\ *file*\ [**+e**] \| |-S|\ [**~**]/\ *regexp*/[**i**][**+e**]*\
     Only output those segments whose header record contains the

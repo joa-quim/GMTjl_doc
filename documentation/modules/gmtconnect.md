@@ -67,13 +67,13 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-\textinput{common_opts/opt_aspatial}
+\textinput{common_opts/opt_a}
 
 \textinput{common_opts/opt_bi}
 
 \textinput{common_opts/opt_bo}
 
-\textinput{common_opts/opt_d}
+\textinput{common_opts/opt_di}
 
 \textinput{common_opts/opt_e}
 
