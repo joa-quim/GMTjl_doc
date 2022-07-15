@@ -4,12 +4,11 @@
 plot(cmd0::String="", arg1=[]; kwargs...)
 ```
 
-
 Reads (x,y) pairs and plot lines, polygons, or symbols with different levels of decoration. The input can either be a file name of a file with at least two columns (x,y),but optionally more, a *GMTdatset* object with also two or more columns.
 If a symbol is selected and no symbol size given, then it will interpret the third column of the input data as symbol size.
 Symbols whose *size* is <= 0 are skipped. If no symbols are specified then the symbol code (see **symbol** below) must be present as last column in the input. If **symbol** is not used, a line connecting the data points will be drawn instead. To explicitly close polygons, use **close**. Select a fill with **fill**. If **fill** is set, **pen** will control whether the polygon outline is drawn or not. If a symbol is selected, **fill** and **pen** determines the fill and outline/no outline, respectively.
 
-Since many options imply further data, to control symbol size and/or color for example, columns beyond 2 for **plot** or 3 for **plot3d** cannot be used to plot multiple lines at once (like Matlab does). However, that is stil possible if one uses the form `plot(x, y, ...`) where *x* is the coordinates vector or a matrix with only one column or row and *y* is a matrix with *N* columns representing the individual lines and *M* rows, as many as elements in *x*. This case, off course, looses the possibility of having extra columns with options auxiliary data. Still, another possibility to achieve this when *arg1* is a *MxN* matrix is to use the key/val **multicol=true**. Automatic legends are obtained by using **legend=true**.
+Since many options imply further data, to control symbol size and/or color for example, columns beyond 2 for **plot** or 3 for **plot3d** cannot be used to plot multiple lines at once (like Matlab does). However, that is stil possible if one uses the form `plot(x, y, ...)` where *x* is the coordinates vector or a matrix with only one column or row and *y* is a matrix with *N* columns representing the individual lines and *M* rows, as many as elements in *x*. This case, off course, looses the possibility of having extra columns with options auxiliary data. Still, another possibility to achieve this when *arg1* is a *MxN* matrix is to use the key/val **multicol=true**. Automatic legends are obtained by using **legend=true**.
 
 Selecting both a **symbol** and a **pen** plots a line and add the sybols at the vertex.
 

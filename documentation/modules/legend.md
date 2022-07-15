@@ -19,7 +19,6 @@ Required Arguments
 ------------------
 
 - **D** or **pos** or **position** : -- *pos=(map=(lon,lat), inside=true, outside=true, norm=(x,y), paper=(x,y), justify=code, offset=XX)*\
-
 Defines the reference point on the map for the legend using one of four coordinate systems:
 
 1. Use `map=(lon,lat)` for map coordinates. Requires both **region** and **proj** to be set.

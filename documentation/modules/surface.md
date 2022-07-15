@@ -34,8 +34,6 @@ Required Arguments
 - *table*\
     One or more data tables holding a number of data columns.
 
-\textinput{common_opts/opt_-Ggrid}
-
 \textinput{common_opts/opt_I}
 
 \textinput{common_opts/opt_J}
@@ -68,6 +66,8 @@ Optional Arguments
     `soft breaklines`. Multi-segments files are accepted. If your lines do not have
     *z*-values or you wish to override those with a constant z-value, then append
     **+z**level to the filename. If no value is given then we default to 0.
+
+\textinput{common_opts/opt_-Grid}
 
 - **Ll** or **lower** and **Lu** or **upper** : -- *lower=??* **|** *upper=??*\
     Impose limits on the output solution. **??** in **lower=??** sets the lower bound. It can
