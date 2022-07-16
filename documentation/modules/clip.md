@@ -36,13 +36,7 @@ Required Arguments
 
 \textinput{common_opts/opt_R_3D}
 
-- **A** or **steps** : -- *steps=true* **|** *steps=:meridian|:parallel|:x|:y*\
-   By default, geographic line segments are drawn as great circle arcs. To draw them as
-   straight lines, use the **steps=true**. Alternatively, use **steps=:meridian** to draw the
-   line by first following a meridian, then a parallel. Or append **steps=:parallel** to start
-   following a parallel, then a meridian. (This can be practical to draw a line along parallels,
-   for example). For Cartesian data, points are simply connected, unless you use **steps=:x**
-   or **steps=:y** to draw stair-case curves that whose first move is along *x* or *y*, respectively.
+\textinput{common_opts/opt_Asteps}
 
 \textinput{common_opts/opt_B}
 
