@@ -13,8 +13,8 @@ Description
 *pathfiles* that each define a closed polygon. The nodes defined by the
 specified region and lattice spacing will be set equal to one of three
 possible values depending on whether the node is outside, on the polygon
-perimeter, or inside the polygon, with the assigned  *z* value selected
-via **out_edge_in**. If multiple polygons overlap the same nodes then the polygon
+perimeter, or inside the polygon, with the assigned *z* value selected
+via **out\_edge\_in**. If multiple polygons overlap the same nodes then the polygon
 selected depends on the **clobber** selection. The resulting mask may be used in
 subsequent operations involving `grdmath` to mask out data from
 polygonal areas. 2. The *pathfiles* simply represent data point locations
@@ -47,14 +47,14 @@ Optional Arguments
 
 \textinput{common_opts/opt_-Grid}
 
-- **N** or **out_edge_in** : -- *out_edge_in=values* **||** *out_edge_in="z|Z|p|Pvalues"*\
+- **N** or **out\_edge\_in** : -- *out\_edge\_in=values* **||** *out\_edge\_in="z|Z|p|Pvalues"*\
     Sets the *out/edge/in* that will be assigned to nodes that are *out*side the polygons,
     on the *edge*, or *in*side. Values can be any number, including the textstring NaN
     [Default is 0/0/1]. Optionally, use **Nz** to set polygon insides to the z-value obtained
     from the data (either segment header **Z**zval, **L**header or via **a**Z=*name*);
     use **NZ** to consider the polygon boundary as part of the inside. Alternatively,
     use **Np** to use a running number as polygon ID; optionally append start of the sequence [0].
-    Here, **NP** includes the polygon perimeter as inside. **Note**: **out_edge_in="z|Z|p|P"**
+    Here, **NP** includes the polygon perimeter as inside. **Note**: **out\_edge\_in="z|Z|p|P"**
     cannot be used in conjunction with **seach_radius**; they also all optionally accept /*out* [0].
 
 **-S** or **search_radius** : -- *search_radius=rad* **||** *search_radius=(xlim,ylim)*\
@@ -101,7 +101,7 @@ Optional Arguments
 
 \textinput{common_opts/opt__x}
 
-\textinput{common_opts/opt_distunits}
+\textinput{common_opts/opt__distunits}
 
 \textinput{common_opts/explain_inside}
 
