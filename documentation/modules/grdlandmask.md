@@ -99,13 +99,9 @@ high resolution data set, do
 To make a 1x1 degree global grid with the hierarchical levels of the
 nodes based on the low resolution data:
 
-\begin{examplefig}{}
 ```julia
-using GMT
 G = grdlandmask(region=:global360, res=:low, inc=1, maskvalues=(0,1,2,3,4))
-imshow(G)
 ```
-\end{examplefig}
 
 See Also
 --------
