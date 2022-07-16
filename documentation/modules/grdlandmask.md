@@ -103,6 +103,7 @@ nodes based on the low resolution data:
 ```julia
 using GMT
 G = grdlandmask(region=:global360, res=:low, inc=1, maskvalues=(0,1,2,3,4))
+imshow(G)
 ```
 \end{examplefig}
 
