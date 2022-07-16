@@ -19,7 +19,7 @@
 | grd2cpt |  grd2kml |  grd2xyz |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
 | grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} |  grdinfo |  grdinterpolate |
-| grdlandmask | \myreflink{grdmask} |  grdmath |  grdmix |  grdpaste |  grdproject |
+| \myreflink{grdlandmask} | \myreflink{grdmask} |  grdmath |  grdmix |  grdpaste |  grdproject |
 | \myreflink{grdsample} |  grdselect | \myreflink{grdtrack} |  grdtrend |  grdvector | \myreflink{grdview} |
 | grdvolume | greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |

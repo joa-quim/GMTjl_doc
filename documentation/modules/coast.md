@@ -26,21 +26,22 @@ painted and no land fill is set then the land-areas will be transparent. A map p
 
 \textinput{common_opts/opt_R}
 
-- **-A** or **area** : -- *area=(min\_area[,min\_level,max\_level]), river\_lake=true, lake=true, antarctica\_ground=true, skip60S=true, skipN60S=true, percent=pct)*\
-   Features with an area smaller than *min\_area* in km^2 or of hierarchical level that is lower than *min\_level* or higher than *max\_level* will not be plotted [Default is 0/0/4 (all features)]. Level 2 (lakes) contains regular lakes and wide river bodies which we normally include as lakes; use **river\_lake=true** to just get river-lakes or **lake=true** to just get regular lakes. By default we select the ice shelf boundary as the coastline for Antarctica; use **antarctica\_ground=true** to instead select the ice grounding line as coastline. For expert users who wish to print their own Antarctica coastline and islands via `plot` you can use **skip60S=true** to skip all GSHHG features below 60S or **skipN60S=true** to instead skip all features north of 60S. Finally, append **percent=pct** to exclude polygons whose percentage area of the corresponding full-resolution feature is less than *pct*.
+\textinput{common_opts/explain_Acoast}
 
 \textinput{common_opts/opt_B}
 
-- **C** or **river\_fill** : -- *river\_fill=fill* **|** *river\_fill=(lake=true, river\_lake=true, fill=fill)*\
+- **C** or **river\_fill** : -- *river\_fill=fill* **||** *river\_fill=(lake=true, river\_lake=true, fill=fill)*\
    Set the shade, color, or pattern for lakes and river-lakes [Default is the fill chosen for "wet" areas (*water*)]. Optionally, specify separate fills by using **river\_fill=(lake=true, fill=fill)** for lakes and **river\_fill=(river\_lake=true, fill=fill)** for river-lakes. To repeate the **river\_fill** option use a tuple of tuples.
 
-- **clip** : -- *clip=:land* **|**  *clip=:water|ocean* **|** *clip=:end*\
+- **clip** : -- *clip=:land* **||** *clip=:water|ocean* **||** *clip=:end*\
    **clip=:land** or **clip=:water|ocean** starts a clipping path. **clip=:end** marks end of existing clip path. No projection information is needed. Also supply **X** and **Y** settings if you have moved since the clip started.
 
-- **D** or **res** or **resolution** : -- *res=full* **|** *res=auto*\
-   Selects the resolution of the data set to use *full*, *high*, *intermediate*, *low*, and *crude*. The resolution drops off by 80% between data sets. The default is **res=auto**, which chooses to automatically select the best resolution given the chosen map scale.
+- **D** or **res** or **resolution** : -- *res=:full* **|** *res=:auto*\
+   Selects the resolution of the data set to use *full*, *high*, *intermediate*, *low*, and *crude*.
+   The resolution drops off by 80% between data sets. The default is **res=:auto**, which chooses
+   to automatically select the best resolution given the chosen map scale.
 
-- **E** or **DCW** : -- *DCW=code1,code2,...* **|** *DCW=(country=code, continent=code, pen=pen, fill=fill)*\
+- **E** or **DCW** : -- *DCW=code1,code2,...* **||** *DCW=(country=code, continent=code, pen=pen, fill=fill)*\
    Select painting country polygons from the Digital Chart of the World. This is another dataset independent of GSHHG and hence the **area** and **resolution** options do not apply. **DCW="+l"** just list the countries and their codes [plotting takes place] and **DCW="+L"** shows states/territories for Argentina, Australia, Brazil, Canada, and the US. *country* or **name=code(s)**, where **code(s)** is a one or more comma-separated countries using the 2-character ISO 3166-1 alpha-2 convention. To select a state of a country (if available), append .state, e.g, US.TX for Texas. To specify a whole continent, use **continent=code**, with continent codes AF (Africa),AN (Antarctica), AS (Asia), EU (Europe), OC (Oceania), NA (North America), or SA (South America). Use **pen=pen** (see \myreflink{Pen attributes}) to draw polygon outlines and **fill=fill** (see \myreflink{Fill color/pattern}) to fill them [default is no fill]. At least one of these must be specified unless **dump** is in effect, in which case only one **DCW** option can be given. It is also possible to specify the parameters using simple Tuples. For example: **DCW=("PT", (0.5,"red","--"), "blue")** plots the polygon *PT* with a 0.5p red dashed line and filled with blue and **DCW=:PT** uses a default pen of 0.5. **DCW=(:PT, :blue)** fills with blue. You may repeat **DCW** to give different groups of items their own *pen/fill* settings. However, since we cannot repeat a keyword, the solution to setting different groupes is to use a tuple of tuples. An example would be *DCW=((country=:PT, pen=(2,:red), fill=:blue), (country=:ES, pen=(2,:blue)) )*. If neither **proj** nor **dump** are set then we just print the **region**.
 
 \textinput{common_opts/opt_box}

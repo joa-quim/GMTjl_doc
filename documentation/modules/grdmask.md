@@ -112,7 +112,7 @@ A grid produced by grdmask is a *categorical* dataset. As such, one has to be ca
 to interpolate it with standard methods, such as splines. However, if you make a map of
 this grid using a map projection the grid will be reprojected to yield a rectangular matrix
 in the projected coordinates. This interpolation is done using splines by default and thus may
-yield artifacts in your map. We recommend you use \myreflink{grdimage} **nn** to instead use
+yield artifacts in your map. We recommend you use \myreflink{grdimage} **interp=:n** to instead use
 a nearest neighbor interpolation for such cases.
 
 Save storage space
