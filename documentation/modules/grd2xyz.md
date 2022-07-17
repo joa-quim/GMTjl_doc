@@ -9,19 +9,19 @@ Convert grid to data table
 Description
 -----------
 
-Reads a grid (from file or a \myreflink{GMTgrid} object) and writes out
-xyz-triplets in ASCII [or binary] format to standard output. Modify the
+Reads a grid (from file or a \myreflink{Grid type} object) and writes out
+xyz-triplets in ASCII [or binary] format to file or return them as a Julia variable. Modify the
 precision of the ASCII output format by editing the
 `FORMAT_FLOAT_OUT` parameter in your `gmt.conf` file or use
-**--FORMAT_FLOAT_OUT**\ =\ *format* on the command line, or choose binary
+**par=(FORMAT_FLOAT_OUT=format,)** or choose binary
 output using single or double precision storage. As an option you may
-output z-values without the (x,y) coordinates (see |-Z| below) or you can
+output z-values without the (x,y) coordinates (see **onecol** below) or you can
 save the grid in the STL format for 3-D printers.
 
 Required Arguments
 ------------------
 
-*ingrid* : -- A grid file name or a \myreflink{GMTgrid}
+*ingrid* : -- A grid file name or a \myreflink{Grid type}
 
 Optional Arguments
 ------------------
@@ -55,7 +55,7 @@ Optional Arguments
     Write out *x,y,z,w*, where *w* is the supplied *weight* (or 1 if not supplied) [Default writes
     *x,y,z* only]. Choose **weight=:a** to compute weights equal to the area each node represents.
     For Cartesian grids this is simply the product of the *x* and *y* increments (except for
-    gridline-registered grids at all sides [half] and corners [quarter]).  For geographic grids we
+    gridline-registered grids at all sides [half] and corners [quarter]). For geographic grids we
     default to a length unit of **k** (hence area is in km^2). Change this by appending **+u**unit
     (see \myreflink{Units}). For such grids, the area varies with latitude and also sees special cases
     for gridline-registered layouts at sides, corners, and poles.
@@ -138,7 +138,7 @@ with **hvline=:c0** and **hvline=:x<xmin>** (for the correct minimum x-value) yi
 Examples
 --------
 
-To edit individual values in the 2' by 2' remote AFR.nc file, dump the .nc to \myreflink{GMTdataset}.
+To edit individual values in the 2' by 2' remote AFR.nc file, dump the .nc to \myreflink{Dataset type}.
 That is, return data in a Julia variable, do
 
 ```julia
