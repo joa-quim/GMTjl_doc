@@ -9,13 +9,11 @@ Create a "wet-dry" mask grid from shoreline data base
 Description
 -----------
 
-**grdlandmask** reads the selected shoreline database and uses that
-information to decide which nodes in the specified grid are over land or
-over water. The nodes defined by the selected region and lattice spacing
-will be set according to one of two criteria: (1) land vs water, or
-(2) the more detailed (hierarchical) ocean vs land vs lake
-vs island vs pond. The resulting mask may be used in subsequent
-operations involving `grdmath` to mask out data from land [or water] areas.
+Reads the selected shoreline database and uses that information to decide which nodes in
+the specified grid are over land or over water. The nodes defined by the selected region
+and lattice spacing will be set according to one of two criteria: (1) land vs water, or (2)
+the more detailed (hierarchical) ocean vs land vs lake vs island vs pond. The resulting mask
+may be used in subsequent operations involving `grdmath` to mask out data from land [or water] areas.
 
 Required Arguments
 ------------------

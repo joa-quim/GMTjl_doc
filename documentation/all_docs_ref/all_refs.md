@@ -16,7 +16,7 @@
 | \myreflink{fitcircle} | gmt2kml | \myreflink{gmtbinstats} | \myreflink{gmtconnect} | \myreflink{gmtconvert} | gmtdefaults |
 | gmtget |  gmtinfo |  gmtlogo | gmtmath | gmtregress | gmtselect |
 | \myreflink{gmtset} | \myreflink{gmtsimplify} |  gmtspatial | gmtsplit |  gmtvector |  gmtwhich |
-| \myreflink{grd2cpt} |  grd2kml |  grd2xyz |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
+| \myreflink{grd2cpt} |  grd2kml | \myreflink{grd2xyz} |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
 | grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} |  grdinfo |  grdinterpolate |
 | \myreflink{grdlandmask} | \myreflink{grdmask} |  grdmath |  grdmix |  grdpaste |  grdproject |

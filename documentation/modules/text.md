@@ -27,14 +27,14 @@ Required Arguments
 ------------------
 
 - **textfile**\
-    This is one file containing 1 or more records with (*x*, *y*\ [, *font*, *angle*, *justify*], *text*).
+    This is one file containing 1 or more records with (*x*, *y*[, *font*, *angle*, *justify*], *text*).
     The attributes in brackets can alternatively be set directly via **attrib**. If no files are given,
-    **text** will read standard input. *font* is a font specification with format [*size*,][\ *font*,][*color*\ ]
+    **text** will read standard input. *font* is a font specification with format [*size*,][*font*,][*color*]
     where *size* is text size in points, *font* is the font to use, and *color* sets the font color. To draw
-    outline fonts you append =\ *pen* to the font specification. The *angle* is measured in degrees counter-clockwise
+    outline fonts you append =*pen* to the font specification. The *angle* is measured in degrees counter-clockwise
     from horizontal, and *justify* sets the alignment. If *font* is not an integer, then it is taken to be a text
     string with the desired font name (see **list** for available fonts). The alignment refers to the part of the
-    text string that will be mapped onto the (*x*,\ *y*) point. Choose a 2 character combination of L, C, R
+    text string that will be mapped onto the (*x,y*) point. Choose a 2 character combination of L, C, R
     (for left, center, or right) and T, M, B for top, middle, or bottom. e.g., BL for lower left.
 
 - **textrecord**\
@@ -43,7 +43,8 @@ Required Arguments
 
 - **([text], x=?, y=?)**\
     As a third alternative provide the input data in a form of a string vector and `x` and `y` vector coordinates,
-    or just a `x=mat` where `mat` is *MxN* matix.
+    or just a `x=mat` where `mat` is *MxN* matix. In the particular case where the *text* is a single string one
+    may use the **(text="txt", x=?, y=?)** form.
 
 Optional Arguments
 ------------------
@@ -145,6 +146,25 @@ Optional Arguments
 
 \textinput{common_opts/opt_save_fig}
 
+\textinput{common_opts/opt_a}
+
+\textinput{common_opts/opt_e}
+
+\textinput{common_opts/opt_f}
+
+\textinput{common_opts/opt_h}
+
+\textinput{common_opts/opt__i}
+
+\textinput{common_opts/opt_p}
+
+\textinput{common_opts/opt_q}
+
+\textinput{common_opts/explain_transparency}
+
+\textinput{common_opts/opt__w}
+
+\textinput{common_opts/opt_xy}
 
 Limitations
 -----------
