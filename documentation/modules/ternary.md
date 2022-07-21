@@ -28,7 +28,7 @@ Parameters
     Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)**
     to build a linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented
     by one for each color. In this case *color_n* can be a [r g b] triplet, a color name, or an HTML
-    hexadecimal color (e.g. #aabbcc ). If **symbol** is set, let symbol fill color be determined by
+    hexadecimal color (e.g. #aabbcc). If **symbol** is set, let symbol fill color be determined by
     the z-value in the fourth column. Additional fields are shifted over by one column (optional size
     would be 5th rather than 4th field, etc.).
 
@@ -64,7 +64,7 @@ Other than the above options, the `kwargs` input accepts still the following opt
 
 - **image** : -- *image=true*\
     Fills the ternary plot with an image computed automatically with \myreflink{grdimage} from a grid
-    interpolated with `surface`
+    interpolated with \myreflink{surface}
 
 - **contour** : -- *contour=??*\
     This option works in two different ways. If used together with `image` it overlays a contour

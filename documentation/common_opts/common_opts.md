@@ -4,7 +4,7 @@
 
 Set map Axes parameters. They are specified by a keyword and a named tuple (but see [1])
 
-    frame=(axes=..., corners=..., xlabel=..., ylabel=..., annot=..., etc)
+    frame=(axes=..., corners=..., xlabel=..., ylabel=..., annot=..., flipx=..., etc)
 
 or separated on a per axes basis by using specific **xaxis**, **yaxis** and **zaxis** that share the same syntax
 as the generic **frame** option. The **xaxis2** and **yaxis2** apply when dealing with secondary axes.
@@ -39,6 +39,9 @@ Optionally append *pole="plon/plat"* (or *pole=(plon,plat)* to draw oblique grid
 specified pole [regular gridlines]. Ignored if gridlines are not requested (below) and disallowed for the oblique
 Mercator projection.
 
+*xx* and *yy* axes grow from left to right and bottomto top (*zz* axis too). This the default but that can be
+changed with the keywords **flipx=true**, **flipy=** and **flipz=**. Alternative names are **xflip, yflip, zflip**. 
+
 For Cartesian plots the *slanted=angle* allows for the optional angle to plot slanted annotations; the angle
 is with respect to the horizontal and must be in the -90 <= *angle* <= 90 range only. This applies to the x-axis
 only, with the exception of the *slanted=:parallel* form that plots the y annotations parallel to y-axis.
@@ -49,11 +52,16 @@ the above defaults.
 GMT uses the notion of *primary* (the default) and *secondary* axes. To set an axes as secondary, use
 *secondary=true* (mostly used for time axes annotations).
 
-The **xaxis** **yaxis** and **zaxis** specify which axis you are providing information for. The syntax is the same
-as for the *axes* keyword but allows fine tuning of different options for the 4 (or 5) axes.
+The **xaxis**, **yaxis** and **zaxis** specify which axis you are providing information for. The syntax is the same
+as for the *axes* keyword but allows fine tuning of different options for the 4 (or 5) axes. In this case to flip
+the positive direction of one particular axis we use **flip=true**. Don't need to explicitly say which axis
+because the function where it's used already knows that.
 
-To add a label, to an axis use *label="Label text"* if using the **xaxis** etc form, or use the **xlabel**, **ylabel**
-and **zlabel** keywords in the common **axes** tuple of options.
+To add a label to an axis use *label="Label text"* if using the **xaxis** etc form, or use the **xlabel**, **ylabel**
+and **zlabel** keywords in the common **frame** tuple of options.
+
+Still a third alternative to change the axis dirs is the option **flipaxes=:x|:y|:z|:xy** but note that so
+far this option is to be used mainly when creating \myreflink{subplot}'s
 
 Use *Yhlabel=true* to force a horizontal label for *y*-axes (useful for very short labels).
 
@@ -103,19 +111,18 @@ For custom annotations and intervals, let *intervals* be given as *custom="intfi
 letters from **a** or **i**, **f**, and **g**. For **a** or **i** you must supply a *label* that will
 be plotted at the *coord* location.
 
-A simpler way of controling the ticks and annotations with custom settings is to use the *xticks* option
-(same for *yticks* and *zticks*). Here, one give a tuple with annotations interval and labels. E.g.
-*xticks=(1:5, ["a", "b", "c", "d"]) where first element is an AbstractArray and second an array or tuple of
+A simpler way of controling the ticks and annotations with custom settings is to use the **xticks** option
+(same for **yticks** and **zticks**). Here, one give a tuple with annotations interval and labels. E.g.
+**xticks=(1:5, ["a", "b", "c", "d"])** where first element is an AbstractArray and second an array or tuple of
 strings or symbols. The more elaborate effect described above for the *custom* options is achieved here by
 escaping the **a** or **i**, **f**, and **g** codes with a forward slash in a text string. Example:
-xticks=(1:5, ["a", "f", "/ag e", "f", "/ag @~p@~"]). Here "/ag e" means annotate the third value with *e*
+**xticks=(1:5, ["a", "f", "/ag e", "f", "/ag @~p@~"])**. Here "/ag e" means annotate the third value with *e*
 and add a grid line. These *x|y|zticks* options work only for the primary axes. To change the secondary use
-the *customtics* form. *E.g.* *xaxis2=(customticks(...),)*. Note that the *ticks* keyword is already taken
+the *customtics* form. *E.g.* **xaxis2=(customticks(...),)**. Note that the *ticks* keyword is already taken
 to control the ticks interval hence the need to use a different one (*customticks*).
 
-For non-geographical projections: Give negative scale (in *proj="x scale"* or axis length
-(in *proj="X map width"* to change the direction of increasing coordinates (i.e., to make the y-axis
-positive down).
+For non-geographical projections: Give negative scale or figure sizes to change the direction of increasing
+coordinates. For example **figsize(-10,-8)** will revert the sense of *xx* and *yy* axes.
 
 For log10 axes: Annotations can be specified in one of three ways: 
 

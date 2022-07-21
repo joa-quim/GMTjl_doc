@@ -9,7 +9,7 @@ Convert grid to data table
 Description
 -----------
 
-Reads a grid (from file or a \myreflink{Grid type} object) and writes out
+Reads a grid (from file or a Grid type object) and writes out
 xyz-triplets in ASCII [or binary] format to file or return them as a Julia variable. Modify the
 precision of the ASCII output format by editing the
 `FORMAT_FLOAT_OUT` parameter in your `gmt.conf` file or use

@@ -43,7 +43,7 @@ line will be used.
 Required Arguments
 ------------------
 
-*ingrid* : -- A grid file name or a \myreflink{GMTgrid}
+*ingrid* : -- A grid file name or a \myreflink{Grid type}
 
 Optional Arguments
 ------------------
@@ -104,7 +104,7 @@ Optional Arguments
     When combined with **bg**, only `COLOR_NAN` is considered.
 
 - **N** or **no_bg** or **nobg** : -- *no_bg=true*\
-    Do not write out the background, foreground, and NaN-color fields [Default will write them].
+    Make all the background, foreground, and NaN-color fields be white (since we can't remove them like in plain GMT).
 
 - **Q** or **log** : -- *log=true* **||** *log=:i|:o*\
     Selects a logarithmic interpolation scheme [Default is linear].  **log=:i** expects input

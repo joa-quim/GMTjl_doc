@@ -26,6 +26,6 @@ n = 200;
 x, y, color = randn(n)/2, randn(n), randn(n);
 histogram(x, limits=(-4,4,0,40), binmethod="sqrt", panel=(1,1));
 scatter(x,y, limits=(-4,4,-4,4), marker=:circ, ms="10p", zcolor=color, panel=(2,1));
-histogram(x, limits=(-4,4,0,40), horizontal=true, binmethod="sqrt", panel=(2,2), show=true);
+histogram(y, limits=(-4,4,0,40), horizontal=true, binmethod="sqrt", panel=(2,2), show=true);
 ```
 \end{examplefig}
