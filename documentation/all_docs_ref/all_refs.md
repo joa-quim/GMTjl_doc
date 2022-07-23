@@ -23,7 +23,7 @@
 | \myreflink{grdsample} |  grdselect | \myreflink{grdtrack} |  grdtrend |  grdvector | \myreflink{grdview} |
 | grdvolume | greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
-| plot3d | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
+| \myreflink{plot3d} | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
 | spectrum1d | sph2grd | sphdistance | \myreflink{sphinterpolate} | \myreflink{sphtriangulate} | \myreflink{subplot} |
 | \myreflink{surface} | \myreflink{ternary} | \myreflink{text} | trend1d | trend2d | \myreflink{triangulate} |
 | \myreflink{wiggle} | xyz2grd |  |  |  |  |

@@ -32,8 +32,8 @@ Optional Arguments
 
 - **C** or *color* or *cmap* : -- *color=cpt*\
    Where *cpt* is a *GMTcpt* type or a cpt file name. Alternatively, supply the name of a GMT color master
-   dynamic CPT [jet] to automatically determine a continuous CPT from the grid's z-range; you may round
-   up/down the z-range by adding **+i** *zinc*. Yet another option is to specify ``color="color1,color2[,color3 ,...]"`` or ``color=((r1,g1,b1),(r2,g2,b2),...)`` to build a linear continuous CPT from those colors automatically (see \myreflink{Setting color}). When not explicitly set, but a color map is needed, we will either use the current color map, if available (set by a previous call to *makecpt*), or the default *jet* color map. Must be present if you want (1) mesh plot with contours (``surftype=(mesh=true,)``), or (2) shaded/colored perspective image (``surftype=(surface=true,)`` or ``surftype=(img=true,)``). For ``surftype=(surface=true,)`` you can specify that you want to skip a z-slice by setting the red r/g/b component to **-**.
+   dynamic CPT [turbo] to automatically determine a continuous CPT from the grid's z-range; you may round
+   up/down the z-range by adding **+i** *zinc*. Yet another option is to specify ``color="color1,color2[,color3 ,...]"`` or ``color=((r1,g1,b1),(r2,g2,b2),...)`` to build a linear continuous CPT from those colors automatically (see \myreflink{Setting color}). When not explicitly set, but a color map is needed, we will either use the current color map, if available (set by a previous call to *makecpt*), or the default *turbo* color map. Must be present if you want (1) mesh plot with contours (``surftype=(mesh=true,)``), or (2) shaded/colored perspective image (``surftype=(surface=true,)`` or ``surftype=(img=true,)``). For ``surftype=(surface=true,)`` you can specify that you want to skip a z-slice by setting the red r/g/b component to **-**.
 
 - **G** or *drape* : -- *drape=grid* **|** *drape=(grid\_r, grid\_g, grid\_b)* **|** *drape=image*\
    Drape the image in _drapegrid_ on top of the relief provided by _reliefgrid_. [Default determines colors from
