@@ -30,12 +30,12 @@ Optional Arguments
 
 \textinput{common_opts/opt_B}
 
-- **C** or *color* or *cmap* : -- *color=cpt*\
+- **C** or **color** or **cmap** : -- *color=cpt*\
    Where *cpt* is a *GMTcpt* type or a cpt file name. Alternatively, supply the name of a GMT color master
    dynamic CPT [turbo] to automatically determine a continuous CPT from the grid's z-range; you may round
    up/down the z-range by adding **+i** *zinc*. Yet another option is to specify ``color="color1,color2[,color3 ,...]"`` or ``color=((r1,g1,b1),(r2,g2,b2),...)`` to build a linear continuous CPT from those colors automatically (see \myreflink{Setting color}). When not explicitly set, but a color map is needed, we will either use the current color map, if available (set by a previous call to *makecpt*), or the default *turbo* color map. Must be present if you want (1) mesh plot with contours (``surftype=(mesh=true,)``), or (2) shaded/colored perspective image (``surftype=(surface=true,)`` or ``surftype=(img=true,)``). For ``surftype=(surface=true,)`` you can specify that you want to skip a z-slice by setting the red r/g/b component to **-**.
 
-- **G** or *drape* : -- *drape=grid* **|** *drape=(grid\_r, grid\_g, grid\_b)* **|** *drape=image*\
+- **G** or **drape** : -- *drape=grid* **|** *drape=(grid\_r, grid\_g, grid\_b)* **|** *drape=image*\
    Drape the image in _drapegrid_ on top of the relief provided by _reliefgrid_. [Default determines colors from
    reliefgrid]. Note that **zsize** and **plane** always refers to the reliefgrid. The _drapegrid_ only provides
    the information pertaining to colors, which (if `drape` is a grid) will be looked-up via the CPT (see
@@ -52,19 +52,19 @@ Optional Arguments
    information about this fact we may need to use this option to help the program finding the common BoundingBox.
    Used only together with **drape**
 
-- **I** or *shade* or *intensity* : -- *shade=grid* **|** *shade=azim* **|** *shade=(azimuth=az, norm=params, auto=true)*\
+- **I** or **shade** or **intensity** : -- *shade=grid* **|** *shade=azim* **|** *shade=(azimuth=az, norm=params, auto=true)*\
    Gives the name of a grid with intensities in the (-1,+1) range, or a constant intensity to apply everywhere
    (affects the ambient light). Alternatively, derive an intensity grid from the input data grid *grd\_z* via a
    call to `grdgradient`; use ``shade=(azimuth=az,)`` or ``shade=(azimuth=az, norm=params)`` to specify azimuth
    and intensity arguments for that module or just give ``shade=(auto=true,)`` to select the default arguments
    (``azim=-45,norm=:t1``). If you want a more specific intensity scenario then run grdgradient separately first.
 
-- **N** or *plane* : -- *plane=lev* **|** *plane=(lev, fill)*\
+- **N** or **plane** : -- *plane=lev* **|** *plane=(lev, fill)*\
     Draws a plane at this z-level. If the optional color is provided via ``plane=(lev, fill)``, and the
     projection is not oblique, the frontal facade between the plane and the data perimeter is colored.
     See -Wf for setting the pen used for the outline.
 
-- **Q** or *surf* or *surftype* : -- *surftype=(mesh=true, waterfall=(:rows | :cols [,fill]), surface=true, image=true, nan\_alpha=true, monochrome=true)*\
+- **Q** or **surf** or **surftype** : -- *surftype=(mesh=true, waterfall=(:rows | :cols [,fill]), surface=true, image=true, nan\_alpha=true, monochrome=true)*\
     Select one of following settings. For any of these choices, you may force a monochrome image by setting
     ``monochrome=true``. Colors are then converted to shades of gray using the (monochrome television) YIQ
     transformation. Note: pay attention to always use a tuple, even when only one option is used. This is
@@ -82,10 +82,10 @@ Optional Arguments
 
 \textinput{common_opts/opt_R_3D}
 
-- **S** or *smooth* : -- *smooth=smoothfactor*\
+- **S** or **smooth** : -- *smooth=smoothfactor*\
    Used to resample the contour lines at roughly every (*gridbox\_size/smoothfactor*) interval.
 
-- **T** or *no\_interp* : -- *no\_interp=(skip=true, outlines=true)*\
+- **T** or **no\_interp** : -- *no\_interp=(skip=true, outlines=true)*\
    Plot image without any interpolation. This involves converting each node-centered bin into a polygon
    which is then painted separately. Use ``skip=true`` to skip nodes with z = NaN. This option is useful
    for categorical data where interpolating between values is meaningless. Optionally, add ``outlines=true``
