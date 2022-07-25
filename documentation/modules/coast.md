@@ -131,3 +131,5 @@ coast(proj=:Mercator, DCW=((country="GB,IT,FR", fill=:blue, pen=(0.25,:red)),
                            (country="ES,PT,GR", fill=:yellow)), show=true)
 ```
 \end{examplefig}
+
+\textinput{common_opts/explain_gshhg}

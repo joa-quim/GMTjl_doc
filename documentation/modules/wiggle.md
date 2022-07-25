@@ -48,8 +48,7 @@ Optional Arguments
 
 - **D** or **scale_bar** : -- *pos=(map=(lon,lat), inside=true, outside=true, norm=(x,y), paper=(x,y), justify=code, offset=XX, anchor=XX, label="the-label", label_left=true)*\
     Defines the reference point on the map for the vertical scale bar using one of four coordinate systems:
-
-\textinput{common_opts/explain_refpoint}
+    (1) Use **map=true** for map (user) coordinates, (2) use **inside=true** or **outside=true** (the default) for setting **anchor** via a 2-char justification code that refers to the (invisible) map domain rectangle, (3) use **norm=true** for normalized (0-1) coordinates, or (4) use **paper=true** for plot coordinates (inches, cm, etc.). All but **paper=true** requires both **region** and **proj** to be specified.
 
     Use `width=(width,height)` to set the *length* (and *height*) of the scale bar in data (*z*) units.
     By default, the anchor point on the legend is assumed to be the bottom left corner (:ML), but this

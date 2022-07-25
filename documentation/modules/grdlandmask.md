@@ -101,6 +101,8 @@ nodes based on the low resolution data:
 G = grdlandmask(region=:global360, res=:low, inc=1, maskvalues=(0,1,2,3,4))
 ```
 
+\textinput{common_opts/explain_gshhg}
+
 See Also
 --------
 
