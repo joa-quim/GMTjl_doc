@@ -19,9 +19,9 @@
 | \myreflink{grd2cpt} |  grd2kml | \myreflink{grd2xyz} |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
 | grdconvert |  grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} | \myreflink{grdinfo} | grdinterpolate |
-| \myreflink{grdlandmask} | \myreflink{grdmask} |  grdmath |  grdmix |  grdpaste |  grdproject |
+| \myreflink{grdlandmask} | \myreflink{grdmask} | grdmath | grdmix |  grdpaste |  grdproject |
 | \myreflink{grdsample} | grdselect | \myreflink{grdtrack} |  grdtrend |  grdvector | \myreflink{grdview} |
-| grdvolume | greenspline | \myreflink{histogram} |  image |  kml2gmt | \myreflink{legend} |
+| grdvolume | greenspline | \myreflink{histogram} | \myreflink{image} |  kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
 | \myreflink{plot3d} | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
 | spectrum1d | sph2grd | sphdistance | \myreflink{sphinterpolate} | \myreflink{sphtriangulate} | \myreflink{subplot} |
