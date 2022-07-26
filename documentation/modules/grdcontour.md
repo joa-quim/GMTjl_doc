@@ -25,26 +25,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_B}
 
-- **C** or **cont** or **contours** or **levels** : -- *cont=cont\_int*\
-  The contours to be drawn may be specified in one of three possible ways:
-
-   1. If ``cont\_int`` has the suffix ".cpt" and can be opened as a file, it is assumed to be a CPT.
-      The color boundaries are then used as contour levels. If the CPT has annotation flags in the
-      last column then those contours will be annotated. By default all contours are labeled;
-      use *annot=(disable=true,))* (or *annot=:none*) to disable all annotations.
-
-   2. If ``cont\_int`` is a file but not a CPT, it is expected to contain contour levels in column 1 and a
-      C(ontour) OR A(nnotate) in col 2. The levels marked C (or c) are contoured, the levels marked A
-      (or a) are contoured and annotated. Optionally, a third column maybe present and contain the
-      fixed annotation angle for this contour level.
-
-   3. If ``cont\_int`` is a constant or an array it means plot those contour intervals. This works also to draw
-      single contours. *E.g.* **contour=[0]** will draw only the zero contour. The **annot** option offers the same
-      possibility so they may be used together to plot a single annotated contour and another single non-annotated contour,
-      as in **anot=[10], cont=[5]** that plots an annotated 10 contour and an non-annotated 5 contour. If **annot** is set
-      and **cont** is not, then the contour interval is set equal to the specified annotation interval.
-
-  If a file is given and **ticks** is set, then only contours marked with upper case C or A will have tick-marks. In all cases the contour values have the same units as the grid. Finally, if neither **cont** nor **annot** are set then we auto-compute suitable contour and annotation intervals from the data range, yielding 10-20 contours.
+\textinput{common_opts/explain_Ccontours}
 
 - **D** or **dump** : -- *dump=fname*\
   Dump contours as data line segments; no plotting takes place. Append filename template which may contain
@@ -96,7 +77,9 @@ Optional Arguments
   set *labels=""*) is set, we use - and + as the labels. Appending exactly two characters, *e.g.*, *labels=:LH*,
   will plot the two characters (here, *L* and *H*) as labels. For more elaborate labels, separate the low and hight
   label strings with a comma (*e.g.*, *labels="lo,hi"*). If a file is given by **cont**, and **ticks** is set,
-  then only contours marked with upper case C or A will have tick marks [and annotations]. 
+  then only contours marked with upper case C or A will have tick marks [and annotations]. Note: The labeling
+  of local highs and lows may plot sometimes outside the innermost contour since only the mean value of the 
+  ontour coordinates is used to position the label. 
 
 - **W** or **pen** : -- *pen=(annot=true, contour=true, pen=pen, colored=true, cline=true, ctext=true)*\
   ``annot=true`` if present, means to annotate contours or ``contour=true`` for regular contours [Default].

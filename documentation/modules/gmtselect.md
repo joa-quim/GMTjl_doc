@@ -16,9 +16,9 @@ selected based on whether or not they are 1) inside a rectangular region (**regi
 *dist* km of any point in *pointfile*, 3) within *dist* km of any line in *linefile*, 4) inside one of the
 polygons in the *polygonfile*, 5) inside geographical features (based on coastlines), 6) has z-values
 within a given range, or 7) inside bins of a grid mask whose nodes are non-zero. The sense of the tests can
-be reversed for each of these 7 criteria by using the |-I| option. See option **-:** on how to read
+be reversed for each of these 7 criteria by using the **reverse** option. See option **yx** on how to read
 (y,x) or (latitude,longitude) files (this option affects all module input data).  **Note**: If no projection
-information is used then you must supply **-fg** to tell **select** that your data are geographical.
+information is used then you must supply **colinfo=:g** to tell **select** that your data are geographical.
 
 Required Arguments
 ------------------
@@ -90,12 +90,10 @@ Optional Arguments
 - **N** or **mask** : -- *mask=maskvalues*\
     Pass all records whose location is inside specified geographical features. Specify if records
     should be skipped (s) or kept (k) using 1 of 2 formats:
+     - **mask=(wet,dry)**
+     - **mask=(ocean,land,lake,island,pond)**
 
-    - **mask=(wet,dry)**.
-
-    - **mask=(ocean,land,lake,island,pond)**.
-
-    [Default is (:s,:k,:s,:k,:s) (i.e., (:s,:k), which passes all points on dry land].
+    Default is (:s,:k,:s,:k,:s) (i.e., (:s,:k)), which passes all points on dry land.
 
 \textinput{common_opts/opt_R}
 
@@ -134,7 +132,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_s}
 
-\textinput{common_opts/opt_w}
+\textinput{common_opts/opt__w}
 
 \textinput{common_opts/opt_xy}
 
@@ -143,7 +141,7 @@ Optional Arguments
 Note On Processing ASCII Input Records
 --------------------------------------
 
-Unless you are using the **xy** option, selected ASCII input records are copied verbatim to output.
+Unless you are using the **yx** option, selected ASCII input records are copied verbatim to output.
 That means that options like **colinfo=:oT** and settings like `FORMAT_FLOAT_OUT` and `FORMAT_GEO_OUT`
 will not have any effect on the output. On the other hand, it allows selecting records with diverse
 content, including character strings, quoted or not, comments, and other non-numerical content.
@@ -176,9 +174,13 @@ Examples
 To only return the data points from the remote file @ship_15.txt that lie
 within the region between longitudes 246 and 247 and latitudes 20 and 21, try:
 
+\begin{examplefig}{}
 ```julia
-    D = gmtselect("@ship_15.txt", region=(246,247,20,21))
+using GMT
+D = gmtselect("@ship_15.txt", region=(246,247,20,21));
+plot(D, marker=:point, show=true)
 ```
+\end{examplefig}
 
 To return all the points *except* those inside that square, use:
  
@@ -222,7 +224,6 @@ where the values are nonzero, try
 ```julia
     D = gmtselect("quakes.txt", gridmask="topo.nc")
 ```
-
 
 \textinput{common_opts/explain_gshhg}
 

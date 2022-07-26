@@ -9,7 +9,7 @@ Plot z = f(x,y) anomalies along tracks
 Description
 -----------
 
-Reads (*x, y,z*) triplets from files from file or table and plots z as a function of distance along track. This means
+Reads (*x, y,z*) triplets from file or table and plots z as a function of distance along track. This means
 that two consecutive (*x, y*) points define the local distance axis,
 and the local *z* axis is then perpendicular to the distance axis,
 forming a right-handed coordinate system. The
@@ -112,8 +112,6 @@ Optional Arguments
 \textinput{common_opts/opt_xy}
 
 \textinput{common_opts/opt_save_fig}
-
-.. module_common_ends
 
 Examples
 --------
