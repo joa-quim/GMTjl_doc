@@ -17,7 +17,7 @@
 | gmtget |  gmtinfo |  gmtlogo | gmtmath | gmtregress | \myreflink{gmtselect} |
 | \myreflink{gmtset} | \myreflink{gmtsimplify} |  gmtspatial | \myreflink{gmtsplit} |  gmtvector |  gmtwhich |
 | \myreflink{grd2cpt} |  grd2kml | \myreflink{grd2xyz} |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
-| grdconvert | grdcut |  grdedit |  grdfft |  grdfill |  grdfilter |
+| grdconvert | grdcut |  grdedit |  grdfft | \myreflink{grdfill} |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} | \myreflink{grdinfo} | grdinterpolate |
 | \myreflink{grdlandmask} | \myreflink{grdmask} | grdmath | grdmix |  grdpaste |  grdproject |
 | \myreflink{grdsample} | grdselect | \myreflink{grdtrack} |  grdtrend |  grdvector | \myreflink{grdview} |
