@@ -30,7 +30,7 @@ Required Arguments
 
 \textinput{common_opts/opt_R_3D}
 
-- **Z** or **scale** : -- *scale=??*\
+- **Z** or **ampscale** or **amp_scale** : -- *ampscale=??*\
     Gives anomaly scale in data-units/distance-unit. Append **c**, **i**, or **p** to indicate
     the distance unit (cm, inch, or point); if no unit is given we use the default unit that
     is controlled by `PROJ_LENGTH_UNIT`.
