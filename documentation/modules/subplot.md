@@ -21,13 +21,12 @@ Required Arguments
     **Note1**: Use NO spaces with the first form. *i.e.* **grid="2x2"** and **NOT** *grid=" 2 x 2"*\
     **Note2**: You are not required to place a plot in each subplot.
 
-
-- **F** or **dims** or **dimensions** or **size** or **sizes** : -- *dims=(panels=(w,h), size=(w,h), frac=(), clearance=(dx,dy), outline=pen, fill=color, divlines=pen)*\
+- **F** or **dims** or **dimensions** or **size** or **sizes** : -- *dims=(panels=(w,h), figsize=(w,h), frac=(), clearance=(dx,dy), outline=pen, fill=color, divlines=pen)*\
     Specify the dimensions of the figure. There are two different ways to do this:
-    1. With the keyword **size** Specify overall figure dimensions\
+    1. With the keyword **figsize** Specify overall figure dimensions\
     2. With the keyword **panels** specify the dimensions of a single subplot.
 
-    **size**\
+    **figsize**\
     Specify the final figure dimensions. The subplot dimensions are then calculated from the figure dimensions after accounting for the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append **frac** with value given as a tuple of *width* and *height* fractions. For example **dims=(size=(10,10), frac=((3,1),(1,2)))** will make a 10x10 cm fig with the first column three times as wide as the second, while the second row will be twice as tall as the first row. A single number means constant widths (or heights) [Default]. If prefered, instead of *size* and/or *frac* as tuples, the **width=x, height=y, fwidth=(...), fheight=(...)** form is also allowed. 
 
     **panels**\
@@ -76,8 +75,8 @@ Optional Arguments
 
 \textinput{common_opts/opt_R}
 
-- **SC** or **col_axes** or **colaxes** : -- *col\_axes=(top="", bott="", bottom="", label="", grid=pen))*\
-- **SR** or **row_axes** or **rowaxes** : -- *row\_axes=(left="", right="", label="", parallel="", row\_title="t", top\_row\_title="", grid=pen))*\
+- **SC** or **col_axes** or **colaxes** or **sharex** : -- *col\_axes=(top="", bott="", bottom="", label="", grid=pen))*\
+- **SR** or **row_axes** or **rowaxes** or **sharey** : -- *row\_axes=(left="", right="", label="", parallel="", row\_title="t", top\_row\_title="", grid=pen))*\
     Set subplot layout for shared axes. May be set separately for rows (**row_axes**) and columns (**col_axes**).\
     Considerations for **col_axes**:\
     Use when all subplots in a column share a common *x*-range. The first (i.e., **top**) and the last (i.e., **bottom**) rows will have *x* annotations; append **top=""** or **bott=""** to select only one of those two rows [both].
