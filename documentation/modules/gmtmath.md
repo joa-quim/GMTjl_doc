@@ -2,7 +2,6 @@
 
 Reverse Polish Notation (RPN) calculator for data tables
 
-*******
 Description
 -----------
 
