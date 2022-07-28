@@ -119,7 +119,10 @@ Examples
 
 Using a grid
 
+\begin{examplefig}{}
 ```julia
+using GMT
+
 	G = GMT.peaks();
 	C = makecpt(T=(-7,9,2));
 
@@ -131,10 +134,15 @@ Using a grid
 	contourf(G, C, contour=1, annot=[-2, 0, 2, 5], show=1)
 	contourf(G, C, annot=:none, show=1)
 ```
+\end{examplefig}
 
 Using a table data.
 
+\begin{examplefig}{}
 ```julia
+using GMT
+
 	d = [0 2 5; 1 4 5; 2 0.5 5; 3 3 9; 4 4.5 5; 4.2 1.2 5; 6 3 1; 8 1 5; 9 4.5 5];
 	contourf(d, limits=(-0.5,9.5,0,5), pen=0.25, labels=(line=(:min,:max),), show=1)
 ```
+\end{examplefig}
