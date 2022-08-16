@@ -32,7 +32,7 @@
 
 |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{bar} | \myreflink{bar3} | \myreflink{decorated} | \myreflink{lines} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{contourf} |
+| \myreflink{arrows} | \myreflink{bar} | \myreflink{bar3} | \myreflink{decorated} | \myreflink{lines} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{contourf} | \myreflink{hband} | \myreflink{vband} |
 
 ## Supplemental Modules
 

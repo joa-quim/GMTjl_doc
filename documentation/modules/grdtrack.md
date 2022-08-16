@@ -53,7 +53,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **A** or **interp_path** : -- *interp_path=*[**f|p|m|r|R**][**+l**]\
+- **A** or **interp_path** or **resample** : -- *interp_path=*[**f|p|m|r|R**][**+l**]\
     For track resampling (if **crossprofile** or **profile** are set) we can select how this
     is to be performed. Append **f** to keep original points, but add intermediate points if
     needed [Default], **m** as **f**, but first follow meridian (along y) then parallel (along x),

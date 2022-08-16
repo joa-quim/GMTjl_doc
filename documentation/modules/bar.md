@@ -52,7 +52,7 @@ Parameters
    List of colors used to wrapp the bars inside each group. When using numbers that means patterns codes.
 
 - *fillalpha=[...]*\
-   When *fill* was used, control the transparency level. Numbers v=can be flots <= 1.0 or integeres in 0-100 range.
+   When *fill* was used, control the transparency level. Numbers can be floats <= 1.0 or integeres in 0-100 range.
 
 - *stack*\
    Plot a vertically stacked group plot
@@ -69,9 +69,12 @@ A simple bar plot with 10 bars and automatic limits.
 ```
 
 A bar group with selected colors and transparency.
+\begin{examplefig}{}
 ```julia
-    bar([0. 1 2 3; 1 2 3 4], fillalpha=[0.3 0.5 0.7], show=1, fill=["red" "green" "blue"])
+using GMT
+bar([0. 1 2 3; 1 2 3 4], fillalpha=[0.3 0.5 0.7], fill=["red" "green" "blue"], show=true)
 ```
+\end{examplefig}
 
 A bar group with bars filled with patterns.
 ```julia
