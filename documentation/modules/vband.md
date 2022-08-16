@@ -1,9 +1,9 @@
 # vband
 
 ```julia
-	vband(mat::Matrix; region=(...), width=false,  percent=false, fill=nothing, fillalpha=nothing)
+    vband(mat::Matrix; region=(...), width=false,  percent=false, fill=nothing, fillalpha=nothing)
 
-	hband(mat::Matrix; region=(...), height=false, percent=false, fill=nothing, fillalpha=nothing)
+    hband(mat::Matrix; region=(...), height=false, percent=false, fill=nothing, fillalpha=nothing)
 ```
 
 Reads a MxN array where 2 <= N <= 4 and plot a vertical (`vband` or `vspan`) or horizontal (`hband` or `hspan`)
@@ -99,8 +99,7 @@ Do a nested call in which one is not forced to specify the plot limits but let i
 \begin{examplefig}{}
 ```julia
 using GMT
-plot(0:0.5:5, rand(11), region=(0,5,-0.5,1.5), vband=(data=[1 2; 2.5 3; 4 4.2],
-     fill=[:red, :blue, :green]), show=true)
+plot(0:0.5:5, rand(11), vband=(data=[1 2; 2.5 3; 4 4.2], fill=[:red, :blue, :green]), show=true)
 ```
 \end{examplefig}
 
