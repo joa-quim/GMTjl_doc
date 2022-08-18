@@ -28,7 +28,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **C** or **oneliner** or **numeric**: -- *oneliner=true* **||** **||** *numeric=true* **||** *oneliner=:n|:t*\
+- **C** or **oneliner** or **numeric**: -- *oneliner=true* **|** **|** *numeric=true* **|** *oneliner=:n|:t*\
     Formats the report using tab-separated fields on a single line. The output is:
 
     - *name w e s n {b t} v0 v1 dx dy {dz} nx ny {nz}* [*x0 y0 {z0} x1 y1 {z1}*] [*med scale*]
@@ -42,7 +42,7 @@ Optional Arguments
     **nearest** option is used, the output format is instead *NF w e s n {b t} v0 v1*, where *NF* is the
     total number of files read and *w e s n {b t}* are rounded off (see **nearest**).
 
-- **D** or **tiles** : -- *tiles=xoff* **||** *tiles=(xoff,yoff)* **||** *tiles="+i"*\
+- **D** or **tiles** : -- *tiles=xoff* **|** *tiles=(xoff,yoff)* **|** *tiles="+i"*\
     Divide a single grid's domain (or the **region** domain, if no grid given)
     into tiles of size *dx* times *dy* (set via **nearest**). You can specify
     overlap between tiles by appending *xoff[/yoff]*. You may use the modifier **+i** to ignore tiles that
@@ -67,7 +67,7 @@ Optional Arguments
     Force (possible) download of all tiles of tiled global remote grids in order
     to report the requested information [refuse to give the information for tiled grids].
 
-- **I** or **nearest** : -- *nearest=dx* **||** *nearest=(dx,dy)* **||** *nearest=:b|:i|:r*\
+- **I** or **nearest** : -- *nearest=dx* **|** *nearest=(dx,dy)* **|** *nearest=:b|:i|:r*\
     Report the min/max of the region to the nearest multiple of *dx* and *dy*, and output this in
     the form **-Rw/e/s/n** (unless **oneliner** is set). To report the actual grid region, select
     **nearest=:r**. For a grid produced by the img supplement (a Cartesian Mercator grid),
@@ -76,7 +76,7 @@ Optional Arguments
     the form **-Ixinc/yinc**. If **nearest=:b** is given we write each grid's bounding box
     polygon instead. Finally, if tiles is in effect then *dx* and *dy* are the dimensions of the desired tiles.
 
-- **L** or **force_scan** : -- *force_scan=0|1|2* **||** *force_scan=:p|:a*\
+- **L** or **force_scan** : -- *force_scan=0|1|2* **|** *force_scan=:p|:a*\
     - **force_scan=0**
         Report range of *v* after actually scanning the data, not just reporting what the header says.
     - **force_scan=1**
@@ -92,7 +92,7 @@ Optional Arguments
     area that decreases with increasing latitude. We therefore report
     spherically weighted statistical estimates for such grids.
 
-- **M** or **minmax_pos** : -- *minmax_pos=true* **||** *minmax_pos=:c|:f*\
+- **M** or **minmax_pos** : -- *minmax_pos=true* **|** *minmax_pos=:c|:f*\
     Find and report the location of min/max *v*-values, and count and report the number of nodes
     set to NaN, if any [Default]. Use **minmax_pos=:f** to instead force an update of the *v*-value
     min/max by reading the matrix, or use **:c** for conditionally doing so if the header
@@ -100,7 +100,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_R}
 
-- **T** or **minmax** : -- *minmax=true* **||** *minmax="[dv][+a[alpha]][+s]"*\
+- **T** or **minmax** : -- *minmax=true* **|** *minmax="[dv][+a[alpha]][+s]"*\
     Determine min and max data value. If *dv* is provided then we first round these values off to
     multiples of *dv*. To exclude the two tails of the distribution when determining the min and
     max you can add **+a** to set the combined *alpha* value (in percent [2]): We then sort the

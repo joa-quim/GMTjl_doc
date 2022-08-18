@@ -20,14 +20,14 @@ Required Arguments
 - *table*\
     Data table(s) containing x,y [w] values in the first 2 [3] columns.
 
-- **F** or **out** or **output** : -- *out=:xymrw* **||** *out=:p|:P|:c*\
+- **F** or **out** or **output** : -- *out=:xymrw* **|** *out=:p|:P|:c*\
     Specify up to six letters from the set {**x y m r w**} in any order to create columns of output.
     **x** = x, **y** = y, **m** = model f(x), **r** = residual y - **m**, **w** = weight used in fitting.
     Alternatively, choose just the single selection **out=:p** to output a record with the polynomial
     model coefficients, **P** for the normalized polynomial model coefficients, or **c** for the
     normalized Chebyshev model coefficients.
 
-- **N** or **model** : -- *model=n* **||** *model="[p|P|f|F|c|C|s|S|x]n[,...][+llength][+oorigin][+r]"*\
+- **N** or **model** : -- *model=n* **|** *model="[p|P|f|F|c|C|s|S|x]n[,...][+llength][+oorigin][+r]"*\
     Specify the components of the (possibly mixed) model. Add one or more comma-separated model
     components. Each component is of the form **Tn**, where **T** indicates the basis function
     and *n* indicates the polynomial degree or how many terms in the Fourier series we want to include.
@@ -51,7 +51,7 @@ Optional Arguments
     that the ratio of the largest eigenvalue to the smallest eigenvalue is *condition\_#*.
     [Default: *condition\_#* = 1.0e06].
 
-- **I** or **conf_level** : -- *conf\_level=true* **||** *conf\_level=level*\
+- **I** or **conf_level** : -- *conf\_level=true* **|** *conf\_level=level*\
     Iteratively increase the number of model parameters, starting at one, until *n\_model* is
     reached or the reduction in variance of the model is not significant at the *confidence\_level*
     level. You may set **conf_level=true** only, without an attached number; in this case the
@@ -61,7 +61,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **weights** : -- *weights=true* **||** *weights="+s|+w"*\
+- **W** or **weights** : -- *weights=true* **|** *weights="+s|+w"*\
     Weights are supplied in input column 4. Do a weighted least squares fit [or start with
     these weights when doing the iterative robust fit]. Append **+s** to instead read data
     uncertainties (one sigma) and create weights as 1/sigma^2, or use the weights as read

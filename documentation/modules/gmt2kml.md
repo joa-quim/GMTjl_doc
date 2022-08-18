@@ -36,7 +36,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **A** or **mode** : -- *mode=:a|:g|s* **||** *mode="a|g|s<altitude>"*\
+- **A** or **mode** : -- *mode=:a|:g|s* **|** *mode="a|g|s<altitude>"*\
     Select one of three altitude modes recognized by Google Earth that
     determines the altitude (in m) of the tile layer: **a** absolute
     altitude, **g** altitude relative to sea surface or ground, **s**
@@ -52,7 +52,7 @@ Optional Arguments
     description content for the KML file [no description]. See SEGMENT
     INFORMATION below for feature-specific descriptions.
 
-- **E** or **extrude** : -- *extrude=true* **||** *extrude="+e"* *extrude="+s"*\
+- **E** or **extrude** : -- *extrude=true* **|** *extrude="+e"* *extrude="+s"*\
     Control how lines and polygons are rendered in Google Earth.
     Use **+e** to extrude the feature down to ground level [no extrusion].
     Use **+s** to connect points with straight lines (which may intersect
@@ -71,7 +71,7 @@ Optional Arguments
     data anomaly is required to be in the 3rd input column. If you also need to plot the track
     itself then do that separately with **feature_type=:l**.
 
-- **G** or **fill** : -- *fill=color* **||** *fill="+f|+n"*\
+- **G** or **fill** : -- *fill=color* **|** *fill="+f|+n"*\
     Sets *color* for fill (modifier **+f** [Default]) or label font (modifier **+n**).
     Fill sets infill color for symbols, extrusions, polygons and positive anomaly wiggles
     [Default is light orange at 75% transparency]. Alternatively, use **fill="+f"** to turn off
@@ -97,7 +97,7 @@ Optional Arguments
     columns then the entire trailing text is set as the last extended data column.  Otherwise, the
     trailing text is split into individual words and set as separate extended columns.
 
-- **N** or **feature_name** : -- *feature_name=true* **||** *feature_name="t|col|name\_template|name"*\
+- **N** or **feature_name** : -- *feature_name=true* **|** *feature_name="t|col|name\_template|name"*\
     By default, if segment headers contain a **-L**"label string" then we use that for the name of
     the KML feature (polygon, line segment or set of symbols). Default names for these segments are
     "Line %d" and "Point Set %d", depending on the feature, where %d is a sequence number of line
@@ -118,7 +118,7 @@ Optional Arguments
     of ``append="kmlfile"`` and **not** any of the ``|>="kmlfile"`` or ``write="kmlfile"`` file saving
     options.
 
-- **Qa** or **wiggles** or **wiggle_fixedazim** or **wiggle_scale=** : -- *wiggles=az* **||** *wiggle_fixedazim=az* **||** *wiggle_scale=scale*\
+- **Qa** or **wiggles** or **wiggle_fixedazim** or **wiggle_scale=** : -- *wiggles=az* **|** *wiggle_fixedazim=az* **|** *wiggle_scale=scale*\
     Option in support of wiggle plots (requires **feature_type=:w**). You may control which directions the
     positive wiggles will tend to point to with **wiggles=**azim. The appended *azimuth* defines
     a half-circle centered on the selected azimuth [0] where positive anomalies will plot. If outside
@@ -128,16 +128,16 @@ Optional Arguments
     d|m|s|e|f|k|M|n|u [e]). This scale is then inverted to yield degrees per user z-unit and used
     to convert wiggle anomalies to map distances and positions.
 
-- **R** or **region** : -- *region=:e* **||** *region=(w,e,s,n)*\
+- **R** or **region** : -- *region=:e* **|** *region=(w,e,s,n)*\
     Issue a single Region tag. Use **region=(w,e,s,n)** to set a particular region (will ignore points
     outside the region), or **region=:e** to determine and use the exact domain of the data
     (single file only) [no region tags issued].
 
-- **S** or **ilscale** : -- *ilscale="c<scale>"* **||** *ilscale="n<scale>"*\
+- **S** or **ilscale** : -- *ilscale="c<scale>"* **|** *ilscale="n<scale>"*\
     Scale icons or labels. Here, **ilscale="c<scale>"** sets a scale for the symbol
     icon, whereas **ilscale="n<scale>"** sets a scale for the name labels [1 for both].
 
-- **T** or **title** : -- *title=title* **||** *title=("title","FolderName")*\
+- **T** or **title** : -- *title=title* **|** *title=("title","FolderName")*\
     Sets the document title [default is unset]. Optionally, set also the *FolderName*; this allows
     you, with **overlay**, **not_over**, to group features into folders within the KML document.
     [The default folder name is "*Name* Features", where *Name* is Point, Event, Timespan, Line,

@@ -39,26 +39,26 @@ its primary usage is to quickly show a CPT with the ``imshow`` command. *e.g* ``
 Optional Arguments
 ------------------
 
-- **A** or **alpha** or **transparency** : -- *alpha=xx* **||** *alpha="xx+a"*\
+- **A** or **alpha** or **transparency** : -- *alpha=xx* **|** *alpha="xx+a"*\
     Sets a constant level of transparency (0-100) for all color slices.
     Append **+a** to also affect the fore-, back-, and nan-colors
 
 \textinput{common_opts/create_cpt}
 
-- **D** or **bg** or **background** : -- *bg=true* **||** *bg=:i*\
+- **D** or **bg** or **background** : -- *bg=true* **|** *bg=:i*\
     Select the back- and foreground colors to match the colors for lowest and highest *z*-values in the
     output CPT [Default uses the colors specified in the master file, or those defined by the parameters
     `COLOR_BACKGROUND`, `COLOR_FOREGROUND`, and `COLOR_NAN`]. Append **i** to match the colors for the lowest
     and highest values in the input (instead of the output) CPT.
 
-- **E** or **nlevels** : -- *nlevels=true* **||** *nlevels=nlevels*\
+- **E** or **nlevels** : -- *nlevels=true* **|** *nlevels=nlevels*\
     Implies reading data table(s) (from an array or file). We use the last data column to determine the data range;
     use **incol** to select another column, and use **binary_in** if your data table is native binary. This z-range
     information is used instead of providing the **range** option. We create a linear color table by dividing the
     table data z-range into *nlevels* equidistant slices. If *nlevels* is not given it defaults to the number of
     levels in the chosen CPT.
 
-- **F** or **color_model** : -- *color_model=true|:r|:h|:c["+c"[label]]* **||** *color_model="+kkeys"*\
+- **F** or **color_model** : -- *color_model=true|:r|:h|:c["+c"[label]]* **|** *color_model="+kkeys"*\
     Force output CPT to be written with r/g/b codes, gray-scale values or color name (the default)
     or r/g/b codes only (**r**), or h-s-v codes (**h**), or c/m/y/k codes (**c**). Optionally or
     alternatively, append **+c** to write discrete palettes in categorical format. If *label* is
@@ -79,7 +79,7 @@ Optional Arguments
     equal NaN then we leave that end of the CPT alone. The truncation takes place before any resampling.
     See also [Manipulating CPTs](https://docs.generic-mapping-tools.org/dev/cookbook/features.html#manipulating-cpts)
 
-- **I** or **inverse** or **reverse** : -- *inverse=true* **||** *inverse=:z*\
+- **I** or **inverse** or **reverse** : -- *inverse=true* **|** *inverse=:z*\
     Reverse the sense of color progression in the master CPT. Also exchanges the foreground and background colors,
     including those specified by the parameters `COLOR_BACKGROUND` and `COLOR_FOREGROUND`. Use **inverse=:z** to
     reverse the sign of z-values in the color table. Note that this change of *z*-direction happens before **truncate**
@@ -116,7 +116,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **wrap** or **categorical** : -- *wrap=true* **||** *wrap=:w*\
+- **W** or **wrap** or **categorical** : -- *wrap=true* **|** *wrap=:w*\
     Do not interpolate the input color table but pick the output colors starting at the beginning of the color table,
     until colors for all intervals are assigned. This is particularly useful in combination with a categorical color
     table, like "categorical". Alternatively, use **wrap=:w** to produce a wrapped (cyclic) color table that endlessly

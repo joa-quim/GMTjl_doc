@@ -31,7 +31,7 @@ The 2-D gridded data set.
 Optional Arguments
 ------------------
 
-- **A** or **mode** : -- *mode=:a|:g|s* **||** *mode="a|g|saltitude"*\
+- **A** or **mode** : -- *mode=:a|:g|s* **|** *mode="a|g|saltitude"*\
     Select one of three altitude modes recognized by Google Earth that
     determines the altitude (in m) of the tile layer: **a** absolute
     altitude, **g** altitude relative to sea surface or ground, **s**
@@ -72,7 +72,7 @@ Optional Arguments
     Typical values are 256 or 512 [256]. **Note**: For global grids (here meaning 360-degree
     longitude range), we will select a *tilesize* of 360 if **tilesize** is not specified.
 
-- **S** or **extralayers** : -- *extralayers=true* **||** *extralayers=extra*\
+- **S** or **extralayers** : -- *extralayers=true* **|** *extralayers=extra*\
     Add extra layers beyond that necessary to capture the full resolution of the data [none].
     This will let GMT interpolate your grid and make more tiles, versus letting Google Earth
     interpolate the last resolution raster images.

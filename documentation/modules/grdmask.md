@@ -47,7 +47,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_-Grid}
 
-- **N** or **out\_edge\_in** : -- *out\_edge\_in=values* **||** *out\_edge\_in="z|Z|p|Pvalues"*\
+- **N** or **out\_edge\_in** : -- *out\_edge\_in=values* **|** *out\_edge\_in="z|Z|p|Pvalues"*\
     Sets the *out/edge/in* that will be assigned to nodes that are *out*side the polygons,
     on the *edge*, or *in*side. Values can be any number, including the textstring NaN
     [Default is 0/0/1]. Optionally, use **Nz** to set polygon insides to the z-value obtained
@@ -57,7 +57,7 @@ Optional Arguments
     Here, **NP** includes the polygon perimeter as inside. **Note**: **out\_edge\_in="z|Z|p|P"**
     cannot be used in conjunction with **seach_radius**; they also all optionally accept /*out* [0].
 
-**-S** or **search_radius** : -- *search_radius=rad* **||** *search_radius=(xlim,ylim)*\
+**-S** or **search_radius** : -- *search_radius=rad* **|** *search_radius=(xlim,ylim)*\
     Set nodes to inside, on edge, or outside depending on their distance to the nearest data point.
     Nodes within *radius* [0] from the nearest data point are considered inside; append a distance
     unit (see \myreflink{Units}). If *radius* is given as **z** then we instead read individual

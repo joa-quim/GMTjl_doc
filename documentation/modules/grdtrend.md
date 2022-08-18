@@ -33,7 +33,7 @@ Required Arguments
 
 The 2-D gridded data set.
 
-**-N** or **model** : -- *model=n_model* **||** *model=(n=?, robust=true, xonly=true, yonly=true)*\
+**-N** or **model** : -- *model=n_model* **|** *model=(n=?, robust=true, xonly=true, yonly=true)*\
     *n_model* sets the ID of the highest model parameters to fit. Use **model=(n=n_model, robust=true**
     for robust fit. As an option, add either **xonly=true** or **yonly=true** to only fit a model that
     depends on *x* or *y* terms, respectively. This means we either fit
@@ -43,13 +43,13 @@ The 2-D gridded data set.
 Optional Arguments
 ------------------
 
-- **D** or **diff** : -- *diff=true* **||** *diff="diff.grd"*\
+- **D** or **diff** : -- *diff=true* **|** *diff="diff.grd"*\
     Compute and return the difference (input data - trend). The form **diff="diff.grd"**
     writes the resul to to the file *diff.grd*.
 
 \textinput{common_opts/opt_R}
 
-- **T** or **trend** : -- *trend=true* **||** *trend="trend.grd"*\
+- **T** or **trend** : -- *trend=true* **|** *trend="trend.grd"*\
     Compute and return the fitted trend. The form **trend="trend.grd"**
     writes the resul to to the file *trend.grd*.
 

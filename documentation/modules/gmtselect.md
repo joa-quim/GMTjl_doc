@@ -31,7 +31,7 @@ Optional Arguments
 
 \textinput{common_opts/explain_Acoast}
 
-- **C** or **dist2pt** : -- *dist2pt=(pts=pointfile, dist=dist)* **||** *dist2pt=(pts=(lon,lat), dist=dist)*\
+- **C** or **dist2pt** : -- *dist2pt=(pts=pointfile, dist=dist)* **|** *dist2pt=(pts=(lon,lat), dist=dist)*\
     Pass all records whose location is within *dist* of any of the points in the ASCII file *pointfile*
     or a *in-memory* matrix. If *dist* is zero then the 3rd column of *pointfile* must have each point's
     individual radius of influence. If you only have a single point then you can specify
@@ -52,7 +52,7 @@ Optional Arguments
     for the **polygon** and/or **mask** options, respectively, so that boundary points are
     considered to be outside.
 
-- **F** or **polygon** : -- *polygon=polygonfile* **||** *polygon=matrix*\
+- **F** or **polygon** : -- *polygon=polygonfile* **|** *polygon=matrix*\
     Pass all records whose location is within one of the closed polygons in the multiple-segment
     file *polygonfile* (or GMTdataset with *in-memory* data). For spherical polygons (lon, lat),
     make sure no consecutive points are separated by 180 degrees or more in longitude. Note that
@@ -75,7 +75,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_J}
 
-- **L** or **dist2line** : -- *dist2line=(line="linefile", dist=dist [,ortho=true])* **||** *dist2line=(line=[pt1; pt2], dist=dist [,ortho=true])*\
+- **L** or **dist2line** : -- *dist2line=(line="linefile", dist=dist [,ortho=true])* **|** *dist2line=(line=[pt1; pt2], dist=dist [,ortho=true])*\
     Pass all records whose location is within *dist* of any of the line segments in the ASCII
     multiple-segment file *linefile* or *in-memory* matrix or GMTdataset. If *dist* is zero
     then we will scan each sub-header in the *linefile* for an embedded **-D**\ *dist* setting
@@ -99,7 +99,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **Z** or **in_range** : -- *in_range=(min,max)* **||** *in_range=min*\
+- **Z** or **in_range** : -- *in_range=(min,max)* **|** *in_range=min*\
     Pass all records whose 3rd column lies within the given range or is NaN (use **-s** to skip NaN records).
     If *max* is omitted then we test if *z* equals *min* instead. This means equality within 5 ULPs
     [unit of least precision](http://en.wikipedia.org/wiki/Unit_in_the_last_place). Input file must have

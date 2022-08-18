@@ -27,14 +27,14 @@ Optional Arguments
 
 \textinput{common_opts/explain_Acoast}
 
-- **D** or **res** or **resolution** : -- *res=:full* **||** *res=:high* **||** *res=:auto*\
+- **D** or **res** or **resolution** : -- *res=:full* **|** *res=:high* **|** *res=:auto*\
    Selects the resolution of the data set to use *full*, *high*, *intermediate*, *low*,
    and *crude*. The resolution drops off by 80% between data sets. Alternatively, chooses
    **res=auto**, to automatically select the best resolution given the chosen region.
    Note that because the coastlines differ in details a node in a mask file using one
    resolution is not guaranteed to remain inside [or outside] when a different resolution is selected.
 
-**-E** or **border** : -- *border=true* **||** *border=bordervalues*\
+**-E** or **border** : -- *border=true* **|** *border=bordervalues*\
     Nodes that fall exactly on a polygon boundary should be
     considered to be outside the polygon [Default considers them to be inside].
     Alternatively, append either the four values *cborder/lborder/iborder/pborder*
@@ -48,7 +48,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_-Grid}
 
-- **N** or **maskvalues** : -- *maskvalues=(wet,dry)* **||** *maskvalues=(ocean,land,lake,island,pond)*\
+- **N** or **maskvalues** : -- *maskvalues=(wet,dry)* **|** *maskvalues=(ocean,land,lake,island,pond)*\
     Sets the values that will be assigned to nodes. Values can be any number, including
     NaN. Also select **border** to let nodes exactly on feature boundaries be
     considered outside [Default is inside]. Specify this information using 1 of 2 formats:

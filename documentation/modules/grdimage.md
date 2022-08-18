@@ -62,14 +62,29 @@ Optional Arguments
    color bar on the right side of the image using the current color map stored in the global scope. To
    access all options available in the *colorbar* module passe them in the named tuple (...).
 
-- **D** or *img\_in* or *image\_in* : -- *img\_in=true* **|** *img\_in=:r*\
+- **clim** : -- *clim=(z_min,z_max)*\
+   When doing an automatic colorization (*i.e.*, when a colormap is not provided explicitly), limit the automatic
+   color map to be computed between *z_min,z_max*. Grid values below *z_min* and above *z_max* will be painted
+   with the same color as those.
+
+- **equalize** : -- *equalize=true* **|** *equalize=ncolors*\
+   With automatic colorization, map data values to colors through the data’s cumulative distribution function (CDF),
+   so that the colors are histogram equalized. Default (with `equalize=true`) chooses arbitrary values by a crazy
+   scheme based on equidistant values for a Gaussian CDF. Use `equalize=ncolors` to specify the desire number of colors.
+
+- **percent** : -- *percent=pct*\
+   Exclude the two tails of the distribution (in percentage). Grid values are sorted and we exclude data in
+   0.5*pct and 100 - 0.5*pct from the automatic colormap determination. This option is specially useful
+   when the grid has outliers.
+
+- **D** or **img\_in** or **image\_in** : -- *img\_in=true* **|** *img\_in=:r*\
    GMT will automatically detect standard image files (Geotiff, TIFF, JPG, PNG, GIF, etc.) and will read
    those via GDAL. For very obscure image formats you may need to explicitly set **img\_in**, which specifies
    that the grid is in fact an image file to be read via GDAL. Use *img\_in=:r* to assign the region specified
    by **region** to the image. For example, if you have used **region=global** then the image will be assigned
    a global domain. This mode allows you to project a raw image (an image without referencing coordinates).
 
-- **E** or *dpi* : -- *dpi=xx* **|** *dpi=:i*\
+- **E** or **dpi** : -- *dpi=xx* **|** *dpi=:i*\
    Sets the resolution of the projected grid that will be created if a map projection other than Linear or
    Mercator was selected [100]. By default, the projected grid will be of the same size (rows and columns)
    as the input file. Specify *dpi=:i* to use the PostScript image operator to interpolate the image at the
@@ -86,15 +101,15 @@ Optional Arguments
    (affects the ambient light). Alternatively, derive an intensity grid from the input data grid *grd\_z* via a
    call to \myreflink{grdgradient}; use `shade=az` or ``shade=(azimuth=az, norm=params)`` to specify azimuth
    and intensity arguments for that module or just give ``shade=true`` to select the default arguments
-   *(azim=-45,nom=:t1)*. If you want a more specific intensity scenario then run grdgradient separately first.
+   *(azim=-45,norm=:t1)*. If you want a more specific intensity scenario then run grdgradient separately first.
 
-- **M** or *monochrome* : -- *monochrome=true*\
+- **M** or **monochrome** : -- *monochrome=true*\
     Force conversion to monochrome image using the (television) YIQ transformation. Cannot be used with **nan\_alpha**.
 
 - **N** or **noclip** : -- *noclip=true*\
     Do not clip the image at the map boundary (only relevant for non-rectangular maps).
 
-- **Q** or *nan\_alpha* or *alpha\_color*: *nan\_alpha=true* or *alpha\_color=true|(r,g,b)*\
+- **Q** or **nan\_alpha** or **alpha\_color** : -- *nan\_alpha=true* or *alpha\_color=true|(r,g,b)*\
     Make grid nodes with z = NaN transparent. If input is an image *alpha\_color* picks one color (default is
     black) and makes it transparent (requires GMT6.2 and above).
 
@@ -120,9 +135,20 @@ Examples
 --------
 
 To make a map of the global bathymetry (automatically download it if needed) using the Winkel projection,
-add coast lines and a color bar, do:
+add coast lines and do an histogram equalization with 64 colors, do:
 
+\begin{examplefig}{}
 ```julia
-grdimage("@earth_relief_20m.grd", proj=:Winkel, colorbar=true,
-         coast=true, show=true)
+using GMT
+grdimage("@earth_relief_20m.grd", proj=:Winkel, equalize=64, coast=true, show=true)
 ```
+\end{examplefig}
+
+For a quick-and-dirty illuminated color map of the data in the remote file @AK_gulf_grav.nc, try:
+
+\begin{examplefig}{}
+```julia
+using GMT
+grdimage("@AK_gulf_grav.nc", shade=true, coast=true, show=true)
+```
+\end{examplefig}

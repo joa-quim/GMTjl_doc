@@ -32,12 +32,12 @@ Required Arguments
 - *table*\
     Data table(s) containing x,y,z [w] values in the first 3 [4] columns.
 
-- **F** or **out** or **output** : -- *out=:xyzmrw* **||** *out=:p*\
+- **F** or **out** or **output** : -- *out=:xyzmrw* **|** *out=:p*\
     Specify up to six letters from the set {**x y z m r w**} in any order to create columns of output.
     **x** = x, **y** = y, **z** = z, **m** = model f(x,y), **r** = residual z - **m**,
     **w** = weight used in fitting. Alternatively, to just report the model parameters, use **out=:p**.
 
-- **N** or **model** : -- *model=n* **||** *model="n+r"*\
+- **N** or **model** : -- *model=n* **|** *model="n+r"*\
     Specify the number of terms in the model, *n\_model*, and use *model="n_model+r"*
     to do a robust fit. E.g., a robust bilinear model is **model="4+r"**.
 
@@ -50,7 +50,7 @@ Optional Arguments
     that the ratio of the largest eigenvalue to the smallest eigenvalue is *condition\_#*.
     [Default: *condition\_#* = 1.0e06].
 
-- **I** or **conf_level** : -- *conf\_level=true* **||** *conf\_level=level*\
+- **I** or **conf_level** : -- *conf\_level=true* **|** *conf\_level=level*\
     Iteratively increase the number of model parameters, starting at one, until *n\_model* is
     reached or the reduction in variance of the model is not significant at the *confidence\_level*
     level. You may set **conf_level=true** only, without an attached number; in this case the
@@ -59,7 +59,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **weights** : -- *weights=true* **||** *weights="+s|+w"*\
+- **W** or **weights** : -- *weights=true* **|** *weights="+s|+w"*\
     Weights are supplied in input column 4. Do a weighted least squares fit [or start with
     these weights when doing the iterative robust fit]. Append **+s** to instead read data
     uncertainties (one sigma) and create weights as 1/sigma^2, or use the weights as read

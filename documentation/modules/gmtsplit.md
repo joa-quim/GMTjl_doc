@@ -54,7 +54,7 @@ Optional Arguments
     separately. This may introduce edge effects at the ends of each segment, but prevents a
     low-pass x,y filter from rounding off the corners of track segments. [Default = no filtering].
 
-**N** or **multi** : -- *multi=true* **||** *multi="template"*\
+**N** or **multi** : -- *multi=true* **|** *multi="template"*\
     Write each segment to a separate output file. Default returns data in a GMTdataset. Optionally
     append a format template for the individual file names; this template **must** contain a C format
     specifier that can format an integer argument (the running segment number across all tables);

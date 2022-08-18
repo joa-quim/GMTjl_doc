@@ -80,7 +80,7 @@ Optional Arguments
 - **N** or **ids** : -- *ids=true*\
     Used in conjunction with **outgrid** to also write the triplets of the ids of all the Delaunay vertices [Default only writes the grid].
 
-- **Q** or **voronoi** : -- *voronoi=true* **||** *voronoi=:polygon*\
+- **Q** or **voronoi** : -- *voronoi=true* **|** *voronoi=:polygon*\
     Output the edges of the Voronoi cells instead [Default is Delaunay triangle edges].
     Requires **region** and is only available if linked with the Shewchuk [1996] library.
     Note that **xyz** is ignored on output. Optionally, use **voronoi=:polygon** (or just `=:pol`)

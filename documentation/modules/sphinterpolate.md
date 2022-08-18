@@ -27,7 +27,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **D** or **skipdup** : *skipdup=true* **||** *skipdup=:east*\
+- **D** or **skipdup** : *skipdup=true* **|** *skipdup=:east*\
     Skip duplicate points since the spherical gridding algorithm cannot handle them.
     [Default assumes there are no duplicates, except possibly at the poles].
     Append a repeating longitude (*east*) to skip records with that longitude instead

@@ -51,7 +51,7 @@ Optional Arguments
   combined and appear in any order to produce the the desired number of output files (e.g., just %c gives
   two files, just %f would separate segments into one file.
 
-- **E** or **index** : -- *index="indexfile[+b]"* **||** *index=dataset*\
+- **E** or **index** : -- *index="indexfile[+b]"* **|** *index=dataset*\
   Give name of file with network information. Each record must contain triplets of node numbers for
   a triangle [Default computes these using Delaunay triangulation (see \myreflink{triangulate})].
   If the *indexfile* is binary and can be read the same way as the binary input *table* then you
@@ -77,7 +77,7 @@ Optional Arguments
   coordinates) or **C** for plot length units in current plot units after projecting the coordinates.
   Optionally, append **+z** to exclude the zero contour.
 
-- **S** or **skip** : -- *skip=true* **||** skip=:p|:t*\
+- **S** or **skip** : -- *skip=true* **|** skip=:p|:t*\
   Skip all input *xyz* points that fall outside the region [Default uses all the data in the
   triangulation]. Alternatively, use **skip=:t** to skip triangles whose three vertices are
   all outside the region.  **skip=true** is interpreted as **skip=:p**.

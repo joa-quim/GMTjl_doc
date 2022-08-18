@@ -52,6 +52,21 @@ Optional Arguments
    information about this fact we may need to use this option to help the program finding the common BoundingBox.
    Used only together with **drape**
 
+- **clim** : -- *clim=(z_min,z_max)*\
+   When doing an automatic colorization (*i.e.*, when a colormap is not provided explicitly), limit the automatic
+   color map to be computed between *z_min,z_max*. Grid values below *z_min* and above *z_max* will be painted
+   with the same color as those.
+
+- **equalize** : -- *equalize=true* **|** *equalize=ncolors*\
+   With automatic colorization, map data values to colors through the data’s cumulative distribution function (CDF),
+   so that the colors are histogram equalized. Default (with `equalize=true`) chooses arbitrary values by a crazy
+   scheme based on equidistant values for a Gaussian CDF. Use `equalize=ncolors` to specify the desire number of colors.
+
+- **percent** : -- *percent=pct*\
+   Exclude the two tails of the distribution (in percentage). Grid values are sorted and we exclude data in
+   0.5*pct and 100 - 0.5*pct from the automatic colormap determination. This option is specially useful
+   when the grid has outliers.
+
 - **I** or **shade** or **intensity** : -- *shade=grid* **|** *shade=azim* **|** *shade=(azimuth=az, norm=params, auto=true)*\
    Gives the name of a grid with intensities in the (-1,+1) range, or a constant intensity to apply everywhere
    (affects the ambient light). Alternatively, derive an intensity grid from the input data grid *grd\_z* via a

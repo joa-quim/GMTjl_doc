@@ -9,36 +9,28 @@ Make linear or histogram-equalized color palette table from grid
 Description
 -----------
 
-**grd2cpt** reads one or more grid files and writes a static color palette
-(CPT) file. In classic mode we write the CPT to standard output, while under
-modern mode we simply save the CPT as the current session CPT.
-The CPT is based on an existing dynamic
-master CPT of your choice, and the mapping from data value to
-colors is through the data's cumulative distribution function (CDF), so
-that the colors are histogram equalized. Thus if the grid(s) and the
-resulting CPT are used in \myreflink{grdimage} with a linear projection,
-the colors will be uniformly distributed in area on the plot. Let z be
-the data values in the grid. Define CDF(Z) = (# of z < Z) / (# of z in
-grid). (NaNs are ignored). These z-values are then normalized to the
-master CPT and colors are sampled at the desired intervals.
+**grd2cpt** reads one or more grid and computes a static color palette (CPT). Once computed the
+color palette stays as the current CPT until an image using it is finished, either with the `show`
+command or saved to file. The CPT is based on an existing dynamic master CPT of your choice, and the
+mapping from data value to colors is through the data's cumulative distribution function (CDF), so that
+the colors are histogram equalized. Thus if the grid(s) and the resulting CPT are used in \myreflink{grdimage}
+with a linear projection, the colors will be uniformly distributed in area on the plot. Let z be the data
+values in the grid. Define CDF(Z) = (# of z < Z) / (# of z in grid). (NaNs are ignored). These z-values
+are then normalized to the master CPT and colors are sampled at the desired intervals.
 
-The color palette includes three additional colors beyond the range of
-z-values. These are the background color (B) assigned to values lower
-than the lowest *z*-value, the foreground color (F) assigned to values
-higher than the highest *z*-value, and the NaN color (N) painted
-wherever values are undefined. For color tables beyond the
-current GMT offerings, visit [cpt-city](http://soliton.vm.bytemark.co.uk/pub/cpt-city/).
+The color palette includes three additional colors beyond the range of z-values. These are the background
+color (B) assigned to values lower than the lowest *z*-value, the foreground color (F) assigned to values
+higher than the highest *z*-value, and the NaN color (N) painted wherever values are undefined. For color
+tables beyond the current GMT offerings, visit [cpt-city](http://soliton.vm.bytemark.co.uk/pub/cpt-city/).
 
 If the master CPT includes B, F, and N entries, these will be copied into the new master file.
 If not, the parameters `COLOR_BACKGROUND`, `COLOR_FOREGROUND`, and `COLOR_NAN` from the
 `gmt.conf` file or the command line will be used. This default behavior can be overruled
 using the options **bg**, **overrule_bg** or **no_bg**.
 
-The color model (RGB, HSV or CMYK) of the palette created by \myreflink{makecpt}
-will be the same as specified in the header of the master CPT. When
-there is no `COLOR_MODEL` entry in the master CPT, the
-`COLOR_MODEL` specified in the `gmt.conf` file or on the command
-line will be used.
+The color model (RGB, HSV or CMYK) of the palette created by \myreflink{makecpt} will be the same as
+specified in the header of the master CPT. When there is no `COLOR_MODEL` entry in the master CPT,
+the `COLOR_MODEL` specified in the `gmt.conf` file or on the command line will be used.
 
 Required Arguments
 ------------------
@@ -48,19 +40,19 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **A** or **alpha** or **transparency** : -- *alpha=xx* **||** *alpha="xx+a"*\
+- **A** or **alpha** or **transparency** : -- *alpha=xx* **|** *alpha="xx+a"*\
     Sets a constant level of transparency (0-100) for all color slices.
     Append **+a** to also affect the fore-, back-, and nan-colors.
 
 \textinput{common_opts/create_cpt}
 
-- **D** or **bg** or **background** : -- *bg=true* **||** *bg=:i*\
+- **D** or **bg** or **background** : -- *bg=true* **|** *bg=:i*\
     Select the back- and foreground colors to match the colors for lowest and highest *z*-values in the
     output CPT [Default uses the colors specified in the master file, or those defined by the parameters
     `COLOR_BACKGROUND`, `COLOR_FOREGROUND`, and `COLOR_NAN`]. Append **i** to match the colors for the lowest
     and highest values in the input (instead of the output) CPT.
 
-- **E** or **nlevels** : -- *nlevels=true* **||** *nlevels=nlevels|"+c[+f<file>"*\
+- **E** or **nlevels** : -- *nlevels=true* **|** *nlevels=nlevels|"+c[+f<file>]"*\
     Create a linear color table by using the grid z-range as the new limits in the CPT, so the
     number of levels in the CPT remain unchanged. Alternatively, append *nlevels* and we will
     instead resample the color table into *nlevels* equidistant slices. As an option, append
@@ -93,7 +85,7 @@ Optional Arguments
     and **range** values are used so the latter much be compatible with the changed *z*-range. See also
     [Manipulating CPTs](https://docs.generic-mapping-tools.org/dev/cookbook/features.html#manipulating-cpts)
 
-- **L** or **datarange** or **limit** : -- *datarange=(minlimit, maxlimit)*\
+- **L** or **datarange** or **clim** : -- *datarange=(minlimit, maxlimit)*\
     Limit range of CPT to *(minlimit, maxlimit)*, and don't count data outside this range when
     estimating CDF(Z). To set only one limit, specify the other limit as "-"
     [Default uses min and max of data.]
@@ -106,7 +98,7 @@ Optional Arguments
 - **N** or **no_bg** or **nobg** : -- *no_bg=true*\
     Make all the background, foreground, and NaN-color fields be white (since we can't remove them like in plain GMT).
 
-- **Q** or **log** : -- *log=true* **||** *log=:i|:o*\
+- **Q** or **log** : -- *log=true* **|** *log=:i|:o*\
     Selects a logarithmic interpolation scheme [Default is linear].  **log=:i** expects input
     z-values to be log10(z), assigns colors, and writes out z [Default]. **log=:o** takes
     log10(z) first, assigns colors, and writes out z.
@@ -126,7 +118,7 @@ Optional Arguments
 - **V**
     Verbose operation. This will write CDF(Z) estimates to stderr. [Default is silent.]
 
-- **W** or **wrap** or **categorical** : -- *wrap=true* **||** *wrap=:w*\
+- **W** or **wrap** or **categorical** : -- *wrap=true* **|** *wrap=:w*\
     Do not interpolate the input color table but pick the output colors starting at the beginning of the color table,
     until colors for all intervals are assigned. This is particularly useful in combination with a categorical color
     table, like "categorical". Alternatively, use **wrap=:w** to produce a wrapped (cyclic) color table that endlessly
@@ -139,7 +131,7 @@ Optional Arguments
    Save the color map with the **save="name.cpt"**. When in modern mode this also automatically
    sets a required GMT option (-H).
 
-\textinput{common_opts/opt_bo} This option only applies if |-E| selects CDF output. 
+\textinput{common_opts/opt_bo} This option only applies if **nlevels** selects CDF output. 
 
 \textinput{common_opts/opt_h}
 

@@ -26,7 +26,7 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **C** or **rcnumbers** : -- *rcnumbers=true* **||** *rcnumbers=:f|:i*\
+- **C** or **rcnumbers** : -- *rcnumbers=true* **|** *rcnumbers=:f|:i*\
     Replace the x- and y-coordinates on output with the corresponding column and row numbers.
     These start at 0 (C-style counting); use **rcnumbers=:f** to start at 1 (Fortran-style counting).
     Alternatively, use **rcnumbers=:i** to write just the two columns *index* and *z*, where
@@ -41,7 +41,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_R}
 
-**T** or **stl** or **STL** : -- *STL=true* **||** *STL=[:b][base]*\
+**T** or **stl** or **STL** : -- *STL=true* **|** *STL=[:b][base]*\
     Write STL triangulation for 3-D printing to standard output. By default we write an STL ASCII file.
     Append **b** to instead write the STL binary (little-endian) format. For more information on STL, see the
     [STL overview on Wikipedia](https://en.wikipedia.org/wiki/STL_(file_format)). **Note**: All coordinates are
@@ -51,7 +51,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or **weight** : -- *weight=true* **||** *weight=:a[+uunit]* **||** *weight=weight*\
+- **W** or **weight** : -- *weight=true* **|** *weight=:a[+uunit]* **|** *weight=weight*\
     Write out *x,y,z,w*, where *w* is the supplied *weight* (or 1 if not supplied) [Default writes
     *x,y,z* only]. Choose **weight=:a** to compute weights equal to the area each node represents.
     For Cartesian grids this is simply the product of the *x* and *y* increments (except for

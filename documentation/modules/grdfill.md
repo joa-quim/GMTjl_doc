@@ -33,12 +33,12 @@ Optional Arguments
 
 \textinput{common_opts/opt_save_grd}
 
-- **N** or **nodata** : -- *nodata=true* **||** *nodata=value*\
+- **N** or **nodata** : -- *nodata=true* **|** *nodata=value*\
     Sets the node value used to identify a point as a member of a hole [Default is NaN].
 
 \textinput{common_opts/opt_R}
 
-- **L** or **list** : -- *list=true* **||** *list=:p*\
+- **L** or **list** : -- *list=true* **|** *list=:p*\
     Just list the rectangular subregions west east south north of each hole.
     No grid fill takes place. Optionally, use **list=:p**
     to instead write closed polygons for all subregions.
