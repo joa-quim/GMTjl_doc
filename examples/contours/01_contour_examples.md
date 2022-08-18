@@ -1,10 +1,12 @@
 # Contours
 
+Examples created with \myreflink{grdcontour}, \myreflink{contour}, \myreflink{contourf}
+
 ## Examples
 
 ### Simple contours
 
-Contours are created with grdcontourgrdcontourgrdcontour that takes a grid as input (or a GMTgrid data type).
+Contours are created with grdcontour that takes a grid as input (or a GMTgrid data type).
 This example shows uses the peaks function to create a classical example. Note, however, that the memory
 consumption in this example, when creating the plot, is much lower than traditional likewise examples because
 we will be using only one 2D array instead of 3 3D arrays (ref). In the example cont=1 and annot=2 means draw
