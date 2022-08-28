@@ -27,7 +27,7 @@ Required Arguments
 ------------------
 
 - **textfile**\
-    This is one file containing 1 or more records with (*x*, *y*[, *font*, *angle*, *justify*], *text*).
+    A file containing 1 or more records with (*x*, *y*[, *font*, *angle*, *justify*], *text*).
     The attributes in brackets can alternatively be set directly via **attrib**. If no files are given,
     **text** will read standard input. *font* is a font specification with format [*size*,][*font*,][*color*]
     where *size* is text size in points, *font* is the font to use, and *color* sets the font color. To draw
@@ -38,26 +38,26 @@ Required Arguments
     (for left, center, or right) and T, M, B for top, middle, or bottom. e.g., BL for lower left.
 
 - **textrecord**\
-    This a GMTdataset type that can be optained with the `mat2ds(mat, txt)` function, where `mat` is a *MxN* with the
+    A GMTdataset type that can be optained with the `mat2ds(mat, txt)` function, where `mat` is a *MxN* with the
     *x,y(,z)* coordinates and `txt` a string vector with the desired text.
 
 - **([text], x=?, y=?)**\
-    As a third alternative provide the input data in a form of a string vector and `x` and `y` vector coordinates,
+    As a third alternative, provide the input data in a form of a string vector and `x` and `y` vector coordinates,
     or just a `x=mat` where `mat` is *MxN* matix. In the particular case where the *text* is a single string one
     may use the **(text="txt", x=?, y=?)** form.
 
 Optional Arguments
 ------------------
 
-- **A** or **azimuths** or **azimuth** or **azim** : -- *azimuths=true*\
+- **A** or **azimuth** or **azim** : -- *azimuth=true*\
     Angles are given as azimuths; convert them to directions using the current projection. 
 
 \textinput{common_opts/opt_B}
 
 - **C** or **clearance** : -- *clearance=true* **|** *clearance=(margin=(dx,dy), round=true, concave=true, convex=true)*\
     Adjust the clearance between the text and the surrounding box [15%]. Only used if
-    **pen** or **fill** are specified.  Append the unit you want (**c**\ m, **i**\ nch,
-    or **p**\ oint; if not given we consult `PROJ_LENGTH_UNIT`) or % for a percentage
+    **pen** or **fill** are specified. Append the unit you want (**c**m, **i**nch,
+    or **p**oint); if not given we consult `PROJ_LENGTH_UNIT`) or % for a percentage
     of the font size. Optionally, use options *round* (rounded rectangle) or, for
     **paragraph** mode only, *concave* or *convex* to set the shape of the textbox when
     using **fill** and/or **pen**. Default gets a straight rectangle.

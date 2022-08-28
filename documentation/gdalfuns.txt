@@ -24,6 +24,7 @@ equals
 envelope
 envelope3d
 geod
+geodesic
 geomarea
 geomlength
 intersection

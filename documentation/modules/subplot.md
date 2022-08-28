@@ -59,8 +59,8 @@ Optional Arguments
 
 \textinput{common_opts/opt_B}
 
-- **C** or **clearance** : -- *clearance=(left=val, right=val, bott=val, bottom=val, top=val))*\
-    Reserve a space of dimension *val* between the margin and the subplot on the specified side, using *side* values from **left=val**, **right=val**, **bottom=val**, or **top=val**. No *side* means all sides. Can specify more than one side. Such space will be left untouched by the main map plotting but can be accessed by modules that plot scales, bars, text, etc. Settings specified under **begin** directive apply to all subplots, while settings under **set** only apply to the selected (active) subplot.  **Note**: Common options **xshift** and **yshift** are not available during subplots; use **clearance** instead.
+- **C** or **clearance** : -- *clearance=val* **|** *clearance=(left=val, right=val, bott=val, bottom=val, top=val))*\
+    Reserve a space of dimension *val* between the margin and the subplot on the specified side, using *side* values from **left=val**, **right=val**, **bottom=val**, or **top=val**. No *side* means all sides. Can specify more than one side. Such space will be left untouched by the main map plotting but can be accessed by modules that plot scales, bars, text, etc. Settings specified under **begin** directive apply to all subplots, while settings under **set** only apply to the selected (active) subplot. **Note**: Common options **xshift** and **yshift** are not available during subplots; use **clearance** instead.
 
 \textinput{common_opts/opt_J}
 
@@ -111,7 +111,7 @@ then the dimensions of the map are automatically determined by the subplot size 
 For Cartesian plots: If you want the scale to apply *equally* to both dimensions
 then you must specify **proj=:linear, figscale="auto"** [The default **figsize="auto"** will fill the subplot by using unequal scales].
 
-  Optional Arguments
+Optional Arguments
 ------------------
 
   - **panel=(row,col)**\

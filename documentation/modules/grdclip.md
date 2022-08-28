@@ -41,8 +41,8 @@ Optional Arguments
     Repeat the option for as many replacements as are needed.
 
 - **S** : -- *S="..."\
-    Any of the above but must use the short form **S?**. The current use of this is to when one wants
-    to repeat an **S?** option, which we cannot do because we can't repeat a kwargs names.
+    Any of the above must use the short form **S?**. The current use of this is when one wants
+    to repeat an **S?** option, which we cannot do because we can't repeat the *kwargs* key names.
     Example usage: `G2 = grdclip(G, S="a5/6 -Sb2/2 -Si3/4/3.5")`
 
 \textinput{common_opts/opt_V}
