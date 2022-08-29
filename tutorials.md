@@ -56,4 +56,15 @@
     ~~~</a>~~~
   @@
 
+  @@box
+    ~~~<a class="boxlink" href="longest_sail/longestsail">~~~
+    @@title The longest sail@@
+    @@box-content
+      ~~~
+      <img src="/tutorials/longest_sail/tilelogo.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
 @@
