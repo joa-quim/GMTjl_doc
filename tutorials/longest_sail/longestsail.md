@@ -7,9 +7,9 @@ about the coastlines data-set see the [GSHHG repository](https://github.com/Gene
 
 Quoting [Rohan Chabukswar and Kushal Mukherjee](https://arxiv.org/pdf/1804.07389.pdf)
 
-	There has been some interest recently in determining the longest distance one can sail for on the
-	earth without hitting land, as well as in the converse problem of determining the longest distance
-	one could drive for on the earth without encountering a major body of water.*
+    *There has been some interest recently in determining the longest distance one can sail for on the*
+    *earth without hitting land, as well as in the converse problem of determining the longest distance*
+    *one could drive for on the earth without encountering a major body of water.*
 
 Those authors have developed an algorithm for calculating the longest straight-line path on land or sea and
 came out with a solution for the maritime path that starts at Pakistan (66:40 E; 25:17 N) and ends at the
@@ -124,7 +124,7 @@ gmtbegin(fname)
 gmtend(:show)
 ```
 
-\figenv{The caption}{/tutorials/longest_sail/Longest_sphere.png}{width:80%;border: 1px solid red;}
+\figenv{The caption}{/tutorials/longest_sail/Longest_sphere.png}{width:90%;}
 
 ## Ellipsoidal (geodesics)
 
@@ -144,9 +144,9 @@ not stand on the real Earth. We can also see in the insets over the Pakistan and
 starting, represented by the red dot, and arrival points do not coincide.
 
 
-\figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_PakKam.png}{width:80%;border: 1px solid red;}
+\figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_PakKam.png}{width:90%;}
 
-\figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_KamPak.png}{width:80%;border: 1px solid red;}
+\figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_KamPak.png}{width:90%;}
 
 ## A working geodesics solution
 
@@ -156,4 +156,4 @@ azimuth computed from the Kamchatka location at (162:12:5.8 E; 58:27:27.6 N) to 
 not shown, reverting the order of these two points would not have worked. The total length of this line is
 ~32,065.8 km
 
-\figenv{The caption}{/tutorials/longest_sail/Longest_best_ellipse.png}{width:80%;border: 1px solid red;}
+\figenv{The caption}{/tutorials/longest_sail/Longest_best_ellipse.png}{width:90%;}
