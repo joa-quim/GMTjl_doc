@@ -12,7 +12,7 @@ Quoting [Rohan Chabukswar and Kushal Mukherjee](https://arxiv.org/pdf/1804.07389
     *one could drive for on the earth without encountering a major body of water.*
 
 Those authors have developed an algorithm for calculating the longest straight-line path on land or sea and
-came out with a solution for the maritime path that starts at Pakistan (66:40 E; 25:17 N) and ends at the
+came out with a solution for the maritime path that starts in Pakistan (66:40 E; 25:17 N) and ends in the
 Kamchatka Peninsula (162:14 E; 58:37 N) following a great circle of 32,090 kilometers long. However, as they
 acknowledge, the computation was performed using a topo-bathymetric grid with a grid step of 1 arc minute
 (~1.8 km) and on a spherical Earth.
@@ -134,9 +134,9 @@ along a meridian or the equator, is not a closed line. That means, following a g
 azimuth different from +/-90 or 0 degrees we don't return to starting point, see this
 [Wiki page](https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid)
 
-Next two figures show the geodesics for the case where the starting point is at Pakistan and end in Kamchatka,
+Next two figures show the geodesics for the case where the starting point is in Pakistan and end in Kamchatka,
 and the inverse. Note that because we are interested in the longest part of the geodesic line, the firts case
-actually starts at Kamchatka and ends in Pakistan but we computed the azimuth of the geodesic from Pakistan to
+actually starts in Kamchatka and ends in Pakistan but we computed the azimuth of the geodesic from Pakistan to
 Kamchatka at its destination (if you are confused, see the second figure of the wiki page linked above).
 
 As we can see, both of those two lines hit an island in the Aleutian archipelago. So, the spherical solution does
