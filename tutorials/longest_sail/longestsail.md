@@ -7,9 +7,9 @@ about the coastlines data-set see the [GSHHG repository](https://github.com/Gene
 
 Quoting [Rohan Chabukswar and Kushal Mukherjee](https://arxiv.org/pdf/1804.07389.pdf)
 
-    *There has been some interest recently in determining the longest distance one can sail for on the*
-    *earth without hitting land, as well as in the converse problem of determining the longest distance*
-    *one could drive for on the earth without encountering a major body of water.*
+> There has been some interest recently in determining the longest distance one can sail for on the
+> earth without hitting land, as well as in the converse problem of determining the longest distance
+> one could drive for on the earth without encountering a major body of water.
 
 Those authors have developed an algorithm for calculating the longest straight-line path on land or sea and
 came out with a solution for the maritime path that starts in Pakistan (66:40 E; 25:17 N) and ends in the
