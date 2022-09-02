@@ -3,7 +3,9 @@
 GMT uses the \myreflink{coast} utility to access a version of the GSHHG data specially formatted for GMT.
 The GSHHG data have strengths and weaknesses. It is global and open source, but is based on relatively
 old datasets and hence may not be accurate enough for very large-scale mapping projects. For more information
-about the coastlines data-set see the [GSHHG repository](https://github.com/GenericMappingTools/gshhg-gmt)
+about the coastlines data-set see the [GSHHG repository](https://github.com/GenericMappingTools/gshhg-gmt).
+We are referring this because the GMT coastlines were used to refine the solutions for the departing and
+arrival points of the longest sail.
 
 Quoting [Rohan Chabukswar and Kushal Mukherjee](https://arxiv.org/pdf/1804.07389.pdf)
 
@@ -22,8 +24,8 @@ and end points actually fall on land. Moving them to the intersection of the gre
 coastlines data-set ((66:39:49 E; 25:16:45 N), (162:20:44 E; 58:35:50 N)) leads to slightly shorter path of
 32,083.3 km. Here we used authalic sphere computed from the WGS84 ellipsoid. The second effect, that of the
 spherical *vs* ellipsoidal approximation, is what we will see here. We will show that the proposed locations
-wont work for an ellipsoidal Earth but that we can find one geodesic line in the *vicinity* of the spherical
-solution, though not mathematically prove it is the longest possible geodesic.
+still works for an ellipsoidal Earth but that we can find a slightly longer geodesic line in the *vicinity*
+of the spherical solution, though not mathematically prove it is the longest possible geodesic.
 
 ## Sherical (great circle path)
 
@@ -41,34 +43,26 @@ PakKam = false		# If all 3 are false ==> KamPak	(compute geodesics with original
 
 # Set titles, fig names and regions for the insets depending on the selected solution.
 if (best)
-	ptPak = [66.70161290 25.24294355];	ptCam = [162.20161290 58.45766129];
-	x = geodesic(ptCam, ptPak, longest=true, step=10000);
-	title, fname = "Best Ellipsoidal", "Longest_best_ellipse.png"
+	ptPak = [66.6424435 25.2972055];		ptKam = [162.34545111 58.59724279];		# New ~Best [66:38:32.8 25:17:49.9]
+	x = geodesic(ptKam, ptPak, longest=true, step=10000);
+	title, fname = "~Best Ellipsoidal", "Longest_best_ellipse.png"
 	subtit = "Length = $(round(parse(Float64, x.attrib["Length"]) / 1000, digits=3)) km"
 else
-	ptPak = [66.66366872 25.27917480];		ptCam = [162.34545111 58.59724279];		# Intersect Orig with shoreline
+	ptPak = [66.66366872 25.27917480];		ptKam = [162.34545111 58.59724279];		# Intersect Orig with shoreline
 	if (sphere)
-		x = geodesic(ptPak, ptCam, longest=true, step=10000, proj="+proj=lonlat +a=6371007 +b=6371007");
+		x = geodesic(ptPak, ptKam, longest=true, step=10000, proj="+proj=lonlat +a=6371007 +b=6371007");
 		title, fname = "Spherical", "Longest_sphere"
 		subtit = "Length = $(round(parse(Float64, x.attrib["Length"]) / 1000, digits=3)) km"
 	else
-		if (PakKam)
-			x = geodesic(ptPak, ptCam, longest=true, step=10000);
-			title, fname = "Ellipsoidal Pak->Kam", "Longest_ellipse_PakKam.png"
-		else
-			x = geodesic(ptCam, ptPak, longest=true, step=10000);
-			title, fname = "Ellipsoidal Kam->Pak", "Longest_ellipse_KamPak.png"
-		end
+		x = geodesic(ptPak, ptKam, longest=true, step=10000);
+		title, fname = "Ellipsoidal Pak->Kam", "Longest_ellipse_PakKam.png"
+		subtit = "Length = $(round(parse(Float64, x.attrib["Length"]) / 1000, digits=3)) km"
 	end
 end
 
 # Make the plot
 gmtbegin(fname)
-	if (best || sphere)
-		coast(region=:global, proj=:guess, shore=0.5, land=:gray, frame=:auto, area=(500,1), title=title, subtitle=subtit)
-	else
-		coast(region=:global, proj=:guess, shore=0.5, land=:gray, frame=:auto, area=(500,1), title=title)
-	end
+	coast(region=:global, proj=:guess, shore=0.5, land=:gray, frame=:auto, area=(500,1), title=title, subtitle=subtit)
 	plot(x, lw=0.5, lc=:red)
 
 	# Comoros
@@ -80,19 +74,18 @@ gmtbegin(fname)
 			plot([43.8 -12.45 44.00 -12.25], marker="r+s", ml=(0.2, :darkblue))    # A blue rectangle for 2nd zoom
 		end
 	inset(:end)
-	if (best || sphere)
-		inset(inset_box=(map=true, anchor=(62,-40), justify=:TL, width=(1.5,1.0)), box=(fill=:white, pen=(0.5, :darkblue)))
-			coast(region=[43.850, 43.93, -12.41, -12.32], frame=:none, shore=0.5, land=:darkorange, figsize=1.5)
-			plot(x, lw=0.5, lc=:red)
-			basemap(map_scale=(anchor=:BL, scale_at_lat=-12.35, length="4k", label=true, fancy=true, offset=(0.1,0.3)),)
-		inset(:end)
-	end
+	inset(inset_box=(map=true, anchor=(62,-40), justify=:TL, width=(1.5,1.0)), box=(fill=:white, pen=(0.5, :darkblue)))
+		coast(region=[43.850, 43.93, -12.41, -12.32], frame=:none, shore=0.5, land=:darkorange, figsize=1.5)
+		plot(x, lw=0.5, lc=:red)
+		just = (PakKam) ? :BL : :BR
+		basemap(map_scale=(anchor=just, scale_at_lat=-12.35, length="4k", label=true, fancy=true, offset=(0.1,0.3)),)
+	inset(:end)
 
 	# Kamchatka
 	inset(inset_box=(map=true, anchor=(140,48), justify=:TL, width=1.5), box=(fill=:white, pen=(0.5, :blue)))
-		coast(region=[161.7, 165.0, 57.67, 59.5], frame=:none, shore=0.5, land=:orange, figsize=1.5)
+		coast(region=[161.7, 164.0, 57.67, 59.5], frame=:none, shore=0.5, land=:orange, figsize=1.5)
 		plot(x, lw=0.5, lc=:red)
-		plot(ptCam, marker=:circ, ms=0.1, fill=:darkred)	# Orig pt
+		plot(ptKam, marker=:circ, ms=0.1, fill=:darkred)	# Orig pt
 	inset(:end)
 
 	# Aleutian
@@ -102,7 +95,7 @@ gmtbegin(fname)
 		coast(region=R, frame=:none, shore=0.5, res=:full, land=:orange, figsize=1.5)
 		plot(x, lw=0.5, lc=:red)
 	inset(:end)
-	if (best || sphere)
+	if (false && best || sphere)
 		inset(inset_box=(map=true, anchor=(-175,5), justify=:TL, width=(1.6,1.4)), box=(fill=:white, pen=(0.5, :darkblue)))
 			R = (best) ? [-175.6, -175.48, 51.945, 52.05] : [-175.60, -175.538, 51.950, 52.07] 
 			coast(region=R, frame=:none, shore=0.5, res=:full, land=:darkorange, figsize=1.6)
@@ -129,31 +122,30 @@ gmtend(:show)
 ## Ellipsoidal (geodesics)
 
 Now let's see how it behaves if we compute the path along the shortest distance on an ellipsoid (a geodesic line),
-the WGS84 ellipsoid in this case. Good, but we start to have problems. The issue is that a geodesic, except for
+the WGS84 ellipsoid in this case. Good, but the case not so simple as a geodesic, except for
 along a meridian or the equator, is not a closed line. That means, following a geodesic that starts at a certain
 azimuth different from +/-90 or 0 degrees we don't return to starting point, see this
-[Wiki page](https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid)
+[Wiki page](https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid). So this means we cannot simply compute
+the *other way around* as the complement of the shortest path between **A** and **B** as that is a too crude
+aproximation. For more details on this problem see this
+[discussion](https://forum.generic-mapping-tools.org/t/oblique-mercator-for-straight-line-between-points-as-maps-equator/3223/11)
+in the GMT forum that shows also the history on how this problem was *solved*. But the take of this is that one can obtain
+a geodesic line that very closely (at the decimeter level) can go from **A** to **B** and be a reversible solution. That is,
+if we swapp **A** and **B** we get the same solution.
 
-Next two figures show the geodesics for the case where the starting point is in Pakistan and end in Kamchatka,
-and the inverse. Note that because we are interested in the longest part of the geodesic line, the firts case
-actually starts in Kamchatka and ends in Pakistan but we computed the azimuth of the geodesic from Pakistan to
-Kamchatka at its destination (if you are confused, see the second figure of the wiki page linked above).
-
-As we can see, both of those two lines hit an island in the Aleutian archipelago. So, the spherical solution does
-not stand on the real Earth. We can also see in the insets over the Pakistan and Kamchatka locations that the
-starting, represented by the red dot, and arrival points do not coincide.
-
+Next figure shows that the proposed geocentric solution still holds for the ellipsoidal case. Well, the figure doesn't
+show that because we can see an interruption due to a hit in one of the Comoro's islet. However, this is not really
+true because the GMT shorelines at this levels show the effect of having been digitized from last century charts and are off
+often off by ~250-300 m. And in fact, checking with GoogleEarth we would see that the path manages to go through those
+rocks without hitting them.
 
 \figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_PakKam.png}{width:90%;}
 
-\figenv{The caption}{/tutorials/longest_sail/Longest_ellipse_KamPak.png}{width:90%;}
+## A slightly longer geodesic solution
 
-## A working geodesics solution
-
-With some trial and error it was possible to find a geodesic line that manages to pass through the tinny passages
-and do all the circuit. That line starts in Pakistan, at coordinates (66:42:5.8 E; 25:14:34.6 N) with the
-azimuth computed from the Kamchatka location at (162:12:5.8 E; 58:27:27.6 N) to Pakistan. Note that, although
-not shown, reverting the order of these two points would not have worked. The total length of this line is
-~32,065.8 km
+Although the solution proposed by Chabukswar and Mukherjee still holds on the ellipsoidal Earth, it is possible
+to find a nearby alternative that is slightly longer. With trial an error it was possible to find one that
+adds ~0.5 km to the that path. That solution, that starts at [66:38:32.8 E; 25:17:49.9 N] and ends at the same
+Kamachatka point of [162:20:44 E; 58:35:50 N] is shown in the figure below and has a length of ~32,064.31 km.
 
 \figenv{The caption}{/tutorials/longest_sail/Longest_best_ellipse.png}{width:90%;}
