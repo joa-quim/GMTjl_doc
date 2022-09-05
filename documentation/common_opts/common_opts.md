@@ -39,14 +39,14 @@ Optionally append *pole="plon/plat"* (or *pole=(plon,plat)* to draw oblique grid
 specified pole [regular gridlines]. Ignored if gridlines are not requested (below) and disallowed for the oblique
 Mercator projection.
 
-*xx* and *yy* axes grow from left to right and bottomto top (*zz* axis too). This the default but that can be
+*xx* and *yy* axes grow from left to right and bottom to top (*zz* axis too). This the default but that can be
 changed with the keywords **flipx=true**, **flipy=** and **flipz=**. Alternative names are **xflip, yflip, zflip**. 
 
 For Cartesian plots the *slanted=angle* allows for the optional angle to plot slanted annotations; the angle
 is with respect to the horizontal and must be in the -90 <= *angle* <= 90 range only. This applies to the x-axis
 only, with the exception of the *slanted=:parallel* form that plots the y annotations parallel to y-axis.
 
-To add a plot title do *title="My title"* The Frame setting is optional but can be invoked once to override
+To add a plot title do *title="My title"*. The Frame setting is optional but can be invoked once to override
 the above defaults.
 
 GMT uses the notion of *primary* (the default) and *secondary* axes. To set an axes as secondary, use
@@ -235,11 +235,14 @@ The entire parameters collection is displayed in the following table
 
 Demonstrates use of dual (left vs right, bottom vs top) Cartesian axis labels
 
+\begin{examplefig}{}
 ```julia
-basemap(limits=(0,50,0,7), figsize=8,
+using GMT
+basemap(limits=(0,50,0,7), figsize=10,
         xaxis=(annot=:auto, ticks=:auto, label="Bottom Label", seclabel="Top label"),
         yaxis=(annot=:auto, ticks=:auto, label="Left label", seclabel="Right label"), show=1)
 ```
+\end{examplefig}
 
 we can obtain the same result with a slightly shorter version of the above that shows how can mix *frame* and *xaxis* calls.
 
@@ -251,13 +254,18 @@ basemap(limits=(0,50,0,7), figsize=8,
 
 Show inside labeling (use default fig size).
 
+\begin{examplefig}{}
 ```julia
-basemap(limits=(0,13,0,10), frame=(annot=2, ticks=0.5), par=(:MAP_FRAME_TYPE,:inside), show=1)
+using GMT
+basemap(limits=(0,13,0,10), frame=(annot=2, ticks=0.5), figsize=(12,6), par=(:MAP_FRAME_TYPE,:inside), show=1)
 ```
+\end{examplefig}
 
 Show horizontal and vertical annotations
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region=[0 1000 0 1000], figsize=5,
         frame=(axes=(:left_full,:bottom_full,:right_full,:top_full), annot=200,
                ticks=100, xlabel=:horizontal, ylabel=:vertical),
@@ -268,14 +276,18 @@ basemap!(frame=(axes=(:left_full,:bottom_full,:right_full,:top_full), annot=200,
          par=(FONT_ANNOT_PRIMARY=10, FONT_LABEL=16, MAP_ANNOT_ORTHO=:sn),
          x_offset=9, show=1)
 ```
+\end{examplefig}
 
 Show `Yhlabel` for horizontal labels for y-axis 
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region="-30/30/-20/20", figsize=(12,8),
         frame=(annot=:a, ticks=:a, xlabel="Standard horizontal label", Yhlabel="@~Y(q)@~",
                title="Vertical Y-axis label"), show=1)
 ```
+\end{examplefig}
 
 --------------------------
 
