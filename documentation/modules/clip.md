@@ -17,14 +17,14 @@ regardless of direction, crosses the clipping path segments an odd number of tim
 inside the clipping path. If the number is even, the point is outside. The **invert** option,
 reverses the sense of what is the inside and outside of the paths by plotting a clipping path along
 the map boundary. After subsequent plotting, which will be clipped against these paths, the clipping
-may be deactivated by running the module a second time with the **end_clip_path** option only.
+may be deactivated by running the module a second time with the **endclip** option only.
 
 Required Arguments
 ------------------
 - *table*\
     One or more data tables holding a number of data columns.
 
-- **C** or **end_clip_path** : -- *end_clip_path=true* or *end_clip_path=n*\
+- **C** or **endclip** or **end_clip_path** : -- *endclip=true* or *endclip=n*\
     Mark end of existing clip path(s). No input file will be processed. No projection information
     is needed unless \myreflink{frame} has been selected as well. With no arguments we terminate
     all active clipping paths. Experts may restrict the termination to just *n* of the active
@@ -92,7 +92,7 @@ being partly visible or missing altogether, try:
 using GMT
 clip([0 0; 5 1; 5 5], region=(0,6,0,6), figscale=2.5, pen=(1,:blue))
 plot("@tut_data.txt", fill=:red, marker=:circ, ms=2)
-clip!(end_clip_path=true, frame=:same, show=true)
+clip!(endclip=true, frame=:same, show=true)
 ```
 \end{examplefig}
 

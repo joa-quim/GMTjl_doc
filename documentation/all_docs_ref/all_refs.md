@@ -22,7 +22,7 @@
 | \myreflink{grdlandmask} | \myreflink{grdmask} | \myreflink{grdmath} | grdmix |  grdpaste |  grdproject |
 | \myreflink{grdsample} | \myreflink{grdtrack} | \myreflink{grdtrend} |  grdvector | \myreflink{grdview} | grdvolume |
 | greenspline | \myreflink{histogram} | \myreflink{image} | \myreflink{inset} | kml2gmt | \myreflink{legend} |
-| \myreflink{makecpt} |  mapproject |  mask | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
+| \myreflink{makecpt} |  mapproject | \myreflink{mask} | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
 | \myreflink{plot3d} | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
 | spectrum1d | sph2grd | sphdistance | \myreflink{sphinterpolate} | \myreflink{sphtriangulate} | \myreflink{subplot} |
 | \myreflink{surface} | \myreflink{ternary} | \myreflink{text} | \myreflink{trend1d} | \myreflink{trend2d} | \myreflink{triangulate} |
