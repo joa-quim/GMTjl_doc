@@ -1,9 +1,9 @@
 # vband
 
 ```julia
-    vband(mat::Matrix; region=(...), width=false,  percent=false, fill=nothing, fillalpha=nothing)
+vband(mat::Matrix; region=(...), width=false,  percent=false, fill=nothing, fillalpha=nothing)
 
-    hband(mat::Matrix; region=(...), height=false, percent=false, fill=nothing, fillalpha=nothing)
+hband(mat::Matrix; region=(...), height=false, percent=false, fill=nothing, fillalpha=nothing)
 ```
 
 Reads a MxN array where 2 <= N <= 4 and plot a vertical (`vband` or `vspan`) or horizontal (`hband` or `hspan`)
