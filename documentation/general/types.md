@@ -17,6 +17,7 @@ type GMTgrid{T<:Real,N} <: AbstractArray{T,N}      # The type holding a local he
     title::String                      # Title (Optional)
     comment::String                    # Remark (Optional)
     command::String                    # Command used to create the grid (Optional)
+    cpt::String                        # Name of a recommended GMT CPT name for this grid.
     names::Vector{String}              # To use whith multi-layered and when layers have names (Optional)
     x::Array{Float64,1}                # [1 x n_columns] vector with XX coordinates
     y::Array{Float64,1}                # [1 x n_rows]    vector with YY coordinates
@@ -30,6 +31,7 @@ type GMTgrid{T<:Real,N} <: AbstractArray{T,N}      # The type holding a local he
     scale::Union{Float64, Float32}=1f0 # When saving in file apply `z = z * scale + offset`
     offset::Union{Float64, Float32}=0f0
     pad::Int=0                         # When != 0 means that the array is placed in a padded array of PAD rows/cols
+    hasnans::Int=2                     # 2 -> "don't know"; 1 -> confirmed, "have NaNs"; 0 -> confirmed, "have no NaNs"
 end
 ```
 

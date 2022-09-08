@@ -19,11 +19,29 @@ Parameters
 
 \textinput{common_opts/opt_B}
 
-- **C** or **color** or **cmap** : *color=cpt*\
-   Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)** to build a linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented by one for each color. In this case *color_n* can be a [r g b] triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ). If **symbol** is set, let symbol fill color be determined by the z-value in the third column. Additional fields are shifted over by one column (optional size would be 4th rather than 3rd field, etc.). If **symbol** is not set, then it expects the user to supply a multisegment file where each segment header contains a **-Z**\ *val* string. The *val* will control the color of the line or polygon (if **close** is set) via the CPT.
+- **bg** or **background** : -- *bg=imagename* **|** *bg=funname|img|grd* **|** *bg=(..., colormap)*\
+   Fills the plotting canvas with a backround image. That image may come from a file (*e.g.* **bg="cute.png"**) or
+   from a predefined function name. Possible names are: *akley, eggs, circle, parabola, rosenbrok, sombrero, x, y, xy, x+y* (see also \myreflink{Plot surfaces}). In the forms **bg=img** and **bg=grd**, the *img* and *grd* stand for a
+   \myreflink{Image type} and a \myreflink{Grid type} object respectively. Image types can have associated a color map
+   (if they do not see the \myreflink{image_cpt!} on how to assign one) but grid type do not so we need to provide that
+   information if the *turbo* default is not intended. To assign a colormap the **bg** argument must be a two elements
+   tuple, where first element is any of *funname|img|grd* and the second a colormap name (a CPT) or a \myreflink{CPT type}
+   object (see also \myreflink{makecpt}). To revert the sense of the color progression prefix the colormap name or of
+   the predefined function with a '-'. Example: `plot(rand(8,2), bg=(:sombrero, "-magma"))`
 
-- **D** or **shift** or **offset** : *offset=(dx,dy)* **|** *offset=dx*\
-   Offset the plot symbol or line locations by the given amounts *dx,dy* [Default is no offset]. If *dy* is not given it is set equal to *dx*.
+plot(rand(8,2), bg=(:somb, :turbo), show=1)
+- **C** or **color** or **cmap** : -- *color=cpt*\
+   Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)** to build a
+   linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented by one for each color.
+   In this case *color_n* can be a [r g b] triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ). If
+   **symbol** is set, let symbol fill color be determined by the z-value in the third column. Additional fields are
+   shifted over by one column (optional size would be 4th rather than 3rd field, etc.). If **symbol** is not set,
+   then it expects the user to supply a multisegment file where each segment header contains a **-Z**\ *val* string.
+   The *val* will control the color of the line or polygon (if **close** is set) via the CPT.
+
+- **D** or **shift** or **offset** : -- *offset=(dx,dy)* **|** *offset=dx*\
+   Offset the plot symbol or line locations by the given amounts *dx,dy* [Default is no offset]. If *dy* is not given
+   it is set equal to *dx*.
 
 - **E** or **error** or **error_bars** : -- *error=(x|y|X|Y=true, wiskers=true, cap=width, pen=pen, colored=true, cline=true, csymbol=true)*\
    Draw symmetrical error bars. Use **error=(x=true)** and/or **error=(y=true)** to indicate which bars you want to draw (Default is both x and y). The x and/or y errors must be stored in the columns after the (x,y) pair [or (x,y,z) triplet]. If **asym=true** is appended then we will draw asymmetrical error bars; these requires two rather than one extra data column, with the low and high value. If upper case **error=(X=true)** and/or **Y** are used we will instead draw "box-and-whisker" (or "stem-and-leaf") symbols. The x (or y) coordinate is then taken as the median value, and four more columns are expected to contain the minimum (0% quantile), the 25% quantile, the 75% quantile, and the maximum (100% quantile) values. The 25-75% box may be filled by using **fill**. If **wiskers=true** is appended the we draw a notched "box-and-whisker" symbol where the notch width reflects the uncertainty in the median. This symbol requires a 5th extra data column to contain the number of points in the distribution. The **cap=width** modifier sets the *cap* width that indicates the length of the end-cap on the error bars [**7p**]. Pen attributes for error bars may also be set via **pen=pen**. [Defaults: width = default, color = black, style = solid]. When **color** is used we can control how the look-up color is applied to our symbol. Add **cline=true** to use it to fill the symbol, while **csymbol=true** will just set the error pen color and turn off symbol fill. Giving **colored=true** will set both color items.
