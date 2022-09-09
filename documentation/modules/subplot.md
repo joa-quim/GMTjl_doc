@@ -156,8 +156,6 @@ To make a minimalistic 3x3 basemap layout, try::
 ```julia
 using GMT
 subplot(grid="3x3", panels_size=(5,7), region=(0, 100, 0, 80), frame=:WSen, autolabel=1, margins="6p")
-    gmtset(MAP_FRAME_TYPE=:plain)
-
     basemap(panel=1)
     basemap(panel=2, proj=:linear)		# Same as above
     basemap(panel="next", proj=:linear, figsize="auto,auto")
