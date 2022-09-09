@@ -112,7 +112,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_Y}
 
-- **Z** or **kind** : -- *kind=type* **|** *kind=(counts=, | freq=, | log_count=, | log_freq=, | log10_count=, | log10_freq=, weights=)*\
+- **Z** or **kind** : -- *kind=type* **|** *kind=(counts=, | freq=, | frequency=, | log_count=, | log_freq=, | log10_count=, | log10_freq=, weights=)*\
    Choose between 6 types of histograms:
 
       0 = counts [Default]
@@ -122,7 +122,8 @@ Optional Arguments
       4 = log10 (1.0 + count)
       5 = log10 (1.0 + frequency_percent).
 
-    To use weights provided as a second data column instead of pure counts, use a tuple. *e.g.* **kind=(counts=true, weights=true)**
+    To use weights provided as a second data column instead of pure counts, use a tuple. *e.g.* **kind=(counts=true, weights=true)**. If no *weights* are used then we may use the simpler form **kind=??** where *??* is the name
+    of any of the 6 types. *e.g.* **kind=frequency**
 
 - **zoom** : -- *zoom=true*\
    When input is a GMTimage of UInt16 type this option will set **auto=true** and show histogram only
@@ -155,9 +156,12 @@ Examples
 To draw a histogram of the data v3206.t containing seafloor depths,
 using a 250 meter bin width, center bars, and draw bar outline, use:
 
+\begin{examplefig}{}
 ```julia
-    histogram("@v3206.t", bin=250, center=true, pen="0.5p", show=true)
+using GMT
+histogram("@v3206.t", bin=250, center=true, pen="0.5p", show=true)
 ```
+\end{examplefig}
 
 If you know the distribution of your data, you may explicitly specify
 range and scales. E.g., to plot a histogram of the y-values (2nd column)

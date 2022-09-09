@@ -14,7 +14,7 @@ using GMT
 histogram("@v3206_06.txt", region=(-6000,0,0,30),
           frame=(axes=:WSen, annot=:auto, title="Histogram", fill=:lightblue),
           xlabel="Topography (m)", yaxis=(label="Frequency", suffix=" %"),
-          fill=:orange, pen=0.5, kind=(freq=true,), bin=250, show=true)
+          fill=:orange, pen=0.5, kind=:frequency, bin=250, show=true)
 ```
 \end{examplefig}
 
