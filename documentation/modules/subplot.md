@@ -25,6 +25,10 @@ Required Arguments
     Specify the dimensions of the figure. There are two different ways to do this:
     1. With the keyword **figsize** Specify overall figure dimensions\
     2. With the keyword **panels** specify the dimensions of a single subplot.
+    
+    For grids up to 3x3 and 2x1 and 3x1, if neither **figsize** or **panels** are specified, an estimation
+    of the *panels* size plus **margins** will be provided. This may suite many use cases with a likely need
+    to specify better margins.
 
     **figsize**\
     Specify the final figure dimensions. The subplot dimensions are then calculated from the figure dimensions after accounting for the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append **frac** with value given as a tuple of *width* and *height* fractions. For example **dims=(size=(10,10), frac=((3,1),(1,2)))** will make a 10x10 cm fig with the first column three times as wide as the second, while the second row will be twice as tall as the first row. A single number means constant widths (or heights) [Default]. If prefered, instead of *size* and/or *frac* as tuples, the **width=x, height=y, fwidth=(...), fheight=(...)** form is also allowed. 
