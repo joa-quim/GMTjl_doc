@@ -6,7 +6,7 @@
 
 Reads (x,y) pairs and plots a bar graph. This module is a subset of `plot` to make it simpler to draw bar
 plots. So not all (fine) controlling parameters are listed here. For a finer control, user should
-consult the `plot` module.
+consult the \myreflink{plot} module.
 
 If input is a MxN array and N > 2 it will plot a bar-group with M groups and N-1 bars in each group (first
 column holds always the coordinates).
@@ -55,7 +55,7 @@ Parameters
    When *fill* was used, control the transparency level. Numbers can be floats <= 1.0 or integeres in 0-100 range.
 
 - *stack*\
-   Plot a vertically stacked group plot
+   Plot a vertically (or horizontally if *hbar=true*) stacked group plot
 
 \textinput{common_opts/opt_save_fig}
 
@@ -91,5 +91,7 @@ bar([0. 1 2 3; 1 2 3 4], error_bars=(y=[0.1 0.2 0.33; 0.2 0.3 0.4],), show=true)
 
 See also
 --------
+
+\myreflink{Bar plots} examples.
 
 The [`GMT man page`](https://docs.generic-mapping-tools.org/latest/plot.html)

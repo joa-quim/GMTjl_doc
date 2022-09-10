@@ -83,18 +83,18 @@ end
 
 ```julia
 type GMTcpt
-    colormap::Array{Float64,2}
-    alpha::Array{Float64,1}
-    range::Array{Float64,2}
-    minmax::Array{Float64,1}
-    bfn::Array{Float64,2}
-    depth::Cint
-    hinge::Cdouble
-    cpt::Array{Float64,2}
-    label::Vector{String}     # Labels of a Categorical CPT
-    key::Vector{String}       # Keys of a Categorical CPT
-    model::String
-    comment::Array{Any,1}     # Cell array with any comments
+    colormap::Array{Float64,2} # Mx3 matrix equal to the first three columns of cpt
+    alpha::Array{Float64,1}    # Vector of alpha values. One for each color.
+    range::Array{Float64,2}    # Mx2 matrix with z range for each slice
+    minmax::Array{Float64,1}   # Two elements Vector with zmin,zmax
+    bfn::Array{Float64,2}      # A 3x3(4?) matrix with BFN colors (one per row) in [0 1] interval
+    depth::Cint                # Color depth: 24, 8, 1
+    hinge::Cdouble             # Z-value at discontinuous color break, or NaN
+    cpt::Array{Float64,2}      # Mx6 matrix with r1 g1 b1 r2 g2 b2 for z1 z2 of each slice
+    label::Vector{String}      # Labels of a Categorical CPT
+    key::Vector{String}        # Keys of a Categorical CPT
+    model::String              # String with color model rgb, hsv, or cmyk [rgb]
+    comment::Vector{String}    # Cell array with any comments
 end
 ```
 
