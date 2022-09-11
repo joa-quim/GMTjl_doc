@@ -110,7 +110,7 @@ Optional Arguments
     Append flag to set the range *R*: **l** for *R* =|zmin|, **u** for *R* =
     |zmax|, **m** for *R* = min(|zmin|, |zmax|), or **h** for *R* = max(|zmin|, |zmax|).
 
-- **T** or **range** : -- *range=(min,max,inc])* **|** *range=n*\
+- **T** or **range** : -- *range=(min,max,inc)* **|** *range=n*\
     Set steps in CPT. Calculate entries in CPT from *start* to *stop* in steps of (*inc*).
     Default chooses arbitrary values by a crazy scheme based on equidistant values for a
     Gaussian CDF. Use **range=n** to select *n* points from such a cumulative normal distribution [11].

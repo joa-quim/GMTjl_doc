@@ -153,13 +153,13 @@ Optional Arguments
 Examples
 --------
 
-To draw a histogram of the data v3206.t containing seafloor depths,
+To draw a histogram of the data *v3206_06.txt* containing seafloor depths,
 using a 250 meter bin width, center bars, and draw bar outline, use:
 
 \begin{examplefig}{}
 ```julia
 using GMT
-histogram("@v3206.t", bin=250, center=true, pen="0.5p", show=true)
+histogram("@v3206_06.txt", bin=250, center=true, pen="0.5p", show=true)
 ```
 \end{examplefig}
 
@@ -170,7 +170,7 @@ meters @ 0.75 cm/m, annotate every 2 m and 100 counts, and use black bars, run:
 
 ```julia
     histogram("errors.xy", bin=1, region=(-10,10,0,0), J="xc/0.01c",
-               xaxis=(annot=2,label=:Error), yaxis=(annot=100, label=:Counts), fill=:black, incol=1) 
+              xaxis=(annot=2,label=:Error), yaxis=(annot=100, label=:Counts), fill=:black, incol=1) 
 ```
 
 Since no y-range was specified, **histogram** will calculate *ymax* in even increments of 100.
@@ -178,8 +178,8 @@ Since no y-range was specified, **histogram** will calculate *ymax* in even incr
 To plot the histogram of a Landsat image, pick good bounds for contrast enhancement and show them
 
 ```julia
-    I = gmtread("landsat.tif")
-    histogram(I, zoom=true, show=true);
+I = gmtread("landsat.tif")
+histogram(I, zoom=true, show=true);
 ```
 
 See also

@@ -102,9 +102,9 @@ end
 
 ```julia
 type GMTps
-    postscript::String      # Actual PS plot (text string)
-    length::Int             # Byte length of postscript
-    mode::Int               # 1 = Has header, 2 = Has trailer, 3 = Has both
-    comment::Array{Any,1}   # Cell array with any comments
+    postscript::String         # Actual PS plot (text string)
+    length::Int                # Byte length of postscript
+    mode::Int                  # 1 = Has header, 2 = Has trailer, 3 = Has both
+    comment::Vector{String}    # Cell array with any comments
 end
 ```
