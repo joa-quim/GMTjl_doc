@@ -13,7 +13,7 @@ This module plots a large variety of lines and polygons. It goes from *simple* l
 symbols and text patterns.
 
 This module is a subset of `plot` to make it simpler to draw line plots. So not all (fine)
-controlling parameters are not listed here. For the finest control, user should consult the `plot` module.
+controlling parameters are not listed here. For the finest control, user should consult the \myreflink{plot} module.
 
 Parameters
 ----------

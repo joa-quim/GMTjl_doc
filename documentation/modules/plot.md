@@ -83,7 +83,7 @@ plot(rand(8,2), bg=(:somb, :turbo), show=1)
 - **I** or **shade** : -- *shade=intens*\
     Use the supplied *intens* value (nominally in the -1 to +1 range) to modulate the fill color by simulating illumination [none]. If no intensity is provided (*e.g.* **shade=""**) we will instead read *intens* from the first data column after the symbol parameters (if given).
 
-- **L** or **close** : -- *close=(sym=true, asym=true, envelope=true, left=true, right=true, x0=x0, top=true, bot=true, y0=y0, pen=pen)*\
+- **L** or **close** or **polygon** : -- *close=(sym=true, asym=true, envelope=true, left=true, right=true, x0=x0, top=true, bot=true, y0=y0, pen=pen)*\
   Force closed polygons. Alternatively, add modifiers to build a polygon from a line segment.
     - **sym=true** to build symmetrical envelope around y(x) using deviations dy(x) given in extra column 3.
     - **asym=true** to build asymmetrical envelope around y(x) using deviations dy1(x) and dy2(x) from extra columns 3-4.
