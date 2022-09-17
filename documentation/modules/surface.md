@@ -86,7 +86,7 @@ Optional Arguments
     means that only the cell where the point lies is filled, **mask="1c"** keeps one cell beyond that
     (i.e. makes a 3x3 square neighborhood), and so on.
 
-- **N** or **max_iter** or **max_iterations** : -- *max_iter=n_iter*\
+- **N** or **iterations** or **max_iterations** : -- *iterations=n_iter*\
     Number of iterations. Iteration will cease when **convergence** is reached or when number of
     iterations reaches *n_iter*.  This is the final iteration limit at the desired grid spacing;
     for intermediate (coarser) grids the effective iteration limit is scaled by the grid spacing
