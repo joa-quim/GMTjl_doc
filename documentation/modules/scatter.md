@@ -42,6 +42,8 @@ Optional Arguments
 
 \textinput{common_opts/opt_p}
 
+\textinput{common_opts/opt_t}
+
 \textinput{common_opts/opt_save_fig}
 
 

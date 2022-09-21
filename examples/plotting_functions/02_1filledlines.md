@@ -42,3 +42,12 @@ y =  sin.(3x) ./ (cos.(x) .+ 2)./x
 band([x y], y .- 0.1 .- 0.015x, y .+ 0.1 .+ 0.03x, fill="blue@80", show=true)
 ```
 \end{examplefig}
+
+A papillon
+
+\begin{examplefig}{}
+```julia
+using GMT
+plot(sin, x->sin(2x), [0 2pi], fill="blue@70", pen=(1,"blue@40"), show=1)
+```
+\end{examplefig}
