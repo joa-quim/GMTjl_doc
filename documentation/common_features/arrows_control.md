@@ -53,7 +53,8 @@ the start point to the end point of a segment:
 - *norm=xx*\
    Scales down vector attributes (pen thickness, head size) with decreasing length, where vector
    plot lengths shorter than norm will have their attributes scaled by length/norm. *xx* may be a number or a
-   string (number&unit).
+   string (number&unit). Optionally, append /min for the minimum shrink factor (in the 0-1 range) that we will
+   shrink to.
 - *pole=(plon,plat)* -- Specifies the oblique pole for the great or small circles.
 - *pen=pen*\
    Sets the vector pen attributes. The *pen* value may contain any of valid ways of specifying pens.
@@ -75,11 +76,14 @@ In addition, all but circular vectors may take these options:
    - *justify=:begin*          -- The default
    - *justify=:end*
    - *justify=:center*
-- *endpoint=true*\
+- *endpoint=true* or *endpt=true*\
    Means that input angle and length are provided instead the x, y coordinates of the vector end point.
+   ATTENTION: when used from within `arrows()` use this directly as an `arrows` option
+   instead of the `arrow=(...)` option because we need to know in advance the meaning of 3 & 4rth columns.
 
 Finally, Cartesian vectors may take this option:
 
 - *uv=scale*\
-   Expects input vx,vy vector components and uses the scale to convert to polar coordinates with
-   length in given unit.
+   Expects input vx,vy vector components and uses the scale to convert to polar coordinates with length
+   in given unit. ATTENTION: when used from within `arrows()` use this directly as an `arrows` option
+   instead of the `arrow=(...)` option.

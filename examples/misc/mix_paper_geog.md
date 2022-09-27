@@ -21,22 +21,22 @@ coast(region=:global, projection=:ortho, figsize=10, land="brown")
 
 # Add annotations using paper coordinates and ask to plot also the paper grid
 arrows!([1 1 6.5 6.5; -1 10 5 10; 10 19 10 15; 21 10 15 10; 19 1 13.5 6.5],
-        lw=2, fill=:darkgreen, arrow=(length="20p", stop=true, shape=0.5, endpoint=true),
+        lw=2, fill=:darkgreen, arrow=(length="20p",), endpoint=true,
 		paper=:grid, noclip=true)
-        text!(text="Cupidos Invasion", x=14, y=15, justify=:BL, font=18, paper=true, show=1)
+text!(text="Cupidos Invasion", x=14, y=15, justify=:BL, font=18, paper=true, show=1)
 ```
 \end{examplefig}
 
 
-Once we are satisfied with the annotations we redo the map but this time with **papaer=true**
+Once we are satisfied with the annotations we redo the map but this time with **paper=true**
+Note also that we can specify the arrow head size with the `markersize` (or `ms`) keyword.
 
 \begin{examplefig}{}
 ```julia
 using GMT
 coast(region=:global, projection=:ortho, figsize=10, land="brown")
 arrows!([1 1 6.5 6.5; -1 10 5 10; 10 19 10 15; 21 10 15 10; 19 1 13.5 6.5],
-        lw=2, fill=:darkgreen, arrow=(length="20p", stop=true, shape=0.5, endpoint=true),
-		paper=true, noclip=true)
-        text!(text="Cupidos Invasion", x=14, y=15, justify=:BL, font=18, paper=true, show=1)
+        lw=2, fill=:darkgreen, ms="20p", endpoint=true, paper=true, noclip=true)
+text!(text="Cupidos Invasion", x=14, y=15, justify=:BL, font=18, paper=true, show=1)
 ```
 \end{examplefig}
