@@ -52,7 +52,7 @@ Plot a single arrow with head and tail.
 ```julia
 using GMT
 arrows([0.0 0 5 5], limits=(0,5,0,5), figsize=10, frame=(annot=:a, grid=1),
-       arrow=(start=true, stop=true, uv=1), uv=true, fill=0, show=true)
+       arrow=(start=:tail, stop=true), uv=true, fill=0, show=true)
 ```
 \end{examplefig}
 
