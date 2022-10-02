@@ -2,8 +2,6 @@
 
 {{doc arrows}}
 
-## Examples
-
 \begin{examplefig}{}
 ```julia
 using GMT
@@ -35,7 +33,7 @@ pstext!([0.1 1.1], text=T3, font=(18,"Times-Italic"), justify=:LB, show=true)
 ```
 \end{examplefig}
 
-### GMT4 & GMT5 style arrows
+## GMT4 & GMT5 style arrows
 
 Plot GMT4 style arrows. We show here three alternatives to set arrow heads
 
@@ -62,7 +60,7 @@ arrows!([5 0 45 2], lw=2, fill=:red,
 ```
 \end{examplefig}
 
-### Mat angles
+## Mat angles
 
 Plot matangle symbols with vector heads.
 
@@ -79,7 +77,7 @@ plot!([2.5 2.5], marker=(:matang, [2 50 350], (length=0.75, start=true, stop=tru
 ```
 \end{examplefig}
 
-### Vector heads and tails
+## Vector heads and tails
 
 There are many methods to plot vectors with individual heads and tails. For this purpose, several
 modifiers may be set to the corresponding vector-producing parameters for specifying the
@@ -120,3 +118,66 @@ text!(["arrow=(len=1, start=:tail, stop=true, half=:right, shape=0.5, angle=45)"
 showfig()
 ```
 \end{examplefig}
+
+## Quivers
+
+A (nicer looking) Matlab quiver plot example. To fully reproduce the Matlab example we also use the extremely
+memory wasting `meshgrid`. And because we turn `U` and `V` into grids before sending them to GMT, not specifying
+the limits would lose all first/last column/rows because most of the arrows are going *out* of the grid domain.
+We could have done it but it looks nicer if we specify a slightly wider domain.
+
+\begin{examplefig}{}
+```julia
+using GMT
+X,Y = meshgrid(-pi:pi/8:pi,-pi:pi/8:pi);
+U = sin.(Y);
+V = cos.(X);
+quiver(X, Y, U, V, region=(-3.6,3.6,-3.6,3.6), fill=:black, lc=:red, show=true)
+```
+\end{examplefig}
+
+Next example doesn't need our *help* to extend the plotting limits and it uses grids directly. And for simplicity
+let's create a grid using `grdmath` and compute its horizontal derivatives. Then we plot them as an arrow field.
+
+\begin{examplefig}{}
+```julia
+using GMT
+G = gmt("grdmath -R-2/2/-2/2 -I0.1 X Y R2 NEG EXP X MUL");
+dzdy = gmt("grdmath ? DDY", G);
+dzdx = gmt("grdmath ? DDX", G);
+grdcontour(G, annot=:none, pen=:gray80)
+grdvector!(dzdx, dzdy, cmap=:turbo, lw=1, show=true)
+```
+\end{examplefig}
+
+The above examples used Cartesian coordinates, but we can use also geographic coordinates where the arrows *know*
+where they are on Earth. This example plots the NUVEL1 plate motion model velocities relative to the Eurasian
+plate. The defaults guess pretty much a good solution for the arrow's length and header sizes, but we can modify
+them if we are not satisfied with the default results.
+
+\begin{examplefig}{}
+```julia
+using GMT
+quiver(getpath4docs("nuvel1_vx.nc"), getpath4docs("nuvel1_vy.nc"), proj=:guess,
+       coast=(shore=:gray70, area=5000), lw=1, C=:turbo, show=true, Vd=1)
+```
+\end{examplefig}
+
+A nice and instructive plot but we may want a somewhat larger arrows. Figuring out a best sized arrows is very
+tricky and no solution will please all users. The above command used the option ``Vd=1``, which prints the real
+hard core command that is sent to GMT. Many users get scared with it but fine tuning implies understanding its
+contents. Specifically the `-Si136.92637k` part that sets arrows scale factor. Much more information is provided
+in the \myreflink{grdvector} manual page, but as a quick help here we inform that **i** stands for inverse scale
+factor (**136.92637** in this case) and **k** means kilometers. So if we want larger arrows we must increase the
+(inverse) scale factor. A slightly modified version of the above is obtained with:
+
+\begin{examplefig}{}
+```julia
+using GMT
+quiver(getpath4docs("nuvel1_vx.nc"), getpath4docs("nuvel1_vy.nc"), proj=:guess, lw=1, 
+       coast=(shore=:gray70, area=5000), vscale=(inverse=true, scale="400k"), C=:turbo, show=true)
+```
+\end{examplefig}
+
+Here we exaggerated on the arrow scale to show the other side of the problem. If arrows are too long chances
+are high that they intersect.

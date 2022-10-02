@@ -10,8 +10,15 @@ the start point to the end point of a segment:
 - *len=xx* or *length=xx*\
    Length of the vector head. *xx* may be numeric, a string with the length and the
    units attached (as in len="2c") or a tuple with length and units as in *len=(2,:centimeters)*
+
 - *angle=xx*\
    Sets the angle of the vector head apex [default 30]
+
+- *magcolor=true*\
+   Selects the vector data quantity *magnitude* for use with CPT color look-up [Default requires a separate
+   data column following the 2 or 3 coordinates]. Requires that data quantity scaling (via **scale** or **uv**)
+   and a CPT have been selected.
+
 - *start=true*\
    Places a vector head at the beginning of the vector path [none]. Optionally, set
   - *start=:line* -- For a terminal line
@@ -61,10 +68,10 @@ the start point to the end point of a segment:
    If pen has a leading '-' (and hence the *pen* value must be a string) then the head outline is not drawn.
 - *ang1_ang2=true* or *start_stop=true*\
    Means that input angle, length data instead represent the start and stop opening angles of the arc
-   segment relative to the given point.
+   segment relative to the given point. See **pole** to specify a specific pole for the arc [north pole].
 - *trim=trim*\
    Shift the beginning or end point (or both) along the vector segment by the given trim. To
-   select begin or end prepend a 'b' or a 'e' to the *trim* value (hence it must be a string). Append suitable
+   select begin or end prepend a **b** or a **e** to the *trim* value (hence it must be a string). Append suitable
    unit (c, i, or p). If the modifiers b|e are not used then trim may be two values separated by a slash, which
    is used to specify different trims for the beginning and end. Positive trims will short the vector while
    negative trims will lengthen it [no trim].
@@ -83,7 +90,14 @@ In addition, all but circular vectors may take these options:
 
 Finally, Cartesian vectors may take this option:
 
-- *uv=scale*\
+- *scale=[i|l]scale*\
+   Expects a scale to magnify the polar length in the given unit. If **i** is prepended we use the inverse
+   scale while if **l** is prepended then it is taken as a fixed length to override input lengths. Append char
+   **q** if input magnitudes are given in data quantity units and we will scale them to current plot unit for
+   Cartesian vectors or to km for geovectors. In addition, if **magcolor** is selected then the vector magnitudes
+   may be used for CPT color-lookup (and no extra data column is required by the module's **cmap** option).
+
+- *uv=true* or *uv=scale*\
    Expects input vx,vy vector components and uses the scale to convert to polar coordinates with length
    in given unit. ATTENTION: when used from within `arrows()` use this directly as an `arrows` option
    instead of the `arrow=(...)` option.
