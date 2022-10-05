@@ -5,11 +5,9 @@ population density. GMT lets us plot choropleth maps but the process is not stra
 because we need to put the color information in the header of a multi-segment file. To
 facilitate this, some tools were added to the Julia wrapper.
 
-## Examples
-
 (But see also the more extended example in \myreflink{tutorials})
 
-### Countries (DCW)
+## Countries (Europe DCW)
 
 Load packages needed to download data and put into a DataFrame
 
@@ -50,7 +48,66 @@ plot(eu, cmap=C, fill="+z", proj=:guess, R="-76/36/26/84", title="Population den
 <img src="/assets/choro1_dcw.png" alt="DCW choropleth" title="DCW choropleth" width="500" class="center"/>
 ~~~
 
-### Covid rate of infection in Portugal 2021
+## Countries (World)
+
+While GMT come with the world countries in its DCW data base, those countries polygons have a somewhat
+too high resolution for world maps and hence produce files unnecessarily, which also makes them slower
+to create. An alternative is to use a much lower resolution file that can be found
+[here](https://github.com/datasets/geo-countries/blob/master/data/countries.geojson) but whose
+download link is [here](https://github.com/datasets/geo-countries/raw/master/data/countries.geojson).
+And we can read it directly into GMT (and wait a bit while it gets downloaded).
+
+```julia
+countries = gmtread("/vsicurl/https://github.com/datasets/geo-countries/raw/master/data/countries.geojson");
+```
+
+The country polygons have attributes like:
+
+``Attributes:  Dict("ISO_A2" => "AW", "ISO_A3" => "ABW", "ADMIN" => "Aruba")``
+
+Like in the Europe case above, we load the world population into a DataFrame
+
+```julia
+pop = CSV.File(HTTP.get("https://raw.githubusercontent.com/tillnagel/unfolding/master/data/data/countries-population-density.csv").body, delim=';') |> DataFrame;
+```
+
+The contents of that file look like this:
+
+```julia
+julia> pop
+248×3 DataFrame
+ Row │ Country Name                       Country Code  2010
+     │ String                             String3       Float64?
+─────┼───────────────────────────────────────────────────────────
+   1 │ Arab World                         ARB            26.2725
+   2 │ Caribbean small states             CSS            16.9939
+   3 │ East Asia & Pacific (all income …  EAS            90.5122
+```
+
+So we must now link the countries in `countries` with density in `2010` via the attribute `ISO_A3` in `countries`
+and the third column in `pop`. To make a global choropleth map with the population density we will use first the
+\myreflink{polygonlevels} function to get as the population density in the same order as the country polygons are
+stored in the `countries` GMTdataset.
+
+```julia
+zvals = polygonlevels(countries, string.(pop[!,2]), pop[!,3], att="ISO_A3");
+```
+
+And now we are ready to make the map
+
+```julia
+# First create the colormap. Limit the maximum range to 500 otherwise states
+# like Monaco would the all the `reds` and the rest of the world would be all blues.
+C = makecpt(range=(0,500,10));
+plot(countries, region=(-180,180,-60,85), level=zvals, cmap=C, proj=:guess,
+     title="World population density", colorbar=true, show=true)
+```
+
+~~~
+<img src="/assets/choro2_wpop.png" alt="World pop" title=" choropleth" width="800" class="center"/>
+~~~
+
+## Covid rate of infection in Portugal 2021
 
 First, download the Portuguese district polygons shape file from this Github repo Next load it with:
 
