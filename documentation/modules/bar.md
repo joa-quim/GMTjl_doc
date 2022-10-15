@@ -43,6 +43,11 @@ Parameters
           If the bar height is measured relative to base *xx* [Default is relative to origin].
           Cannot be used together with *base*.
 
+- *bargap*\
+   Controls the gap between the bars. The default is to let a space of 20% of the bar width but this can be
+   changed by providing eithe a gap in the [0-1] interval or in percentage. *i.e.* `bargap=40` or `bargap=0.4`
+   will create a space of 40% between the bars.
+
 - *hbar*\
    Horizontal bar extending from base to x. Same as *bar* but now with respect to y axis, except that one
    cannot use *width* or *base* to change just those defaults (the use of it is restricted to the vertical
@@ -55,7 +60,13 @@ Parameters
    When *fill* was used, control the transparency level. Numbers can be floats <= 1.0 or integeres in 0-100 range.
 
 - *stack*\
-   Plot a vertically (or horizontally if *hbar=true*) stacked group plot
+   Plot a vertically (or horizontally if *hbar=true*) stacked group plot. The particular setting `stack=:waterfall`
+   creates a waterfall chart, which is a form of data visualization that helps in understanding the cumulative
+   effect of sequentially introduced positive or negative values. The input data for this option is a vector or
+   one row matrix with the heights of each bar. A height o zero (0) has the special meaning of plotting the total
+   accumulated up to that value. For these plots we can connect the bars with the `connector=true` or `connector=pen`
+   option. Bar colors (three for the waterfall type) are controlled with the `fill` option but default values
+   are provided. See example below.
 
 \textinput{common_opts/opt_save_fig}
 
@@ -64,9 +75,12 @@ Examples
 
 A simple bar plot with 10 bars and automatic limits.
 
+\begin{examplefig}{}
 ```julia
-    bar(rand(10), show=true)
+using GMT
+bar(rand(10), show=true)
 ```
+\end{examplefig}
 
 A bar group with selected colors and transparency.
 \begin{examplefig}{}
@@ -82,10 +96,21 @@ A bar group with bars filled with patterns.
 ```
 
 A bar group with error bars
+
 \begin{examplefig}{}
 ```julia
 using GMT
 bar([0. 1 2 3; 1 2 3 4], error_bars=(y=[0.1 0.2 0.33; 0.2 0.3 0.4],), show=true)
+```
+\end{examplefig}
+
+A waterfall chart.
+
+\begin{examplefig}{}
+```julia
+using GMT
+bar([1 2 3 0 -1 -2 0], stacked=:water, connector=true, bargap=25,
+    xticks=(:A, :B, :C, :Partial, :D, :E, :Total), show=true)
 ```
 \end{examplefig}
 
