@@ -64,6 +64,19 @@ bar(1:3,[-5 -15 20; 17 10 21; 10 5 15], stacked=1, show=true)
 ```
 \end{examplefig}
 
+## A waterfall chart
+
+\begin{examplefig}{}
+```julia
+using GMT
+bar([1 2 3 0 -1 -2 0], stacked=:water, connector=true, bargap=25,
+    xticks=(:A, :B, :C, :Partial, :D, :E, :Total), show=true)
+```
+\end{examplefig}
+
+
+## Horizontal bar plots
+
 To create an horizontal bar plot we use the **hbar**=*true* option
 
 \begin{examplefig}{}
@@ -83,7 +96,7 @@ bar([0. 1 2 3; 1 2 3 4], stack=true, hbar=true, fill=["red", "green", "blue"], s
 \end{examplefig}
 
 
-#### Make a 3D bar plot with constant color
+## Make a 3D bar plot with constant color
 
 \begin{examplefig}{}
 ```julia
