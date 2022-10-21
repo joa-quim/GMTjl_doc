@@ -8,7 +8,7 @@ so it shows the coordinates of only one axis.
 \begin{examplefig}{}
 ```julia
 using GMT
-radar([0.5 0.5 0.6 0.9 0.77; 0.6 0.5 0.8 0.2 0.9]e, marker=:circ, fill=true, show=true)
+radar([0.5 0.5 0.6 0.9 0.77; 0.6 0.5 0.8 0.2 0.9], marker=:circ, fill=true, show=true)
 ```
 \end{examplefig}
 
