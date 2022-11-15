@@ -33,7 +33,7 @@
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
 | \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{hband} | \myreflink{lines} | \myreflink{scatter} | \myreflink{scatter3} |
-| \myreflink{stairs} | \myreflink{vband} |  |  |  |  |  |  |  |  |
+| \myreflink{stairs} | \myreflink{vband} | \myreflink{boxplot} |  |  |  |  |  |  |  |
 
 ## Supplemental Modules
 

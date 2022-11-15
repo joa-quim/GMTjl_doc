@@ -1,7 +1,7 @@
 # stairs
 
 ```julia
-stairs(cmd0::String="", arg1=noting; step=:post, kwargs...)
+stairs(cmd0::String="", arg1=nothing; step=:post, kwargs...)
 ```
 
 Reads (x,y) pairs and plot stairstep graph. The input can either be a file name of a file with at least two columns
