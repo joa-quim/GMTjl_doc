@@ -11,6 +11,7 @@ for a perticular data.
 \begin{examplefig}{}
 ```julia
 using GMT
+GMT.resetGMT() # hide
 G = earthtide(T="2022-07-07T12:00:00");
 imshow(G, coast=true, colorbar=true, title="Earth tide at noon 7-July-2022")
 ```

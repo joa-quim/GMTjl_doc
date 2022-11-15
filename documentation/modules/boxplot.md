@@ -4,7 +4,7 @@
 boxplot(data, grp=[]; pos=nothing, kwargs...)
 ```
 
-Draw a box-and-whisker style plot. The input can take several different forms.
+Draw a box-and-whisker style plot. The input data can take several different forms.
 
 ---
 boxplot(data::AbstractVector{<:Real}; kwargs...)
@@ -14,7 +14,7 @@ Draws a single boxplot. Options in *kwargs* provide fine settings for the boxplo
 - `boxwidth` or `cap`: Sets the the boxplot width and, optionally, the cap width. Provide info as
           `boxwidth="10p/3p"` to set the boxwidth different from the cap's. Note, however, that this
            requires GMT6.5. Previous versions do not destinguish box and cap widths.
-- `notch`: Logical value indicating whether the box should have a notch.
+- `notch`: Logical value indicating whether the box should have a notch (needs GMT6.5).
 - `outliers`: If other than a NamedTuple, plots outliers (1.5IQR) with the default black 5pt stars.
               If argument is a NamedTuple (marker=??, size=??, color=??, markeredge=??), where `marker`
               is one of the `plots` marker symbols, plots the outliers with those specifications. Any missing
@@ -48,14 +48,17 @@ vector used to compute the statistics can have a different number of points. The
 ---
 boxplot(data::Array{T<:Real,3}; pos=Vector{Real}(), groupwidth=0.75, ccolor=false, ...) Draws *G* groups of
 boxplots of *N* columns boxes.
-    - `groupWidth`: Specify the proportion of the x-axis interval across which each x-group of boxes should
+- `groupWidth`: Specify the proportion of the x-axis interval across which each x-group of boxes should
        be spread. The default is 0.75.
-    - `ccolor`: Logical value indicating whether the groups have constant color (when `fill=true` is used)
+- `ccolor`: Logical value indicating whether the groups have constant color (when `fill=true` is used)
        or have variable color (the default).
-    - `fill`: If fill=true paint the boxes with a pre-defined color scheme. Otherwise, give a list of colors
+- `fill`: If fill=true paint the boxes with a pre-defined color scheme. Otherwise, give a list of colors
        to paint the boxes.
-    - `separator`: If = true plot a black line separating the groups. Otherwise provide the pen settings of those lines.
-    - `ticks` or `xticks` or `yticks`: A tuple with annotations interval and labels. E.g. xticks=(1:5, ["a", "b", "c", "d"])
+- `fillalpha`: When the `fill` option is used, we can set the transparency of filled violins with this
+         option that takes in an array (vec or 1-row matrix) with numeric values between [0-1] or ]1-100],
+	      where 100 (or 1) means full transparency.
+- `separator`: If = true plot a black line separating the groups. Otherwise provide the pen settings of those lines.
+- `ticks` or `xticks` or `yticks`: A tuple with annotations interval and labels. E.g. xticks=(1:5, ["a", "b", "c", "d"])
        where first element is an AbstractArray and second an array or tuple of strings or symbols.
 
 ---

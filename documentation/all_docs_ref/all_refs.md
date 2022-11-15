@@ -32,8 +32,8 @@
 
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{hband} | \myreflink{lines} | \myreflink{scatter} | \myreflink{scatter3} |
-| \myreflink{stairs} | \myreflink{vband} | \myreflink{boxplot} |  |  |  |  |  |  |  |
+| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{hband} | \myreflink{lines} | \myreflink{scatter} |
+| \myreflink{scatter3} | \myreflink{stairs} | \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |  |
 
 ## Supplemental Modules
 
