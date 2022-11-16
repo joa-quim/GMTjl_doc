@@ -122,7 +122,7 @@ violin(randn(100,8), fill=true, boxplot=true, scatter=true, outliers=true, show=
 ```
 \end{examplefig}
 
-And a group example with red dashed sparator lines.
+And a group example with red dashed separator lines.
 
 \begin{examplefig}{}
 ```julia
