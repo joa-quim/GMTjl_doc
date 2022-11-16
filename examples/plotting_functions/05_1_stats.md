@@ -22,7 +22,7 @@ By lowering the bandwidth we forcing the line to be less smoth.
 \begin{examplefig}{}
 ```julia
 using GMT
-density(randn(200), fill=:orange, lc=:red, lw=1,ndwidth=0.15, extend=4, show=true)
+density(randn(200), fill=:orange, lc=:red, lw=1, bandwidth=0.15, extend=4, show=true)
 ```
 \end{examplefig}
 
