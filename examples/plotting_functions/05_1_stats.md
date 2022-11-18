@@ -91,3 +91,24 @@ violin(randn(100,3,2), fill=true, scatter=true, split=true, xticks=["First","Sec
 ```
 \end{examplefig}
 
+
+## Q-Q plots
+
+Test if *x* and *y* follow the same distribution.
+
+\begin{examplefig}{}
+```julia
+using GMT
+qqplot(randn(100), randn(100), qqline=:identity, show=true)
+```
+\end{examplefig}
+
+Test if *x* is normally distributed. the :fitrobust default line passes through the 1st and 3rd
+quartiles of the distribution
+
+\begin{examplefig}{}
+```julia
+using GMT
+qqnorm(randn(200), qqline=:fitrobust, show=true)
+```
+\end{examplefig}
