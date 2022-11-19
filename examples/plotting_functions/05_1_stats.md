@@ -112,3 +112,13 @@ using GMT
 qqnorm(randn(200), qqline=:fitrobust, show=true)
 ```
 \end{examplefig}
+
+
+## ECDF plot
+
+\begin{examplefig}{}
+```julia
+using GMT
+ecdfplot(randn(100), show=true)
+```
+\end{examplefig}
