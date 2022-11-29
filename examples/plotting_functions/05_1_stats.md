@@ -122,3 +122,36 @@ using GMT
 ecdfplot(randn(100), show=true)
 ```
 \end{examplefig}
+
+## Parallel plots
+
+See docs in \myreflink{parallelplot}
+
+Create a parallel plot using the measurement data in `iris.dat`. Use a different color for each group as
+identified in species, and label the horizontal axis using the variable names.
+
+\begin{examplefig}{}
+```julia
+using GMT
+parallelplot(getpath4docs("iris.dat"), groupvar="text", normalize="none", legend=true, show=true)
+```
+\end{examplefig}
+
+Plot only the median, 25 percent, and 75 percent quartile values for each group identified in species.
+Label the horizontal axis using the variable names.
+
+\begin{examplefig}{}
+```julia
+using GMT
+parallelplot(getpath4docs("iris.dat"), groupvar="text", quantile=0.25, legend=true, show=true)
+```
+\end{examplefig}
+
+Plot bands enveloping the +- 25% percentil arround the median.
+
+\begin{examplefig}{}
+```julia
+using GMT
+parallelplot(getpath4docs("iris.dat"), groupvar="text", band=true, legend=true, show=true)
+```
+\end{examplefig}
