@@ -89,7 +89,6 @@ Parameters
 Examples
 --------
 
-
 Create a parallel plot using the measurement data in `iris.dat`. Use a different color for each group as
 identified in species, and label the horizontal axis using the variable names.
 

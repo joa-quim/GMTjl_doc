@@ -11,11 +11,9 @@ for more details about what the arguments mean.
 \begin{examplefig}{}
 ```julia
 using GMT
-GMT.resetGMT()  # hide
 topo = makecpt(color=:rainbow, range=(1000,5000,500), continuous=true);
 grdimage("@tut_relief.nc", shade=(azimuth=100, norm="e0.8"), proj=:Mercator, frame=:a, color=topo)
-GMT.resetGMT()  # hide
-colorbar!(pos=(outside=:TC,length=(12.5,0.6), horizontal=true, offset=(0,1.0)),
+colorbar!(pos=(outside=:TC,length=(12.5,0.6), horizontal=true, offset=(0,1.0)), region="@tut_relief.nc",
           color=topo, frame=(ylabel=:m,), show=true)
 ```
 \end{examplefig}

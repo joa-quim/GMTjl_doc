@@ -73,6 +73,7 @@ at the points location. Note that now we are selectiong the columns from teir na
 ```julia
 using GMT
 # Create a GMTdataset with named columns.
+x = linspace(0, 4*pi, 50);
 D = mat2ds([x sin.(x) cos.(x)], colnames=["x", "sin(x)", "cos(x)"]);
 stairs(D, xvar=:x, yvar=["sin(x)", "cos(x)"], lw=0.5, marker=:circ, show=true)
 ```

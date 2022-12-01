@@ -32,8 +32,10 @@
 
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | |
-| \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |
+| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | bubblechart | \myreflink{contourf} | \myreflink{decorated} | ecdfplot | \myreflink{feather} |
+| \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | qqplot | quiver | radar | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | stem |
+| \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |  |  |  |
+
 
 ## Supplemental Modules
 
