@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy
 on:
   pull_request:
     branches:
@@ -27,11 +27,11 @@ jobs:
         version:
           #- '1.6' # Replace this with the minimum Julia version that your package supports. E.g. if your package requires Julia 1.5 or higher, change this to '1.5'.
           - '1.7' # Leave this line unchanged. '1' will automatically expand to the latest stable 1.x release of Julia.
-          - 'nightly'
+          #- 'nightly'
         os:
           - ubuntu-latest
           #- ubuntu-18.04
-          - macos-latest
+          #- macos-latest
         arch:
           - x64
         include:
@@ -102,35 +102,23 @@ jobs:
             ${{ runner.os }}-test-
             ${{ runner.os }}-
       - uses: julia-actions/julia-buildpkg@v1
-      - uses: julia-actions/julia-runtest@v1
-      - uses: julia-actions/julia-processcoverage@v1
-      - uses: codecov/codecov-action@v1
-        with:
-          file: lcov.info
   
-  docs:
-    name: Documentation
-    #runs-on: ubuntu-latest
-    #runs-on: ubuntu-18.04
-    #runs-on: macos-latest
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: julia-actions/setup-julia@v1
+      - run: julia -e '
+              using Pkg;
+              Pkg.activate(".");
+              Pkg.instantiate();
+              Pkg.add(PackageSpec(name="GMT", rev="master"));
+              using NodeJS;
+              run(`$(npm_cmd()) install highlight.js`);
+              run(`$(npm_cmd()) install cheerio`);
+              run(`$(npm_cmd()) install lunr`);
+              using Franklin;
+              serve(single=true, cleanup=false);
+              lunr();
+              optimize(minify=false, prerender=false);'
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          version: '1'
-      - run: |
-          julia --project=docs -e '
-            using Pkg
-            Pkg.add("Documenter")
-            Pkg.develop(PackageSpec(path=pwd()))
-            Pkg.instantiate()'
-      #- run: |
-          #julia --project=docs -e '
-            #using Documenter: doctest
-            #using GMT
-            #doctest(GMT)' # change MYPACKAGE to the name of your package
-      - run: julia --project=docs docs/make.jl
-        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
+          BRANCH: gh-pages
+          FOLDER: __site
