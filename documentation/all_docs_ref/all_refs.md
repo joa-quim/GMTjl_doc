@@ -20,7 +20,7 @@
 | grdconvert | grdcut |  grdedit |  grdfft | \myreflink{grdfill} |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} | \myreflink{grdinfo} | grdinterpolate |
 | \myreflink{grdlandmask} | \myreflink{grdmask} | \myreflink{grdmath} | grdmix |  grdpaste |  grdproject |
-| \myreflink{grdsample} | \myreflink{grdtrack} | \myreflink{grdtrend} |  grdvector | \myreflink{grdview} | grdvolume |
+| \myreflink{grdsample} | \myreflink{grdtrack} | \myreflink{grdtrend} | \myreflink{grdvector} | \myreflink{grdview} | grdvolume |
 | greenspline | \myreflink{histogram} | \myreflink{image} | \myreflink{inset} | kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject | \myreflink{mask} | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
 | \myreflink{plot3d} | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
@@ -33,7 +33,7 @@
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
 | \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{bubblechart} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{ecdfplot} | \myreflink{feather} |
-| \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | \myreflink{qqplot} | quiver | \myreflink{radar} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{stem} |
+| \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | \myreflink{qqplot} | \myreflink{quiver} | \myreflink{radar} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{stem} |
 | \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |  |  |  |
 
 

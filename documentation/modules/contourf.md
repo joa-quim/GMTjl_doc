@@ -82,7 +82,7 @@ Optional Arguments
    Alternatively, use **skip="t"* to skip triangles whose three vertices are all outside the region.
    *This option should be used only when input data is a grid*.
 
-- **T** or *ticks* : -- *ticks=(local\_high=true, local\_low=true, gap=gap, closed=true, labels=labels)*\
+- **T** or **ticks** : -- *ticks=(local\_high=true, local\_low=true, gap=gap, closed=true, labels=labels)*\
    Will draw tick marks pointing in the downward direction every *gap* along the innermost closed contours only;
    set *closed=true* to tick all closed contours. Use *gap=(gap,length)* and optionally tick mark *length*
    (append units as **c**, **i**, or **p**) or use defaults [*"15p/3p"*]. User may choose to tick only local
@@ -97,7 +97,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_V}
 
-- **W** or *pen* : -- *pen=(annot=true, contour=true, pen=pen, colored=true, cline=true, ctext=true)*\
+- **W** or **pen** : -- *pen=(annot=true, contour=true, pen=pen, colored=true, cline=true, ctext=true)*\
    ``annot=true`` if present, means to annotate contours or ``contour=true`` for regular contours [Default].
    The *pen* sets the attributes for the particular line. Default pen for annotated contours: ``pen=(0.75,:black)``.
    Regular contours use ``pen=(0.25,:black)``. Normally, all contours are drawn with a fixed color determined by

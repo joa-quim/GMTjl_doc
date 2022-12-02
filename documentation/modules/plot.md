@@ -35,7 +35,6 @@ Parameters
    a constant color by replicating a pattern (that can be an image too) and this has a quite different result.
    The example \myreflink{Subplots} shows applications of this option. 
 
-plot(rand(8,2), bg=(:somb, :turbo), show=1)
 - **C** or **color** or **cmap** : -- *color=cpt*\
    Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)** to build a
    linear continuous CPT from those colors automatically, where *z* starts at 0 and is incremented by one for each color.

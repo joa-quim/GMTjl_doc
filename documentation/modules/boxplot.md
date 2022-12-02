@@ -98,3 +98,13 @@ using GMT
 boxplot(randn(100,5), outliers=(size="5p",), ticks=["A","B","C","D","E"], fill=true, notch=true, show=true)
 ```
 \end{examplefig}
+
+An horizontal boxplot with default colors, displaying outliers as 6p black stars.
+Noches are also shown but this requires GMT6.5.
+
+\begin{examplefig}{}
+```julia
+using GMT
+boxplot(randn(50,6), notch=true, fill=true, outliers=(size="6p",), hbar=true, show=1)
+```
+\end{examplefig}
