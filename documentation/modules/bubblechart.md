@@ -1,4 +1,4 @@
-# scatter
+# bubblechart
 
 ```julia
 bubblechart(cmd0::String="", arg1=nothing; size=?, kwargs...)

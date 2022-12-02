@@ -32,7 +32,7 @@
 
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | bubblechart | \myreflink{contourf} | \myreflink{decorated} | \myreflink{ecdfplot} | \myreflink{feather} |
+| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{bubblechart} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{ecdfplot} | \myreflink{feather} |
 | \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | \myreflink{qqplot} | quiver | \myreflink{radar} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{stem} |
 | \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |  |  |  |
 
