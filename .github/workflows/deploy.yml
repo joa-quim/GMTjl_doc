@@ -19,7 +19,7 @@ jobs:
 
     env:
       COASTLINEDIR: ${{ github.workspace }}/coastline
-      JULIA_NUM_THREADS: 2
+      #JULIA_NUM_THREADS: 2
 
     strategy:
       fail-fast: false
@@ -40,9 +40,9 @@ jobs:
             #os: ubuntu-18.04
             os: ubuntu-latest
             run_in_pr : true
-          - name: macOS
-            os: macos-latest
-            run_in_pr : true
+          #- name: macOS
+            #os: macos-latest
+            #run_in_pr : true
 
     steps:
       - name: Cancel Previous Runs
