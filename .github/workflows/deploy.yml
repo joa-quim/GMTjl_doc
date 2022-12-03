@@ -23,12 +23,12 @@ jobs:
     # GMT + ghostscript deps
     #- run: brew install ghostscript gmt
     #- run: echo $(gmt --version)
-    - run: download("http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe", "GMTinstaller.exe")
-    - run: run(`cmd /k GMTinstaller.exe /S`)
 
     - name: Install Ghostscript (Windows)
       run: >
-        choco install ghostscript
+        choco install ghostscript, wget
+    - run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
+    - run: run(`cmd /k gmt-win64.exe /S`)
 
     - run: julia -e '
             using Pkg;
