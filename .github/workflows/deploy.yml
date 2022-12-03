@@ -32,7 +32,6 @@ jobs:
 
     - run: julia -e '
             using Pkg;
-            Pkg.activate(".");
             Pkg.instantiate();
             Pkg.add(PackageSpec(name="GMT", rev="master"));
             using NodeJS;
