@@ -6,8 +6,8 @@ on:
       - master
 jobs:
   build-and-deploy:
-    #runs-on: macos-latest
-    runs-on: windows-latest
+    runs-on: macos-latest
+    #runs-on: windows-latest
     permissions:
       contents: write
     steps:
@@ -24,11 +24,11 @@ jobs:
     #- run: brew install ghostscript gmt
     #- run: echo $(gmt --version)
 
-    - name: Install Ghostscript (Windows)
-      run: >
-        choco install ghostscript wget
-    - run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
-    - run: cmd /k gmt-win64.exe /S
+    #- name: Install Ghostscript (Windows)
+      #run: >
+        #choco install ghostscript wget
+    #- run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
+    #- run: cmd /k gmt-win64.exe /S
 
     - run: julia -e '
             using Pkg;
