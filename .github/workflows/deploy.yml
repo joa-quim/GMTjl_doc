@@ -28,7 +28,7 @@ jobs:
       run: >
         choco install ghostscript wget
     - run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
-    - run: run(`cmd /k gmt-win64.exe /S`)
+    - run: cmd /k gmt-win64.exe /S
 
     - run: julia -e '
             using Pkg;
