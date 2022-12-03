@@ -6,8 +6,8 @@ on:
       - master
 jobs:
   build-and-deploy:
-    runs-on: macos-latest
-    #runs-on: windows-latest
+    #runs-on: macos-latest
+    runs-on: windows-latest
     permissions:
       contents: write
     steps:
@@ -21,12 +21,12 @@ jobs:
         version: '1.7'
 
     # GMT + ghostscript deps
-    - run: brew install ghostscript gmt
-    - run: echo $(gmt --version)
+    #- run: brew install ghostscript gmt
+    #- run: echo $(gmt --version)
 
-    #- name: Install Ghostscript (Windows)
-      #run: >
-        #choco install ghostscript
+    - name: Install Ghostscript (Windows)
+      run: >
+        choco install ghostscript
 
     - run: julia -e '
             using Pkg;
