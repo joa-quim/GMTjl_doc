@@ -20,13 +20,9 @@ coordinates as produced by `meshgrid`; *U, V* horizontal and vertical components
 Required Arguments
 ------------------
 
-*compx*\
-    Contains the x-components of the vector field.
+- *compx* Contains the x-components of the vector field.
     
-*compy*\
-    Contains the y-components of the vector field.
-
-\textinput{common_opts/opt_J}
+- *compy* Contains the y-components of the vector field.
 
 Optional Arguments
 ------------------
@@ -48,6 +44,8 @@ Optional Arguments
     multiples *multx*[/*multy*] directly [Default plots every node]. Example **inc="x10/5"** to select every other
     10 nodes in *x* and 5 nodes in *y*. **_NOTE_**: by default we estimate good values so that the arrows do no
     overlap so you may start by jumping this option unless some fine control is desired.
+
+\textinput{common_opts/opt_J}
 
 - **N** or **noclip** or **no\_clip** : *noclip=true*\
     Do NOT clip vectors at map boundaries [Default will clip]. 
@@ -111,7 +109,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_t}
 
-\textinput{common_opts/opt__distunitst}
+\textinput{common_opts/opt__distunits}
 
 .. include:: explain_vectors.rst_
 
