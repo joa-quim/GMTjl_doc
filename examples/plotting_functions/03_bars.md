@@ -31,6 +31,18 @@ bar([0. 1 2 3; 1 2 3 4], fillalpha=[0.3 0.5 0.7], show=true)
 ```
 \end{examplefig}
 
+And we can also make plots with bar groups where each group has a variable number of bars.
+For that, pass NaN's in place of the missing bars for a particular group. For example:
+
+\begin{examplefig}{}
+```julia
+using GMT
+bar([2 0.5 1 NaN 1; 4 NaN NaN 2 NaN; 1 3 4 3 2; NaN 3 NaN 1 2], fillalpha=[0.3 0.5 0.7],
+    xticks=(:d1, :d2, :d3, :d4), show=true)
+```
+\end{examplefig}
+
+
 Next example shows how to plot error bars in a grouped bar. Similar to this [mapplotlib's example](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/barchart.html#sphx-glr-gallery-lines-bars-and-markers-barchart-py) (labels will come later).
 
 \begin{examplefig}{}
@@ -52,6 +64,19 @@ bar(1:3,[-5 -15 20; 17 10 21; 10 5 15], stacked=1, show=true)
 ```
 \end{examplefig}
 
+## A waterfall chart
+
+\begin{examplefig}{}
+```julia
+using GMT
+bar([1 2 3 0 -1 -2 0], stacked=:water, connector=true, bargap=25,
+    xticks=(:A, :B, :C, :Partial, :D, :E, :Total), show=true)
+```
+\end{examplefig}
+
+
+## Horizontal bar plots
+
 To create an horizontal bar plot we use the **hbar**=*true* option
 
 \begin{examplefig}{}
@@ -71,7 +96,7 @@ bar([0. 1 2 3; 1 2 3 4], stack=true, hbar=true, fill=["red", "green", "blue"], s
 \end{examplefig}
 
 
-#### Make a 3D bar plot with constant color
+## Make a 3D bar plot with constant color
 
 \begin{examplefig}{}
 ```julia

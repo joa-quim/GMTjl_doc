@@ -11,7 +11,9 @@ Makes legends that can be overlaid on maps. It reads specific legend-related inf
 file or from a GMTdatset type.  Unless otherwise noted, annotations will be made using the primary
 annotation font and size in effect (i.e., `FONT_ANNOT_PRIMARY`)
 
-[![](figures/docs/seislegend.png)](figures/docs/seislegend.md)
+~~~
+<img src="/assets/docs/seislegend.png" alt="Simple" width="500" class="center"/>
+~~~
 
 Example of a map legend, here for seismicity in the Pacific region.
 
@@ -19,7 +21,6 @@ Required Arguments
 ------------------
 
 - **D** or **pos** or **position** : -- *pos=(map=(lon,lat), inside=true, outside=true, norm=(x,y), paper=(x,y), justify=code, offset=XX)*\
-
 Defines the reference point on the map for the legend using one of four coordinate systems:
 
 1. Use `map=(lon,lat)` for map coordinates. Requires both **region** and **proj** to be set.
@@ -248,7 +249,9 @@ Examples
 
 To add an example of a legend to a Mercator plot with the given specifications:
 
+\begin{examplefig}{}
 ```julia
+using GMT
 makecpt("-Cpanoply -T-8/8 > tt.cpt")
 
 legend((
@@ -282,3 +285,4 @@ legend((
        figsize=16, proj=:Mercator, show=true
        )
 ```
+\end{examplefig}

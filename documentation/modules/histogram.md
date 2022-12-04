@@ -28,6 +28,11 @@ Optional Arguments
 
 \textinput{common_opts/opt_B}
 
+- **bg** or **background** : -- *bg=imagename* **|** *bg=funname|img|grd* **|** *bg=(..., colormap)*\
+   Fills the plotting canvas with a backround image. That image may come from a file (*e.g.* **bg="cute.png"**) or
+   from a predefined function name. Possible names are: *akley, eggs, circle, parabola, rosenbrok, sombrero, x, y, xy, x+y*.
+   For further details consult the same option in the plot manual.
+
 - **C** or **color** or **cmap** : -- *color=cpt*\
    Give a CPT or specify **color="color1,color2 [,color3 ,...]"** or **color=((r1,g1,b1),(r2,g2,b2),...)** to build a linear continuous CPT from those colors automatically. The mid x-value for each bar is used to look-up the bar color. If no argument is given then we select the current CPT.
 
@@ -107,7 +112,7 @@ Optional Arguments
 
 \textinput{common_opts/opt_Y}
 
-- **Z** or **kind** : -- *kind=type* **|** *kind=(counts=, | freq=, | log_count=, | log_freq=, | log10_count=, | log10_freq=, weights=)*\
+- **Z** or **kind** : -- *kind=type* **|** *kind=(counts=, | freq=, | frequency=, | log_count=, | log_freq=, | log10_count=, | log10_freq=, weights=)*\
    Choose between 6 types of histograms:
 
       0 = counts [Default]
@@ -117,7 +122,8 @@ Optional Arguments
       4 = log10 (1.0 + count)
       5 = log10 (1.0 + frequency_percent).
 
-    To use weights provided as a second data column instead of pure counts, use a tuple. *e.g.* **kind=(counts=true, weights=true)**
+    To use weights provided as a second data column instead of pure counts, use a tuple. *e.g.* **kind=(counts=true, weights=true)**. If no *weights* are used then we may use the simpler form **kind=??** where *??* is the name
+    of any of the 6 types. *e.g.* **kind=frequency**
 
 - **zoom** : -- *zoom=true*\
    When input is a GMTimage of UInt16 type this option will set **auto=true** and show histogram only
@@ -147,12 +153,15 @@ Optional Arguments
 Examples
 --------
 
-To draw a histogram of the data v3206.t containing seafloor depths,
+To draw a histogram of the data *v3206_06.txt* containing seafloor depths,
 using a 250 meter bin width, center bars, and draw bar outline, use:
 
+\begin{examplefig}{}
 ```julia
-    histogram("@v3206.t", bin=250, center=true, pen="0.5p", show=true)
+using GMT
+histogram("@v3206_06.txt", bin=250, center=true, pen="0.5p", show=true)
 ```
+\end{examplefig}
 
 If you know the distribution of your data, you may explicitly specify
 range and scales. E.g., to plot a histogram of the y-values (2nd column)
@@ -161,7 +170,7 @@ meters @ 0.75 cm/m, annotate every 2 m and 100 counts, and use black bars, run:
 
 ```julia
     histogram("errors.xy", bin=1, region=(-10,10,0,0), J="xc/0.01c",
-               xaxis=(annot=2,label=:Error), yaxis=(annot=100, label=:Counts), fill=:black, incol=1) 
+              xaxis=(annot=2,label=:Error), yaxis=(annot=100, label=:Counts), fill=:black, incol=1) 
 ```
 
 Since no y-range was specified, **histogram** will calculate *ymax* in even increments of 100.
@@ -169,8 +178,8 @@ Since no y-range was specified, **histogram** will calculate *ymax* in even incr
 To plot the histogram of a Landsat image, pick good bounds for contrast enhancement and show them
 
 ```julia
-    I = gmtread("landsat.tif")
-    histogram(I, zoom=true, show=true);
+I = gmtread("landsat.tif")
+histogram(I, zoom=true, show=true);
 ```
 
 See also

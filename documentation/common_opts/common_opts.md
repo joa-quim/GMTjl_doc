@@ -4,7 +4,7 @@
 
 Set map Axes parameters. They are specified by a keyword and a named tuple (but see [1])
 
-    frame=(axes=..., corners=..., xlabel=..., ylabel=..., annot=..., etc)
+    frame=(axes=..., corners=..., xlabel=..., ylabel=..., annot=..., flipx=..., etc)
 
 or separated on a per axes basis by using specific **xaxis**, **yaxis** and **zaxis** that share the same syntax
 as the generic **frame** option. The **xaxis2** and **yaxis2** apply when dealing with secondary axes.
@@ -39,21 +39,29 @@ Optionally append *pole="plon/plat"* (or *pole=(plon,plat)* to draw oblique grid
 specified pole [regular gridlines]. Ignored if gridlines are not requested (below) and disallowed for the oblique
 Mercator projection.
 
+*xx* and *yy* axes grow from left to right and bottom to top (*zz* axis too). This the default but that can be
+changed with the keywords **flipx=true**, **flipy=** and **flipz=**. Alternative names are **xflip, yflip, zflip**. 
+
 For Cartesian plots the *slanted=angle* allows for the optional angle to plot slanted annotations; the angle
 is with respect to the horizontal and must be in the -90 <= *angle* <= 90 range only. This applies to the x-axis
 only, with the exception of the *slanted=:parallel* form that plots the y annotations parallel to y-axis.
 
-To add a plot title do *title="My title"* The Frame setting is optional but can be invoked once to override
+To add a plot title do *title="My title"*. The Frame setting is optional but can be invoked once to override
 the above defaults.
 
 GMT uses the notion of *primary* (the default) and *secondary* axes. To set an axes as secondary, use
 *secondary=true* (mostly used for time axes annotations).
 
-The **xaxis** **yaxis** and **zaxis** specify which axis you are providing information for. The syntax is the same
-as for the *axes* keyword but allows fine tuning of different options for the 4 (or 5) axes.
+The **xaxis**, **yaxis** and **zaxis** specify which axis you are providing information for. The syntax is the same
+as for the *axes* keyword but allows fine tuning of different options for the 4 (or 5) axes. In this case to flip
+the positive direction of one particular axis we use **flip=true**. Don't need to explicitly say which axis
+because the function where it's used already knows that.
 
-To add a label, to an axis use *label="Label text"* if using the **xaxis** etc form, or use the **xlabel**, **ylabel**
-and **zlabel** keywords in the common **axes** tuple of options.
+To add a label to an axis use *label="Label text"* if using the **xaxis** etc form, or use the **xlabel**, **ylabel**
+and **zlabel** keywords in the common **frame** tuple of options.
+
+Still a third alternative to change the axis dirs is the option **flipaxes=:x|:y|:z|:xy** but note that so
+far this option is to be used mainly when creating \myreflink{subplot}'s
 
 Use *Yhlabel=true* to force a horizontal label for *y*-axes (useful for very short labels).
 
@@ -103,19 +111,18 @@ For custom annotations and intervals, let *intervals* be given as *custom="intfi
 letters from **a** or **i**, **f**, and **g**. For **a** or **i** you must supply a *label* that will
 be plotted at the *coord* location.
 
-A simpler way of controling the ticks and annotations with custom settings is to use the *xticks* option
-(same for *yticks* and *zticks*). Here, one give a tuple with annotations interval and labels. E.g.
-*xticks=(1:5, ["a", "b", "c", "d"]) where first element is an AbstractArray and second an array or tuple of
+A simpler way of controling the ticks and annotations with custom settings is to use the **xticks** option
+(same for **yticks** and **zticks**). Here, one give a tuple with annotations interval and labels. E.g.
+**xticks=(1:5, ["a", "b", "c", "d"])** where first element is an AbstractArray and second an array or tuple of
 strings or symbols. The more elaborate effect described above for the *custom* options is achieved here by
 escaping the **a** or **i**, **f**, and **g** codes with a forward slash in a text string. Example:
-xticks=(1:5, ["a", "f", "/ag e", "f", "/ag @~p@~"]). Here "/ag e" means annotate the third value with *e*
+**xticks=(1:5, ["a", "f", "/ag e", "f", "/ag @~p@~"])**. Here "/ag e" means annotate the third value with *e*
 and add a grid line. These *x|y|zticks* options work only for the primary axes. To change the secondary use
-the *customtics* form. *E.g.* *xaxis2=(customticks(...),)*. Note that the *ticks* keyword is already taken
+the *customtics* form. *E.g.* **xaxis2=(customticks(...),)**. Note that the *ticks* keyword is already taken
 to control the ticks interval hence the need to use a different one (*customticks*).
 
-For non-geographical projections: Give negative scale (in *proj="x scale"* or axis length
-(in *proj="X map width"* to change the direction of increasing coordinates (i.e., to make the y-axis
-positive down).
+For non-geographical projections: Give negative scale or figure sizes to change the direction of increasing
+coordinates. For example **figsize(-10,-8)** will revert the sense of *xx* and *yy* axes.
 
 For log10 axes: Annotations can be specified in one of three ways: 
 
@@ -228,11 +235,14 @@ The entire parameters collection is displayed in the following table
 
 Demonstrates use of dual (left vs right, bottom vs top) Cartesian axis labels
 
+\begin{examplefig}{}
 ```julia
-basemap(limits=(0,50,0,7), figsize=8,
+using GMT
+basemap(limits=(0,50,0,7), figsize=10,
         xaxis=(annot=:auto, ticks=:auto, label="Bottom Label", seclabel="Top label"),
         yaxis=(annot=:auto, ticks=:auto, label="Left label", seclabel="Right label"), show=1)
 ```
+\end{examplefig}
 
 we can obtain the same result with a slightly shorter version of the above that shows how can mix *frame* and *xaxis* calls.
 
@@ -244,13 +254,18 @@ basemap(limits=(0,50,0,7), figsize=8,
 
 Show inside labeling (use default fig size).
 
+\begin{examplefig}{}
 ```julia
-basemap(limits=(0,13,0,10), frame=(annot=2, ticks=0.5), par=(:MAP_FRAME_TYPE,:inside), show=1)
+using GMT
+basemap(limits=(0,13,0,10), frame=(annot=2, ticks=0.5), figsize=(12,6), par=(:MAP_FRAME_TYPE,:inside), show=1)
 ```
+\end{examplefig}
 
 Show horizontal and vertical annotations
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region=[0 1000 0 1000], figsize=5,
         frame=(axes=(:left_full,:bottom_full,:right_full,:top_full), annot=200,
                ticks=100, xlabel=:horizontal, ylabel=:vertical),
@@ -261,14 +276,18 @@ basemap!(frame=(axes=(:left_full,:bottom_full,:right_full,:top_full), annot=200,
          par=(FONT_ANNOT_PRIMARY=10, FONT_LABEL=16, MAP_ANNOT_ORTHO=:sn),
          x_offset=9, show=1)
 ```
+\end{examplefig}
 
 Show `Yhlabel` for horizontal labels for y-axis 
 
+\begin{examplefig}{}
 ```julia
+using GMT
 basemap(region="-30/30/-20/20", figsize=(12,8),
         frame=(annot=:a, ticks=:a, xlabel="Standard horizontal label", Yhlabel="@~Y(q)@~",
                title="Vertical Y-axis label"), show=1)
 ```
+\end{examplefig}
 
 --------------------------
 

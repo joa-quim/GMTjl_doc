@@ -77,6 +77,7 @@ controlling algorithms.
 
 - *marker=symb* or *symbol=symb*\
    Selects the decorating symbol *symb*. See the \myreflink{Symbols} for the list of symbols available.
+   Custom symbols may be set with (for example, but `unit` can be drop) `symbol=(custom="arrow", size=0.3, unit=:c)`
 - *size=xx* or *markersize* or *ms* or *symbolsize*\
    Use any of these to set the symbol size. Sizes can be scalars, strings or tuples if a unit is used.
 - *angle=xx*\

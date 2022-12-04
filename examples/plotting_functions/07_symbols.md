@@ -54,14 +54,14 @@ fs = ["decorated=(dist=(1,0.25), symbol=:fault)",
       "decorated=(dist=(1,0.25), symbol=:box)",
       "decorated=(dist=(1,0.25), symbol=:circle)",
       "decorated=(dist=(1,0.30), symbol=:triangle)",
-      "decorated=(dist=(2,1.00), symbol=\"s45\", side=left, offset=2.25)",
-      "decorated=(dist=(1,0.40), symbol=:fault, side=left)",
-      "decorated=(dist=(1,0.30), symbol=:box, side=left)",
+      "decorated=(dist=(2,1.00), symbol=\"s45\", side=:left, offset=2.25)",
+      "decorated=(dist=(1,0.40), symbol=:fault, side=:left)",
+      "decorated=(dist=(1,0.30), symbol=:box, side=:left)",
       "decorated=(dist=(1,0.40), symbol=:circle, right=true)",
-      "decorated=(dist=(1,0.30), symbol=:triangle, side=left)",
-      "decorated=(dist=(1,0.40), symbol=:fault, side=right, pen=(1.5,:dodgerblue))",
-      "decorated=(dist=(0.5,0.3), symbol=:triang, side=right, offset=0.3, pen=true)",
-      "decorated=(dist=(0.5,0.3), symbol=:triang, side=right, offset=0.3, pen='''', noline=true)"];
+      "decorated=(dist=(1,0.30), symbol=:triangle, side=:left)",
+      "decorated=(dist=(1,0.40), symbol=:fault, side=:right, pen=(1.5,:dodgerblue))",
+      "decorated=(dist=(0.5,0.3), symbol=:triang, side=:right, offset=0.3, pen=true)",
+      "decorated=(dist=(0.5,0.3), symbol=:triang, side=:right, offset=0.3, pen='''', noline=true)"];
 
 # Helper variable with the above verbose pen settings converted to GMT hard-core syntax
 _fs = ["1c/0.25c", "1c/0.25c+b", "1c/0.25c+c", "1c/0.3c+t", "2c/1c+l+s45+o2.25c", "1c/0.4c+l",

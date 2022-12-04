@@ -6,8 +6,6 @@
 
 From https://en.wikipedia.org/wiki/Archimedean_spiral
 
-The begin end of this block are NOT the GMT's modern mode gmt begin ... gmt end. They are
-forced by the Nootebook to have more than one command per cell.
 
 \begin{examplefig}{}
 ```julia

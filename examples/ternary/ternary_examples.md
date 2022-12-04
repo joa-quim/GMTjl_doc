@@ -1,10 +1,12 @@
-# Ternary plots
+## Ternary plots
 
-## Examples
+See manual at \myreflink{ternary}
 
+### A scatter plot example
 
-o plot points on a ternary diagram at the positions listed in the file ternary.txt (that GMT knows where to find it),
-with default annotations and gridline spacings, using the specified labeling, do
+To plot points on a ternary diagram at the positions listed in the file ternary.txt
+(that GMT knows where to find it), with default annotations and gridline spacings,
+using the specified labeling, do:
 
 \begin{examplefig}{}
 ```julia
@@ -30,6 +32,8 @@ ternary("@ternary.txt",  marker=:p, cmap=C, clockwise=true,
         clabel="Sand", suffix=" %"), show=true)
 ```
 \end{examplefig}
+
+### Ternary with image
 
 Ah, much better, but now I would like to display the above data as an image.
 
@@ -72,5 +76,31 @@ using GMT
 ternary("@ternary.txt", marker=:p, clockwise=true, 
         frame=(annot=:auto, grid=:a, ticks=:a, alabel="Clay", blabel="Silt", clabel="Sand", suffix=" %"),
         contourf=(annot=10, cont=5), show=true)
+```
+\end{examplefig}
+
+### Diagram with lines and text
+
+This example makes use of the \myreflink{tern2cart} function that converts from ternary
+to cartesian coordinates. It is based on [this discussion](https://discourse.julialang.org/t/ternary-plots-in-gmt-jl/63181/4)
+of the Julia forum.
+
+\begin{examplefig}{}
+```julia
+using GMT
+
+b = 0:0.01:0.3
+c1 = (1 .- b).^3 .- 0.7^3
+c2 = (1 .- 2*b).^2 .- 0.4^2
+
+# Generate the coordinates of two lines.
+t1 = tern2cart([(1 .- b .- c1) b c1])    # Note that GMT.jl function expects a Mx3 matrix
+t2 = tern2cart([(1 .- b .- c2) b c2])
+
+ternary(labels=("A", "B", "C"))
+
+plot!(t1, lw=2, lc=:red, ls="line& (a) &")	# line style -> fancy stuff
+plot!(t2, lw=2, lc=:blue)
+text!(tern2cart([0.3 0.4 0.3]), text="Umbilicus", font=18, show=true)
 ```
 \end{examplefig}

@@ -21,21 +21,28 @@ Required Arguments
     **Note1**: Use NO spaces with the first form. *i.e.* **grid="2x2"** and **NOT** *grid=" 2 x 2"*\
     **Note2**: You are not required to place a plot in each subplot.
 
-
-- **F** or **dims** ir **dimensions** or **size** or **sizes** : -- *dims=(panels=(w,h), size=(w,h), frac=(), clearance=(dx,dy), outline=pen, fill=color, divlines=pen)*\
+- **F** or **dims** or **dimensions** or **size** or **sizes** : -- *dims=(panels=(w,h), figsize=(w,h), frac=(), clearance=(dx,dy), outline=pen, fill=color, divlines=pen)*\
     Specify the dimensions of the figure. There are two different ways to do this:
-    1. With the keyword **size** Specify overall figure dimensions\
+    1. With the keyword **figsize** Specify overall figure dimensions\
     2. With the keyword **panels** specify the dimensions of a single subplot.
+    
+    For grids up to 3x3 and 2x1 and 3x1, if neither **figsize** or **panels** are specified, an estimation
+    of the *panels* size plus **margins** will be provided. This may suite many use cases with a likely need
+    to specify better margins.
 
-    **size**\
-    Specify the final figure dimensions. The subplot dimensions are then calculated from the figure dimensions after accounting for the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append **frac** with value given as a tuple of *width* nd *height* fractions. For example **dims=(size=(10,10), frac=((3,1),(1,2)))** will make the first column three times as wide as the second, while the second row will be twice as tall as the first row. A single number means constant widths (or heights) [Default]. If prefered, instead of *size* and/or *frac* as tuples, the **width=x, height=y, fwidth=(...), fheight=(...)** form is also allowed. 
+    **figsize**\
+    Specify the final figure dimensions. The subplot dimensions are then calculated from the figure dimensions after accounting for the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append **frac** with value given as a tuple of *width* and *height* fractions. For example **dims=(size=(10,10), frac=((3,1),(1,2)))** will make a 10x10 cm fig with the first column three times as wide as the second, while the second row will be twice as tall as the first row. A single number means constant widths (or heights) [Default]. If prefered, instead of *size* and/or *frac* as tuples, the **width=x, height=y, fwidth=(...), fheight=(...)** form is also allowed. 
 
     **panels**\
-    Specify the dimensions of each subplot directly. Then, the figure dimensions are computed from the subplot dimensions after adding the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append a comma-separated list of widths, a slash, and then the comma-separated list of heights. A single number means constant widths (or heights) [Default]. For example **dims=(panels=((5,8),8),)** will make the first column 5 cm wide and the second column 8 cm wide, with all having a constant height of 8 cm. The number of values must either be one (constant across the rows or columns) or exactly match the number of rows (or columns). For geographic maps, the height of each subplot depends on your map region and projection. There are two options: (1) Specify both **limits** and **projection** and we use these to compute the height of each subplot. All subplots must share the same region and projection and you specify a zero *height*, or (2) you can select *height* based on trial and error to suit your plot layout.
+    Specify the dimensions of each subplot directly. Then, the figure dimensions are computed from the subplot dimensions after adding the space that optional tick marks, annotations, labels, and margins occupy between subplots. As for other figures, annotations, ticks, and labels along the outside perimeter are not counted as part of the figure dimensions. To specify different subplot dimensions for each row (or column), append a comma-separated list of widths, a slash, and then the comma-separated list of heights. A single number means constant widths (or heights) [Default]. For example **dims=(panels=((5,8),8),)** will make the first column 5 cm wide and the second column 8 cm wide, with all having a constant height of 8 cm. The number of values must either be one (constant across the rows or columns) or exactly match the number of rows (or columns). For geographic maps, the height of each subplot depends on your map region and projection. There are two options:
+    
+    1. Specify both **limits** and **projection** and we use these to compute the height of each subplot. All subplots must share the same region and projection and you specify a zero *height*, or 
+    
+    2. you can select *height* based on trial and error to suit your plot layout.
 
     Optionally, you may draw the outline (**outline=pen**) or paint (**fill=color**) the figure rectangle behind the subplots, add dividing lines between panels (**divlines=pen**), and even expand it via **clearance=(dx.dy)**. These are most useful if you supply **axes=:none**, meaning no ticks or annotations will take place in the subplots. See \myreflink{Setting color} and \myreflink{Pen attributes} for extend color and pen selections.
 
-    But when only want to set panels with a constant size one can use the simpler form **subplot(grid=..., panels_size=8, ...)**, *i.e.* without sing the **dims=(panels=())** form. *panels_size*, *panel_size* and *panel_sizes* are all aliases.
+    But when we only want to set panels with a constant size one can use the simpler form **subplot(grid=..., panels_size=8, ...)**, *i.e.* without using the **dims=(panels=())** form. *panels_size*, *panel_size* and *panel_sizes* are all aliases.
 
 Optional Arguments
 ------------------
@@ -56,12 +63,12 @@ Optional Arguments
 
 \textinput{common_opts/opt_B}
 
-- **C** or **clearance** : -- *clearance=(left=val, right=val, bott=val, bottom=val, top=val))*\
-    Reserve a space of dimension *val* between the margin and the subplot on the specified side, using *side* values from **left=val**, **right=val**, **bottom=val**, or **top=val**. No *side* means all sides. Can specify more than one side. Such space will be left untouched by the main map plotting but can be accessed by modules that plot scales, bars, text, etc. Settings specified under **begin** directive apply to all subplots, while settings under **set** only apply to the selected (active) subplot.  **Note**: Common options **xshift** and **yshift** are not available during subplots; use **clearance** instead.
+- **C** or **clearance** : -- *clearance=val* **|** *clearance=(left=val, right=val, bott=val, bottom=val, top=val))*\
+    Reserve a space of dimension *val* between the margin and the subplot on the specified side, using *side* values from **left=val**, **right=val**, **bottom=val**, or **top=val**. No *side* means all sides. Can specify more than one side. Such space will be left untouched by the main map plotting but can be accessed by modules that plot scales, bars, text, etc. Settings specified under **begin** directive apply to all subplots, while settings under **set** only apply to the selected (active) subplot. **Note**: Common options **xshift** and **yshift** are not available during subplots; use **clearance** instead.
 
 \textinput{common_opts/opt_J}
 
-- **-M** or **margins** : -- *margins=val*\
+- **M** or **margins** : -- *margins=val*\
     This is margin space that is added *between* neighboring subplots (i.e., the interior margins) *in addition*
     to the automatic space added for tick marks, annotations, and labels. The margins can be specified as
     a single value (for same margin on all sides), a pair of values separated by slashes
@@ -72,22 +79,28 @@ Optional Arguments
 
 \textinput{common_opts/opt_R}
 
-- **SC** or **col_axes** : -- *col_axes=(top="", bott="", bottom="", label="", grid=pen))*\
-- **SR** or **row_axes** : -- *row_axes=(left="", right="", label="", parallel="", row_title="t", top_row_title="", grid=pen))*\
+- **SC** or **col_axes** or **colaxes** or **sharex** : -- *col\_axes=(top="", bott="", bottom="", label="", grid=pen))*\
+- **SR** or **row_axes** or **rowaxes** or **sharey** : -- *row\_axes=(left="", right="", label="", parallel="", row\_title="t", top\_row\_title="", grid=pen))*\
     Set subplot layout for shared axes. May be set separately for rows (**row_axes**) and columns (**col_axes**).\
     Considerations for **col_axes**:\
     Use when all subplots in a column share a common *x*-range. The first (i.e., **top**) and the last (i.e., **bottom**) rows will have *x* annotations; append **top=""** or **bott=""** to select only one of those two rows [both].
-    - Append **label=""** if annotated *x*-axes should have a label [none]; optionally append the label if it is the same for the entire subplot.
-      Labels and titles that depends on which row or column are specified as usual via a subplot's own **axes** setting.\
+    - Add **label=""** if annotated *x*-axes should have a label [none]; optionally append the label if it is
+      the same for the entire subplot. Labels and titles that depends on which row or column are specified as
+      usual via a subplot's own **axes** setting.\
     Considerations for **row_axes**:\
-    Use when all subplots in a row share a common *y*-range. The first (i.e., **left**) and the last (i.e., **right**) columns will have *y*-annotations; append **left=""** or **right=""** to select only one of those two columns [both].
-    - Append **left=""** if annotated *y*-axes will have a label [none]; optionally, append the label if it is the same for the entire subplot.
-    - Append **row_title** to make space for subplot titles for each row; use **top_row_title** for top row titles only [no subplot titles].
-    - Append **parallel=""** to make all annotations axis-parallel [horizontal]; if not used you may have to set **clearance** to secure extra space for long horizontal annotations.
-    - Append **grid=pen** to draw horizontal and vertical lines between interior panels using selected pen [no lines].
+    Use when all subplots in a row share a common *y*-range. The first (i.e., **left**) and the last
+    (i.e., **right**) columns will have *y*-annotations; append **left=""** or **right=""** to select
+    only one of those two columns [both].
+    - Add **left=""** if annotated *y*-axes will have a label [none]; optionally, append the label if it
+      is the same for the entire subplot.
+    - Add **row_title** to make space for subplot titles for each row; use **top\_row\_title** for top row
+      titles only [no subplot titles].
+    - Add **parallel=""** to make all annotations axis-parallel [horizontal]; if not used you may have
+      to set **clearance** to secure extra space for long horizontal annotations.
+    - Add **grid=pen** to draw horizontal and vertical lines between interior panels using selected pen [no lines].
 
 - **T** or **title** : -- *title="Heading"*\
-    While individual subplots can have titles (see **-S** or **axes**), the entire figure may also have a
+    While individual subplots can have titles (see **S** or **axes**), the entire figure may also have a
     overarching *heading* [no heading]. Font is determined by setting `FONT_HEADING`.
 
 
@@ -102,7 +115,7 @@ then the dimensions of the map are automatically determined by the subplot size 
 For Cartesian plots: If you want the scale to apply *equally* to both dimensions
 then you must specify **proj=:linear, figscale="auto"** [The default **figsize="auto"** will fill the subplot by using unequal scales].
 
-  Optional Arguments
+Optional Arguments
 ------------------
 
   - **panel=(row,col)**\
@@ -117,13 +130,12 @@ then you must specify **proj=:linear, figscale="auto"** [The default **figsize="
 
 Any number of plotting command can now take place and all output will be directed to the
 selected subplot. There are a few other rules that need to be followed:\
-(1) The subplot machinery expects the first plotting command in a new subplot window
-to take care of plotting the base frame. The particulars of this frame may have been
-specified by the **row|col_axes** option. In either case, should you need to set or override
-frame and axes parameters then you must specify these **axes** options with this first plot
-command.\
-(2) The subplot machinery automatically uses the **xshift** and **yshift** options under
-the hood so these options are not available while a subplot is active.
+  1. The subplot machinery expects the first plotting command in a new subplot window to take
+     care of plotting the base frame. The particulars of this frame may have been specified
+     by the **row|col_axes** option. In either case, should you need to set or override frame
+     and axes parameters then you must specify these **axes** options with this first plot command.
+  2. The subplot machinery automatically uses the **xshift** and **yshift** options under
+     the hood so these options are not available while a subplot is active.
 
 Synopsis (end mode)
 -------------------
@@ -142,31 +154,31 @@ reference to the complete figure dimensions. We also reset the current plot loca
 Examples
 --------
 
-To make a minimalistic 3x3 basemap layout called panels.pdf, try::
+To make a minimalistic 3x3 basemap layout, try::
 
+\begin{examplefig}{}
 ```julia
-subplot(grid="3x3", panels_size=(5,7), region=(0, 100, 0, 80), frame=:WSen, autolabel=1, margins="6p", name="panels.pdf")
-    gmtset(MAP_FRAME_TYPE=:plain)
-
+using GMT
+subplot(grid="3x3", panels_size=(5,7), region=(0, 100, 0, 80), frame=:WSen, autolabel=1, margins="6p")
     basemap(panel=1)
     basemap(panel=2, proj=:linear)		# Same as above
     basemap(panel="next", proj=:linear, figsize="auto,auto")
 
-    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:x)
-    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:y)
-    basemap(panel="", proj=:linear, figsize="auto,auto", axesswap=:xy)
+    basemap(panel="", proj=:linear, figsize="auto,auto", flipaxes=:x)
+    basemap(panel="", proj=:linear, figsize="auto,auto", flipaxes=:y)
+    basemap(panel="", proj=:linear, figsize="auto,auto", flipaxes=:xy)
 
-    basemap(panel=(3,1), proj=:linear, figscale="auto,auto", axesswap=:x)
+    basemap(panel=(3,1), proj=:linear, figscale="auto,auto", flipaxes=:x)
     basemap(panel="next", proj=:geog, figsize="auto,auto")
     basemap(panel="next", proj=:geog, figsize="auto")
 subplot(:show)
 ```
+\end{examplefig}
 
 and a 2x2 with some symbols and showing more ways of setting the panel sizes and selection
 
 ```julia
 subplot(grid=(2,2), panels_size=8, region=(0, 100, 0, 80), margins="5p", autolabel=true, col_axes=(bott=true,), row_axes=(left=true,), axes="wstr", name="panels.pdf")
-    subplot(:set)
     basemap(region=(0,80,0,50))
     subplot(:set)
     plot([50 40], marker=:circle, mc=:red)
@@ -174,6 +186,37 @@ subplot(grid=(2,2), panels_size=8, region=(0, 100, 0, 80), margins="5p", autolab
     plot([50 40], marker=:square, mc=:green)
     subplot(:set, panel=(2,2))
     plot([50 40], marker=:star, mc=:blue)
+subplot(:show)
+```
+
+Use variable panels with variable sizes:
+
+\begin{examplefig}{}
+```julia
+using GMT
+subplot(grid=(3,2), dims=(panels=true, sizes=(("2i","4i"),("2.5i","5i","1.25i"))), row_axes=(left=true, parallel=true),
+        col_axes=(bott=true,), margins=0, autolabel=(label=:A, vertical=true), title="Variable dimensions")
+	basemap(region=(0,5,0,5),     frame=(fill=:pink,))
+	basemap(region=(0,5,10,15),   frame=(fill=:cyan,),   panel=:next)
+	basemap(region=(0,5,10,15),   frame=(fill=:lightgray,),   panel=:next)
+	basemap(region=(10,15,0,5),   frame=(fill=:yellow,), panel=:next)
+	basemap(region=(10,15,10,15), frame=(fill=:purple,), panel=:next)
+	basemap(region=(10,15,10,15), frame=(fill=:orange,), panel=:next)
+subplot(:show)
+```
+\end{examplefig}
+
+A very similar to the above figure can be created with:
+
+```julia
+subplot(grid=(3,2), dims=(size=("6.5i","9i"), frac=((1,2), (1,2,0.5)) ), row_axes=(left=true, parallel=true),
+        col_axes=(bott=true,), frame=:WSne, margins=0, autolabel=true, title="Variable fractions")
+	basemap(region=(0,5,0,5),     frame=(fill=:pink,))
+	basemap(region=(10,15,0,5),   frame=(fill=:yellow,), panel=:next)
+	basemap(region=(0,5,10,15),   frame=(fill=:cyan,),   panel=:next)
+	basemap(region=(10,15,10,15), frame=(fill=:purple,), panel=:next)
+	basemap(region=(0,5,10,15), frame=(fill=:lightgray,),panel=:next)
+	basemap(region=(10,15,10,15), frame=(fill=:orange,), panel=:next)
 subplot(:show)
 ```
 
