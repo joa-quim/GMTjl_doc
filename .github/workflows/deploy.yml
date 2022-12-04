@@ -32,9 +32,9 @@ jobs:
 
     - run: julia -e '
             using Pkg;
-            Pkg.activate(\".\");
+            Pkg.activate(".");
             Pkg.instantiate();
-            Pkg.add(PackageSpec(name=\"GMT\", rev=\"master\"));
+            Pkg.add(PackageSpec(name="GMT", rev="master"));
             using NodeJS;
             run(`$(npm_cmd()) install highlight.js`);
             run(`$(npm_cmd()) install cheerio`);
