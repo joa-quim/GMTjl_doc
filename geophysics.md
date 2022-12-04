@@ -15,4 +15,15 @@
     ~~~</a>~~~
   @@
 
+  @@box
+    ~~~<a class="boxlink" href="earthtides/">~~~
+    @@title Earth tides @@
+    @@box-content
+      ~~~
+      <img src="/geophysics/earthtides/tillelogo.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
 @@

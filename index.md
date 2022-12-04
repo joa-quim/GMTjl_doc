@@ -51,22 +51,22 @@ using GMT
   @@
 
   @@box
-    ~~~<a class="boxlink" href="examples/CPTs/">~~~
-    @@title Color maps @@
+    ~~~<a class="boxlink" href="examples/projections/">~~~
+    @@title Projections @@
     @@box-content
       ~~~
-      <img src="/examples/CPTs/GMT_CPTscale.png">
+      <img src="/examples/projections/GMT_sinus_int.png">
       ~~~
     @@
     ~~~</a>~~~
   @@
 
   @@box
-    ~~~<a class="boxlink" href="examples/projections/">~~~
-    @@title Projections @@
+    ~~~<a class="boxlink" href="examples/CPTs/">~~~
+    @@title Color maps @@
     @@box-content
       ~~~
-      <img src="/examples/projections/GMT_sinus_int.png">
+      <img src="/examples/CPTs/GMT_CPTscale.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -89,6 +89,17 @@ using GMT
     @@box-content
       ~~~
       <img src="/examples/contours/color-contour.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
+    ~~~<a class="boxlink" href="examples/arrows/">~~~
+    @@title Arrows @@
+    @@box-content
+      ~~~
+      <img src="/examples/arrows/icon.png">
       ~~~
     @@
     ~~~</a>~~~
@@ -148,13 +159,24 @@ using GMT
     @@
     ~~~</a>~~~
   @@
-   
+ 
   @@box
     ~~~<a class="boxlink" href="examples/misc/">~~~
     @@title Misc @@
     @@box-content
       ~~~
       <img src="/examples/misc/buffer3.png">
+      ~~~
+    @@
+    ~~~</a>~~~
+  @@
+
+  @@box
+    ~~~<a class="boxlink" href="examples/embellish/">~~~
+    @@title Embellishments @@
+    @@box-content
+      ~~~
+      <img src="/examples/embellish/rose.png">
       ~~~
     @@
     ~~~</a>~~~

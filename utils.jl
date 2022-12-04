@@ -6,23 +6,20 @@ using ImageTransformations
 using Colors
 using Pkg
 
-############################ Initialization ##############################
-
-#include("colormap_generation.jl")
-
 ############################ Functions ##############################
-
-#const global DOCSROOT = pwd()
-#getpath4docs(file::String) = joinpath(DOCSROOT, "assert", file)
 
 function hfun_doc(params)
 	fname = params[1]
 	html_docstring(fname)
 end
 
-
 function html_docstring(fname)
-	doc = Base.doc(getfield(GMT, Symbol(fname)))
+	local doc = ""
+	try
+		doc = Base.doc(getfield(GMT, Symbol(fname)))
+	catch
+		return ""
+	end
 	body = Markdown.html(doc)
 
 	# body = fd2html(replace(txt, raw"$" => raw"\$"), internal = true)
@@ -48,6 +45,13 @@ end
 
 function hfun_utilfuns_reference()
 	fid = open("documentation/utilfuns.txt", "r")
+	names = readlines(fid)
+	close(fid)
+	join(map(html_docstring, names))
+end
+
+function hfun_supplements_reference()
+	fid = open("documentation/supplements.txt", "r")
 	names = readlines(fid)
 	close(fid)
 	join(map(html_docstring, names))
