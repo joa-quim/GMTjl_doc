@@ -1,6 +1,6 @@
 using Chain
-using Markdown
-using GMT
+import Markdown
+# using GMT
 using FileIO
 using ImageTransformations
 using Colors
@@ -60,14 +60,14 @@ end
 function hfun_generate_tablerefs(fiche)
 	# Create a table in HTML and an fill it with references to functions whose docs comes
 	# only from doc-strings. Whe have two sets of those functions that are listed in the
-	# files documentation\utilfuns and documentation\gdalfuns 
+	# files documentation\utilfuns and documentation\gdalfuns
 
 	# 'fiche' should be "utilfuns" or "gdalfuns"
 	fname = fiche[1]        # For some unknown reason the argin is a string vector
 	fid = open("documentation/" * fname * ".txt", "r")
 	names = readlines(fid)
 	close(fid)
- 
+
 	hdir = "\"/documentation/" * fname * "#"
 	n_cols = 6              # Number of columns in the table
 	n_rows = div(length(names), n_cols)
@@ -92,7 +92,7 @@ function hfun_generate_tablerefs(fiche)
 		write(io, "</tr>")
 	end
 	write(io, "</table>")
-	
+
 	return String(take!(io))
 end
 
@@ -144,7 +144,7 @@ function env_examplefig(com, _)
 	mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
 	GMT.isFranklin[1] = false    # hide
 	GMT.IamModern[1]  = false    # hide
- 
+
 	nothing # hide
 	```
 	~~~
@@ -158,7 +158,7 @@ function env_examplefig(com, _)
 	return str
 end
 
-@delay function hfun_list_folder_with_images(params)
+function hfun_list_folder_with_images(params)
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -232,7 +232,7 @@ end
 end
 
 
-@delay function hfun_list_folder(params)
+function hfun_list_folder(params)
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -315,141 +315,141 @@ struct NavEntry
 	children::Vector{NavEntry}
 	metadata::Dict
 end
-
-@delay function hfun_navigation()
-	all_pages = sort!(collect(keys(Franklin.ALL_PAGE_VARS)))
-
-	naventries = NavEntry[]
-
-	for page in all_pages
-		parts = splitpath(page)
-
-		this_page_vars = Franklin.ALL_PAGE_VARS[page]
-
-		hidden = first(get(this_page_vars, "hidden", false => nothing))
-		hidden && continue
-
-		d = naventries
-		for (j, part) in enumerate(parts)
-			i = findfirst(x -> x.name == part, d)
-			if i === nothing
-				n = NavEntry(part, [], Dict())
-
-				push!(d, n)
-			else
-				n = d[i]
-			end
-			d = n.children
-
-
-			if j == length(parts)
-				n.metadata["title"] = first(get(this_page_vars, "title", "" => nothing))
-				n.metadata["order"] = first(get(this_page_vars, "order", 999 => nothing))
-				n.metadata["icon"] = first(get(this_page_vars, "icon", "" => nothing))
-				n.metadata["page"] = page === "index" ? "" : page
-
-				pretty_url = match(r"(.*)/index.html", first(Franklin.LOCAL_VARS["fd_url"]))
-				pretty_url = pretty_url === nothing ? nothing : pretty_url[1]
-
-				n.metadata["isactive"] = pretty_url == n.metadata["page"] || pretty_url == "/" * join(parts, "/")
-			end
-		end
-	end
-
-	function should_collapse(naventry)
-		!get(naventry.metadata, "isactive", false) && all(should_collapse, naventry.children)
-	end
-
-	function navsort!(entries)
-		sort!(entries, by = e -> get(e.metadata, "order", Inf))
-		foreach(entries) do entry
-			navsort!(entry.children)
-		end
-	end
-
-	navsort!(naventries)
-
-	function printlist(io, naventries, level = "")
-		isempty(naventries) && return
-
-		print(io, "<ul>")
-
-		for (i, naventry) in enumerate(naventries)
-
-			this_level = join([level, string(i)], "-")
-
-			has_children = !isempty(naventry.children)
-
-			print(io, "<li>")
-
-			active = get(naventry.metadata, "isactive", false)
-
-			inputid = "menuitem$this_level"
-			if has_children
-				print(io, """<input class="collapse-toggle" id="$inputid" type="checkbox" $(should_collapse(naventry) ? "" : "checked")>""")
-			end
-
-			print(io, """<div class="tocitem-container">""")
-
-			if has_children
-				print(io, """<label class="tocexpander" for="$inputid">""")
-				print(io, "<i class=\"docs-chevron\"></i>")
-				print(io, "</label>")
-			end
-
-			if haskey(naventry.metadata, "page")
-				print(io, """<a $(active ? "class = active" : "") href="/$(naventry.metadata["page"])">$(naventry.metadata["title"])</a>""")
-			else
-				print(io, """<span $(active ? "class = active" : "")>$(get(naventry.metadata, "title", ""))</span>""")
-			end
-
-			print(io, "</div>")
-
-			if active
-				print(io, contenttable())
-			end
-
-			printlist(io, naventry.children, this_level)
-			print(io, "</li>\n")
-		end
-		print(io, "</ul>")
-	end
-
-	return sprint(io-> printlist(io, naventries))
-end
-
-
-function contenttable()
-	isempty(Franklin.PAGE_HEADERS) && return ""
-
-	return sprint() do io
-
-		println(io, """<ul class="page-content">""")
-
-		order_stack = [first(Franklin.PAGE_HEADERS)[2][3]]
-
-		for (key, val) in Franklin.PAGE_HEADERS
-			order = val[3]
-
-			n_steps_up = count(>=(order), order_stack)
-
-			if n_steps_up == 0
-				println(io, "<li><ul>")
-			elseif n_steps_up == 1
-				# do nothing
-			else
-				for i in 2:n_steps_up
-					println(io, "</ul></li>")
-				end
-			end
-			filter!(<(order), order_stack)
-			push!(order_stack, order)
-
-			println(io, "<li><a href=\"#$key\">$(val[1])</a></li>")
-		end
-
-		for i in 1:length(order_stack)
-			println(io, "</ul>")
-		end
-	end
-end
+#
+# function hfun_navigation()
+# 	all_pages = sort!(collect(keys(Franklin.ALL_PAGE_VARS)))
+#
+# 	naventries = NavEntry[]
+#
+# 	for page in all_pages
+# 		parts = splitpath(page)
+#
+# 		this_page_vars = Franklin.ALL_PAGE_VARS[page]
+#
+# 		hidden = first(get(this_page_vars, "hidden", false => nothing))
+# 		hidden && continue
+#
+# 		d = naventries
+# 		for (j, part) in enumerate(parts)
+# 			i = findfirst(x -> x.name == part, d)
+# 			if i === nothing
+# 				n = NavEntry(part, [], Dict())
+#
+# 				push!(d, n)
+# 			else
+# 				n = d[i]
+# 			end
+# 			d = n.children
+#
+#
+# 			if j == length(parts)
+# 				n.metadata["title"] = first(get(this_page_vars, "title", "" => nothing))
+# 				n.metadata["order"] = first(get(this_page_vars, "order", 999 => nothing))
+# 				n.metadata["icon"] = first(get(this_page_vars, "icon", "" => nothing))
+# 				n.metadata["page"] = page === "index" ? "" : page
+#
+# 				pretty_url = match(r"(.*)/index.html", first(Franklin.LOCAL_VARS["fd_url"]))
+# 				pretty_url = pretty_url === nothing ? nothing : pretty_url[1]
+#
+# 				n.metadata["isactive"] = pretty_url == n.metadata["page"] || pretty_url == "/" * join(parts, "/")
+# 			end
+# 		end
+# 	end
+#
+# 	function should_collapse(naventry)
+# 		!get(naventry.metadata, "isactive", false) && all(should_collapse, naventry.children)
+# 	end
+#
+# 	function navsort!(entries)
+# 		sort!(entries, by = e -> get(e.metadata, "order", Inf))
+# 		foreach(entries) do entry
+# 			navsort!(entry.children)
+# 		end
+# 	end
+#
+# 	navsort!(naventries)
+#
+# 	function printlist(io, naventries, level = "")
+# 		isempty(naventries) && return
+#
+# 		print(io, "<ul>")
+#
+# 		for (i, naventry) in enumerate(naventries)
+#
+# 			this_level = join([level, string(i)], "-")
+#
+# 			has_children = !isempty(naventry.children)
+#
+# 			print(io, "<li>")
+#
+# 			active = get(naventry.metadata, "isactive", false)
+#
+# 			inputid = "menuitem$this_level"
+# 			if has_children
+# 				print(io, """<input class="collapse-toggle" id="$inputid" type="checkbox" $(should_collapse(naventry) ? "" : "checked")>""")
+# 			end
+#
+# 			print(io, """<div class="tocitem-container">""")
+#
+# 			if has_children
+# 				print(io, """<label class="tocexpander" for="$inputid">""")
+# 				print(io, "<i class=\"docs-chevron\"></i>")
+# 				print(io, "</label>")
+# 			end
+#
+# 			if haskey(naventry.metadata, "page")
+# 				print(io, """<a $(active ? "class = active" : "") href="/$(naventry.metadata["page"])">$(naventry.metadata["title"])</a>""")
+# 			else
+# 				print(io, """<span $(active ? "class = active" : "")>$(get(naventry.metadata, "title", ""))</span>""")
+# 			end
+#
+# 			print(io, "</div>")
+#
+# 			if active
+# 				print(io, contenttable())
+# 			end
+#
+# 			printlist(io, naventry.children, this_level)
+# 			print(io, "</li>\n")
+# 		end
+# 		print(io, "</ul>")
+# 	end
+#
+# 	return sprint(io-> printlist(io, naventries))
+# end
+#
+#
+# function contenttable()
+# 	isempty(Franklin.PAGE_HEADERS) && return ""
+#
+# 	return sprint() do io
+#
+# 		println(io, """<ul class="page-content">""")
+#
+# 		order_stack = [first(Franklin.PAGE_HEADERS)[2][3]]
+#
+# 		for (key, val) in Franklin.PAGE_HEADERS
+# 			order = val[3]
+#
+# 			n_steps_up = count(>=(order), order_stack)
+#
+# 			if n_steps_up == 0
+# 				println(io, "<li><ul>")
+# 			elseif n_steps_up == 1
+# 				# do nothing
+# 			else
+# 				for i in 2:n_steps_up
+# 					println(io, "</ul></li>")
+# 				end
+# 			end
+# 			filter!(<(order), order_stack)
+# 			push!(order_stack, order)
+#
+# 			println(io, "<li><a href=\"#$key\">$(val[1])</a></li>")
+# 		end
+#
+# 		for i in 1:length(order_stack)
+# 			println(io, "</ul>")
+# 		end
+# 	end
+# end
