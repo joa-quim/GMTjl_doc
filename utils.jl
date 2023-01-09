@@ -2,8 +2,8 @@ using Chain
 using Markdown
 using GMT
 using FileIO
-#using ImageTransformations
-#using Colors
+using ImageTransformations
+using Colors
 using Pkg
 
 ############################ Functions ##############################
@@ -97,8 +97,13 @@ function hfun_generate_tablerefs(fiche)
 end
 
 function env_showhtml(com, _)
+<<<<<<< HEAD
 	content = Xranklin.content(com)
 	lang, ex_name, code = Xranklin.parse_fenced_block(content, false)
+=======
+	content = Franklin.content(com)
+	lang, ex_name, code = Franklin.parse_fenced_block(content, false)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	name = "example_$(hash(code))"
 	str = """
 	```julia:$name
@@ -117,32 +122,54 @@ end
 
 
 function env_examplefig(com, _)
+<<<<<<< HEAD
 	content = Xranklin.content(com)
 	lang, ex_name, code = Xranklin.parse_fenced_block(content, false)
+=======
+	content = Franklin.content(com)
+	lang, ex_name, code = Franklin.parse_fenced_block(content, false)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	if lang != "julia"
 		error("Code block needs to be julia. Found: $(lang), $(typeof(lang))")
 	end
 
+<<<<<<< HEAD
 	kwargs = eval(Meta.parse("Dict(pairs((;" * Xranklin.content(com.braces[1]) * ")))"))
+=======
+	kwargs = eval(Meta.parse("Dict(pairs((;" * Franklin.content(com.braces[1]) * ")))"))
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	name = pop!(kwargs, :name, "example_" * string(hash(content)))
 	pngfile = "$name.png"
 
 	# add the generated png name to the list of examples for this page, which
 	# can later be used to assemble an overview page
+<<<<<<< HEAD
 	# for some reason Xranklin needs a pair as the content?
 	pngsvec, _ = get!(Xranklin.LOCAL_VARS, "examplefigures_png", String[] => Vector{String})
+=======
+	# for some reason franklin needs a pair as the content?
+	pngsvec, _ = get!(Franklin.LOCAL_VARS, "examplefigures_png", String[] => Vector{String})
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	push!(pngsvec, pngfile)
 
 	str = """
 	```julia:example_figure
 	begin # hide
 		using GMT   # hide
+<<<<<<< HEAD
 		GMT.isXranklin[1] = true    # hide
+=======
+		GMT.isFranklin[1] = true    # hide
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 		getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
 		$code
 	end # hide
 	mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
+<<<<<<< HEAD
 	GMT.isXranklin[1] = false    # hide
+=======
+	GMT.isFranklin[1] = false    # hide
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	GMT.IamModern[1]  = false    # hide
  
 	nothing # hide
@@ -158,7 +185,11 @@ function env_examplefig(com, _)
 	return str
 end
 
+<<<<<<< HEAD
 function hfun_list_folder_with_images(params)
+=======
+@delay function hfun_list_folder_with_images(params)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -232,7 +263,11 @@ function hfun_list_folder_with_images(params)
 end
 
 
+<<<<<<< HEAD
 function hfun_list_folder(params)
+=======
+@delay function hfun_list_folder(params)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -284,8 +319,13 @@ end
 =#
 
 function lx_outputimage(lxc, _)
+<<<<<<< HEAD
 	rpath = Xranklin.stent(lxc.braces[1])
 	path = Xranklin.parse_rpath("output/" * rpath; canonical=false, code=true)
+=======
+	rpath = Franklin.stent(lxc.braces[1])
+	path = Franklin.parse_rpath("output/" * rpath; canonical=false, code=true)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 	return "![$rpath]($path)"
 end
 
@@ -305,7 +345,11 @@ function hfun_generating_versions()
 end
 
 function hfun_sidebar()
+<<<<<<< HEAD
 	items = join("""<li><a href="#$key">$(val[1])</a></li>""" for (key, val) in Xranklin.PAGE_HEADERS)
+=======
+	items = join("""<li><a href="#$key">$(val[1])</a></li>""" for (key, val) in Franklin.PAGE_HEADERS)
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 	return "<ul class=\"sidebar\">$items</ul>"
 end
@@ -316,15 +360,24 @@ struct NavEntry
 	metadata::Dict
 end
 
+<<<<<<< HEAD
 function hfun_navigation()
 	all_pages = sort!(collect(keys(Xranklin.ALL_PAGE_VARS)))
+=======
+@delay function hfun_navigation()
+	all_pages = sort!(collect(keys(Franklin.ALL_PAGE_VARS)))
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 	naventries = NavEntry[]
 
 	for page in all_pages
 		parts = splitpath(page)
 
+<<<<<<< HEAD
 		this_page_vars = Xranklin.ALL_PAGE_VARS[page]
+=======
+		this_page_vars = Franklin.ALL_PAGE_VARS[page]
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 		hidden = first(get(this_page_vars, "hidden", false => nothing))
 		hidden && continue
@@ -348,7 +401,11 @@ function hfun_navigation()
 				n.metadata["icon"] = first(get(this_page_vars, "icon", "" => nothing))
 				n.metadata["page"] = page === "index" ? "" : page
 
+<<<<<<< HEAD
 				pretty_url = match(r"(.*)/index.html", first(Xranklin.LOCAL_VARS["fd_url"]))
+=======
+				pretty_url = match(r"(.*)/index.html", first(Franklin.LOCAL_VARS["fd_url"]))
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 				pretty_url = pretty_url === nothing ? nothing : pretty_url[1]
 
 				n.metadata["isactive"] = pretty_url == n.metadata["page"] || pretty_url == "/" * join(parts, "/")
@@ -420,15 +477,25 @@ end
 
 
 function contenttable()
+<<<<<<< HEAD
 	isempty(Xranklin.PAGE_HEADERS) && return ""
+=======
+	isempty(Franklin.PAGE_HEADERS) && return ""
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 
 	return sprint() do io
 
 		println(io, """<ul class="page-content">""")
 
+<<<<<<< HEAD
 		order_stack = [first(Xranklin.PAGE_HEADERS)[2][3]]
 
 		for (key, val) in Xranklin.PAGE_HEADERS
+=======
+		order_stack = [first(Franklin.PAGE_HEADERS)[2][3]]
+
+		for (key, val) in Franklin.PAGE_HEADERS
+>>>>>>> 96b742c29838c5a74b68b9453c53f3487c5a9e26
 			order = val[3]
 
 			n_steps_up = count(>=(order), order_stack)

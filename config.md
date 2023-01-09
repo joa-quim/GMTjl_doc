@@ -9,18 +9,18 @@ auto_code_path = true
 
 prepath = "GMTjl_doc"
 
-# Add here files or directories that should be ignored by Xranklin, otherwise
-# these files might be copied and, if markdown, processed by Xranklin which
+# Add here files or directories that should be ignored by Franklin, otherwise
+# these files might be copied and, if markdown, processed by Franklin which
 # you might not want. Indicate directories by ending the name with a `/`.
 # Base files such as LICENSE.md and README.md are ignored by default.
 ignore = ["node_modules/", "misc/"]
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
-website_title = "Xranklin Template"
-website_descr = "Example website using Xranklin"
-prepath = get(ENV, "PREVIEW_XRANKLIN_PREPATH", "")
-website_url = get(ENV, "PREVIEW_XRANKLIN_WEBSITE_URL", "fct-gmt.ualg.pt")
+website_title = "Franklin Template"
+website_descr = "Example website using Franklin"
+prepath = get(ENV, "PREVIEW_FRANKLIN_PREPATH", "")
+website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "fct-gmt.ualg.pt")
 prepath = "GMTjl_doc"
 +++
 
