@@ -27,7 +27,7 @@ Required Arguments
     2. With the keyword **panels** specify the dimensions of a single subplot.
     
     For grids up to 3x3 and 2x1 and 3x1, if neither **figsize** or **panels** are specified, an estimation
-    of the *panels* size plus **margins** will be provided. This may suite many use cases with a likely need
+    of the *panels* size plus **margins** will be provided. This may suite many use cases but with a probable need
     to specify better margins.
 
     **figsize**\

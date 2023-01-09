@@ -2,8 +2,8 @@ using Chain
 using Markdown
 using GMT
 using FileIO
-using ImageTransformations
-using Colors
+#using ImageTransformations
+#using Colors
 using Pkg
 
 ############################ Functions ##############################
@@ -97,8 +97,8 @@ function hfun_generate_tablerefs(fiche)
 end
 
 function env_showhtml(com, _)
-	content = Franklin.content(com)
-	lang, ex_name, code = Franklin.parse_fenced_block(content, false)
+	content = Xranklin.content(com)
+	lang, ex_name, code = Xranklin.parse_fenced_block(content, false)
 	name = "example_$(hash(code))"
 	str = """
 	```julia:$name
@@ -117,32 +117,32 @@ end
 
 
 function env_examplefig(com, _)
-	content = Franklin.content(com)
-	lang, ex_name, code = Franklin.parse_fenced_block(content, false)
+	content = Xranklin.content(com)
+	lang, ex_name, code = Xranklin.parse_fenced_block(content, false)
 	if lang != "julia"
 		error("Code block needs to be julia. Found: $(lang), $(typeof(lang))")
 	end
 
-	kwargs = eval(Meta.parse("Dict(pairs((;" * Franklin.content(com.braces[1]) * ")))"))
+	kwargs = eval(Meta.parse("Dict(pairs((;" * Xranklin.content(com.braces[1]) * ")))"))
 	name = pop!(kwargs, :name, "example_" * string(hash(content)))
 	pngfile = "$name.png"
 
 	# add the generated png name to the list of examples for this page, which
 	# can later be used to assemble an overview page
-	# for some reason franklin needs a pair as the content?
-	pngsvec, _ = get!(Franklin.LOCAL_VARS, "examplefigures_png", String[] => Vector{String})
+	# for some reason Xranklin needs a pair as the content?
+	pngsvec, _ = get!(Xranklin.LOCAL_VARS, "examplefigures_png", String[] => Vector{String})
 	push!(pngsvec, pngfile)
 
 	str = """
 	```julia:example_figure
 	begin # hide
 		using GMT   # hide
-		GMT.isFranklin[1] = true    # hide
+		GMT.isXranklin[1] = true    # hide
 		getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
 		$code
 	end # hide
 	mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "$pngfile"), force=true);    # hide
-	GMT.isFranklin[1] = false    # hide
+	GMT.isXranklin[1] = false    # hide
 	GMT.IamModern[1]  = false    # hide
  
 	nothing # hide
@@ -158,7 +158,7 @@ function env_examplefig(com, _)
 	return str
 end
 
-@delay function hfun_list_folder_with_images(params)
+function hfun_list_folder_with_images(params)
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -232,7 +232,7 @@ end
 end
 
 
-@delay function hfun_list_folder(params)
+function hfun_list_folder(params)
 
 	file_location = locvar("fd_rpath")
 	pathparts = split(file_location, r"\\|/")
@@ -284,8 +284,8 @@ end
 =#
 
 function lx_outputimage(lxc, _)
-	rpath = Franklin.stent(lxc.braces[1])
-	path = Franklin.parse_rpath("output/" * rpath; canonical=false, code=true)
+	rpath = Xranklin.stent(lxc.braces[1])
+	path = Xranklin.parse_rpath("output/" * rpath; canonical=false, code=true)
 	return "![$rpath]($path)"
 end
 
@@ -305,7 +305,7 @@ function hfun_generating_versions()
 end
 
 function hfun_sidebar()
-	items = join("""<li><a href="#$key">$(val[1])</a></li>""" for (key, val) in Franklin.PAGE_HEADERS)
+	items = join("""<li><a href="#$key">$(val[1])</a></li>""" for (key, val) in Xranklin.PAGE_HEADERS)
 
 	return "<ul class=\"sidebar\">$items</ul>"
 end
@@ -316,15 +316,15 @@ struct NavEntry
 	metadata::Dict
 end
 
-@delay function hfun_navigation()
-	all_pages = sort!(collect(keys(Franklin.ALL_PAGE_VARS)))
+function hfun_navigation()
+	all_pages = sort!(collect(keys(Xranklin.ALL_PAGE_VARS)))
 
 	naventries = NavEntry[]
 
 	for page in all_pages
 		parts = splitpath(page)
 
-		this_page_vars = Franklin.ALL_PAGE_VARS[page]
+		this_page_vars = Xranklin.ALL_PAGE_VARS[page]
 
 		hidden = first(get(this_page_vars, "hidden", false => nothing))
 		hidden && continue
@@ -348,7 +348,7 @@ end
 				n.metadata["icon"] = first(get(this_page_vars, "icon", "" => nothing))
 				n.metadata["page"] = page === "index" ? "" : page
 
-				pretty_url = match(r"(.*)/index.html", first(Franklin.LOCAL_VARS["fd_url"]))
+				pretty_url = match(r"(.*)/index.html", first(Xranklin.LOCAL_VARS["fd_url"]))
 				pretty_url = pretty_url === nothing ? nothing : pretty_url[1]
 
 				n.metadata["isactive"] = pretty_url == n.metadata["page"] || pretty_url == "/" * join(parts, "/")
@@ -420,15 +420,15 @@ end
 
 
 function contenttable()
-	isempty(Franklin.PAGE_HEADERS) && return ""
+	isempty(Xranklin.PAGE_HEADERS) && return ""
 
 	return sprint() do io
 
 		println(io, """<ul class="page-content">""")
 
-		order_stack = [first(Franklin.PAGE_HEADERS)[2][3]]
+		order_stack = [first(Xranklin.PAGE_HEADERS)[2][3]]
 
-		for (key, val) in Franklin.PAGE_HEADERS
+		for (key, val) in Xranklin.PAGE_HEADERS
 			order = val[3]
 
 			n_steps_up = count(>=(order), order_stack)

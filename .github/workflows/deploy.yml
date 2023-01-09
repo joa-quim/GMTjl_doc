@@ -39,7 +39,7 @@ jobs:
             run(`$(npm_cmd()) install highlight.js`);
             run(`$(npm_cmd()) install cheerio`);
             run(`$(npm_cmd()) install lunr`);
-            using Franklin;
+            using Xranklin;
             serve(single=true, cleanup=false);
             lunr();
             optimize(minify=false, prerender=false);'
