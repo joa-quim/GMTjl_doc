@@ -25,7 +25,12 @@ jobs:
     - run: cmd /k gmt-win64.exe /S
 
     - run: julia -e '
-            using Pkg; Pkg.add("Franklin"); using Franklin;
+            using Pkg;
+            Pkg.activate(".");
+            Pkg.instantiate();
+            Pkg.add(PackageSpec(name="GMT", rev="master"));
+            #using Pkg; Pkg.add("Franklin"); 
+            using Franklin;
             optimize(prepath="GMTjl_doc",minify=false,prerender=false)'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
