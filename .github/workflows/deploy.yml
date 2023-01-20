@@ -21,8 +21,8 @@ jobs:
     - name: Install Ghostscript (Windows)
       run: >
         choco install ghostscript wget
-    - run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
-    - run: cmd /k gmt-win64.exe /S
+    #- run: wget http://fct-gmt.ualg.pt/gmt/data/wininstallers/gmt-win64.exe
+    #- run: cmd /k gmt-win64.exe /S
 
     - run: julia -e '
             using Pkg;
@@ -66,4 +66,4 @@ jobs:
         rm -rf __tmp__site
     - name: Push
       run: |
-        git add -A && git commit -am "update" && git push -u origin gh-pages
+        git add -A && git commit -am "update" && git push -u origin gh-lixo
