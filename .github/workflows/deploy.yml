@@ -30,7 +30,7 @@ jobs:
             Pkg.instantiate();
             Pkg.add(PackageSpec(name=\"GMT\", rev=\"master\"));
             using Franklin;
-            optimize(prepath=\"GMTjl_doc\",minify=false,prerender=false)'
+            optimize(minify=false,prerender=false)'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
