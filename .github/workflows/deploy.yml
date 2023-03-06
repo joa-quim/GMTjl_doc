@@ -18,6 +18,9 @@ jobs:
       with:
         version: '1' # Latest stable Julia release.
 
+    #- name: Install ghostscript
+      #run: sudo apt-get install ghostscript
+
     - name: Install Ghostscript (Windows)
       run: >
         choco install ghostscript wget
@@ -30,7 +33,8 @@ jobs:
             Pkg.instantiate();
             Pkg.add(PackageSpec(name=\"GMT\", rev=\"master\"));
             using Franklin;
-            optimize(minify=false,prerender=false)'
+            include(\"makedocs.jl\")'
+            #optimize(minify=false,prerender=false)'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
@@ -52,7 +56,7 @@ jobs:
         git config user.email "<>"
     - name: Checkout preview
       run: |
-        git checkout -B gh-lixo
+        git checkout -B gh-pages
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
@@ -66,4 +70,4 @@ jobs:
         rm -rf __tmp__site
     - name: Push
       run: |
-        git add -A && git commit -am "update" && git push -u origin gh-lixo
+        git add -A && git commit -am "update" && git push -u origin gh-pages
