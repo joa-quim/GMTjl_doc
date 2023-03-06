@@ -17,24 +17,24 @@
 | gmtget |  gmtinfo |  gmtlogo | \myreflink{gmtmath} | gmtregress | \myreflink{gmtselect} |
 | \myreflink{gmtset} | \myreflink{gmtsimplify} |  gmtspatial | \myreflink{gmtsplit} |  gmtvector |  gmtwhich |
 | \myreflink{grd2cpt} | \myreflink{grd2kml} | \myreflink{grd2xyz} |  grdblend | \myreflink{grdclip} | \myreflink{grdcontour} |
-| grdconvert | grdcut |  grdedit |  grdfft | \myreflink{grdfill} |  grdfilter |
+| grdconvert | \myreflink{grdcut} |  grdedit |  grdfft | \myreflink{grdfill} |  grdfilter |
 | grdgdal | \myreflink{grdgradient} | \myreflink{grdhisteq} | \myreflink{grdimage} | \myreflink{grdinfo} | grdinterpolate |
-| \myreflink{grdlandmask} | \myreflink{grdmask} | \myreflink{grdmath} | grdmix |  grdpaste |  grdproject |
+| \myreflink{grdlandmask} | \myreflink{grdmask} | \myreflink{grdmath} | grdmix | \myreflink{grdpaste} |  grdproject |
 | \myreflink{grdsample} | \myreflink{grdtrack} | \myreflink{grdtrend} | \myreflink{grdvector} | \myreflink{grdview} | grdvolume |
 | greenspline | \myreflink{histogram} | \myreflink{image} | \myreflink{inset} | kml2gmt | \myreflink{legend} |
 | \myreflink{makecpt} |  mapproject | \myreflink{mask} | \myreflink{movie} | \myreflink{nearneighbor} | \myreflink{plot} |
-| \myreflink{plot3d} | \myreflink{project} |  psconvert | rose | \myreflink{sample1d} | \myreflink{solar} |
+| \myreflink{plot3d} | \myreflink{project} |  psconvert | \myreflink{rose} | \myreflink{sample1d} | \myreflink{solar} |
 | spectrum1d | sph2grd | sphdistance | \myreflink{sphinterpolate} | \myreflink{sphtriangulate} | \myreflink{subplot} |
 | \myreflink{surface} | \myreflink{ternary} | \myreflink{text} | \myreflink{trend1d} | \myreflink{trend2d} | \myreflink{triangulate} |
-| \myreflink{wiggle} | xyz2grd |  |  |  |  |
+| \myreflink{wiggle} | \myreflink{xyz2grd} |  |  |  |  |
 
 ## Avatars
 
 |  |  |  |  |  |  |  |  |  |  |
 |:-----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{bubblechart} | \myreflink{contourf} | \myreflink{decorated} | \myreflink{ecdfplot} | \myreflink{feather} |
-| \myreflink{hband} | \myreflink{lines} | \myreflink{parallelplot} | \myreflink{qqplot} | \myreflink{quiver} | \myreflink{radar} | \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{stem} |
-| \myreflink{vband} | \myreflink{violin} |  |  |  |  |  |  |  |  |
+| \myreflink{arrows} | \myreflink{band} | \myreflink{bar} | \myreflink{bar3} | \myreflink{boxplot} | \myreflink{bubblechart} | \myreflink{contourf} | \myreflink{cornerplot} | \myreflink{decorated} | \myreflink{ecdfplot} |
+| \myreflink{feather} | \myreflink{fill_between} | \myreflink{hband} | \myreflink{lines} | \myreflink{marginalhist} | \myreflink{parallelplot} | \myreflink{plotlinefit} | \myreflink{qqplot} | \myreflink{quiver} | \myreflink{radar} |
+| \myreflink{scatter} | \myreflink{scatter3} | \myreflink{stairs} | \myreflink{stem} | \myreflink{vband} | \myreflink{violin} |  |  |  |  |
 
 
 ## Supplemental Modules

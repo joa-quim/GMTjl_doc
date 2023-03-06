@@ -1,8 +1,6 @@
 # Line plots
 
-### Examples
-
-### Hello world
+## Hello world
 
 \begin{examplefig}{}
 ```julia
@@ -14,7 +12,7 @@ plot(1:10, rand(10), lw=1, lc=:blue, marker=:square,
 \end{examplefig}
 
 
-### 
+## 
 
 In this example the lines color is set using a custom CPT. Pen thickness is assigned automatically.
 
@@ -39,7 +37,7 @@ colorbar!(show=true)
 \end{examplefig}
 
 
-### Line colors with the automatic color scheme
+## Line colors with the automatic color scheme
 
 Here we are showing how to plot several lines at once and color them according to a circular color scheme comprised of 7 distinct colors. We start by generating a dummy matrix 8x5, where rows represent the vertex and the columns hold the lines. To tell the program that first column contains the coordinates and the remaining are all lines to be plotted we use the option **multicol**=*true*
 
@@ -51,7 +49,7 @@ lines(mat, multicol=true, show=true)
 ```
 \end{examplefig}
 
-### Line colors with user set color scheme
+## Line colors with user set color scheme
 
 But if we want choose the colors ourselves, it is also easy though we need to go a bit lower in the data preparation.
 
@@ -70,7 +68,7 @@ lines(D, figsize=(14, 9.5), show=true)
 \end{examplefig}
 
 
-### Bezier curve
+## Bezier curve
 
 \begin{examplefig}{}
 ```julia
@@ -82,7 +80,7 @@ lines(x,y, limits=(-1,4,-0.5,2.0), scale=3.0, lw=1, markerfacecolor=:red,
 \end{examplefig}
 
 
-### Decorated line
+## Decorated line
 
 \begin{examplefig}{}
 ```julia
@@ -96,7 +94,7 @@ lines(xy, limits=(-5,185,4,6), figsize=(16,8), pen=(1,:red),
 \end{examplefig}
 
 
-### Text decorated line
+## Text decorated line
 
 \begin{examplefig}{}
 ```julia
@@ -113,7 +111,7 @@ lines(x,y, region=(-4,7,-5.5,2.5), lw=2, lc=:sienna,
 \end{examplefig}
 
 
-### The snake skier
+## The snake skier
 
 Plot a skier on a sinusoid.
 
@@ -131,5 +129,16 @@ lines(x,y,                           # The data
 plot!(3.49, 0.97,                    # Coordinates where to plot symbol
       custom_symbol=(name="ski_alpine", size=1.7),    # The skier symbol
       fill=:black, show=true)        # Fill the symbol in black
+```
+\end{examplefig}
+
+## Variable sized/colors points
+
+\begin{examplefig}{}
+```julia
+using GMT
+xs = linspace(0,10,30);
+ys = 0.5 .* sin.(xs);
+scatter(xs, ys, zcolor=true, ms=linspace(2,15,30).*2.54/72, show=true)
 ```
 \end{examplefig}

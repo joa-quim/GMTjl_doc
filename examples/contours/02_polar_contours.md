@@ -11,6 +11,7 @@ We will use grdcontour to make a contour map of this data. Because the data file
 \begin{examplefig}{}
 ```julia
 using GMT
+GMT.resetGMT()  # hide
 
 G = grdmath("-R0/360/2/4 -I6/0.1 X 4 MUL PI MUL 180 DIV COS Y 2 POW MUL");
 grdcontour(G, proj=:polar, frame=(annot=30, axes=:Ns, fill=:honeydew),

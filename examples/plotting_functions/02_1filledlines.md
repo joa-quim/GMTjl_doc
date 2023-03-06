@@ -51,3 +51,29 @@ using GMT
 plot(sin, x->sin(2x), [0 2pi], fill="blue@70", pen=(1,"blue@40"), show=1)
 ```
 \end{examplefig}
+
+## Fill between
+
+Fill the area between the two sinc functions. Here we use the default values for line thickness
+and fill color but all of that can be changed. We also add a thin white border arround tke lines.
+
+\begin{examplefig}{}
+```julia
+using GMT
+theta = linspace(-2π, 2π, 150);
+y1 = sin.(theta) ./ theta;
+y2 = sin.(2*theta) ./ theta;
+fill_between([theta y1], [theta y2], white=true, legend="Sinc1,Sinc2", show=1)
+```
+\end{examplefig}
+
+
+
+\begin{examplefig}{}
+```julia
+using GMT
+D = gmtread(getpath4docs("1635541200000.dat"));
+D.attrib["Timecol"] = "1";         # Inform that first column has Time
+fill_between(D, figsize=(16,9), yaxis=(annot=20,), theme="A0XYag", show=true)
+```
+\end{examplefig}

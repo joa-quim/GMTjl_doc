@@ -7,7 +7,7 @@ mintoclevel = 2
 frontpage = false
 auto_code_path = true
 
-prepath = "GMTjl_doc"
+# prepath = "GMTjl_doc"
 
 # Add here files or directories that should be ignored by Franklin, otherwise
 # these files might be copied and, if markdown, processed by Franklin which
@@ -19,9 +19,9 @@ ignore = ["node_modules/", "misc/"]
 generate_rss = true
 website_title = "Franklin Template"
 website_descr = "Example website using Franklin"
-prepath = get(ENV, "PREVIEW_FRANKLIN_PREPATH", "")
-website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "fct-gmt.ualg.pt")
-prepath = "GMTjl_doc"
+prepath = get(ENV, "PREVIEW_FRANKLIN_PREPATH", "GMTjl_doc")
+# website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "fct-gmt.ualg.pt")
+website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "www.generic-mapping-tools.org")
 +++
 
 <!--

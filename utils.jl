@@ -214,7 +214,7 @@ end
 		thumbpaths_website = "/assets/$folder/$name/code/output/" .* basename.(thumbpaths)
 		thumbs = map(thumbpaths_website, pngpaths) do thumbpath, pngpath
 			bn = splitext(basename(pngpath))[1]
-			return "<a href=\"$name#$bn\"><img class='plotting-function-thumb' src=\"$thumbpath\"/></a>"
+			return "<a href=\"$name/#$bn\"><img class='plotting-function-thumb' src=\"$thumbpath\"/></a>"
 		end
 
 		"""
@@ -445,7 +445,7 @@ function contenttable()
 			filter!(<(order), order_stack)
 			push!(order_stack, order)
 
-			println(io, "<li><a href=\"#$key\">$(val[1])</a></li>")
+			println(io, "<li><a href=\"#$key/\">$(val[1])</a></li>")
 		end
 
 		for i in 1:length(order_stack)

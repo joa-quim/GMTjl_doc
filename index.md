@@ -117,7 +117,7 @@ using GMT
   @@
 
   @@box
-    ~~~<a class="boxlink" href="examples/choropleths/choro_examples">~~~
+    ~~~<a class="boxlink" href="examples/choropleths/choro_examples/">~~~
     @@title Choropleth Maps @@
     @@box-content
       ~~~

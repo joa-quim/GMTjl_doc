@@ -89,7 +89,7 @@ Parameters
     - **envelope=true** to build asymmetrical envelope around y(x) using bounds yl(x) and yh(x) from extra columns 3-4.
     - **left=true** or **right=true** or **x0=x0** to connect first and last point to anchor points at either *xmin*, *xmax*, or *x0*, or
     - **bot=true** or **top=true** or **y0=y0** to connect first and last point to anchor points at either *ymin*, *ymax*, or *y0*.
-    Polygon may be painted (**fill**) and optionally outlined by adding **pen=pen**.
+    Polygon may be painted (**fill**) and optionally outlined by adding **pen=pen**. See also the **ribbon** option further down.
 
 - **N** or **noclip** or **no\_clip** : *noclip=true* **|** *noclip=:r* **|** *noclip=:c*\
    Do NOT clip symbols that fall outside map border [Default plots points whose coordinates are strictly inside the map border only]. This option does not apply to lines and polygons which are always clipped to the map region. For periodic (360-longitude) maps we must plot all symbols twice in case they are clipped by the repeating boundary. The **noclip** will turn off clipping and not plot repeating symbols. Use **noclip=:r** to turn off clipping but retain the plotting of such repeating symbols, or use **noclip=:c** to retain clipping but turn off plotting of repeating symbols.
@@ -168,6 +168,43 @@ Parameters
    \myreflink{Vector Attributes} for more information. If **level** is set, then **pen=(zlevels=true)** assign pen color via
    **cmap** and the z-values obtained. Finally, if pen `color = :auto` then we will cycle through the pen colors implied by
    `COLOR_SET` and change on a per-segmentbasis. The width, style, or transparency settings are unchanged.
+
+- **decimate** : -- *decimate=true* **|** *decimate=decfactor*\
+   For very large datasets it may be convenient to decimate data before plotting. The `decimate` option decimates
+   the input data using a *clever* algorithm (see https://skemman.is/bitstream/1946/15343/3/SS_MSthesis.pdf). The
+   `decfactor` (default is 10) is used such that the decimated size is 1÷decfactor of initial size.
+
+- **groupvar** or **hue** : -- *groupvar="text"* **|** *groupvar=Int* **|** *groupvar=:ColName*\
+   Uses the table variable specified by `groupvar` to group the points in the plot. `groupvar` can
+   be a column number, or a column name passed in as a Symbol. *e.g.* `groupvar=:Male` if a column with that
+   name exists.  When `arg1` is GMTdatset or `cmd0` is the name of a file with one and it has the `text` field
+   filled, use `groupvar="text"` or `groupvar=*text_col_name*` to use that text field as the grouping vector.
+
+- **legend** and **label** : -- *legend="thelabel"* **|** *label=thelabel* **|** *legend=(label="thelabel", pos=position, box=??, fontsise=?, font=?)*\
+   Add a legend to the plot. In its simple form just provide `legend="thelabel"`, which plots the legend at the
+   default *UpperRight* position. To control the legend position and other parameters one must use the tuple form
+   where `label="thelabel"` is the same as above; `pos=position` where *position* is a 2 char code (or its expanded form)
+   like in the \myreflink{text}. The `box` option may take two forms (refer to \myreflink{legend} for more details):
+   (1) use `box=:none` to not plot the legend box or, (2) `box=(clearance=?, fill=?, inner=?, pen=?, rounded=?, shade=?)`.
+   For example, `box=(pen=1, fill="gray95", shade=true)` to plot a light gray box with a shade.  When using the
+   **groupvar** option we can just set `legend=true` to create a legend containing an entry for each of the groups.
+   Controling the position of that legend is done by omitting the *label* keyword in the `legend=(...)` form.
+   *e.g.* `legend=(pos=:TL,)`. Use `fontsise=?`, where *?* is the size in points, controls the legend text size and
+   `font=?` to change the default font. Example: `label=(fontsize=8, font="Helvetica,blue")`
+
+- **linefit** or **regress** : -- *linefit=true*\
+   Plot a regression fit over a scatter plot. Input can either be a GMTdataset obtained from the `linearfitxy`
+   function or a Mx2 matrix. Preferably use the first form that provides more user control. See the \myreflink{linearfitxy}
+   documentation for extra options usable in this case.
+
+- **ribbon** or **band** : -- *ribbon=dy* **|** *ribbon=(dy1,dy2)* **|** *ribbon=mat** **|** *ribbon=(vec1,vec2)*\
+   Similar to the **polygon** option above but where the data to build envelope around y(x) is passed directly via
+   this option instead of extra columns in the input data. In the above *dy, dy1, dy2* are scalars, *mat* is a Mx2
+   matrix and *vec1,vec2* are vectors with the same length as number of rows in input data.
+
+- **zcolor** or **markerz** or **mz** : -- *zcolor=xx* **|** *zcolor=true*\
+   Take the vector `xx` (same size as number os points in data) and interpolate the current color scale to paint the
+   symbols based on that colr scale. The form `zcolor=true` is equivant to *zcolor=1:npoints*
 
 \textinput{common_opts/opt_U}
 

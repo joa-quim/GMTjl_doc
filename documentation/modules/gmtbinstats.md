@@ -34,22 +34,30 @@ Optional Arguments
    Choose the statistic that will be computed per node based on the points that are within *radius* distance
    of the node. Select one of:
 
-   - average        # mean (average)
-   - mad            # median absolute deviation
-   - range          # full (max-min) range
-   - interquartil   # 25-75% interquartile range
-   - minimum        # minimum (low)
-   - minimum_pos    # minimum of positive values only
-   - median         # median
-   - number         # number of values
-   - LMS            # LMS scale
-   - mode           # mode (maximum likelihood)
-   - quantil[val]   # selected quantile (append desired quantile in 0-100% range [50], *e.g.* "quantil25")
-   - rms            # the r.m.s.
-   - std            # standard deviation
-   - maximum        # maximum (upper)
-   - maximum_neg    # maximum of negative values only
-   - sum            # the sum
+   - average or mean        # mean (average)
+   - mad                    # median absolute deviation
+   - range                  # full (max-min) range
+   - iq or interquartil     # 25-75% interquartile range
+   - min or minimum         # minimum (low)
+   - min_pos or minimum_pos # minimum of positive values only
+   - median                 # median
+   - number or count        # number of values
+   - LMS                    # LMS scale
+   - mode                   # mode (maximum likelihood)
+   - quantil[val]           # selected quantile (append desired quantile in 0-100% range [50], *e.g.* "quantil25")
+   - rms                    # the r.m.s.
+   - std                    # standard deviation
+   - max or maximum         # maximum (upper)
+   - max_neg or maximum_neg # maximum of negative values only
+   - sum                    # the sum
+
+- **nbins** : -- *nbins=n*\
+    Set the number of hexagonal cells along the horizontal direction. Grid increment (`inc`) is computed
+    x-data range and this number of cells. Default, when figure size is known, uses a simple heuristic to st increment.
+
+- **threshold** : -- *threshold=xx*\
+    Rows with computed stats lower then `threshold` are removed. Note that this option is not to be used
+    when computing grids (will be ignored).
 
 - **E** or **empty** : -- *empty=-9999*
     Set the value assigned to empty nodes. By default we use NaN.

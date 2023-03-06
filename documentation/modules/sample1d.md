@@ -27,16 +27,16 @@ Required Arguments
 Optional Arguments
 ------------------
 
-- **A** or **resample** : -- *resample="f|p|m|r|R" **|** *resample="f|p|m|r|R[+d][+l]"*\
+- **A** or **resample** : -- *resample="f|p|m|r|R"* **|** *resample="f|p|m|r|R[+d][+l]"*\
     For track resampling (if **inc**...*unit* is set) we can select how this is to be performed.
     Use **resample=:f** to keep original points, but add intermediate points if needed; note this
-    selection does not necessarily yield equidistant points [Default], **resample=:m** as **f**,
-    but first follow meridian (along y) then parallel (along x), **p** as **f**, but first follow
-    parallel (along y) then meridian (along x), **r** to resample at equidistant locations;
-    input points are not necessarily included in the output, and **R** as **r**, but adjust given
+    selection does not necessarily yield equidistant points [Default]. **resample=:m** as **f**
+    but first follow meridian (along y) then parallel (along x). **p** as **f** but first follow
+    parallel (along y) then meridian (along x). **r** to resample at equidistant locations;
+    input points are not necessarily included in the output. **R** as **r** but adjust given
     spacing to fit the track length exactly. Finally, append **+d** to delete duplicate input records
     (identified by having no change in the time column, and **+l** if distances should be measured
-    along rhumb lines (loxodromes). **Note**: Calculation mode for loxodromes is spherical,
+    along rhumb lines (loxodromes). **Note**: Calculation made for loxodromes is spherical,
     hence **spherical=:ellipsoidal** cannot be used in combination with **+l**.
 
 - **E** or **keeptxt** : -- *keeptxt=true*\
@@ -94,6 +94,8 @@ gmtend(:show)
 
 - **T** or **range** or **inc** : -- *range=(min,max,inc[,:number,:log2,:log10])* **|** *range=[list]* **|** *range=file*\
     Make evenly spaced time-steps from *min* to *max* by *inc* [Default uses input times].
+    The form **range=**_list_ means a online list of *time* coordinates like for example: `range=[13,15,16,22.5]`
+    whilst `range=file` means: read the *time* coordinates from *file*, one coordinate per row in *file*.
     **Note**: For resampling of spatial (*x,y* or *lon,lat*) series you must give an increment with
     a valid distance unit; see \myreflink{Units} for map units or use **c** if plain Cartesian coordinates.
     The first two columns must contain the spatial coordinates. From these we calculate distances in the

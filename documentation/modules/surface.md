@@ -55,9 +55,9 @@ Optional Arguments
     This is the final convergence limit at the desired grid spacing; for intermediate
     (coarser) grids the effective convergence limit is divided by the grid spacing multiplier.
 
+\textinput{common_opts/opt_J}
     Select the data map projection. This projection is only used to add a referencing info
     to the grid formats that support it. E.g., netCDF, GeoTIFF, and others supported by GDAL.
-\textinput{common_opts/opt_J}
 
 - **D** or **breakline** : -- *breakline="bfile"* **|** *breakline="bfile+z[level]"*\
     Use *x, y, z* data in the *bfile* file (or a GMTdataset) as a `soft breakline`. A `soft breakline`

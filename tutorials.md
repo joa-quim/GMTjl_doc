@@ -18,7 +18,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="Landsat8/histogram_stretch">~~~
+    ~~~<a class="boxlink" href="Landsat8/histogram_stretch/">~~~
     @@title L8 True color @@
     @@box-content
       @@description
@@ -46,7 +46,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="dlakelan/GMTMaps">~~~
+    ~~~<a class="boxlink" href="dlakelan/GMTMaps/">~~~
     @@title @dlakelan choropleths@@
     @@box-content
       ~~~
@@ -57,7 +57,7 @@
   @@
 
   @@box
-    ~~~<a class="boxlink" href="longest_sail/longestsail">~~~
+    ~~~<a class="boxlink" href="longest_sail/longestsail/">~~~
     @@title The longest sail@@
     @@box-content
       ~~~

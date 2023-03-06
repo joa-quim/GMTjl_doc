@@ -99,7 +99,7 @@ Test if *x* and *y* follow the same distribution.
 \begin{examplefig}{}
 ```julia
 using GMT
-qqplot(randn(100), randn(100), qqline=:identity, show=true)
+qqplot(randn(100), randn(100), qqline=:identity, title="Q-Q plot", show=true)
 ```
 \end{examplefig}
 
@@ -119,7 +119,7 @@ qqnorm(randn(200), qqline=:fitrobust, show=true)
 \begin{examplefig}{}
 ```julia
 using GMT
-ecdfplot(randn(100), show=true)
+ecdfplot(randn(100), title="ECDF plot", show=true)
 ```
 \end{examplefig}
 
@@ -133,7 +133,8 @@ identified in species, and label the horizontal axis using the variable names.
 \begin{examplefig}{}
 ```julia
 using GMT
-parallelplot(getpath4docs("iris.dat"), groupvar="text", normalize="none", legend=true, show=true)
+parallelplot(getpath4docs("iris.dat"), groupvar="text", normalize="none", legend=true,
+             title="Parallel plot", show=true)
 ```
 \end{examplefig}
 
@@ -153,5 +154,99 @@ Plot bands enveloping the +- 25% percentil arround the median.
 ```julia
 using GMT
 parallelplot(getpath4docs("iris.dat"), groupvar="text", band=true, legend=true, show=true)
+```
+\end{examplefig}
+
+## Corner plots
+
+Create a cornerplot plot with hexagonal bins, setting the color map, the vriable names, plot *truth* and title.
+
+\begin{examplefig}{}
+```julia
+using GMT
+cornerplot(randn(4000,3), cmap=:viridis, truths=[0.25, 0.5, 0.75],
+           varnames=["Ai", "Oi", "Ui"], title="Corner plot", show=true)
+```
+\end{examplefig}
+
+
+Example on how to control the symbol types, size and color.
+
+\begin{examplefig}{}
+```julia
+using GMT
+cornerplot(randn(1500,3), scatter=true, marker=:cross, mec=:red, ms="3p", show=true)
+```
+\end{examplefig}
+
+
+## Marginalhist plots
+
+A scatter plot with histograms on the sides
+
+\begin{examplefig}{}
+```julia
+using GMT
+marginalhist(randn(2000,2), histkw=(frame="none",), show=true)
+```
+\end{examplefig}
+
+
+A scatter plot with density curves on the sides
+
+\begin{examplefig}{}
+```julia
+using GMT
+ marginalhist(randn(2000,2), histkw=(frame="none", fill="red@60"), density=true, show=true)
+```
+\end{examplefig}
+
+An hexbin scater plot with marginal density plots. Note that we must set `aspect=:equal` to have that hexbin plot.
+
+\begin{examplefig}{}
+```julia
+using GMT
+marginalhist(randn(2500,2), cmap=:lisbon, density=true, histkw=(fill="darkgreen@60",),
+             aspect=:equal, show=true)
+```
+\end{examplefig}
+
+## Line fits
+
+Plot a regression fit over a scatter plot (no errors in X nor in Y).
+Example0 in https://github.com/rafael-guerra-www/LinearFitXYerrors.jl/blob/master/examples/example0.jl
+
+\begin{examplefig}{}
+```julia
+using GMT
+D = linearfitxy([91., 104, 107, 107, 106, 100, 92, 92, 105, 108],
+                [9.8, 7.4, 7.9, 8.3, 8.3, 9.0, 9.7, 8.8, 7.6, 6.9]);
+plot(D, linefit=true, band_ab=true, band_ci=true, legend=true, show=true)
+```
+\end{examplefig}
+
+Non-correlated errors in X and in Y
+Example2 in https://github.com/rafael-guerra-www/LinearFitXYerrors.jl/blob/master/examples/example2.jl
+
+\begin{examplefig}{}
+```julia
+using GMT
+D = linearfitxy([0.0, 0.9, 1.8, 2.6, 3.3, 4.4, 5.2, 6.1, 6.5, 7.4],
+                [5.9, 5.4, 4.4, 4.6, 3.5, 3.7, 2.8, 2.8, 2.4, 1.5],
+                sx=1 ./ sqrt.([1000., 1000, 500, 800, 200, 80,  60, 20, 1.8, 1]),
+                sy=1 ./ sqrt.([1., 1.8, 4, 8, 20, 20, 70, 70, 100, 500]));
+plot(D, linefit=true, band_ab=true, band_ci=true, ellipses=true, legend=true, show=1)
+```
+\end{examplefig}
+
+
+Condition the regression fit on another variable and represent it using color.
+
+\begin{examplefig}{}
+```julia
+using GMT
+D = gmtread(getpath4docs("iris.dat"));
+plot(D, xvar=1, yvar=2, hue="Species", xlabel=:auto, ylabel=:auto, linefit=true,
+     band_ci=true, legend=true, show=1)
 ```
 \end{examplefig}

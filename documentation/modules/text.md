@@ -41,6 +41,11 @@ Required Arguments
     A GMTdataset type that can be optained with the `mat2ds(mat, txt)` function, where `mat` is a *MxN* with the
     *x,y(,z)* coordinates and `txt` a string vector with the desired text.
 
+- **rich()**\
+    The `rich()` function is a convinient function to plot text whose parts have different colors, fonts, font sizes,
+    subscripts, superscripts, greek letters, underline, small caps and LaTeX equations. Text generated with this
+    functions can also be used in titles, labels, legends, etc... Se example at the end of this page.
+
 - **([text], x=?, y=?)**\
     As a third alternative, provide the input data in a form of a string vector and `x` and `y` vector coordinates,
     or just a `x=mat` where `mat` is *MxN* matix. In the particular case where the *text* is a single string one
@@ -135,14 +140,16 @@ Optional Arguments
 \textinput{common_opts/opt_V}
 
 - **W** or **pen** : -- *pen=pen*\
-    Sets the pen used to draw a rectangle around the text string (see **clearance**) [Default is width = default, color = black, style = solid].
+    Sets the pen used to draw a rectangle around the text string (see **clearance**) [Default is width = default,
+    color = black, style = solid].
 
 \textinput{common_opts/opt_X}
 
 \textinput{common_opts/opt_Y}
 
 - **Z** or **threeD** : -- *threeD=true*\
-    For 3-D projections: expect each item to have its own level given in the 3rd column, and **noclip** is implicitly set. (Not implemented for paragraph mode). 
+    For 3-D projections: expect each item to have its own level given in the 3rd column, and **noclip**
+    is implicitly set. (Not implemented for paragraph mode). 
 
 \textinput{common_opts/opt_save_fig}
 
@@ -189,5 +196,23 @@ To plot just the "Hello World" and let the program estimate the *region*, do
 ```julia
 using GMT
 text(["Hello World"], x=2.0, y=2.0, show=true)
+```
+\end{examplefig}
+
+Example using the *rich* function (reproduces the original example in Makie).
+
+\begin{examplefig}{}
+```julia
+using GMT
+text(rich("H", subscript("2"), greek("O")," is the ", smallcaps("formula")," for ",
+     rich(underline("water"), color=:red, font="Helvetica", size=16)), x=1, y=1, frame=:none)
+
+str = "A BEAUTIFUL RAINBOW";
+C = makecpt(range=(1,length(str)+1,1));
+fontsizes = 20 .+ 10 .* sin.(range(0, 3pi, length = length(str)));
+rainbow_chars = map(enumerate(str)) do (i, c)
+	rich("$c", color = GMT.arg2str(Tuple(round.(Int,C.colormap[i,:].*255))), size = fontsizes[i]);
+end
+text!(join(rainbow_chars), x=1, y=0.99, font="Helvetica-Bold", show=1)
 ```
 \end{examplefig}

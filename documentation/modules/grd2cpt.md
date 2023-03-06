@@ -128,8 +128,8 @@ Optional Arguments
     Force a continuous CPT [Default is discontinuous].
 
 - **name** or **save** : -- *save="name.cpt"*\
-   Save the color map with the **save="name.cpt"**. When in modern mode this also automatically
-   sets a required GMT option (-H).
+   Save the color map with the **save="name.cpt"**. When in modern mode this also automatically sets a
+   required GMT option (-H).
 
 \textinput{common_opts/opt_bo} This option only applies if **nlevels** selects CDF output. 
 

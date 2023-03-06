@@ -63,12 +63,12 @@ Optional Arguments
 \textinput{common_opts/opt_pen}
 
 - **G** or **fill** : -- *fill=fill[+n][+p]*\
-    Set fill shade, color or pattern for positive and/or negative
-    wiggles [Default is no fill]. Optionally, append **+p** to fill
-    positive areas (this is the default behavior). Append **+n** to fill
-    negative areas. Append **+n+p** to fill both positive and negative
-    areas with the same fill. **Note**: You will need to repeat this option
-    to select different fills for the positive and negative wiggles, but sie we cannot repeat keywords the solution is to pass in a tuple of tuples or of NamedTuples. For simpler cases one can pass also a 2 elements vector of strings thet will be used as is, that is, without any further parsing. See example below.
+    Set fill shade, color or pattern for positive and/or negative wiggles [Default is no fill]. Optionally,
+    append **+p** to fill positive areas (this is the default behavior). Append **+n** to fill negative areas.
+    Append **+n+p** to fill both positive and negative areas with the same fill. **Note**: You will need to
+    repeat this option to select different fills for the positive and negative wiggles, but sie we cannot repeat
+    keywords the solution is to pass in a tuple of tuples or of NamedTuples. For simpler cases one can pass also
+    a 2 elements vector of strings thet will be used as is, that is, without any further parsing. See example below.
 
 - **I** or **fixed_azim** : *fixed_azim=az*\
     Set a fixed azimuth projection for wiggles [Default uses track azimuth, but see |-A|]. With this option, the calculated track-normal azimuths are overridden by *fixed_az*.
