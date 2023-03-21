@@ -3,14 +3,14 @@ BEGIN GMT 6.5.0
 B	py+lm
 J	M
 JM	M14c
-JW	W35/14c
+JN	N0.0/?
+JR	R?
+JW	W35/?
 JX	X14c/9.5c
-Jx	x1i
-JZ	Z6c
+Jx	x2.5
+JZ	Z8
 R	@tut_relief.nc
-X	a4.0176i
-Y	a0i
 Z	Z
-p	200/30
+p	159/30
 @L	3
 END

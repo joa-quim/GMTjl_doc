@@ -1,0 +1,12 @@
+# GMT 6 Session common arguments shelf
+BEGIN GMT 6.5.0
+B	+tSentinel 2
+J	D
+J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs
+JD	D-7.5/40.5/38.166666666666664/45.166666666666664/14c
+JM	M14c
+JR	R14c
+JX	X14/6
+R	-10/-5/37/44
+@L	1
+END

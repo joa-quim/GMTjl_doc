@@ -34,7 +34,7 @@ arrows!([1  2 0 5], pen=2, arrow=(len=1, start=:tail, stop=true, half=:right, sh
 text!(["arrow=(len=1, start=:tail, stop=true, half=:right, shape=0.5, angle=45)"], x=40, y=2, font=8, justify=:LM)
 showfig()
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_1768977753467872075.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_7863945143731930807.png"), force=true);    # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  

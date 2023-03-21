@@ -1,0 +1,6 @@
+MethodError: no method matching palette_init(::Ptr{Nothing}, ::Matrix{Float64})
+
+Closest candidates are:
+  palette_init(::Ptr{Nothing}, !Matched::GMT.GMTcpt)
+   @ GMT ~/.julia/packages/GMT/1pWzb/src/gmt_main.jl:1207
+

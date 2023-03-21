@@ -2,24 +2,16 @@
 BEGIN GMT 6.5.0
 B	pxa5g5+lxyay+lf(x)gWSrt
 J	X
-JG	G0/45/14c
-JI	I-90/14c
-JK	Ks0/12
-JM	M10
-Jm	m0.4
-JN	N0.0/14c
-JP	P24
-JQ	Q0/14c
+JM	M14c
+JN	N0.0/?
 JR	R14c
-JW	W14c
+JW	W35/?
 JX	X14c/9.5c
-Jx	x4
-JZ	Z6c
+Jx	x2.5
+JZ	Z8
 R	-6.283185307179586/6.283185307179586/-1/1
-X	-12
-Y	-12
 Z	Z
-p	0
+p	159/30
 @G	5 0.5
 @L	5
 END

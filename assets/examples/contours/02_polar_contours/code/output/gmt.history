@@ -1,15 +1,14 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.5.0
-B	af
-J	R
+B	a
+J	M
 JM	M14c
-JP	P24
-JR	R14c
-JX	X14c/9.5c
-Jx	x1
-R	@earth_relief_20m_p.grd
-X	-12
-Y	-12
-p	0
-@L	4
+JU	U54/14c
+JX	X15/5
+Jx	x2.5
+JZ	Z1
+R	0.5/0.5/1/1
+Z	Z
+p	135/30
+@L	1
 END
