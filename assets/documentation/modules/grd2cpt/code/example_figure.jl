@@ -1,6 +1,7 @@
 # This file was generated, do not modify it. # hide
 begin # hide
 	using GMT   # hide
+	GMT.gmt_restart()	# hide
 	GMT.isFranklin[1] = true    # hide
 	getpath4docs(file::String) = joinpath("..", "..", "..", "..", "..", file) # hide
 	using GMT

@@ -2,10 +2,8 @@
 BEGIN GMT 6.5.0
 B	a
 J	R
-J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs
 JM	M14c
 JR	R14c
-JX	X14/6
 R	-108/-103/35/40
 @L	1
 END
