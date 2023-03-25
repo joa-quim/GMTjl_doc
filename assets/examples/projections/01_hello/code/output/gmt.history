@@ -1,10 +1,11 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.5.0
-B	afg+tSpiders
-J	x
+B	g+tHello Round World
+J	G
+JG	G300/15/14c
 JX	X15/15
 Jx	x2.5
-R	0/6/0/3
+R	d
 Y	7
-@L	6
+@L	4
 END

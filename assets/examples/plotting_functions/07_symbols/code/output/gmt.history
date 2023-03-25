@@ -1,20 +1,10 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.5.0
-B	afgzafg+w
-J	X
-JD	D15.5/37.5/33.833333333333336/44.833333333333336/14c
-JG	G0/0/10
-JM	M10
-JN	N0.0/?
-JR	R?
-JW	W35/?
-JX	X15/10
+B	afg+tSpiders
+J	x
+JX	X15/15
 Jx	x2.5
-JZ	Z8
-R	0/2/0/2
-X	-5c
-Y	-5c
-Z	Z
-p	159/30
-@L	1
+R	0/6/0/3
+Y	7
+@L	6
 END

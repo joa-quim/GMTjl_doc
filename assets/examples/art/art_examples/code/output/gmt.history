@@ -1,22 +1,19 @@
 # GMT 6 Session common arguments shelf
 BEGIN GMT 6.5.0
-B	afWSen
-J	x
-JD	D15.5/37.5/33.833333333333336/44.833333333333336/14c
-JG	G0/0/10
+B	+tMandelbrot painting
+J	X
 JI	I-90/14c
 JM	M14c
 Jm	m0.4
 JN	N0.0/?
 JR	R14c
 JW	W14c
-JX	X14/0
+JX	X8/0
 Jx	x1
 JZ	Z8
-R	0/594/0/841
+R	0.5/1600.5/0.5/1600.5
 X	12
-Y	-5c
 Z	Z
 p	159/30
-@L	9
+@L	2
 END
