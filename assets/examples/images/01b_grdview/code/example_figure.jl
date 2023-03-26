@@ -11,6 +11,5 @@ end # hide
 mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_8930495291843333046.png"), force=true);    # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
-GMT.gmt_restart()	# hide
  
 nothing # hide

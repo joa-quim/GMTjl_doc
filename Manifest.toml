@@ -292,7 +292,7 @@ version = "3.11.2+0"
 
 [[deps.GMT]]
 deps = ["Dates", "GDAL_jll", "GMT_jll", "Ghostscript_jll", "PROJ_jll", "PrettyTables", "Printf", "Statistics", "Tables"]
-git-tree-sha1 = "e70706578e48a5b642b45e38587df7235f8933b3"
+git-tree-sha1 = "6e4620d3c2c8e2278785b7e6c62e406d82238212"
 repo-rev = "GMT_jll"
 repo-url = "https://github.com/GenericMappingTools/GMT.jl.git"
 uuid = "5752ebe1-31b9-557e-87aa-f909b540aa54"
