@@ -1,1 +1,1 @@
-Something went wrong when calling the module. GMT error number = 45
+BoundsError: attempt to access 0-element Vector{GMT.GMTdataset} at index [1]

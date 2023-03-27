@@ -1,9 +1,0 @@
-# GMT 6 Session common arguments shelf
-BEGIN GMT 6.5.0
-B	paWS
-J	+
-J+	+proj=utm+zone=5+a=6378137+rf=298.257220143428+units=m+no_defs
-JX	X14/6
-R	0/5/0/3
-@L	1
-END
