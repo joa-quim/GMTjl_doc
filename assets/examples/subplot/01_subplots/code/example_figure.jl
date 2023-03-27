@@ -10,9 +10,10 @@ n = 200;
 x, y, color = randn(n)/2, randn(n), randn(n);
 histogram(x, limits=(-4,4,0,40), binmethod="sqrt", panel=(1,1));
 scatter(x,y, limits=(-4,4,-4,4), marker=:circ, ms="10p", zcolor=color, panel=(2,1));
-histogram(y, limits=(-4,4,0,40), horizontal=true, binmethod="sqrt", panel=(2,2), show=true);
+histogram(y, limits=(-4,4,0,40), horizontal=true, binmethod="sqrt", panel=(2,2));
+subplot(:show)
 end # hide
-mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_9912761044480967764.png"), force=true);    # hide
+mv(joinpath(tempdir(), "GMTjl_tmp.png"), joinpath(@OUTPUT, "example_11672024583047509555.png"), force=true);    # hide
 GMT.isFranklin[1] = false    # hide
 GMT.IamModern[1]  = false    # hide
  
