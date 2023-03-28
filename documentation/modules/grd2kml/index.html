@@ -186,8 +186,10 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/colorbar">colorbar</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/contour">contour</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/contourf">contourf</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/cornerplot">cornerplot</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/ecdfplot">ecdfplot</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/feather">feather</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/fill_between">fill_between</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/filter1d">filter1d</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/fitcircle">fitcircle</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/gmt2kml">gmt2kml</a></div></li>
@@ -207,6 +209,8 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grd2xyz">grd2xyz</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdclip">grdclip</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdcontour">grdcontour</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdcut">grdcut</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdedit">grdedit</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdfill">grdfill</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdgradient">grdgradient</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdhisteq">grdhisteq</a></div></li>
@@ -215,6 +219,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdlandmask">grdlandmask</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdmask">grdmask</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdmath">grdmath</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdpaste">grdpaste</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdsample">grdsample</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdtrack">grdtrack</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/grdtrend">grdtrend</a></div></li>
@@ -227,6 +232,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/legend">legend</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/lines">lines</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/makecpt">makecpt</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/marginalhist">marginalhist</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/mask">mask</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/movie">movie</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/nearneighbor">nearneighbor</a></div></li>
@@ -236,6 +242,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/qqplot">qqplot</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/quiver">quiver</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/radar">radar</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/rose">rose</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/sample1d">sample1d</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/scatter">scatter</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/scatter3">scatter3</a></div></li>
@@ -254,6 +261,7 @@
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/vband">vband</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/violins">violin</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/wiggle">wiggle</a></div></li>
+<li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/modules/xyz2grd">xyz2grd</a></div></li>
 </ul></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/gdalfuns">GDAL related functions</a></div></li>
 <li><div class="tocitem-container"><a  href="/GMTjl_doc/documentation/supplements">Supplements modules</a></div></li>
@@ -323,7 +331,7 @@
 </ul>
 
 <h2>Quadtree building</h2>
-<p>We extend the input grid vi <a href="#">grdcut</a> to obtain a square dimension that can be repeatedly divided by 2 until we arrive at tiles with the original grid increments. For global grids this mean we extend the grid to a 360 x 360 Cartesian region and an initial grid increment of one degree. This is the first global tile. As the quartering of tiles and halving of grid increment continue we may not end exactly at the original grid spacing but at the largest increment less than or equal to the original increment. For non-global grids, e.g., smaller &#40;local or regional&#41; grids, we extend the domain to a radix-2 multiple of the <em>tilesize</em> times the grid increment. This initial tile is then quartered and the grid increment halved until we reach the original grid increment. Tiles that have all NaNs are not produced. THe tiles are inherently pixel-registered. Thus, if a global grid has gridline-registration then we are down-sampling the extended grid onto a pixel-registered coarser grid. Because these nodes do not coincide with the original nodes we widen the filter width by a factor of sqrt&#40;2&#41;. We detect if NaNs are present in any tile and if so produce a transparent PNG tile; otherwise we make an opaque JPG tile.</p>
+<p>We extend the input grid vi <a href="/GMTjl_doc/documentation/modules/grdcut/index.html#grdcut">grdcut</a> to obtain a square dimension that can be repeatedly divided by 2 until we arrive at tiles with the original grid increments. For global grids this mean we extend the grid to a 360 x 360 Cartesian region and an initial grid increment of one degree. This is the first global tile. As the quartering of tiles and halving of grid increment continue we may not end exactly at the original grid spacing but at the largest increment less than or equal to the original increment. For non-global grids, e.g., smaller &#40;local or regional&#41; grids, we extend the domain to a radix-2 multiple of the <em>tilesize</em> times the grid increment. This initial tile is then quartered and the grid increment halved until we reach the original grid increment. Tiles that have all NaNs are not produced. THe tiles are inherently pixel-registered. Thus, if a global grid has gridline-registration then we are down-sampling the extended grid onto a pixel-registered coarser grid. Because these nodes do not coincide with the original nodes we widen the filter width by a factor of sqrt&#40;2&#41;. We detect if NaNs are present in any tile and if so produce a transparent PNG tile; otherwise we make an opaque JPG tile.</p>
 <h2>Contour overlays</h2>
 <p>Because each tile is a fixed size image &#40;e.g., 512x512 pixels&#41; but the amount of data represented changes by factors of 4 for each new level, we cannot use a constant thickness contour pen for all levels. Thus, the pen you supply must be considered the final pen applied to the highest resolution map overlays. Furthermore, because the <em>dpi</em> here is very small compared to regular GMT plots, it is important to improve the appearance of the contours by using sub-pixel smoothing &#40;<strong>subpixel</strong>&#41;. Both generating PostScript tiles and using sub-pixel smoothing adds considerable processing time over plain tiles.</p>
 <h2>Notes</h2>
