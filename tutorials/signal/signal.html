@@ -279,37 +279,37 @@ ul.task-list li input[type="checkbox"] {
 <p>Some examples of using GMT to do time series signal processing.</p>
 <div class="grid">
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/autocorr_periodic/autocorr_periodic/">Autocorr and periods I</a> <a href="../..\tutorials/signal/autocorr_periodic/autocorr_periodic/"><img src="../..\tutorials/signal/autocorr_periodic/tilelogo.png" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/autocorr_chloro/autocorr_chloro/">Autocorr and periods II</a> <a href="../..\tutorials/signal/autocorr_chloro/autocorr_chloro/"><img src="../..\tutorials/signal/autocorr_chloro/tilelogo.png" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/tide_smooth/tide_smooth/">Smooth a Tide Record</a> <a href="../..\tutorials/signal/tide_smooth/tide_smooth/"><img src="../..\tutorials/signal/tide_smooth/tilelogo.jpg" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/clean_outliers/clean_outliers/">Clean Outliers</a> <a href="../..\tutorials/signal/clean_outliers/clean_outliers/"><img src="../..\tutorials/signal/clean_outliers/tilelogo.png" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/fft_ex1/fft_ex1/">Simple FFT</a> <a href="../..\tutorials/signal/fft_ex1/fft_ex1/"><img src="../..\tutorials/signal/fft_ex1/tilelogo.png" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/fft_tide/fft_tide/">Tide components, FFT</a> <a href="../..\tutorials/signal/fft_tide/fft_tide/"><img src="../..\tutorials/signal/fft_tide/tilelogo.jpg" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
 <div class="g-col-12 g-col-md-4 g-col-lg-2">
-<div class="card">
+<div class="card h-100">
 <p><a href="../..\tutorials/signal/keeling/keeling/">Keeling curve</a> <a href="../..\tutorials/signal/keeling/keeling/"><img src="../..\tutorials/signal/keeling/tilelogo.jpg" class="card-img-top img-fluid"></a></p>
 </div>
 </div>
@@ -396,6 +396,82 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   });
+
+
+
+  // Equalize heights of grid sections (documentation cards)
+
+  function equalizeGridHeights() {
+
+    const grids = document.querySelectorAll('.grid');
+
+
+
+    grids.forEach(grid => {
+
+      const sections = Array.from(grid.querySelectorAll(':scope > section, :scope > div'));
+
+
+
+      if (sections.length === 0) return;
+
+
+
+      // Reset heights
+
+      sections.forEach(section => {
+
+        section.style.height = 'auto';
+
+      });
+
+
+
+      // Group sections by row (based on offsetTop)
+
+      const rows = new Map();
+
+      sections.forEach(section => {
+
+        const top = section.offsetTop;
+
+        if (!rows.has(top)) {
+
+          rows.set(top, []);
+
+        }
+
+        rows.get(top).push(section);
+
+      });
+
+
+
+      // Equalize heights within each row
+
+      rows.forEach(rowSections => {
+
+        const maxHeight = Math.max(...rowSections.map(s => s.offsetHeight));
+
+        rowSections.forEach(section => {
+
+          section.style.height = maxHeight + 'px';
+
+        });
+
+      });
+
+    });
+
+  }
+
+
+
+  // Run on load and resize
+
+  equalizeGridHeights();
+
+  window.addEventListener('resize', equalizeGridHeights);
 
 });
 
