@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/choropleths/choro_examples.html</loc>
-    <lastmod>2025-11-15T21:31:54.300Z</lastmod>
+    <lastmod>2025-11-30T20:36:53.299Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/arrows/10_arrows.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/images/01_grdimage.html</loc>
-    <lastmod>2025-11-13T16:11:54.134Z</lastmod>
+    <lastmod>2025-11-30T23:14:47.542Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/projections/stereonet.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/projections/leepacific.html</loc>
-    <lastmod>2025-11-13T13:53:11.936Z</lastmod>
+    <lastmod>2025-11-30T04:42:10.059Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/projections/best_rectangular.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/geophysics/seismicity/ThreeD_vp_vs.html</loc>
-    <lastmod>2025-11-13T18:08:28.469Z</lastmod>
+    <lastmod>2025-11-30T20:39:28.421Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/geophysics/seismicity/01_focalmec.html</loc>
@@ -125,316 +125,328 @@
     <lastmod>2025-11-13T18:08:28.082Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/signal.html</loc>
-    <lastmod>2025-11-29T23:49:06.120Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/tide_smooth/tide_smooth.html</loc>
+    <lastmod>2025-12-01T02:34:42.729Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/mosaics/mosaics.html</loc>
-    <lastmod>2025-11-15T21:31:52.632Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/fft_tide/fft_tide.html</loc>
+    <lastmod>2025-12-01T02:31:01.383Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/Landsat8/histogram_stretch.html</loc>
-    <lastmod>2025-11-17T16:38:25.882Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/clean_outliers/clean_outliers.html</loc>
+    <lastmod>2025-12-01T02:19:19.963Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/coast/coastlines.html</loc>
-    <lastmod>2025-11-17T14:29:58.102Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/autocorr_chloro/autocorr_chloro.html</loc>
+    <lastmod>2025-12-01T02:04:47.049Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/blender_shading/blender_rt.html</loc>
-    <lastmod>2025-11-13T18:08:28.059Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/remote_datasets/remote_datasets.html</loc>
+    <lastmod>2025-11-29T23:49:06.105Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex48.html</loc>
-    <lastmod>2025-11-20T03:24:03.440Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/longest_sail/longestsail.html</loc>
+    <lastmod>2025-11-13T18:08:28.065Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex45.html</loc>
-    <lastmod>2025-11-20T03:24:03.414Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/insets/insets.html</loc>
+    <lastmod>2025-11-13T16:11:53.223Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex42.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/choropleths/choropleths.html</loc>
+    <lastmod>2025-11-13T13:53:11.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials.html</loc>
+    <lastmod>2025-12-01T01:17:10.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex46.html</loc>
+    <lastmod>2025-11-20T03:24:03.419Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex44.html</loc>
+    <lastmod>2025-11-20T03:24:03.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex41.html</loc>
     <lastmod>2025-11-20T03:24:03.384Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex40.html</loc>
-    <lastmod>2025-11-20T03:24:03.381Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex36.html</loc>
+    <lastmod>2025-11-20T03:24:03.376Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex35.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex34.html</loc>
     <lastmod>2025-11-20T03:24:03.372Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex33.html</loc>
-    <lastmod>2025-11-20T03:24:03.371Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex30.html</loc>
+    <lastmod>2025-11-20T03:24:03.361Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex29.html</loc>
-    <lastmod>2025-11-20T03:24:03.345Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex28.html</loc>
+    <lastmod>2025-11-20T03:24:03.328Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex27.html</loc>
-    <lastmod>2025-11-20T03:24:03.319Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex25.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex26.html</loc>
     <lastmod>2025-11-20T03:24:03.298Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex23.html</loc>
-    <lastmod>2025-11-20T03:24:03.292Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex24.html</loc>
+    <lastmod>2025-11-20T03:24:03.295Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex21.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex22.html</loc>
     <lastmod>2025-11-20T03:24:03.283Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex19.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex20.html</loc>
+    <lastmod>2025-11-20T03:24:03.260Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex18.html</loc>
     <lastmod>2025-11-20T03:24:03.256Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex17.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex16.html</loc>
     <lastmod>2025-11-20T03:24:03.250Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex15.html</loc>
-    <lastmod>2025-11-20T03:24:03.250Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex14.html</loc>
+    <lastmod>2025-11-20T03:24:03.245Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex13.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex12.html</loc>
     <lastmod>2025-11-20T03:24:03.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex10.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex09.html</loc>
     <lastmod>2025-11-20T03:24:03.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex08.html</loc>
-    <lastmod>2025-11-20T03:24:03.234Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex07.html</loc>
+    <lastmod>2025-11-20T03:24:03.212Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex06.html</loc>
-    <lastmod>2025-11-20T03:24:03.192Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex04.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex05.html</loc>
     <lastmod>2025-11-20T03:24:03.186Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex02.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex03.html</loc>
     <lastmod>2025-11-20T03:24:03.176Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery.html</loc>
-    <lastmod>2025-11-29T23:49:06.084Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex01.html</loc>
+    <lastmod>2025-11-20T03:24:03.176Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/strel.html</loc>
-    <lastmod>2025-11-15T21:31:51.981Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/examples.html</loc>
+    <lastmod>2025-11-29T16:45:11.894Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2lab.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2ycbcr.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/padarray.html</loc>
-    <lastmod>2025-11-22T18:47:53.592Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imtophat.html</loc>
-    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imsegment.html</loc>
-    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imregionalmax.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2gray.html</loc>
     <lastmod>2025-11-22T18:09:43.327Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imrankfilter.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/isodata.html</loc>
+    <lastmod>2025-11-22T18:09:43.327Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imsobel.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/immorphgrad.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imregionalmin.html</loc>
+    <lastmod>2025-11-22T18:09:43.327Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imreconstruct.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhmax.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imopen.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imfilter.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhmin.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imerode.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhdome.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imcomplement.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imfill.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imbothat.html</loc>
-    <lastmod>2025-11-26T07:24:49.014Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imdilate.html</loc>
+    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/fillsinks.html</loc>
-    <lastmod>2025-11-26T07:24:49.014Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imclose.html</loc>
+    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwskell.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/graydist.html</loc>
+    <lastmod>2025-11-22T18:09:43.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/cc2bw.html</loc>
+    <lastmod>2025-11-26T07:24:49.013Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwperim.html</loc>
     <lastmod>2025-11-26T07:24:49.005Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwhitmiss.html</loc>
-    <lastmod>2025-11-26T07:24:49.005Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwconncomp.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwdist.html</loc>
     <lastmod>2025-11-22T18:47:53.565Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/binarize.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwareaopen.html</loc>
     <lastmod>2025-11-26T07:24:49.005Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/solids.html</loc>
-    <lastmod>2025-11-26T07:13:46.314Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc.html</loc>
+    <lastmod>2025-11-22T02:07:18.126Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/wkt2proj.html</loc>
-    <lastmod>2025-11-22T02:11:26.923Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/xy2lonlat.html</loc>
+    <lastmod>2025-11-22T18:47:53.565Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/touches.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/within.html</loc>
+    <lastmod>2025-11-22T18:47:53.564Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/symdifference.html</loc>
     <lastmod>2025-11-22T18:47:53.563Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/simplify.html</loc>
-    <lastmod>2025-11-22T18:47:53.563Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/setproj.html</loc>
+    <lastmod>2025-11-22T18:43:29.404Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/proj2wkt.html</loc>
-    <lastmod>2025-11-22T02:13:06.753Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/polygonize.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/polyunion.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/overlaps.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/pointalongline.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome_inverse.html</loc>
-    <lastmod>2025-11-21T11:25:36.000Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/ogr2ogr.html</loc>
+    <lastmod>2025-11-22T02:11:27.067Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome_direct.html</loc>
+    <lastmod>2025-11-21T11:25:35.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/lonlat2xy.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/invgeod.html</loc>
-    <lastmod>2025-11-22T02:11:27.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/intersection.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/intersects.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geomlength.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gmt2gd.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geodesicarea.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geomarea.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geod.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geodesic.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalwarp.html</loc>
-    <lastmod>2025-11-22T18:47:53.551Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalwrite.html</loc>
+    <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalshade.html</loc>
-    <lastmod>2025-11-22T02:13:06.561Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdaltranslate.html</loc>
+    <lastmod>2025-11-22T18:47:53.550Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdaldem.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalread.html</loc>
+    <lastmod>2025-11-22T18:47:53.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gd2gmt.html</loc>
     <lastmod>2025-11-22T18:47:53.548Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/fillnodata.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/equals.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/epsg2wkt.html</loc>
-    <lastmod>2025-11-22T02:11:26.896Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/epsg2proj.html</loc>
+    <lastmod>2025-11-22T02:11:26.908Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/envelope3d.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/envelope.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/dither.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/distance.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/disjoint.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/difference.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/delaunay.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/crosses.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/convexhull.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/contains.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/concavehull.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/circgeo.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/centroid.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/buffergeo.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/buffer.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/boundary.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/arcellipse.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/arccircle.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns.html</loc>
-    <lastmod>2025-11-21T11:37:43.547Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/zonal_statistics.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/zscores.html</loc>
     <lastmod>2025-11-28T16:48:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/xcov.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/yeardecimal.html</loc>
     <lastmod>2025-11-28T16:48:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/whittaker.html</loc>
-    <lastmod>2025-11-28T16:48:43.476Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/xcorr.html</loc>
+    <lastmod>2025-11-28T16:48:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/vizpdf.html</loc>
-    <lastmod>2025-11-28T16:48:43.476Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/VSdisp.html</loc>
+    <lastmod>2025-11-28T16:48:43.445Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/vband.html</loc>
-    <lastmod>2025-11-28T16:08:05.732Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/vector_attrib.html</loc>
+    <lastmod>2025-11-28T16:48:43.476Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/trisurf.html</loc>
@@ -670,7 +682,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/parkergrav.html</loc>
-    <lastmod>2025-11-28T16:08:05.651Z</lastmod>
+    <lastmod>2025-11-30T20:32:43.387Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/ODE2ds.html</loc>
@@ -702,7 +714,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/leepacific.html</loc>
-    <lastmod>2025-11-28T16:08:05.599Z</lastmod>
+    <lastmod>2025-11-30T04:42:41.602Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/lazread.html</loc>
@@ -738,7 +750,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/grid2tri.html</loc>
-    <lastmod>2025-11-28T16:08:05.576Z</lastmod>
+    <lastmod>2025-11-30T20:29:49.267Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/gmtwrite.html</loc>
@@ -754,7 +766,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/fv2fv.html</loc>
-    <lastmod>2025-11-28T16:08:05.550Z</lastmod>
+    <lastmod>2025-11-30T20:28:15.703Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/findpeaks.html</loc>
@@ -782,7 +794,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/cubeplot.html</loc>
-    <lastmod>2025-11-28T16:08:05.524Z</lastmod>
+    <lastmod>2025-11-30T20:27:37.953Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/crop.html</loc>
@@ -833,6 +845,10 @@
     <lastmod>2025-11-13T16:11:51.534Z</lastmod>
   </url>
   <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/talwani2d.html</loc>
+    <lastmod>2025-11-30T17:46:28.986Z</lastmod>
+  </url>
+  <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/subplot.html</loc>
     <lastmod>2025-11-13T18:08:27.982Z</lastmod>
   </url>
@@ -849,92 +865,128 @@
     <lastmod>2025-11-26T07:24:49.045Z</lastmod>
   </url>
   <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/segyz.html</loc>
+    <lastmod>2025-11-30T17:15:19.851Z</lastmod>
+  </url>
+  <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/seismicity.html</loc>
     <lastmod>2025-11-26T07:24:49.045Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/scatter.html</loc>
-    <lastmod>2025-11-13T13:54:16.209Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/scatter3.html</loc>
+    <lastmod>2025-11-21T01:46:11.044Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/rose.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/sample1d.html</loc>
     <lastmod>2025-11-13T18:08:27.976Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/quiver.html</loc>
-    <lastmod>2025-11-21T01:46:11.004Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/rotsmoother.html</loc>
+    <lastmod>2025-11-30T17:45:08.603Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/project.html</loc>
-    <lastmod>2025-11-15T21:22:15.925Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/radar.html</loc>
+    <lastmod>2025-11-21T01:46:11.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/qqplot.html</loc>
+    <lastmod>2025-11-21T01:46:10.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/polespotter.html</loc>
+    <lastmod>2025-11-30T17:37:44.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/pmodeler.html</loc>
+    <lastmod>2025-11-30T17:34:50.182Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/piechart.html</loc>
     <lastmod>2025-11-21T01:46:10.969Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/nearneighbor.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/originater.html</loc>
+    <lastmod>2025-11-30T17:31:56.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/movie.html</loc>
+    <lastmod>2025-11-30T20:25:15.849Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mgd77convert.html</loc>
+    <lastmod>2025-11-30T17:12:27.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mask.html</loc>
     <lastmod>2025-11-26T07:24:49.045Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/meca.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mapproject.html</loc>
+    <lastmod>2025-11-26T07:24:49.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/magref.html</loc>
+    <lastmod>2025-11-22T18:47:53.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/legend.html</loc>
+    <lastmod>2025-11-30T20:05:46.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/img2grd.html</loc>
+    <lastmod>2025-11-30T17:02:44.166Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/hotspotter.html</loc>
+    <lastmod>2025-11-30T17:30:33.408Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/hband.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/marginalhist.html</loc>
-    <lastmod>2025-11-22T18:44:05.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/makecpt.html</loc>
-    <lastmod>2025-11-22T18:09:43.352Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/lines.html</loc>
-    <lastmod>2025-11-13T16:11:51.301Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/inset.html</loc>
-    <lastmod>2025-11-22T18:47:53.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/histogram.html</loc>
-    <lastmod>2025-11-22T18:47:53.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/greenspline.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdvolume.html</loc>
     <lastmod>2025-11-22T18:47:53.694Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdview.html</loc>
-    <lastmod>2025-11-22T18:47:53.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdtrend.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdvector.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdtrack.html</loc>
+    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdsample.html</loc>
     <lastmod>2025-11-19T14:52:18.407Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdpaste.html</loc>
-    <lastmod>2025-11-22T19:05:15.662Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdredpol.html</loc>
+    <lastmod>2025-11-30T17:38:52.246Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdmask.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdpmodeler.html</loc>
+    <lastmod>2025-11-30T17:49:58.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdmath.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdinfo.html</loc>
-    <lastmod>2025-11-22T19:05:15.662Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdlandmask.html</loc>
+    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdhisteq.html</loc>
-    <lastmod>2025-11-12T22:06:49.283Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdimage.html</loc>
+    <lastmod>2025-11-30T04:01:36.128Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdgradient.html</loc>
-    <lastmod>2025-11-13T18:08:27.959Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdgravmag3d.html</loc>
+    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdflexure.html</loc>
+    <lastmod>2025-11-30T17:33:25.649Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdfill.html</loc>
@@ -957,8 +1009,12 @@
     <lastmod>2025-11-22T19:05:15.656Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gravfft.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gravmag3d.html</loc>
+    <lastmod>2025-11-30T18:57:02.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gpsgridder.html</loc>
+    <lastmod>2025-11-30T17:11:29.169Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtspatial.html</loc>
@@ -973,20 +1029,24 @@
     <lastmod>2025-11-12T22:06:49.270Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtconvert.html</loc>
-    <lastmod>2025-11-15T21:22:15.910Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtgravmag3d.html</loc>
+    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtbinstats.html</loc>
-    <lastmod>2025-11-22T18:47:53.629Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtconnect.html</loc>
+    <lastmod>2025-11-13T18:08:27.946Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/fitcircle.html</loc>
-    <lastmod>2025-11-15T21:22:15.910Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmt2kml.html</loc>
+    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/fill_between.html</loc>
-    <lastmod>2025-11-22T18:47:53.628Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/filter1d.html</loc>
+    <lastmod>2025-11-13T18:08:27.944Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/flexure.html</loc>
+    <lastmod>2025-11-30T17:05:48.663Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/events.html</loc>
@@ -1033,87 +1093,11 @@
     <lastmod>2025-11-22T18:47:53.596Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_opts.html</loc>
-    <lastmod>2025-11-30T01:26:40.585Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/alphabetical.html</loc>
+    <lastmod>2025-11-27T23:37:54.980Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/themes.html</loc>
-    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/pens.html</loc>
-    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/fonts.html</loc>
-    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/color.html</loc>
-    <lastmod>2025-11-14T23:40:46.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features.html</loc>
-    <lastmod>2025-11-29T20:36:04.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules.html</loc>
-    <lastmod>2025-11-30T01:56:56.541Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/monolitic.html</loc>
-    <lastmod>2025-11-22T18:22:56.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/quick_learn.html</loc>
-    <lastmod>2025-11-22T18:44:05.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general.html</loc>
-    <lastmod>2025-11-22T16:50:49.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/Interoperability.html</loc>
-    <lastmod>2025-11-28T19:59:13.228Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/index.html</loc>
-    <lastmod>2025-11-29T21:26:29.757Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/comp_other_pkgs.html</loc>
-    <lastmod>2025-11-28T19:30:42.912Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation.html</loc>
-    <lastmod>2025-11-30T00:38:38.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/introduction.html</loc>
-    <lastmod>2025-11-26T06:05:15.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/modules.html</loc>
-    <lastmod>2025-11-22T19:05:15.647Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/types.html</loc>
-    <lastmod>2025-11-22T18:47:53.565Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/extensions.html</loc>
-    <lastmod>2025-11-30T02:59:43.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/arrows_control.html</loc>
-    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/decorated.html</loc>
-    <lastmod>2025-11-22T18:47:53.517Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/justify.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/units.html</loc>
     <lastmod>2025-11-12T22:06:49.204Z</lastmod>
   </url>
   <url>
@@ -1121,12 +1105,92 @@
     <lastmod>2025-11-12T22:06:49.204Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/units.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/justify.html</loc>
     <lastmod>2025-11-12T22:06:49.204Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/alphabetical.html</loc>
-    <lastmod>2025-11-27T23:37:54.980Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/decorated.html</loc>
+    <lastmod>2025-11-22T18:47:53.517Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/arrows_control.html</loc>
+    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/extensions.html</loc>
+    <lastmod>2025-11-30T22:44:55.944Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/types.html</loc>
+    <lastmod>2025-11-22T18:47:53.565Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/modules.html</loc>
+    <lastmod>2025-11-22T19:05:15.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/introduction.html</loc>
+    <lastmod>2025-11-26T06:05:15.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation.html</loc>
+    <lastmod>2025-11-30T00:38:38.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/comp_other_pkgs.html</loc>
+    <lastmod>2025-11-28T19:30:42.912Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/index.html</loc>
+    <lastmod>2025-11-30T15:13:29.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/Interoperability.html</loc>
+    <lastmod>2025-11-30T20:15:22.965Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general.html</loc>
+    <lastmod>2025-11-22T16:50:49.734Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/quick_learn.html</loc>
+    <lastmod>2025-11-22T18:44:05.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/general/monolitic.html</loc>
+    <lastmod>2025-11-22T18:22:56.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules.html</loc>
+    <lastmod>2025-11-30T22:57:46.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features.html</loc>
+    <lastmod>2025-11-29T20:36:04.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/color.html</loc>
+    <lastmod>2025-11-14T23:40:46.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/fonts.html</loc>
+    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/pens.html</loc>
+    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_features/themes.html</loc>
+    <lastmod>2025-11-12T22:06:49.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/common_opts.html</loc>
+    <lastmod>2025-11-30T01:26:40.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/backtracker.html</loc>
+    <lastmod>2025-11-30T22:57:33.165Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/bar.html</loc>
@@ -1173,20 +1237,24 @@
     <lastmod>2025-11-22T18:47:53.612Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/filter1d.html</loc>
-    <lastmod>2025-11-13T18:08:27.944Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/fill_between.html</loc>
+    <lastmod>2025-11-22T18:47:53.628Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmt2kml.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/fitcircle.html</loc>
+    <lastmod>2025-11-15T21:22:15.910Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtconnect.html</loc>
-    <lastmod>2025-11-13T18:08:27.946Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtbinstats.html</loc>
+    <lastmod>2025-11-22T18:47:53.629Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtgravmag3d.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtconvert.html</loc>
+    <lastmod>2025-11-15T21:22:15.910Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtisf.html</loc>
+    <lastmod>2025-11-30T19:07:24.918Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gmtselect.html</loc>
@@ -1201,8 +1269,12 @@
     <lastmod>2025-11-22T18:47:53.644Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gravprisms.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gravfft.html</loc>
     <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/gravprisms.html</loc>
+    <lastmod>2025-11-30T20:17:56.517Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grd2kml.html</loc>
@@ -1225,64 +1297,84 @@
     <lastmod>2025-11-22T18:47:53.665Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdgravmag3d.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdgradient.html</loc>
+    <lastmod>2025-11-13T18:08:27.959Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdimage.html</loc>
-    <lastmod>2025-11-13T18:08:27.960Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdhisteq.html</loc>
+    <lastmod>2025-11-12T22:06:49.283Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdlandmask.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdinfo.html</loc>
+    <lastmod>2025-11-22T19:05:15.662Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdmath.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdmask.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdpaste.html</loc>
+    <lastmod>2025-11-30T19:39:54.214Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdproject.html</loc>
     <lastmod>2025-11-22T18:47:53.679Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdtrack.html</loc>
-    <lastmod>2025-11-26T07:24:49.032Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdrotater.html</loc>
+    <lastmod>2025-11-30T19:28:31.845Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdvector.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdspotter.html</loc>
+    <lastmod>2025-11-30T17:18:00.206Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdtrend.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdvolume.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/grdview.html</loc>
     <lastmod>2025-11-22T18:47:53.694Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/hband.html</loc>
-    <lastmod>2025-11-13T18:08:27.961Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/greenspline.html</loc>
+    <lastmod>2025-11-22T18:47:53.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/histogram.html</loc>
+    <lastmod>2025-11-22T18:47:53.702Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/image.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/legend.html</loc>
-    <lastmod>2025-11-13T16:11:51.284Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/inset.html</loc>
+    <lastmod>2025-11-22T18:47:53.702Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/magref.html</loc>
-    <lastmod>2025-11-22T18:47:53.712Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/lines.html</loc>
+    <lastmod>2025-11-13T16:11:51.301Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mapproject.html</loc>
-    <lastmod>2025-11-26T07:24:49.045Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/makecpt.html</loc>
+    <lastmod>2025-11-22T18:09:43.352Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mask.html</loc>
-    <lastmod>2025-11-26T07:24:49.045Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/marginalhist.html</loc>
+    <lastmod>2025-11-22T18:44:05.767Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/movie.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/meca.html</loc>
     <lastmod>2025-11-13T18:08:27.961Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/mgd77track.html</loc>
+    <lastmod>2025-11-30T17:18:17.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/nearneighbor.html</loc>
+    <lastmod>2025-11-26T07:24:49.045Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/parallelplot.html</loc>
@@ -1290,23 +1382,39 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/plot.html</loc>
-    <lastmod>2025-11-22T19:05:15.662Z</lastmod>
+    <lastmod>2025-11-30T16:04:04.240Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/qqplot.html</loc>
-    <lastmod>2025-11-21T01:46:10.987Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/polar.html</loc>
+    <lastmod>2025-11-30T17:39:57.814Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/radar.html</loc>
-    <lastmod>2025-11-21T01:46:11.028Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/project.html</loc>
+    <lastmod>2025-11-15T21:22:15.925Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/sample1d.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/quiver.html</loc>
+    <lastmod>2025-11-21T01:46:11.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/rose.html</loc>
     <lastmod>2025-11-13T18:08:27.976Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/scatter3.html</loc>
-    <lastmod>2025-11-21T01:46:11.044Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/sac.html</loc>
+    <lastmod>2025-11-30T17:43:49.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/scatter.html</loc>
+    <lastmod>2025-11-13T13:54:16.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/segy2grd.html</loc>
+    <lastmod>2025-11-30T17:07:52.041Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/segy.html</loc>
+    <lastmod>2025-11-30T17:14:05.213Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/solar.html</loc>
@@ -1329,6 +1437,10 @@
     <lastmod>2025-11-22T18:47:53.763Z</lastmod>
   </url>
   <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/talwani3d.html</loc>
+    <lastmod>2025-11-30T17:47:37.424Z</lastmod>
+  </url>
+  <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/text.html</loc>
     <lastmod>2025-11-22T18:47:53.767Z</lastmod>
   </url>
@@ -1342,7 +1454,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/vband.html</loc>
-    <lastmod>2025-11-21T01:46:11.110Z</lastmod>
+    <lastmod>2025-11-30T04:19:43.697Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/modules/violins.html</loc>
@@ -1378,7 +1490,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/cylinder.html</loc>
-    <lastmod>2025-11-28T16:08:05.526Z</lastmod>
+    <lastmod>2025-11-30T03:44:15.559Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/delrows.html</loc>
@@ -1490,7 +1602,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/parkermag.html</loc>
-    <lastmod>2025-11-28T16:08:05.651Z</lastmod>
+    <lastmod>2025-11-30T20:33:44.115Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/pca.html</loc>
@@ -1725,312 +1837,324 @@
     <lastmod>2025-11-28T16:48:43.476Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/vector_attrib.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/vizpdf.html</loc>
     <lastmod>2025-11-28T16:48:43.476Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/VSdisp.html</loc>
-    <lastmod>2025-11-28T16:48:43.445Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/whittaker.html</loc>
+    <lastmod>2025-11-28T16:48:43.476Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/xcorr.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/xcov.html</loc>
     <lastmod>2025-11-28T16:48:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/yeardecimal.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/zonal_statistics.html</loc>
     <lastmod>2025-11-28T16:48:43.490Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/utilities/zscores.html</loc>
-    <lastmod>2025-11-28T16:48:43.490Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns.html</loc>
+    <lastmod>2025-11-21T11:37:43.547Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/arccircle.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/arcellipse.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/boundary.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/buffer.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/buffergeo.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/centroid.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/circgeo.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/concavehull.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/contains.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/convexhull.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/crosses.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/delaunay.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/difference.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/disjoint.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/distance.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/dither.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/envelope.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/envelope3d.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/epsg2proj.html</loc>
-    <lastmod>2025-11-22T02:11:26.908Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/epsg2wkt.html</loc>
+    <lastmod>2025-11-22T02:11:26.896Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/equals.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/fillnodata.html</loc>
     <lastmod>2025-11-22T18:47:53.533Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gd2gmt.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdaldem.html</loc>
     <lastmod>2025-11-22T18:47:53.548Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalread.html</loc>
-    <lastmod>2025-11-22T18:47:53.549Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalshade.html</loc>
+    <lastmod>2025-11-22T02:13:06.561Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdaltranslate.html</loc>
-    <lastmod>2025-11-22T18:47:53.550Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalwarp.html</loc>
+    <lastmod>2025-11-22T18:47:53.551Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gdalwrite.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geod.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geodesic.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geodesicarea.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geomarea.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/geomlength.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/gmt2gd.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/intersection.html</loc>
     <lastmod>2025-11-22T18:47:53.552Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/intersects.html</loc>
-    <lastmod>2025-11-22T18:47:53.552Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/invgeod.html</loc>
+    <lastmod>2025-11-22T02:11:27.147Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/lonlat2xy.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome_direct.html</loc>
-    <lastmod>2025-11-21T11:25:35.999Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/loxodrome_inverse.html</loc>
+    <lastmod>2025-11-21T11:25:36.000Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/ogr2ogr.html</loc>
-    <lastmod>2025-11-22T02:11:27.067Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/pointalongline.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/overlaps.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/polyunion.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/polygonize.html</loc>
     <lastmod>2025-11-22T18:47:53.557Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/setproj.html</loc>
-    <lastmod>2025-11-22T18:43:29.404Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/proj2wkt.html</loc>
+    <lastmod>2025-11-22T02:13:06.753Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/symdifference.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/simplify.html</loc>
     <lastmod>2025-11-22T18:47:53.563Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/within.html</loc>
-    <lastmod>2025-11-22T18:47:53.564Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/touches.html</loc>
+    <lastmod>2025-11-22T18:47:53.563Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/xy2lonlat.html</loc>
-    <lastmod>2025-11-22T18:47:53.565Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/gdalfuns/wkt2proj.html</loc>
+    <lastmod>2025-11-22T02:11:26.923Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc.html</loc>
-    <lastmod>2025-11-22T02:07:18.126Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/solids.html</loc>
+    <lastmod>2025-11-30T15:55:14.061Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwareaopen.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/binarize.html</loc>
     <lastmod>2025-11-26T07:24:49.005Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwdist.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwconncomp.html</loc>
     <lastmod>2025-11-22T18:47:53.565Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwperim.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwhitmiss.html</loc>
     <lastmod>2025-11-26T07:24:49.005Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/cc2bw.html</loc>
-    <lastmod>2025-11-26T07:24:49.013Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/bwskell.html</loc>
+    <lastmod>2025-11-26T07:24:49.005Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/graydist.html</loc>
-    <lastmod>2025-11-22T18:09:43.320Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/fillsinks.html</loc>
+    <lastmod>2025-11-26T07:24:49.014Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imclose.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imbothat.html</loc>
+    <lastmod>2025-11-26T07:24:49.014Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imcomplement.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imdilate.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imerode.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imfill.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imfilter.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhdome.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhmax.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imhmin.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/immorphgrad.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imopen.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imrankfilter.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imreconstruct.html</loc>
-    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imregionalmin.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imregionalmax.html</loc>
     <lastmod>2025-11-22T18:09:43.327Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imsobel.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imsegment.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/isodata.html</loc>
-    <lastmod>2025-11-22T18:09:43.327Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2gray.html</loc>
-    <lastmod>2025-11-22T18:09:43.327Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2ycbcr.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/imtophat.html</loc>
     <lastmod>2025-11-26T07:24:49.015Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/examples.html</loc>
-    <lastmod>2025-11-29T16:45:11.894Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/padarray.html</loc>
+    <lastmod>2025-11-22T18:47:53.592Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex01.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/rgb2lab.html</loc>
+    <lastmod>2025-11-26T07:24:49.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/documentation/imgproc/strel.html</loc>
+    <lastmod>2025-11-15T21:31:51.981Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery.html</loc>
+    <lastmod>2025-11-29T23:49:06.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex02.html</loc>
     <lastmod>2025-11-20T03:24:03.176Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex03.html</loc>
-    <lastmod>2025-11-20T03:24:03.176Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex05.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex04.html</loc>
     <lastmod>2025-11-20T03:24:03.186Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex07.html</loc>
-    <lastmod>2025-11-20T03:24:03.212Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex06.html</loc>
+    <lastmod>2025-11-20T03:24:03.192Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex09.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex08.html</loc>
     <lastmod>2025-11-20T03:24:03.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex12.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex10.html</loc>
     <lastmod>2025-11-20T03:24:03.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex14.html</loc>
-    <lastmod>2025-11-20T03:24:03.245Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex13.html</loc>
+    <lastmod>2025-11-20T03:24:03.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex16.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex15.html</loc>
     <lastmod>2025-11-20T03:24:03.250Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex18.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex17.html</loc>
+    <lastmod>2025-11-20T03:24:03.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex19.html</loc>
     <lastmod>2025-11-20T03:24:03.256Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex20.html</loc>
-    <lastmod>2025-11-20T03:24:03.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex22.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex21.html</loc>
     <lastmod>2025-11-20T03:24:03.283Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex24.html</loc>
-    <lastmod>2025-11-20T03:24:03.295Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex23.html</loc>
+    <lastmod>2025-11-20T03:24:03.292Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex26.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex25.html</loc>
     <lastmod>2025-11-20T03:24:03.298Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex28.html</loc>
-    <lastmod>2025-11-20T03:24:03.328Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex27.html</loc>
+    <lastmod>2025-11-20T03:24:03.319Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex30.html</loc>
-    <lastmod>2025-11-20T03:24:03.361Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex29.html</loc>
+    <lastmod>2025-11-20T03:24:03.345Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex34.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex33.html</loc>
+    <lastmod>2025-11-20T03:24:03.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex35.html</loc>
     <lastmod>2025-11-20T03:24:03.372Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex36.html</loc>
-    <lastmod>2025-11-20T03:24:03.376Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex40.html</loc>
+    <lastmod>2025-11-20T03:24:03.381Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex41.html</loc>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex42.html</loc>
     <lastmod>2025-11-20T03:24:03.384Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex44.html</loc>
-    <lastmod>2025-11-20T03:24:03.412Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex45.html</loc>
+    <lastmod>2025-11-20T03:24:03.414Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex46.html</loc>
-    <lastmod>2025-11-20T03:24:03.419Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/gallery/ex48.html</loc>
+    <lastmod>2025-11-20T03:24:03.440Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials.html</loc>
-    <lastmod>2025-11-29T20:20:26.228Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/blender_shading/blender_rt.html</loc>
+    <lastmod>2025-11-13T18:08:28.059Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/choropleths/choropleths.html</loc>
-    <lastmod>2025-11-13T13:53:11.953Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/coast/coastlines.html</loc>
+    <lastmod>2025-11-17T14:29:58.102Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/insets/insets.html</loc>
-    <lastmod>2025-11-13T16:11:53.223Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/Landsat8/histogram_stretch.html</loc>
+    <lastmod>2025-11-17T16:38:25.882Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/longest_sail/longestsail.html</loc>
-    <lastmod>2025-11-13T18:08:28.065Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/mosaics/mosaics.html</loc>
+    <lastmod>2025-11-15T21:31:52.632Z</lastmod>
   </url>
   <url>
-    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/remote_datasets/remote_datasets.html</loc>
-    <lastmod>2025-11-29T23:49:06.105Z</lastmod>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/signal.html</loc>
+    <lastmod>2025-12-01T01:56:11.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/autocorr_periodic/autocorr_periodic.html</loc>
+    <lastmod>2025-12-01T02:06:33.614Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/fft_ex1/fft_ex1.html</loc>
+    <lastmod>2025-12-01T02:28:10.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/signal/keeling/keeling.html</loc>
+    <lastmod>2025-12-01T02:33:27.551Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/tutorials/texture_shading/texture.html</loc>
@@ -2038,7 +2162,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/geophysics.html</loc>
-    <lastmod>2025-11-13T13:34:48.147Z</lastmod>
+    <lastmod>2025-11-30T04:35:57.561Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/geophysics/seismicity/global_seis.html</loc>
@@ -2090,7 +2214,7 @@
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/projections/02_proj_examples.html</loc>
-    <lastmod>2025-11-29T17:50:27.674Z</lastmod>
+    <lastmod>2025-11-30T20:40:45.099Z</lastmod>
   </url>
   <url>
     <loc>https://joa-quim.github.io/GMTjl_doc/examples/projections/ex28.html</loc>

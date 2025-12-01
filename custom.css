@@ -11,7 +11,7 @@ main.page-columns {
 
 /* Use smaller negative margin to close gap without cutting banner */
 .column-page:first-of-type {
-  margin-top: -0.53rem !important;
+  margin-top: -1.00rem !important;
   padding-top: 0 !important;
 }
 
@@ -19,7 +19,7 @@ main.page-columns {
   display: block;
   margin: 0 auto !important;
   padding: 0 !important;
-  width: 80% !important;  /* Reduce banner to 80% of its width */
+  width: 85% !important;  /* Reduce banner to 80% of its width */
   height: auto;
 }
 
@@ -79,4 +79,11 @@ main.page-columns {
   opacity: 1 !important;
   transform: translateY(0) !important;
   padding: 0.05rem !important;
+}
+
+.figure-img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 600px;
 }

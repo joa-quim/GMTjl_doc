@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>vband</title>
+<title>autocorr_chloro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0615b85506723fa54ab13a613a4e9e4c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-0615b85506723fa54ab13a613a4e9e4c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../custom.css">
+<link rel="stylesheet" href="../../../custom.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,9 +115,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../GMTjl_logo.png" alt="" class="navbar-logo light-content">
-    <img src="../../GMTjl_logo.png" alt="" class="navbar-logo dark-content">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/GMTjl_logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/GMTjl_logo.png" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -92,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,108 +136,240 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-documentation">    
         <li>
-    <a class="dropdown-item" href="../../documentation.html">
+    <a class="dropdown-item" href="../../../documentation.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="../../documentation/modules.html">
- <span class="dropdown-text">Modules</span></a>
+    <a class="dropdown-item" href="../../../documentation/modules.html">
+ <span class="dropdown-text">GMT Modules</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/general/types.html">
+    <a class="dropdown-item" href="../../../documentation/general/types.html">
  <span class="dropdown-text">GMT.jl Types</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/extensions.html">
+    <a class="dropdown-item" href="../../../documentation/extensions.html">
  <span class="dropdown-text">GMT.jl Extensions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/gdalfuns.html">
+    <a class="dropdown-item" href="../../../documentation/gdalfuns.html">
  <span class="dropdown-text">GDAL Functions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/solids.html">
- <span class="dropdown-text">Solids</span></a>
+    <a class="dropdown-item" href="../../../documentation/solids.html">
+ <span class="dropdown-text">Solids Functions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/imgproc.html">
+    <a class="dropdown-item" href="../../../documentation/imgproc.html">
  <span class="dropdown-text">Image Processing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/common_features.html">
+    <a class="dropdown-item" href="../../../documentation/common_features.html">
  <span class="dropdown-text">Common Features</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../documentation/alphabetical.html">
+    <a class="dropdown-item" href="../../../documentation/alphabetical.html">
  <span class="dropdown-text">Alphabetical List</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../examples.html"> 
+    <a class="nav-link" href="../../../examples.html"> 
 <span class="menu-text">Examples</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../gallery.html"> 
-<span class="menu-text">Gallery</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-gallery-(gmt-gallery" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Gallery (GMT Gallery)</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-gallery-(gmt-gallery">    
+        <li>
+    <a class="dropdown-item" href="../../../gallery.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex01.html">
+ <span class="dropdown-text">(1) Contour maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex02.html">
+ <span class="dropdown-text">(2) Image presentations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex03.html">
+ <span class="dropdown-text">(3) Spectral estimation and xy-plots</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex04.html">
+ <span class="dropdown-text">(4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex05.html">
+ <span class="dropdown-text">(5) A 3-D illuminated surface</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex06.html">
+ <span class="dropdown-text">(6) Plotting of histograms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex07.html">
+ <span class="dropdown-text">(7) A simple location map</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex08.html">
+ <span class="dropdown-text">(8) A 3-D histogram</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex09.html">
+ <span class="dropdown-text">(9) Time-series along tracks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex10.html">
+ <span class="dropdown-text">(10) A geographical bar graph plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex11.html">
+ <span class="dropdown-text">(11)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex12.html">
+ <span class="dropdown-text">(12) Optimal triangulation of data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex13.html">
+ <span class="dropdown-text">(13) Plotting of vector fields</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex14.html">
+ <span class="dropdown-text">(14) Gridding of data and trend surfaces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex15.html">
+ <span class="dropdown-text">(15) Gridding, contouring, and masking of unconstrained areas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex16.html">
+ <span class="dropdown-text">(16) Gridding of data, continued</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex17.html">
+ <span class="dropdown-text">(17) Images clipped by coastlines</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex18.html">
+ <span class="dropdown-text">(18) Volumes and Spatial Selections</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex19.html">
+ <span class="dropdown-text">(19) Color patterns on maps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex20.html">
+ <span class="dropdown-text">(20) Custom plot symbols</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex21.html">
+ <span class="dropdown-text">(21)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex22.html">
+ <span class="dropdown-text">(22)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex23.html">
+ <span class="dropdown-text">(23)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex24.html">
+ <span class="dropdown-text">(24)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex25.html">
+ <span class="dropdown-text">(25)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex26.html">
+ <span class="dropdown-text">(26)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex27.html">
+ <span class="dropdown-text">(27)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex28.html">
+ <span class="dropdown-text">(28)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex29.html">
+ <span class="dropdown-text">(29)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../gallery/ex30.html">
+ <span class="dropdown-text">(30)</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../../tutorials.html">
+    <a class="dropdown-item" href="../../../tutorials.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="../../tutorials/Landsat8/histogram_stretch.html">
+    <a class="dropdown-item" href="../../../tutorials/ISC/isc.jl.html">
+ <span class="dropdown-text">ISC seismicity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../tutorials/Landsat8/histogram_stretch.html">
  <span class="dropdown-text">Landsat 8/9</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/coast/coastlines.html">
+    <a class="dropdown-item" href="../../../tutorials/coast/coastlines.html">
  <span class="dropdown-text">Coastlines</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/choropleths/choropleths.html">
+    <a class="dropdown-item" href="../../../tutorials/choropleths/choropleths.html">
  <span class="dropdown-text">US Choropleths</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/longest_sail/longestsail.html">
+    <a class="dropdown-item" href="../../../tutorials/dlakelan/GMTMaps.html">
+ <span class="dropdown-text"><span class="citation" data-cites="dlakelan">@dlakelan</span> choropleths</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../tutorials/longest_sail/longestsail.html">
  <span class="dropdown-text">Longest Sail</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/vector_shp/vector_shp.html">
+    <a class="dropdown-item" href="../../../tutorials/vector_shp/vector_shp.html">
  <span class="dropdown-text">Geospatial vector</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/texture_shading/texture.html">
+    <a class="dropdown-item" href="../../../tutorials/texture_shading/texture.html">
  <span class="dropdown-text">Texture Shading</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/mosaics/mosaics.html">
+    <a class="dropdown-item" href="../../../tutorials/mosaics/mosaics.html">
  <span class="dropdown-text">Mosaics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/mosaics/mosaics.html">
- <span class="dropdown-text">Mosaics</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/insets/insets.html">
+    <a class="dropdown-item" href="../../../tutorials/insets/insets.html">
  <span class="dropdown-text">Insets</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/remote_datasets/remote_datasets.html">
+    <a class="dropdown-item" href="../../../tutorials/remote_datasets/remote_datasets.html">
  <span class="dropdown-text">Remote Grids</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/blender_shading/blender_rt.html">
+    <a class="dropdown-item" href="../../../tutorials/blender_shading/blender_rt.html">
  <span class="dropdown-text">Blender</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/signal/signal.html">
+    <a class="dropdown-item" href="../../../tutorials/signal/signal.html">
  <span class="dropdown-text">Signal</span></a>
   </li>  
     </ul>
@@ -213,20 +380,20 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-geophysics">    
         <li>
-    <a class="dropdown-item" href="../../geophysics.html">
+    <a class="dropdown-item" href="../../../geophysics.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="../../geophysics/seismicity/global_seis.html">
+    <a class="dropdown-item" href="../../../geophysics/seismicity/global_seis.html">
  <span class="dropdown-text">Seismicity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../geophysics/earthtides/01_earthtides.html">
+    <a class="dropdown-item" href="../../../geophysics/earthtides/01_earthtides.html">
  <span class="dropdown-text">Earth Tides</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../geophysics/weather/01_weather.html">
+    <a class="dropdown-item" href="../../../geophysics/weather/01_weather.html">
  <span class="dropdown-text">Weather Data</span></a>
   </li>  
     </ul>
@@ -237,12 +404,12 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-help">    
         <li>
-    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/GenericMappingTools/GMT.jl/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Report a Bug</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/quarto-dev/quarto-cli/discussions"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://forum.generic-mapping-tools.org/c/questions/5"><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Ask a Question</span></a>
   </li>  
@@ -267,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">vband</h1>
+<h1 class="title">Find Periodicity in Chlorophyl time series</h1>
 </div>
 
 
@@ -284,9 +451,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><code>GMT.vband</code> is a <code>Function</code>.</p>
-<pre><code># 1 method for generic function "vband" from GMT:
- [1] vband(mat::Matrix{&lt;:Real}; width, percent, first, kw...)</code></pre>
+<p>Another example on how to detect periodicities in a Chlorophyl time series.</p>
+<p>Load the data file with the chlorophyll concentration file.</p>
+<div id="0717ef11" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">GMT</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>D1 <span class="op">=</span> <span class="fu">gmtread</span>(TESTSDIR <span class="op">*</span> <span class="st">"assets/cmems_mod_blk_bgc-plankton.csv"</span>);</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viz</span>(D1, figsize<span class="op">=</span>(<span class="fl">15</span>,<span class="fl">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="autocorr_chloro_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Create the <em>lags</em> vector. This case is simple as data points were collected one every day (less the missing days), so we use a lag interval of 1, extended over 3 years.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lags <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">3</span><span class="op">*</span><span class="fl">365</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now, compute the autocorrelation of the data using the <code>autocor</code> function. But, we want to pass it <strong>only</strong> the chlorophyll data that is stored in the second column of <strong>D1</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> GMT.<span class="fu">autocor</span>(D1[<span class="op">:</span>,<span class="fl">2</span>], lags)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Show the autocorrelation values in a plot. The x-axis represent be the lags, and the y-axis should be the autocorrelation value.</p>
+<div id="6de29210" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>D1 <span class="op">=</span> <span class="fu">gmtread</span>(TESTSDIR <span class="op">*</span> <span class="st">"assets/cmems_mod_blk_bgc-plankton.csv"</span>);   <span class="co"># Hide</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lags <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">3</span><span class="op">*</span><span class="fl">365</span>; <span class="co"># Hide</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> GMT.<span class="fu">autocor</span>(D1[<span class="op">:</span>,<span class="fl">2</span>], lags)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viz</span>(ac, figsize<span class="op">=</span>(<span class="fl">15</span>,<span class="fl">6</span>), grid<span class="op">=</span><span class="cn">true</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="autocorr_chloro_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
